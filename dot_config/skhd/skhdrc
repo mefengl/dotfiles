@@ -1,0 +1,44 @@
+#2 try
+
+# with key ctrl + alt + cmd
+meh - i : open -na iTerm
+meh - 1 : open -na Google\ Chrome
+meh - g : open -na Google\ Chrome
+meh - c : open -na Visual\ Studio\ Code
+
+# meta operation
+meh - r : brew services restart yabai
+meh - space  : yabai -m space --layout bsp
+meh - return : yabai -m space --mirror y-axis
+
+# Navigation
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+alt - n : yabai -m window --focus stack.next || yabai -m window --focus stack.first
+
+# ctrl + alt used to move window
+## swap windows
+shift + alt - h : yabai -m window --warp west
+shift + alt - j : yabai -m window --warp south
+shift + alt - k : yabai -m window --warp north
+shift + alt - l : yabai -m window --warp east
+## stack windows
+ctrl + alt - h : yabai -m window --stack west || yabai -m window --stack east
+ctrl + alt - j : yabai -m window --stack south || yabai -m window --stack north
+ctrl + alt - k : yabai -m window --stack north || yabai -m window --stack south
+ctrl + alt - l : yabai -m window --stack east || yabai -m window --stack west
+## window => space
+alt - 1 : yabai -m window --space 1
+alt - 2 : yabai -m window --space 2
+alt - 3 : yabai -m window --space 3
+alt - 4 : yabai -m window --space 4
+alt - 5 : yabai -m window --space 5
+alt - 6 : yabai -m window --space 6
+alt - 7 : yabai -m window --space 7
+alt - 8 : yabai -m window --space 8
+alt - 9 : yabai -m window --space 9
+alt - 0 : yabai -m window --space 10
+
+## Resize window: just use mouse
