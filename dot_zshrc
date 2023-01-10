@@ -1,6 +1,11 @@
 #2 try
 if test “${PS1+set}”; then CDPATH=.:~:~/Github:~/Sourcetree:~/.config:/projects; fi
 
+# chezmoi
+alias dot="chezmoi cd"
+alias dota="chezmoi add"
+alias dotra="chezmoi re-add"
+
 # zplug
 source ~/.zplug/init.zsh
 zplug "RiverGlide/zsh-goenv", from:gitlab
@@ -14,6 +19,7 @@ zplug "zsh-users/zsh-history-substring-search", defer:3, on:"zsh-users/zsh-synta
 # oh-my-zsh
 ##2 try
 zplug "plugins/tmux", from:oh-my-zsh
+
 zplug "djui/alias-tips"
 zplug "b4b4r07/enhancd", use:init.sh
 
