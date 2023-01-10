@@ -21,7 +21,7 @@ zplug "zsh-users/zsh-history-substring-search", defer:3, on:"zsh-users/zsh-synta
 zplug "plugins/tmux", from:oh-my-zsh
 
 zplug "djui/alias-tips"
-zplug "b4b4r07/enhancd", use:init.sh
+zplug "b4b4r07/enhancd", use:init.sh # brew install fzy
 
 zplug "plugins/git-auto-fetch", from:oh-my-zsh
 
