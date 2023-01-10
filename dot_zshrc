@@ -1,0 +1,73 @@
+#2 try
+
+# zplug
+source ~/.zplug/init.zsh
+zplug "RiverGlide/zsh-goenv", from:gitlab
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+zplug load
+
+#1.2 better for daily
+alias ss='source ~/.zshrc'
+alias update='bubu; omz update; tldr --update; chezmoi upgrade'
+alias \$=''
+alias rm='trash'
+
+# git
+alias gpp='ga .;gcmsg "zz";gp'
+alias gdd='previous_branch=$(current_branch) && git checkout $(git_main_branch) && git pull && git branch -d $previous_branch'
+
+# development
+source ~/development.sh
+
+# nvim
+alias vim='nvim'
+alias vimz='nvim ~/.zshrc'
+alias vimr='nvim ~/.config/nvim/init.lua'
+
+## yabai&skhd
+alias vimy='nvim ~/.config/yabai/yabairc'
+alias vims='nvim ~/.config/skhd/skhdrc'
+
+plugins=(
+  # try
+  git-auto-fetch
+  vscode
+  brew
+  # del
+  fzf # ctrl+r
+
+  git # ggpull, ggpush...
+  aliases # acs
+  # env
+  pyenv 
+  nvm
+  rbenv
+
+  autojump # j
+  zsh-autosuggestions # auto complete
+  zsh-syntax-highlighting # colorful
+)
+
+# magic-enter: just Enter
+plugins+=(magic-enter)
+MAGIC_ENTER_GIT_COMMAND='gsb'
+MAGIC_ENTER_OTHER_COMMAND='ls'
+
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+zstyle ':omz:update' mode disabled
+COMPLETION_WAITING_DOTS="true"
+source $ZSH/oh-my-zsh.sh
+eval "$(starship init zsh)"
+
+### Codex CLI setup - start
+export CODEX_CLI_PATH=/Users/fl/GitHub/Codex-CLI
+source "$CODEX_CLI_PATH/scripts/zsh_plugin.zsh"
+bindkey '^G' create_completion
+### Codex CLI setup - end
