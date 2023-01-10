@@ -1,4 +1,5 @@
 #2 try
+if test “${PS1+set}”; then CDPATH=.:~:~/Github:~/Sourcetree:~/.config:/projects; fi
 
 # zplug
 source ~/.zplug/init.zsh
