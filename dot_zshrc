@@ -4,6 +4,25 @@ if test “${PS1+set}”; then CDPATH=.:~:~/Github:~/Sourcetree:~/.config:/proje
 # zplug
 source ~/.zplug/init.zsh
 zplug "RiverGlide/zsh-goenv", from:gitlab
+
+# zsh users
+zplug "zsh-users/zsh-completions",              defer:0
+zplug "zsh-users/zsh-autosuggestions",          defer:2, on:"zsh-users/zsh-completions"
+zplug "zsh-users/zsh-syntax-highlighting",      defer:3, on:"zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-history-substring-search", defer:3, on:"zsh-users/zsh-syntax-highlighting"
+
+# oh-my-zsh
+zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/brew", from:oh-my-zsh
+zplug "plugins/git-auto-fetch", from:oh-my-zsh
+zplug "plugins/vscode", from:oh-my-zsh
+zplug "plugins/fzf", from:oh-my-zsh
+zplug "plugins/aliases", from:oh-my-zsh
+zplug "plugins/pyenv", from:oh-my-zsh
+zplug "plugins/nvm", from:oh-my-zsh
+zplug "plugins/rbenv", from:oh-my-zsh
+zplug "plugins/autojump", from:oh-my-zsh
+
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
     if read -q; then
@@ -33,31 +52,6 @@ alias vimr='nvim ~/.config/nvim/init.lua'
 ## yabai&skhd
 alias vimy='nvim ~/.config/yabai/yabairc'
 alias vims='nvim ~/.config/skhd/skhdrc'
-
-plugins=(
-  # try
-  git-auto-fetch
-  vscode
-  brew
-  # del
-  fzf # ctrl+r
-
-  git # ggpull, ggpush...
-  aliases # acs
-  # env
-  pyenv 
-  nvm
-  rbenv
-
-  autojump # j
-  zsh-autosuggestions # auto complete
-  zsh-syntax-highlighting # colorful
-)
-
-# magic-enter: just Enter
-plugins+=(magic-enter)
-MAGIC_ENTER_GIT_COMMAND='gsb'
-MAGIC_ENTER_OTHER_COMMAND='ls'
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
