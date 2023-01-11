@@ -46,7 +46,7 @@ zplug load
 
 #1.2 better for daily
 alias ss='source ~/.zshrc'
-alias update='bubu; omz update; tldr --update; chezmoi upgrade'
+alias update='bugbc; omz update; tldr --update; chezmoi upgrade'
 alias \$=''
 alias rm='trash'
 
