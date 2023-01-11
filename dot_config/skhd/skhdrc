@@ -1,15 +1,15 @@
 #2 try
 
+# meta operation
+hyper - r : brew services restart yabai
+meh - space  : yabai -m space --layout bsp
+meh - return : yabai -m space --mirror y-axis
+
 # with key ctrl + alt + cmd
 meh - i : open -na iTerm
 meh - 1 : open -na Google\ Chrome
 meh - g : open -na Google\ Chrome
 meh - c : open -na Visual\ Studio\ Code
-
-# meta operation
-meh - r : brew services restart yabai
-meh - space  : yabai -m space --layout bsp
-meh - return : yabai -m space --mirror y-axis
 
 # Navigation
 alt - h : yabai -m window --focus west
