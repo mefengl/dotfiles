@@ -50,7 +50,7 @@ Plug 'mhinz/vim-startify'
 Plug 'jghauser/mkdir.nvim'
 
 Plug 'wakatime/vim-wakatime', Cond(!exists('g:vscode'))
-Plug 'github/copilot.vim', Cond(!exists('g:vscode'))
+" Plug 'github/copilot.vim', Cond(!exists('g:vscode'))
 
 Plug 'echasnovski/mini.nvim'
 
