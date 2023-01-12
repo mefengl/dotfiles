@@ -7,7 +7,12 @@ alias dota="chezmoi add"
 alias dotra="chezmoi re-add"
 
 # zplug
+if [[ ! -d ~/.zplug ]]; then
+    git clone https://github.com/zplug/zplug ~/.zplug
+fi
 source ~/.zplug/init.zsh
+
+zplug "zplug/zplug", hook-build: "zplug --self-manage"
 zplug "RiverGlide/zsh-goenv", from:gitlab
 
 # zsh users
@@ -46,7 +51,7 @@ zplug load
 
 #1.2 better for daily
 alias ss='source ~/.zshrc'
-alias update='bugbc; omz update; tldr --update; chezmoi upgrade'
+alias update='bugbc; omz update; tldr --update; chezmoi upgrade; zplug update;'
 alias \$=''
 alias rm='trash'
 
@@ -75,7 +80,7 @@ source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
 
 ### Codex CLI setup - start
-export CODEX_CLI_PATH=/Users/fl/GitHub/Codex-CLI
+export CODEX_CLI_PATH=~/GitHub/Codex-CLI
 source "$CODEX_CLI_PATH/scripts/zsh_plugin.zsh"
 bindkey '^G' create_completion
 ### Codex CLI setup - end
