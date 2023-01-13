@@ -46,6 +46,9 @@ function! Cond(cond, ...)
   return a:cond ? opts : extend(opts, { 'on': [], 'for': [] })
 endfunction
 call plug#begin()
+""2 try
+Plug 'tpope/vim-obsession'
+
 Plug 'mhinz/vim-startify'
 Plug 'jghauser/mkdir.nvim'
 

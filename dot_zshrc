@@ -66,6 +66,7 @@ source ~/development.sh
 alias vim='nvim'
 alias vimz='nvim ~/.zshrc'
 alias vimr='nvim ~/.config/nvim/init.lua'
+alias vimt='nvim ~/.tmux.conf'
 
 ## yabai&skhd
 alias vimy='nvim ~/.config/yabai/yabairc'
