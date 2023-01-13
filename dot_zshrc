@@ -2,9 +2,9 @@
 if test “${PS1+set}”; then CDPATH=.:~:~/Github:~/Sourcetree:~/.config:/projects; fi
 
 # chezmoi
-alias chezmoicd="chezmoi cd"
-alias chezmoia="chezmoi add"
-alias chezmoira="chezmoi re-add"
+alias checd="chezmoi cd"
+alias chea="chezmoi add"
+alias chera="chezmoi re-add"
 
 # zplug
 if [[ ! -d ~/.zplug ]]; then
