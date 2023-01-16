@@ -47,6 +47,19 @@ function! Cond(cond, ...)
 endfunction
 call plug#begin()
 ""2 try
+
+"" copy&paste
+Plug 'svermeulen/vim-cutlass'
+Plug 'svermeulen/vim-yoink'
+let g:yoinkIncludeDeleteOperations = 1
+nmap <C-n> <plug>(YoinkPostPasteSwapBack)
+nmap <C-p> <plug>(YoinkPostPasteSwapForward)
+nmap p <plug>(YoinkPaste_p)
+nmap P <plug>(YoinkPaste_P)
+nmap gp <plug>(YoinkPaste_gp)
+nmap gP <plug>(YoinkPaste_gP)
+
+
 Plug 'tpope/vim-obsession'
 
 Plug 'mhinz/vim-startify'
