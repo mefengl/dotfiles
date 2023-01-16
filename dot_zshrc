@@ -2,6 +2,7 @@
 if test “${PS1+set}”; then CDPATH=.:~:~/Github:~/Sourcetree:~/.config:/projects; fi
 
 # chezmoi
+export LANG=en_US.UTF-8
 alias checd="chezmoi cd"
 alias chea="chezmoi add"
 alias chera="chezmoi re-add"
