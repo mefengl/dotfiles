@@ -49,16 +49,19 @@ call plug#begin()
 ""2 try
 
 "" copy&paste
+set clipboard=unnamedplus
 Plug 'svermeulen/vim-cutlass'
 Plug 'svermeulen/vim-yoink'
 let g:yoinkIncludeDeleteOperations = 1
-nmap <C-n> <plug>(YoinkPostPasteSwapBack)
-nmap <C-p> <plug>(YoinkPostPasteSwapForward)
+let g:yoinkSavePersistently = 1
 nmap p <plug>(YoinkPaste_p)
 nmap P <plug>(YoinkPaste_P)
 nmap gp <plug>(YoinkPaste_gp)
 nmap gP <plug>(YoinkPaste_gP)
-
+nmap y <plug>(YoinkYankPreserveCursorPosition)
+xmap y <plug>(YoinkYankPreserveCursorPosition)
+nmap <C-n> <plug>(YoinkPostPasteSwapBack)
+nmap <C-p> <plug>(YoinkPostPasteSwapForward)
 
 Plug 'tpope/vim-obsession'
 
