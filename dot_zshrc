@@ -3,7 +3,7 @@ if test “${PS1+set}”; then CDPATH=.:~:~/Github:~/Sourcetree:~/.config:/proje
 
 #1.2 better for daily
 alias ss='source ~/.zshrc'
-alias update='bugbc; omz update; tldr --update; chezmoi upgrade; zplug update;'
+alias update='bubc; omz update; tldr --update; chezmoi upgrade; zplug update;'
 alias \$=''
 alias rm='trash'
 
