@@ -47,22 +47,6 @@ function! Cond(cond, ...)
 endfunction
 call plug#begin()
 ""2 try
-
-"" copy&paste
-set clipboard=unnamedplus
-Plug 'svermeulen/vim-cutlass'
-Plug 'svermeulen/vim-yoink'
-let g:yoinkIncludeDeleteOperations = 1
-let g:yoinkSavePersistently = 1
-nmap p <plug>(YoinkPaste_p)
-nmap P <plug>(YoinkPaste_P)
-nmap gp <plug>(YoinkPaste_gp)
-nmap gP <plug>(YoinkPaste_gP)
-nmap y <plug>(YoinkYankPreserveCursorPosition)
-xmap y <plug>(YoinkYankPreserveCursorPosition)
-nmap <C-n> <plug>(YoinkPostPasteSwapBack)
-nmap <C-p> <plug>(YoinkPostPasteSwapForward)
-
 Plug 'tpope/vim-obsession'
 
 Plug 'mhinz/vim-startify'
@@ -80,6 +64,9 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sensible' 
 Plug 'tpope/vim-commentary'
 call plug#end()
+
+" copy&paste
+set clipboard=unnamedplus
 
 " set up variables
 let g:t_co = 256
