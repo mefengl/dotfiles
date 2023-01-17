@@ -1,6 +1,12 @@
 #2 try
 if test “${PS1+set}”; then CDPATH=.:~:~/Github:~/Sourcetree:~/.config:/projects; fi
 
+#1.2 better for daily
+alias ss='source ~/.zshrc'
+alias update='bugbc; omz update; tldr --update; chezmoi upgrade; zplug update;'
+alias \$=''
+alias rm='trash'
+
 # chezmoi
 export LANG=en_US.UTF-8
 alias checd="chezmoi cd"
@@ -49,12 +55,6 @@ if ! zplug check --verbose; then
     fi
 fi
 zplug load
-
-#1.2 better for daily
-alias ss='source ~/.zshrc'
-alias update='bugbc; omz update; tldr --update; chezmoi upgrade; zplug update;'
-alias \$=''
-alias rm='trash'
 
 # git
 alias gpp='ga .;gcmsg "zz";gp'
