@@ -1,6 +1,13 @@
 #2 try
 if test “${PS1+set}”; then CDPATH=.:~:~/Github:~/Sourcetree:~/.config:/projects; fi
 
+# nvim
+alias vim='nvim'
+alias vimz='nvim ~/.zshrc'
+alias vimr='nvim ~/.config/nvim/init.lua'
+alias vimt='nvim ~/.tmux.conf'
+alias vimb='nvim ~/.config/homebrew/install.sh'
+
 #1.2 better for daily
 alias ss='source ~/.zshrc'
 alias update='bubc; omz update; tldr --update; chezmoi upgrade; zplug update;'
@@ -62,12 +69,6 @@ alias gdd='previous_branch=$(current_branch) && git checkout $(git_main_branch) 
 
 # development
 source ~/development.sh
-
-# nvim
-alias vim='nvim'
-alias vimz='nvim ~/.zshrc'
-alias vimr='nvim ~/.config/nvim/init.lua'
-alias vimt='nvim ~/.tmux.conf'
 
 ## yabai&skhd
 alias vimy='nvim ~/.config/yabai/yabairc'
