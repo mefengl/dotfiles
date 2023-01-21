@@ -14,6 +14,8 @@ packages=(
     pyenv
 
     bitwarden-cli
+
+    gh
 )
 
 for package in "${packages[@]}"; do
