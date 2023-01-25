@@ -18,7 +18,7 @@
                 },
                 "rules": [
                     {
-                        "description": "Caps Lock → Meh Key (⌃⌥⇧) (Caps Lock if alone)",
+                        "description": "Caps Lock → Meh Key (⌃⌥⇧) (Nothing if alone)",
                         "manipulators": [
                             {
                                 "from": {
@@ -36,11 +36,6 @@
                                             "left_control",
                                             "left_option"
                                         ]
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "caps_lock"
                                     }
                                 ],
                                 "type": "basic"
