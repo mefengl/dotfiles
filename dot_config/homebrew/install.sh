@@ -12,6 +12,8 @@ packages=(
     tmux
 
     pyenv
+    aria2 # for quicker xcodes download
+    robotsandpencils/made/xcodes
 
     bitwarden-cli
 
@@ -30,6 +32,7 @@ casks=(
     openinterminal
 
     bob
+    calibre
     mark-text
     wechat
 )
@@ -38,9 +41,14 @@ for cask in "${casks[@]}"; do
     brew install --cask "$cask"
 done
 
-# pyenv
+# python
 pyenv install 3.10
 pyenv global 3.10
+pip install --upgrade pip
+pip install asitop
+
+# xcodes
+xcodes install --latest --experimental-unxip
 
 #0.5 Else
 # git yabai skhd
