@@ -41,6 +41,25 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                        "description": "Make Shift+Caps Lock act as Caps Lock",
+                        "manipulators": [
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": {
+                                        "optional": ["shift"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "caps_lock"
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },
