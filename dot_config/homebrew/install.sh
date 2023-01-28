@@ -32,9 +32,9 @@ casks=(
     openinterminal
 
     bob
-    calibre
-    mark-text
     wechat
+    microsoft-outlook
+    mark-text
 )
 
 for cask in "${casks[@]}"; do
