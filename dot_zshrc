@@ -7,6 +7,9 @@ alias vimz='nvim ~/.zshrc'
 alias vimr='nvim ~/.config/nvim/init.lua'
 alias vimt='nvim ~/.tmux.conf'
 alias vimb='nvim ~/.config/homebrew/install.sh'
+# vscode
+alias codek='code ~/.config/karabiner/karabiner.json'
+alias codeb='code ~/.config/homebrew/install.sh'
 
 #1.2 better for daily
 alias \$=''

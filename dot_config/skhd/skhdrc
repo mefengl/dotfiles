@@ -7,7 +7,6 @@ meh - return : yabai -m space --mirror y-axis
 
 # with key ctrl + alt + cmd
 meh - i : open -na iTerm
-meh - 1 : open -na Google\ Chrome
 meh - g : open -na Google\ Chrome
 meh - c : open -na Visual\ Studio\ Code
 
