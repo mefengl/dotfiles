@@ -35,6 +35,7 @@ casks=(
 
     bob
     wechat
+    arc
     # microsoft-outlook
     # mark-text
 )
