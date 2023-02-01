@@ -44,6 +44,10 @@ for cask in "${casks[@]}"; do
     brew install --cask "$cask"
 done
 
+# git
+# gh auth login
+# gh auth setup-git
+
 # python
 # pyenv install 3.10
 # pyenv global 3.10
