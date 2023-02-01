@@ -12,8 +12,8 @@ packages=(
     tmux
 
     pyenv
-    aria2 # for quicker xcodes download
-    robotsandpencils/made/xcodes
+    # aria2 # for quicker xcodes download
+    # robotsandpencils/made/xcodes
 
     bitwarden-cli
 
@@ -28,13 +28,15 @@ casks=(
     homebrew/cask-fonts/font-fira-code-nerd-font
 
     visual-studio-code
+    karabiner-elements
+    raycast
     iterm2
     openinterminal
 
     bob
     wechat
-    microsoft-outlook
-    mark-text
+    # microsoft-outlook
+    # mark-text
 )
 
 for cask in "${casks[@]}"; do
@@ -42,13 +44,13 @@ for cask in "${casks[@]}"; do
 done
 
 # python
-pyenv install 3.10
-pyenv global 3.10
-pip install --upgrade pip
-pip install asitop
+# pyenv install 3.10
+# pyenv global 3.10
+# pip install --upgrade pip
+# pip install asitop
 
 # xcodes
-xcodes install --latest --experimental-unxip
+# xcodes install --latest --experimental-unxip
 
 #0.5 Else
 # git yabai skhd
