@@ -31,6 +31,7 @@ cask "raycast"
 cask "iterm2"
 cask "openinterminal"
 
+cask "arc"
 cask "snipaste"
 cask "bob"
 cask "wechat"
