@@ -1,0 +1,52 @@
+# Brewfile
+
+NONINTERACTIVE=1
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew cleanup
+
+tap "homebrew/cask-fonts"
+
+brew "starship"
+brew "autojump"
+brew "trash"
+brew "tldr"
+brew "chezmoi"
+brew "neovim"
+brew "tmux"
+
+brew "pyenv"
+# brew "aria2" # for quicker xcodes download
+# brew "robotsandpencils/made/xcodes"
+
+brew "bitwarden-cli"
+brew "gh"
+
+cask "font-fira-code-nerd-font"
+
+cask "visual-studio-code"
+cask "karabiner-elements"
+cask "raycast"
+cask "iterm2"
+cask "openinterminal"
+
+cask "snipaste"
+cask "bob"
+cask "wechat"
+# cask "microsoft-outlook"
+# cask "mark-text"
+
+# # Python
+# run "pyenv install 3.10"
+# run "pyenv global 3.10"
+# run "pip install --upgrade pip"
+# run "pip install asitop"
+
+# # Xcodes
+# run "xcodes install --latest --experimental-unxip"
+
+# # Else
+# brew "git"
+# brew "yabai"
+# brew "skhd"
