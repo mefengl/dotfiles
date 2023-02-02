@@ -33,9 +33,10 @@ casks=(
     iterm2
     openinterminal
 
+    arc
     bob
     wechat
-    arc
+    snipaste
     # microsoft-outlook
     # mark-text
 )
