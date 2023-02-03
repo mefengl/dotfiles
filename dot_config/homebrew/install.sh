@@ -28,6 +28,7 @@ casks=(
     homebrew/cask-fonts/font-fira-code-nerd-font
 
     visual-studio-code
+    github
     karabiner-elements
     raycast
     iterm2
