@@ -36,7 +36,7 @@ casks=(
 
     arc
     notion
-    flomo
+    menubarx
     snipaste
     shottr
     bob
