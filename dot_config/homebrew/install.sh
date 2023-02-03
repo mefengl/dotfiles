@@ -35,6 +35,7 @@ casks=(
     openinterminal
 
     arc
+    notion
     snipaste
     shottr
     bob

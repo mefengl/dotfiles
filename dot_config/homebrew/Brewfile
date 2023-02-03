@@ -33,6 +33,7 @@ cask "iterm2"
 cask "openinterminal"
 
 cask "arc"
+cask "notion"
 cask "snipaste"
 cask "shottr"
 cask "bob"
