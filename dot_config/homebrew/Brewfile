@@ -33,6 +33,7 @@ cask "openinterminal"
 
 cask "arc"
 cask "snipaste"
+cask "shottr"
 cask "bob"
 cask "wechat"
 # cask "microsoft-outlook"

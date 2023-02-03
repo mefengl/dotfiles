@@ -1,6 +1,9 @@
 #2 try
 if test “${PS1+set}”; then CDPATH=.:~:~/Github:~/Sourcetree:~/.config:/projects; fi
 
+# node
+alias pn='pnpm'
+
 # nvim
 alias vim='nvim'
 alias vimz='nvim ~/.zshrc'

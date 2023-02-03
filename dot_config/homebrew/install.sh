@@ -34,9 +34,10 @@ casks=(
     openinterminal
 
     arc
+    snipaste
+    shottr
     bob
     wechat
-    snipaste
     # microsoft-outlook
     # mark-text
 )
