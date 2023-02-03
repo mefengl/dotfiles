@@ -34,6 +34,7 @@ cask "openinterminal"
 
 cask "arc"
 cask "notion"
+cask "flomo"
 cask "snipaste"
 cask "shottr"
 cask "bob"
