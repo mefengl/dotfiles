@@ -78,6 +78,7 @@ alias gpp='ga .;gcmsg "zz";gp'
 alias gdd='previous_branch=$(current_branch) && git checkout $(git_main_branch) && git pull && git branch -d $previous_branch'
 
 # development
+touch ~/development.sh
 source ~/development.sh
 
 ## yabai&skhd
