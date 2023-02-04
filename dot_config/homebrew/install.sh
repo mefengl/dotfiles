@@ -11,6 +11,7 @@ packages=(
     neovim
     tmux
 
+    nvm
     pyenv
     # aria2 # for quicker xcodes download
     # robotsandpencils/made/xcodes
@@ -36,6 +37,7 @@ casks=(
 
     arc
     notion
+    hiddenbar
     menubarx
     snipaste
     shottr

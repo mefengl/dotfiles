@@ -16,6 +16,7 @@ brew "chezmoi"
 brew "neovim"
 brew "tmux"
 
+brew "nvm"
 brew "pyenv"
 # brew "aria2" # for quicker xcodes download
 # brew "robotsandpencils/made/xcodes"
@@ -34,6 +35,7 @@ cask "openinterminal"
 
 cask "arc"
 cask "notion"
+cask "hiddenbar"
 cask "menubarx"
 cask "snipaste"
 cask "shottr"
