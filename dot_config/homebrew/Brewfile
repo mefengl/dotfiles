@@ -1,13 +1,3 @@
-# Brewfile
-
-NONINTERACTIVE=1
-
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew cleanup
-
-tap "homebrew/cask-fonts"
-
 brew "starship"
 brew "autojump"
 brew "trash"
@@ -24,7 +14,8 @@ brew "pyenv"
 brew "bitwarden-cli"
 brew "gh"
 
-cask "font-fira-code-nerd-font"
+cask "homebrew/cask-fonts/font-input"
+cask "homebrew/cask-fonts/font-fira-code-nerd-font"
 
 cask "visual-studio-code"
 cask "github"

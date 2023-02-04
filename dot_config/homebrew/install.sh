@@ -27,6 +27,7 @@ done
 
 casks=(
     homebrew/cask-fonts/font-fira-code-nerd-font
+    homebrew/cask-fonts/font-input
 
     visual-studio-code
     github
