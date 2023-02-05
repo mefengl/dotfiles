@@ -15,7 +15,6 @@ brew "bitwarden-cli"
 brew "gh"
 
 cask "homebrew/cask-fonts/font-input"
-cask "homebrew/cask-fonts/font-fira-code-nerd-font"
 
 cask "visual-studio-code"
 cask "github"
