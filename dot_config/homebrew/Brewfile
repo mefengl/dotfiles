@@ -34,6 +34,9 @@ cask "wechat"
 # cask "microsoft-outlook"
 # cask "mark-text"
 
+# cask "podman-desktop"
+# cask "electron-fiddle"
+
 # # Python
 # run "pyenv install 3.10"
 # run "pyenv global 3.10"
