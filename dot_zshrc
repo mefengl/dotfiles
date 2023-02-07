@@ -2,7 +2,7 @@
 if test “${PS1+set}”; then CDPATH=.:~:~/Github:~/Sourcetree:~/.config:/projects; fi
 
 # git
-alias gcamdaily='git commit -am "daily: $(date +%m/%d)"'
+alias gdaily='git commit -am "daily: $(date +%m/%d)"'
 
 # node
 alias pn='pnpm'
