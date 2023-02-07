@@ -32,6 +32,7 @@ export LANG=en_US.UTF-8
 alias checd="chezmoi cd"
 alias chea="chezmoi add"
 alias chera="chezmoi re-add"
+alias cherm="chezmoi remove"
 
 # zplug
 if [[ ! -d ~/.zplug ]]; then
