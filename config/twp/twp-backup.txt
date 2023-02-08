@@ -1,5 +1,5 @@
 {
-    "timeStamp": 1675858952695,
+    "timeStamp": 1675863909184,
     "version": "9.6",
     "pageTranslatorService": "google",
     "textTranslatorService": "google",
@@ -17,7 +17,8 @@
         "www.lesswrong.com",
         "mindingourway.com",
         "alexkondov.com",
-        "matklad.github.io"
+        "matklad.github.io",
+        "www.theneurondaily.com"
     ],
     "neverTranslateSites": [],
     "sitesToTranslateWhenHovering": [],
@@ -54,7 +55,7 @@
     "translateTag_pre": "yes",
     "dontSortResults": "no",
     "translateDynamicallyCreatedContent": "yes",
-    "autoTranslateWhenClickingALink": "yes",
+    "autoTranslateWhenClickingALink": "no",
     "translateSelectedWhenPressTwice": "no",
     "translateTextOverMouseWhenPressTwice": "no",
     "translateClickingOnce": "no"
