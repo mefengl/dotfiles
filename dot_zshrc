@@ -25,7 +25,7 @@ alias rm='trash'
 alias ss='source ~/.zshrc'
 github_clone(){gh repo list mefengl | awk '{print $1}' | xargs -L1 gh repo clone 2>/dev/null}
 github_update(){echo -e "\033[32mgithub_update:\033[0m";cd ~/GitHub;github_clone;for i in *;do cd $i;git pull;cd ~;done}
-alias update='bubc; omz update; tldr --update; chezmoi upgrade; zplug update; github_update;'
+alias update='bubc; omz update; tldr --update; chezmoi upgrade; zplug update'
 
 # chezmoi
 export LANG=en_US.UTF-8
