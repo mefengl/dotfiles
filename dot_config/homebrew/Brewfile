@@ -16,6 +16,12 @@ brew "gh"
 
 cask "homebrew/cask-fonts/font-input"
 
+cask "homebrew/cask-fonts/font-fira-code"
+cask "homebrew/cask-fonts/font-fira-code-nerd-font"
+cask "homebrew/cask-fonts/font-fira-mono"
+cask "homebrew/cask-fonts/font-fira-mono-nerd-font"
+cask "homebrew/cask-fonts/font-fira-mono-for-powerline"
+
 cask "visual-studio-code"
 cask "github"
 cask "karabiner-elements"
