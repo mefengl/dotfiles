@@ -31,11 +31,12 @@ cask "snipaste"
 cask "shottr"
 cask "bob"
 cask "wechat"
-# cask "microsoft-outlook"
-# cask "mark-text"
 
+# cask "mark-text"
+# cask "zotero"
 # cask "podman-desktop"
 # cask "electron-fiddle"
+# cask "microsoft-outlook"
 
 # # Python
 # run "pyenv install 3.10"
