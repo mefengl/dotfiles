@@ -36,6 +36,7 @@ alias checd="chezmoi cd"
 alias chea="chezmoi add"
 alias chera="chezmoi re-add"
 alias cherm="chezmoi remove"
+alias cheu="chezmoi update"
 
 # zplug
 if [[ ! -d ~/.zplug ]]; then
