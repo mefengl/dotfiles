@@ -9,12 +9,15 @@ alias pn='pnpm'
 alias pnx='pnpm dlx'
 alias pnr='pnpm run'
 
+# homebrew
+alias brewb='brew bundle --file=~/.config/homebrew/Brewfile'
+alias vimb='nvim ~/.config/homebrew/Brewfile'
+
 # nvim
 alias vim='nvim'
 alias vimz='nvim ~/.zshrc'
 alias vimr='nvim ~/.config/nvim/init.lua'
 alias vimt='nvim ~/.tmux.conf'
-alias vimb='nvim ~/.config/homebrew/Brewfile'
 # vscode
 alias codek='code ~/.config/karabiner/karabiner.json'
 alias codeb='code ~/.config/homebrew/install.sh'
