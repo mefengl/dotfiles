@@ -32,8 +32,8 @@ cask "shottr"
 cask "bob"
 cask "wechat"
 
-tap "lencx/chatgpt", "https://github.com/lencx/chatgpt.git"
-cask "chatgpt", args: { "no-quarantine": true }
+# tap "lencx/chatgpt", "https://github.com/lencx/chatgpt.git"
+# cask "chatgpt", args: { "no-quarantine": true }
 
 # cask "mark-text"
 # cask "zotero"
