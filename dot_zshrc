@@ -1,6 +1,11 @@
 #2 try
 if test “${PS1+set}”; then CDPATH=.:~:~/Github:~/Sourcetree:~/.config:/projects; fi
 
+# github
+alias ghr='gh repo'
+alias ghc='gh repo clone'
+alias ghrc='gh repo create'
+
 # git
 alias gdaily='git commit -am "daily: $(date +%m/%d)" && git push'
 
