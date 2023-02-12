@@ -30,7 +30,7 @@ alias codeb='code ~/.config/homebrew/Brewfile'
 #1.2 better for daily
 alias \$=''
 alias rm='trash'
-alias ss='source ~/.zshrc'
+alias ss='exec zsh'
 github_clone(){gh repo list mefengl | awk '{print $1}' | xargs -L1 gh repo clone 2>/dev/null}
 github_update(){echo -e "\033[32mgithub_update:\033[0m";cd ~/GitHub;github_clone;for i in *;do cd $i;git pull;cd ~;done}
 alias update='bubc; omz update; tldr --update; chezmoi upgrade; zplug update'
@@ -99,3 +99,7 @@ alias vimy='nvim ~/.config/yabai/yabairc'
 alias vims='nvim ~/.config/skhd/skhdrc'
 
 eval "$(starship init zsh)"
+
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+fpath+=~/.zfunc

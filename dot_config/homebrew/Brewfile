@@ -14,6 +14,8 @@ brew "pyenv"
 brew "bitwarden-cli"
 brew "gh"
 
+brew "poetry"
+
 cask "homebrew/cask-fonts/font-input"
 
 cask "visual-studio-code"
