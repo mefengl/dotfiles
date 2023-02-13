@@ -29,13 +29,17 @@ cask "arc"
 cask "notion"
 cask "hiddenbar"
 cask "menubarx"
+cask "monitorcontrol"
+
 cask "snipaste"
 cask "shottr"
+cask "kap"
 cask "bob"
 cask "wechat"
 
 cask "1password"
 cask "1password-cli"
+
 # tap "lencx/chatgpt", "https://github.com/lencx/chatgpt.git"
 # cask "chatgpt", args: { "no-quarantine": true }
 
