@@ -3,3 +3,6 @@ success_symbol = "[🐈]()"
 
 [nodejs]
 symbol = "[⬢](bold green) "
+
+[aws]
+disabled = true

@@ -1,6 +1,9 @@
 #2 try
 if test “${PS1+set}”; then CDPATH=.:~:~/Github:~/Sourcetree:~/.config:/projects; fi
 
+# starship
+alias vimstar='nvim ~/.config/starship.toml'
+
 # github
 alias ghr='gh repo'
 alias ghc='gh repo clone'
