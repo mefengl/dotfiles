@@ -8,6 +8,8 @@ brew "tmux"
 
 brew "nvm"
 brew "pyenv"
+brew "rustup-init"
+
 # brew "aria2" # for quicker xcodes download
 # brew "robotsandpencils/made/xcodes"
 
