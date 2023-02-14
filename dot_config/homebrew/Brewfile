@@ -11,6 +11,7 @@ brew "nvm"
 brew "pyenv"
 # brew "rustup-init"
 
+
 # brew "aria2" # for quicker xcodes download
 # brew "robotsandpencils/made/xcodes"
 
@@ -41,6 +42,8 @@ cask "wechat"
 
 cask "1password"
 cask "1password-cli"
+
+cask "docker"
 
 # tap "lencx/chatgpt", "https://github.com/lencx/chatgpt.git"
 # cask "chatgpt", args: { "no-quarantine": true }
