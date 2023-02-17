@@ -3,8 +3,8 @@
 #2 try
 
 # auto app placement
-yabai -m rule --add app="GitHub Desktop" space=2
-yabai -m rule --add app=Arc space=3
+yabai -m rule --add app=Arc space=2
+yabai -m rule --add app="GitHub Desktop" space=3
 yabai -m rule --add app=WeCom space=4
 yabai -m rule --add app=Notion space=5
 
