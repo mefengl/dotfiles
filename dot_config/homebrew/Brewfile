@@ -17,14 +17,12 @@ brew "kafka"
 # brew "aria2" # for quicker xcodes download
 # brew "robotsandpencils/made/xcodes"
 
-brew "fwartner/tap/mac-cleanup"
-
+brew "poetry"
 
 cask "homebrew/cask-fonts/font-input"
 
 cask "visual-studio-code"
 cask "github"
-cask "insomnia"
 cask "karabiner-elements"
 cask "raycast"
 cask "iterm2"
@@ -42,13 +40,12 @@ cask "snipaste"
 cask "shottr"
 cask "kap"
 cask "bob"
-
 cask "wechat"
-cask "qq"
-cask "tencent-meeting"
 
 cask "1password"
 cask "1password-cli"
+
+cask "docker"
 
 # tap "lencx/chatgpt", "https://github.com/lencx/chatgpt.git"
 # cask "chatgpt", args: { "no-quarantine": true }

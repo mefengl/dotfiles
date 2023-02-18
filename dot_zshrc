@@ -10,7 +10,7 @@ alias ss='exec zsh'
 alias q='exit'
 github_clone(){gh repo list mefengl | awk '{print $1}' | xargs -L1 gh repo clone 2>/dev/null}
 github_update(){echo -e "\033[32mgithub_update:\033[0m";cd ~/GitHub;github_clone;for i in *;do cd $i;git pull;cd ~;done}
-alias update='bubc; tldr --update; chezmoi upgrade; zplug update'
+alias update='bubc; omz update; tldr --update; chezmoi upgrade; zplug update'
 
 # starship
 alias vimstar='nvim ~/.config/starship.toml'
@@ -66,9 +66,9 @@ zplug "zsh-users/zsh-history-substring-search", defer:3, on:"zsh-users/zsh-synta
 
 # oh-my-zsh
 ##2 try
-zplug "b4b4r07/enhancd", use:init.sh
-
 zplug "plugins/tmux", from:oh-my-zsh
+
+zplug "b4b4r07/enhancd", use:init.sh # brew install fzy
 
 zplug "plugins/docker", from:oh-my-zsh
 zplug "plugins/terraform", from:oh-my-zsh
