@@ -44,6 +44,7 @@ cask "bob"
 
 cask "wechat"
 cask "qq"
+cask "tencent-meeting"
 
 cask "1password"
 cask "1password-cli"
