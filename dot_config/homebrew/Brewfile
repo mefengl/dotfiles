@@ -11,7 +11,8 @@ brew "nvm"
 brew "pyenv"
 # brew "rustup-init"
 
-brew "hashicorp/tap/terraform"
+brew "terraform"
+brew "kafka"
 
 # brew "aria2" # for quicker xcodes download
 # brew "robotsandpencils/made/xcodes"
@@ -39,7 +40,7 @@ cask "monitorcontrol"
 
 cask "snipaste"
 cask "shottr"
-# cask "kap"
+cask "kap"
 cask "bob"
 
 cask "wechat"

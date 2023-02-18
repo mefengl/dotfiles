@@ -69,13 +69,17 @@ zplug "zsh-users/zsh-history-substring-search", defer:3, on:"zsh-users/zsh-synta
 zplug "b4b4r07/enhancd", use:init.sh
 
 zplug "plugins/tmux", from:oh-my-zsh
+
 zplug "plugins/docker", from:oh-my-zsh
 zplug "plugins/terraform", from:oh-my-zsh
+
 ## alias & fast operation
 zplug "plugins/aliases", from:oh-my-zsh
 zplug "djui/alias-tips"
+
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/git-auto-fetch", from:oh-my-zsh
+
 zplug "plugins/brew", from:oh-my-zsh
 zplug "plugins/vscode", from:oh-my-zsh
 zplug "plugins/autojump", from:oh-my-zsh
