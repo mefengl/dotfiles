@@ -10,6 +10,7 @@ yabai -m rule --add app=Notion space=5
 
 yabai -m rule --add app=Docker space=7
 yabai -m rule --add app=HTTPie space=8
+# yabai -m rule --add app=wechatwebdevtools space=9
 
 # borders
 yabai -m config window_border                on
