@@ -12,7 +12,7 @@ brew "pyenv"
 # brew "rustup-init"
 
 brew "terraform"
-brew "kafka"
+# brew "kafka"
 
 # brew "aria2" # for quicker xcodes download
 # brew "robotsandpencils/made/xcodes"
