@@ -1,0 +1,24 @@
+! 2023-01-10 https://www.lesswrong.com
+www.lesswrong.com##.intercom-namespace
+
+! 2023-01-11 https://www.lesswrong.com
+www.lesswrong.com##.PostsPage-commentsSection
+www.lesswrong.com##.PostsPagePostFooter-footerSection
+www.lesswrong.com##.PostsPagePostFooter-footerTagList
+www.lesswrong.com##.PostsPage-centralColumn > .FooterTagList-root
+www.lesswrong.com##.PostsPagePostHeader-headerVote
+www.lesswrong.com##.PostsPagePostHeader-secondaryInfo
+www.lesswrong.com##.PingbacksList-root
+www.lesswrong.com##.Footer-root
+www.lesswrong.com##.BottomNavigation-nextPost.BottomNavigation-post [href] > .BottomNavigationItem-root > .BottomNavigationItem-meta
+www.lesswrong.com##.BottomNavigationItem-previous.BottomNavigationItem-root > .BottomNavigationItem-meta
+
+! 2023-02-02 https://basecamp.com
+basecamp.com##.pop--visible.pop
+
+! 2023-02-02 https://turbo.build
+turbo.build##.nx-px-4.xl\:nx-block.nx-shrink-0.nx-w-64.nx-hidden.nx-order-last.nextra-toc
+
+! 2023-02-02 https://tanstack.com
+tanstack.com##.xl\:p-12.p-6.md\:block.hidden
+
