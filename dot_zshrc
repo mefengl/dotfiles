@@ -1,3 +1,54 @@
+# zplug
+if [[ ! -d ~/.zplug ]]; then
+    git clone https://github.com/zplug/zplug ~/.zplug
+fi
+source ~/.zplug/init.zsh
+
+zplug "zplug/zplug", hook-build: "zplug --self-manage"
+zplug "RiverGlide/zsh-goenv", from:gitlab
+
+# zsh users
+zplug "zsh-users/zsh-completions",              defer:0
+zplug "zsh-users/zsh-autosuggestions",          defer:2, on:"zsh-users/zsh-completions"
+zplug "zsh-users/zsh-syntax-highlighting",      defer:3, on:"zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-history-substring-search", defer:3, on:"zsh-users/zsh-syntax-highlighting"
+
+# oh-my-zsh
+##2 try
+zplug "plugins/common-aliases", from:oh-my-zsh
+zplug "plugins/command-not-found", from:oh-my-zsh
+zplug "plugins/1password", from:oh-my-zsh
+
+zplug "plugins/tmux", from:oh-my-zsh
+
+zplug "b4b4r07/enhancd", use:init.sh # brew install fzy
+
+zplug "plugins/docker", from:oh-my-zsh
+zplug "plugins/terraform", from:oh-my-zsh
+
+## alias & fast operation
+zplug "plugins/aliases", from:oh-my-zsh
+zplug "djui/alias-tips"
+
+zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/git-auto-fetch", from:oh-my-zsh
+
+zplug "plugins/brew", from:oh-my-zsh
+zplug "plugins/vscode", from:oh-my-zsh
+zplug "plugins/autojump", from:oh-my-zsh
+## env
+zplug "plugins/pyenv", from:oh-my-zsh
+zplug "plugins/nvm", from:oh-my-zsh
+zplug "plugins/rbenv", from:oh-my-zsh
+
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+zplug load
+
 #2 try
 
 # docker
@@ -48,53 +99,6 @@ alias chea="chezmoi add"
 alias chera="chezmoi re-add"
 alias cherm="chezmoi remove"
 alias cheu="chezmoi update"
-
-# zplug
-if [[ ! -d ~/.zplug ]]; then
-    git clone https://github.com/zplug/zplug ~/.zplug
-fi
-source ~/.zplug/init.zsh
-
-zplug "zplug/zplug", hook-build: "zplug --self-manage"
-zplug "RiverGlide/zsh-goenv", from:gitlab
-
-# zsh users
-zplug "zsh-users/zsh-completions",              defer:0
-zplug "zsh-users/zsh-autosuggestions",          defer:2, on:"zsh-users/zsh-completions"
-zplug "zsh-users/zsh-syntax-highlighting",      defer:3, on:"zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-history-substring-search", defer:3, on:"zsh-users/zsh-syntax-highlighting"
-
-# oh-my-zsh
-##2 try
-zplug "plugins/tmux", from:oh-my-zsh
-
-zplug "b4b4r07/enhancd", use:init.sh # brew install fzy
-
-zplug "plugins/docker", from:oh-my-zsh
-zplug "plugins/terraform", from:oh-my-zsh
-
-## alias & fast operation
-zplug "plugins/aliases", from:oh-my-zsh
-zplug "djui/alias-tips"
-
-zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/git-auto-fetch", from:oh-my-zsh
-
-zplug "plugins/brew", from:oh-my-zsh
-zplug "plugins/vscode", from:oh-my-zsh
-zplug "plugins/autojump", from:oh-my-zsh
-## env
-zplug "plugins/pyenv", from:oh-my-zsh
-zplug "plugins/nvm", from:oh-my-zsh
-zplug "plugins/rbenv", from:oh-my-zsh
-
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-zplug load
 
 # git
 alias gpp='ga .;gcmsg "zz";gp'
