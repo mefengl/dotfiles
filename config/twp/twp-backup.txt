@@ -1,5 +1,5 @@
 {
-    "timeStamp": 1676188421165,
+    "timeStamp": 1676903044302,
     "version": "9.6",
     "pageTranslatorService": "google",
     "textTranslatorService": "google",
@@ -19,7 +19,8 @@
         "alexkondov.com",
         "matklad.github.io",
         "www.theneurondaily.com",
-        "learning.oreilly.com"
+        "learning.oreilly.com",
+        "aibreakfast.beehiiv.com"
     ],
     "neverTranslateSites": [],
     "sitesToTranslateWhenHovering": [],
