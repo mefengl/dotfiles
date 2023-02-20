@@ -3,8 +3,8 @@
 #2 try
 
 # auto app placement
-yabai -m rule --add app="GitHub Desktop" space=2
-yabai -m rule --add app=Arc space=3
+yabai -m rule --add app=Arc space=2
+yabai -m rule --add app="GitHub Desktop" space=3
 yabai -m rule --add app=WeCom space=4
 yabai -m rule --add app=Notion space=5
 
@@ -24,7 +24,6 @@ yabai -m config normal_window_border_color   0xffaaaaaa
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config --space 3 layout float
 yabai -m config top_padding                  6
 yabai -m config bottom_padding               6
 yabai -m config left_padding                 25
@@ -43,3 +42,6 @@ yabai -m signal --add event=window_focused action="${functions[record_display_id
 yabai -m signal --add event=application_front_switched action="${functions[record_display_id]}"
 yabai -m signal --add event=window_destroyed action="${functions[focus_current_display]}"
 yabai -m signal --add event=application_terminated action="${functions[focus_current_display]}"
+
+#0.6 how to
+# yabai -m config --space 3 layout float
