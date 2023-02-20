@@ -10,10 +10,6 @@ yabai -m rule --add app=Notion space=5
 
 yabai -m rule --add app=HTTPie space=8
 
-# sync mouse and focus
-yabai -m config mouse_modifier ctrl
-yabai -m config focus_follows_mouse          autofocus
-
 # borders
 yabai -m config window_border                on
 yabai -m config active_window_border_topmost on
