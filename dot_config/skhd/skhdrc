@@ -2,7 +2,6 @@
 
 # meta operation
 hyper - r : brew services restart yabai
-meh - space  : yabai -m space --layout bsp
 meh - return : yabai -m space --mirror y-axis
 
 # with key ctrl + alt + cmd
