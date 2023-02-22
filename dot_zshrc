@@ -61,11 +61,13 @@ alias pkri='packer init .'
 alias pkrf='packer fmt -recursive .'
 alias pkrv='packer validate .'
 alias pkrb='packer build .'
+alias pkrall='packer init . && packer fmt -recursive . && packer validate . && packer build .'
 
 # terraform
 alias tff='terraform fmt -recursive'
 alias tfa='terraform apply -auto-approve'
 alias tfd='terraform destroy -auto-approve'
+alias tfall='terraform fmt -recursive && terraform apply -auto-approve'
 
 # docker
 alias awsdocker='aws ecr get-login-password --region $aws_region | docker login --username AWS --password-stdin $aws_prefix'
