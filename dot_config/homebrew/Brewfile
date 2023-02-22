@@ -12,6 +12,7 @@ brew "pyenv"
 # brew "rustup-init"
 
 brew "terraform"
+brew "packer"
 # brew "kafka"
 
 # brew "aria2" # for quicker xcodes download
