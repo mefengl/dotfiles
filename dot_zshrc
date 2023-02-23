@@ -126,7 +126,7 @@ alias codeb='code ~/.config/homebrew/Brewfile'
 export LANG=en_US.UTF-8
 alias checd="chezmoi cd"
 alias chea="chezmoi add"
-alias chera="chezmoi update && chezmoi re-add"
+alias chera="chezmoi re-add"
 alias cherm="chezmoi remove"
 alias cheu="chezmoi update"
 
