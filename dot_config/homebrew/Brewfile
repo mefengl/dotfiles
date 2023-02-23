@@ -12,6 +12,7 @@ brew "pyenv"
 # brew "rustup-init"
 
 brew "terraform"
+brew "terragrunt"
 brew "packer"
 # brew "kafka"
 
