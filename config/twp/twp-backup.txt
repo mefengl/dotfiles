@@ -1,5 +1,5 @@
 {
-    "timeStamp": 1677128054342,
+    "timeStamp": 1677140014632,
     "version": "9.6",
     "pageTranslatorService": "google",
     "textTranslatorService": "google",
@@ -22,7 +22,8 @@
         "aibreakfast.beehiiv.com",
         "learning.oreilly.com",
         "spacelift.io",
-        "www.argonaut.dev"
+        "www.argonaut.dev",
+        "world.hey.com"
     ],
     "neverTranslateSites": [],
     "sitesToTranslateWhenHovering": [],
