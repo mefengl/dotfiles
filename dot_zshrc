@@ -71,6 +71,14 @@ alias tfa='terraform apply -auto-approve'
 alias tfd='terraform destroy -auto-approve'
 alias tfall='terraform fmt -recursive && terraform apply -auto-approve'
 
+alias tfw='terraform workspace'
+alias tfws='terraform workspace select'
+alias tfwn='terraform workspace new'
+alias tfwd='terraform workspace delete'
+alias tfwls='terraform workspace list'
+
+alias tfr='terraform refresh'
+
 # terragrunt
 alias tg='terragrunt'
 alias tgi='terragrunt init'
