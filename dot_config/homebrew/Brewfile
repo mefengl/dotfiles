@@ -22,6 +22,7 @@ brew "poetry"
 cask "homebrew/cask-fonts/font-input"
 
 cask "visual-studio-code"
+cask "wechatwebdevtools"
 cask "github"
 cask "karabiner-elements"
 cask "raycast"
