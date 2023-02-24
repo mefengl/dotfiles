@@ -69,7 +69,7 @@ alias pkrall='packer init . && packer fmt -recursive . && packer validate . && p
 alias tff='terraform fmt -recursive'
 alias tfa='terraform apply -auto-approve'
 alias tfd='terraform destroy -auto-approve'
-alias tfall='terraform fmt -recursive && terraform apply -auto-approve'
+alias tfall='terraform init && terraform fmt -recursive && terraform validate && terraform apply -auto-approve'
 
 alias tfw='terraform workspace'
 alias tfws='terraform workspace select'
