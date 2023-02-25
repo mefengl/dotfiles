@@ -22,7 +22,6 @@ brew "poetry"
 cask "homebrew/cask-fonts/font-input"
 
 cask "visual-studio-code"
-cask "wechatwebdevtools"
 cask "github"
 cask "karabiner-elements"
 cask "raycast"
@@ -30,6 +29,9 @@ cask "iterm2"
 cask "openinterminal"
 
 cask "docker"
+
+tap "mongodb/brew"
+brew "mongodb-community"
 
 cask "arc"
 cask "notion"
