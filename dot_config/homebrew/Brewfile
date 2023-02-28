@@ -59,6 +59,7 @@ cask "docker"
 # cask "podman-desktop"
 # cask "electron-fiddle"
 # cask "microsoft-outlook"
+cask "wpsoffice"
 
 # # Python
 # run "pyenv install 3.10"
