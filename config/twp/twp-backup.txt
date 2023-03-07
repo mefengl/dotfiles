@@ -1,5 +1,5 @@
 {
-    "timeStamp": 1677927989349,
+    "timeStamp": 1678011439747,
     "version": "9.6",
     "pageTranslatorService": "google",
     "textTranslatorService": "google",
@@ -24,7 +24,9 @@
         "spacelift.io",
         "www.argonaut.dev",
         "world.hey.com",
-        "www.bensbites.co"
+        "www.bensbites.co",
+        "mailchi.mp",
+        "www.paulgraham.com"
     ],
     "neverTranslateSites": [],
     "sitesToTranslateWhenHovering": [],
