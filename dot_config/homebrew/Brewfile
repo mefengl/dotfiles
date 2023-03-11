@@ -14,9 +14,9 @@ brew "pyenv"
 brew "terraform"
 # brew "kafka"
 
-# brew "aria2" # for quicker xcodes download
-# brew "robotsandpencils/made/xcodes"
-brew watchman
+brew "aria2" # for quicker xcodes download
+brew "robotsandpencils/made/xcodes"
+brew "watchman"
 
 brew "poetry"
 
@@ -69,7 +69,7 @@ cask "wpsoffice"
 # run "pip install --upgrade pip"
 # run "pip install asitop"
 
-# # Xcodes
+## Xcodes
 # run "xcodes install --latest --experimental-unxip"
 
 # # Else
