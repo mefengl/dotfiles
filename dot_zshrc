@@ -17,7 +17,6 @@ zplug "zsh-users/zsh-history-substring-search", defer:3, on:"zsh-users/zsh-synta
 ##2 try
 zplug "plugins/marktext", from:oh-my-zsh
 
-zplug "plugins/lol", from:oh-my-zsh
 zplug "plugins/pip", from:oh-my-zsh
 zplug "plugins/git-prompt", from:oh-my-zsh # add numbers of behind and ahead
 zplug "plugins/gitignore", from:oh-my-zsh

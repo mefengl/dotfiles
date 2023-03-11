@@ -1,5 +1,5 @@
 {
-    "timeStamp": 1678011439747,
+    "timeStamp": 1678520798161,
     "version": "9.6",
     "pageTranslatorService": "google",
     "textTranslatorService": "google",
@@ -36,7 +36,7 @@
     "showTranslatePageContextMenu": "yes",
     "showTranslateSelectedContextMenu": "yes",
     "showButtonInTheAddressBar": "yes",
-    "showOriginalTextWhenHovering": "yes",
+    "showOriginalTextWhenHovering": "no",
     "showTranslateSelectedButton": "no",
     "showPopupMobile": "yes",
     "useOldPopup": "yes",

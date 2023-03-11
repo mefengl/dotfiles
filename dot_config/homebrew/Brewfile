@@ -17,6 +17,7 @@ brew "terraform"
 brew "aria2" # for quicker xcodes download
 brew "robotsandpencils/made/xcodes"
 brew "watchman"
+brew "cocoapods"
 
 brew "poetry"
 
