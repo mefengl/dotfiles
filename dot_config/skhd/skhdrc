@@ -4,10 +4,9 @@
 hyper - r : brew services restart yabai
 meh - return : yabai -m space --mirror y-axis
 
-# with key ctrl + alt + cmd
-meh - i : open -na iTerm
-meh - g : open -na Google\ Chrome
-meh - c : open -na Visual\ Studio\ Code
+# # with key ctrl + alt + cmd
+# meh - i : open -na iTerm
+# meh - g : open -na Google\ Chrome
 
 # Navigation
 alt - h : yabai -m window --focus west
