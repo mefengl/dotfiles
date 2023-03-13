@@ -8,6 +8,7 @@ brew "gh"
 brew "tmux"
 
 brew "nvm"
+brew "direnv"
 brew "pyenv"
 # brew "rustup-init"
 
@@ -17,7 +18,6 @@ brew "terraform"
 brew "aria2" # for quicker xcodes download
 brew "robotsandpencils/made/xcodes"
 brew "watchman"
-brew "cocoapods"
 
 brew "poetry"
 
