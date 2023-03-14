@@ -10,7 +10,7 @@ brew "tmux"
 brew "nvm"
 brew "direnv"
 brew "pyenv"
-# brew "rustup-init"
+brew "rustup-init"
 
 brew "terraform"
 # brew "kafka"
