@@ -1,5 +1,5 @@
 {
-    "timeStamp": 1678520798161,
+    "timeStamp": 1678764382297,
     "version": "9.6",
     "pageTranslatorService": "google",
     "textTranslatorService": "google",
@@ -26,7 +26,10 @@
         "world.hey.com",
         "www.bensbites.co",
         "mailchi.mp",
-        "www.paulgraham.com"
+        "www.paulgraham.com",
+        "letterstoanewdeveloper.com",
+        "www.neugierig.org",
+        "www.swyx.io"
     ],
     "neverTranslateSites": [],
     "sitesToTranslateWhenHovering": [],
