@@ -1,3 +1,7 @@
+#2 try
+create_issue() {
+  gh issue create --title="$1" --assignee=mefengl
+}
 # zplug
 if [[ ! -d ~/.zplug ]]; then
     git clone https://github.com/zplug/zplug ~/.zplug
