@@ -14,3 +14,5 @@
 	email = 71683364+mefengl@users.noreply.github.com
 [core]
 	excludesFile = /Users/fl/.gitignore
+[init]
+	defaultBranch = main
