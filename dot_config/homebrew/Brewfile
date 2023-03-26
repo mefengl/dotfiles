@@ -1,3 +1,7 @@
+#2 try
+brew tap zurawiki/brews
+brew "zurawiki/brews/gptcommit"
+
 brew "starship"
 brew "autojump"
 brew "trash"
