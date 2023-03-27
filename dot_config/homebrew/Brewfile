@@ -1,4 +1,5 @@
 #2 try
+# brew "asciinema"
 tap "zurawiki/brews"
 brew "zurawiki/brews/gptcommit"
 
