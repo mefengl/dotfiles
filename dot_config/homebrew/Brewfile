@@ -1,6 +1,6 @@
 #2 try
 # brew "asciinema"
-brew "openjdk@11"
+brew "java"
 tap "zurawiki/brews"
 brew "zurawiki/brews/gptcommit"
 
