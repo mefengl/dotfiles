@@ -33,6 +33,7 @@ packages=(
 # Run pnpm setup command
 echo -e "${GREEN}Running pnpm setup command...${NC}"
 pnpm setup
+source ~/.zshrc
 echo $divider
 
 # Check if the -u flag is present, uninstall packages if necessary
