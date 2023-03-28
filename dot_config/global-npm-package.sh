@@ -11,15 +11,26 @@ width=$(tput cols)
 # Calculate the width of the divider
 divider=$(printf "%-${width}s" "-" | tr ' ' '-')
 
-# Install pnpm using npm
-echo -e "${GREEN}Installing pnpm using npm...${NC}"
-npm -g install pnpm
-if [ $? -eq 0 ]; then
-  echo -e "${GREEN}Successfully installed pnpm using npm.${NC}"
+# Check Node.js version
+node_version=$(node -v | cut -c2-)
+IFS='.' read -ra version_parts <<< "$node_version"
+
+if [ ${version_parts[0]} -lt 16 ] || ([ ${version_parts[0]} -eq 16 ] && [ ${version_parts[1]} -lt 4 ]); then
+  echo -e "${RED}Node.js version is below 16.4. Installing packages using npm instead of pnpm.${NC}"
+  installer="npm"
 else
-  echo -e "${RED}Failed to install pnpm using npm.${NC}"
-  exit 1
+  # Install pnpm using npm
+  echo -e "${GREEN}Installing pnpm using npm...${NC}"
+  npm -g install pnpm
+  if [ $? -eq 0 ]; then
+    echo -e "${GREEN}Successfully installed pnpm using npm.${NC}"
+    installer="pnpm"
+  else
+    echo -e "${RED}Failed to install pnpm using npm. Falling back to npm for package installation.${NC}"
+    installer="npm"
+  fi
 fi
+
 echo $divider
 
 # Define the packages to install
@@ -37,24 +48,24 @@ packages=(
 # Check if the -u flag is present, uninstall packages if necessary
 if [ "$1" == "-u" ]; then
   for package in "${packages[@]}"; do
-    echo -e "${GREEN}Uninstalling ${package} with pnpm...${NC}"
-    pnpm uninstall -g ${package}
+    echo -e "${GREEN}Uninstalling ${package} with $installer...${NC}"
+    $installer uninstall -g ${package}
     if [ $? -eq 0 ]; then
-      echo -e "${GREEN}Successfully uninstalled ${package} with pnpm.${NC}"
+      echo -e "${GREEN}Successfully uninstalled ${package} with $installer.${NC}"
     else
-      echo -e "${RED}Failed to uninstall ${package} with pnpm.${NC}"
+      echo -e "${RED}Failed to uninstall ${package} with $installer.${NC}"
     fi
     echo $divider
   done
 else
   # Install packages and display a message
   for package in "${packages[@]}"; do
-    echo -e "${GREEN}Installing ${package} with pnpm...${NC}"
-    pnpm install -g ${package}
+    echo -e "${GREEN}Installing ${package} with $installer...${NC}"
+    $installer install -g ${package}
     if [ $? -eq 0 ]; then
-      echo -e "${GREEN}Successfully installed ${package} with pnpm.${NC}"
+      echo -e "${GREEN}Successfully installed ${package} with $installer.${NC}"
     else
-      echo -e "${RED}Failed to install ${package} with pnpm.${NC}"
+      echo -e "${RED}Failed to install ${package} with $installer.${NC}"
     fi
     echo $divider
   done
