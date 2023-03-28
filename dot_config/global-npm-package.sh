@@ -24,16 +24,15 @@ echo $divider
 
 # Define the packages to install
 packages=(
-  "yarn"
-  "vercel"
-  "turbo"
-  "yo generator-code"
+"yarn"
+# vercel
+"vercel"
+"turbo"
+# vscode
+"yo generator-code"
+# github
+"@githubnext/github-copilot-cli"
 )
-
-# Run pnpm setup command
-echo -e "${GREEN}Running pnpm setup command...${NC}"
-pnpm setup
-echo $divider
 
 # Check if the -u flag is present, uninstall packages if necessary
 if [ "$1" == "-u" ]; then
