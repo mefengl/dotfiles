@@ -131,7 +131,7 @@ alias vim='nvim'
 alias vimz='nvim ~/.zshrc'
 alias vimr='nvim ~/.config/nvim/init.lua'
 alias vimt='nvim ~/.tmux.conf'
-alias vimn='nvim ~/.config/global-npm-package.sh'
+alias vimn='nvim ~/.config/ppm.sh'
 # vscode
 alias codek='code ~/.config/karabiner/karabiner.json'
 alias codeb='code ~/.config/homebrew/Brewfile'
