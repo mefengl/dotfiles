@@ -1,5 +1,5 @@
 {
-    "timeStamp": 1678764382297,
+    "timeStamp": 1680169510641,
     "version": "9.6",
     "pageTranslatorService": "google",
     "textTranslatorService": "google",
@@ -29,7 +29,8 @@
         "www.paulgraham.com",
         "letterstoanewdeveloper.com",
         "www.neugierig.org",
-        "www.swyx.io"
+        "www.swyx.io",
+        "yoheinakajima.com"
     ],
     "neverTranslateSites": [],
     "sitesToTranslateWhenHovering": [],
