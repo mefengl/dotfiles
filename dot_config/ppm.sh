@@ -1,10 +1,8 @@
 #!/bin/bash
 
-# not compatible with pnpm
-npm -g install ni
-
 # Define the packages to install
 packages=(
+"ni"
 "yarn"
 # vercel
 "vercel"
