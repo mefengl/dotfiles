@@ -129,7 +129,7 @@ alias gdaily='git commit -am "daily: $(date +%m/%d)" && git push'
 alias aic='ga . && gc'
 
 # node
-alias ppm='bash ~/.config/ppm.sh'
+alias npmb='bash ~/.config/ppm.sh'
 
 # homebrew
 alias brewb='brew bundle --file=~/.config/homebrew/Brewfile'
