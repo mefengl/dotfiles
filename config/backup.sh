@@ -23,8 +23,8 @@ fi
 file=$(ls ~/Downloads/vimium_c-* 2>/dev/null)
 
 if [ -n "$file" ]; then
-  mkdir -p ~/config/vimium
-  mv "$file" ~/config/vimium/vimium_c-backup.json
+  mkdir -p ~/config/vimium_c
+  mv "$file" ~/config/vimium_c/vimium_c-backup.json
 fi
 
 trash ~/Downloads/* 2>/dev/null
