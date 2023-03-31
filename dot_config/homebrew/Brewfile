@@ -28,6 +28,7 @@ brew "watchman"
 brew "poetry"
 
 # cask try
+cask "diffusionbee"
 cask "hey"
 tap "homebrew/cask-versions"
 cask "visual-studio-code-insiders"
