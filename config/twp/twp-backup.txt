@@ -1,5 +1,5 @@
 {
-    "timeStamp": 1680169510641,
+    "timeStamp": 1680257142099,
     "version": "9.6",
     "pageTranslatorService": "google",
     "textTranslatorService": "google",
@@ -30,7 +30,9 @@
         "letterstoanewdeveloper.com",
         "www.neugierig.org",
         "www.swyx.io",
-        "yoheinakajima.com"
+        "yoheinakajima.com",
+        "aiweekly.co",
+        "www.epicweb.dev"
     ],
     "neverTranslateSites": [],
     "sitesToTranslateWhenHovering": [],
