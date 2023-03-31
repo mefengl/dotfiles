@@ -2,6 +2,9 @@
 
 # Define the packages to install
 packages=(
+# try
+"jsdoc"
+
 "ni"
 "yarn"
 # vercel
