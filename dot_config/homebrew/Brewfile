@@ -28,6 +28,7 @@ brew "watchman"
 brew "poetry"
 
 # cask try
+tap "homebrew/cask-versions"
 cask "visual-studio-code-insiders"
 
 cask "homebrew/cask-fonts/font-input"
