@@ -1,4 +1,6 @@
 #2 try
+tap "fwartner/tap"
+brew "fwartner/tap/mac-cleanup"
 brew "cog"
 # brew "asciinema"
 # brew "java"
