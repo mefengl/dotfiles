@@ -1,8 +1,9 @@
 #2 try
 # brew "asciinema"
-brew "java"
-tap "zurawiki/brews"
-brew "zurawiki/brews/gptcommit"
+# brew "java"
+
+# tap "zurawiki/brews"
+# brew "zurawiki/brews/gptcommit"
 
 brew "starship"
 brew "autojump"
