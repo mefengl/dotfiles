@@ -164,6 +164,8 @@ source ~/development.sh
 ## yabai&skhd
 alias vimy='nvim ~/.config/yabai/yabairc'
 alias vims='nvim ~/.config/skhd/skhdrc'
+alias bssy='brew services start yabai'
+alias bssn='brew services stop yabai'
 
 eval "$(starship init zsh)"
 
