@@ -34,7 +34,8 @@ brew "watchman"
 brew "poetry"
 
 # cask try
-cask "mochi-diffusion"
+
+# cask "mochi-diffusion"
 cask "diffusionbee"
 cask "hey"
 tap "homebrew/cask-versions"
