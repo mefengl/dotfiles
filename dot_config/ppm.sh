@@ -13,7 +13,8 @@ packages=(
 "vercel"
 "turbo"
 # vscode
-"yo generator-code"
+"yo"
+"generator-code"
 # github
 "@githubnext/github-copilot-cli"
 )
@@ -51,28 +52,29 @@ fi
 
 echo $divider
 
-# Check if the -u flag is present, uninstall packages if necessary
-if [ "$1" == "-u" ]; then
-  for package in "${packages[@]}"; do
-    echo -e "${GREEN}Uninstalling ${package} with $installer...${NC}"
-    $installer uninstall -g ${package}
-    if [ $? -eq 0 ]; then
-      echo -e "${GREEN}Successfully uninstalled ${package} with $installer.${NC}"
+# Check if the -f flag is present, force installation of all packages
+force=false
+if [ "$1" == "-f" ]; then
+  echo -e "${GREEN}Forcing installation of all packages.${NC}"
+  force=true
+fi
+
+# Install or uninstall packages based on the force flag and whether the package is installed
+for package in "${packages[@]}"; do
+  if $force || ! $installer list -g | grep -q $package; then
+    if $force; then
+      echo -e "${GREEN}Force installing ${package} with $installer...${NC}"
     else
-      echo -e "${RED}Failed to uninstall ${package} with $installer.${NC}"
+      echo -e "${GREEN}Installing ${package} with $installer...${NC}"
     fi
-    echo $divider
-  done
-else
-  # Install packages and display a message
-  for package in "${packages[@]}"; do
-    echo -e "${GREEN}Installing ${package} with $installer...${NC}"
     $installer install -g ${package}
     if [ $? -eq 0 ]; then
       echo -e "${GREEN}Successfully installed ${package} with $installer.${NC}"
     else
       echo -e "${RED}Failed to install ${package} with $installer.${NC}"
     fi
-    echo $divider
-  done
-fi
+  else
+    echo -e "${GREEN}${package} is already installed.${NC}"
+  fi
+  echo $divider
+done
