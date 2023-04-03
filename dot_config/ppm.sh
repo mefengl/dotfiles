@@ -2,21 +2,21 @@
 
 # Define the packages to install
 packages=(
-# try
-"opencommit"
-"jsdoc"
+    # try
+    "opencommit"
+    "jsdoc"
 
-"ni"
-"yarn"
-"kill-port"
-# vercel
-"vercel"
-"turbo"
-# vscode
-"yo"
-"generator-code"
-# github
-"@githubnext/github-copilot-cli"
+    "ni"
+    "yarn"
+    "kill-port"
+    # vercel
+    "vercel"
+    "turbo"
+    # vscode
+    "yo"
+    "generator-code"
+    # github
+    "@githubnext/github-copilot-cli"
 )
 
 # Define color codes for echoing messages
@@ -35,18 +35,25 @@ node_version=$(node -v | cut -c2-)
 IFS='.' read -ra version_parts <<< "$node_version"
 
 if [ ${version_parts[0]} -lt 16 ] || ([ ${version_parts[0]} -eq 16 ] && [ ${version_parts[1]} -lt 4 ]); then
-  echo -e "${RED}Node.js version is below 16.4. Installing packages using npm instead of pnpm.${NC}"
-  installer="npm"
-else
-  # Install pnpm using npm
-  echo -e "${GREEN}Installing pnpm using npm...${NC}"
-  npm -g install pnpm
-  if [ $? -eq 0 ]; then
-    echo -e "${GREEN}Successfully installed pnpm using npm.${NC}"
-    installer="pnpm"
-  else
-    echo -e "${RED}Failed to install pnpm using npm. Falling back to npm for package installation.${NC}"
+    echo -e "${RED}Node.js version is below 16.4. Installing packages using npm instead of pnpm.${NC}"
     installer="npm"
+else
+
+  # Check if pnpm is already installed
+  if npm list -g | grep -q "pnpm"; then
+      echo -e "${GREEN}pnpm is already installed.${NC}"
+      installer="pnpm"
+  else
+      # Install pnpm using npm
+      echo -e "${GREEN}Installing pnpm using npm...${NC}"
+      npm -g install pnpm
+  fi
+  if [ $? -eq 0 ]; then
+      echo -e "${GREEN}Successfully installed pnpm using npm.${NC}"
+      installer="pnpm"
+  else
+      echo -e "${RED}Failed to install pnpm using npm. Falling back to npm for package installation.${NC}"
+      installer="npm"
   fi
 fi
 
@@ -55,26 +62,26 @@ echo $divider
 # Check if the -f flag is present, force installation of all packages
 force=false
 if [ "$1" == "-f" ]; then
-  echo -e "${GREEN}Forcing installation of all packages.${NC}"
-  force=true
+    echo -e "${GREEN}Forcing installation of all packages.${NC}"
+    force=true
 fi
 
 # Install or uninstall packages based on the force flag and whether the package is installed
 for package in "${packages[@]}"; do
-  if $force || ! $installer list -g | grep -q $package; then
-    if $force; then
-      echo -e "${GREEN}Force installing ${package} with $installer...${NC}"
+    if $force || ! $installer list -g | grep -q $package; then
+        if $force; then
+            echo -e "${GREEN}Force installing ${package} with $installer...${NC}"
+        else
+            echo -e "${GREEN}Installing ${package} with $installer...${NC}"
+        fi
+        $installer install -g ${package}
+        if [ $? -eq 0 ]; then
+            echo -e "${GREEN}Successfully installed ${package} with $installer.${NC}"
+        else
+            echo -e "${RED}Failed to install ${package} with $installer.${NC}"
+        fi
     else
-      echo -e "${GREEN}Installing ${package} with $installer...${NC}"
+        echo -e "${GREEN}${package} is already installed.${NC}"
     fi
-    $installer install -g ${package}
-    if [ $? -eq 0 ]; then
-      echo -e "${GREEN}Successfully installed ${package} with $installer.${NC}"
-    else
-      echo -e "${RED}Failed to install ${package} with $installer.${NC}"
-    fi
-  else
-    echo -e "${GREEN}${package} is already installed.${NC}"
-  fi
-  echo $divider
+    echo $divider
 done
