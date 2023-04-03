@@ -8,6 +8,7 @@ packages=(
 
 "ni"
 "yarn"
+"kill-port"
 # vercel
 "vercel"
 "turbo"
