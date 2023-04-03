@@ -1,4 +1,6 @@
 #2 try
+brew "git-lfs"
+
 tap "fwartner/tap"
 brew "fwartner/tap/mac-cleanup"
 brew "cog"
