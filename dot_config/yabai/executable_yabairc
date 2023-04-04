@@ -3,16 +3,16 @@
 #2 try
 
 # auto app placement
-yabai -m rule --add app=Arc space=2
+# yabai -m rule --add app=Arc space=2
 yabai -m rule --add app="GitHub Desktop" space=3
 yabai -m rule --add app=WeCom space=4
-yabai -m rule --add app=Notion space=5
+# yabai -m rule --add app=Notion space=5
 
 yabai -m rule --add app=HTTPie space=8
 
 # borders
 yabai -m config window_border                on
-yabai -m config active_window_border_topmost on
+# yabai -m config active_window_border_topmost on
 yabai -m config window_shadow                on
 yabai -m config window_border_width          5
 yabai -m config active_window_border_color   0xffff3050
@@ -20,11 +20,12 @@ yabai -m config normal_window_border_color   0xffaaaaaa
 
 # general space settings
 # yabai -m config layout                       bsp
-yabai -m config top_padding                  6
-yabai -m config bottom_padding               6
-yabai -m config left_padding                 25
-yabai -m config right_padding                25
-yabai -m config window_gap                   5
+
+# yabai -m config top_padding                  6
+# yabai -m config bottom_padding               6
+# yabai -m config left_padding                 25
+# yabai -m config right_padding                25
+# yabai -m config window_gap                   5
 
 # yabai auto focus to previously focused window after killing a window
 function record_display_id {
