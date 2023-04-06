@@ -37,7 +37,7 @@ brew "poetry"
 
 # cask "mochi-diffusion"
 cask "diffusionbee"
-cask "hey"
+# cask "hey"
 tap "homebrew/cask-versions"
 cask "visual-studio-code-insiders"
 
@@ -55,7 +55,7 @@ cask "docker"
 tap "mongodb/brew"
 brew "mongodb-community"
 
-cask "arc"
+# cask "arc"
 cask "notion"
 cask "hiddenbar"
 cask "menubarx"
