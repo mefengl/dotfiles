@@ -6,7 +6,7 @@ packages=(
     "opencommit"
     "jsdoc"
 
-    "ni"
+    "@antfu/ni"
     "yarn"
     "kill-port"
     # vercel
