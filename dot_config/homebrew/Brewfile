@@ -7,8 +7,8 @@ brew "cog"
 # brew "asciinema"
 # brew "java"
 
-# tap "zurawiki/brews"
-# brew "zurawiki/brews/gptcommit"
+tap "zurawiki/brews"
+brew "zurawiki/brews/gptcommit"
 
 brew "starship"
 brew "autojump"
