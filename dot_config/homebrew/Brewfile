@@ -1,10 +1,16 @@
 #2 try
+brew "jq"
+
+##0.3 git
 brew "bfg"
 brew "git-lfs"
+##0.5 format
+brew "shfmt"
 
+##0.5 mac
 tap "fwartner/tap"
 brew "fwartner/tap/mac-cleanup"
-brew "cog"
+
 # brew "asciinema"
 # brew "java"
 
@@ -40,7 +46,7 @@ brew "poetry"
 cask "diffusionbee"
 # cask "hey"
 tap "homebrew/cask-versions"
-cask "visual-studio-code-insiders"
+# cask "visual-studio-code-insiders"
 
 cask "homebrew/cask-fonts/font-input"
 
@@ -51,6 +57,8 @@ cask "raycast"
 cask "iterm2"
 cask "openinterminal"
 
+##1.1 docker like
+brew "cog"
 cask "docker"
 
 tap "mongodb/brew"
@@ -71,8 +79,6 @@ cask "qq"
 
 cask "1password"
 cask "1password-cli"
-
-cask "docker"
 
 # tap "lencx/chatgpt", "https://github.com/lencx/chatgpt.git"
 # cask "chatgpt", args: { "no-quarantine": true }
