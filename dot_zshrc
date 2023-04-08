@@ -121,6 +121,7 @@ alias vimstar='nvim ~/.config/starship.toml'
 alias ghr='gh repo'
 alias ghc='gh repo clone'
 alias ghrc='gh repo create'
+alias ghprv='gh pr view --web'
 ## ?? git? gh?
 eval "$(github-copilot-cli alias -- "$0")"
 
