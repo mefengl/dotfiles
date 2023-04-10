@@ -1,6 +1,10 @@
 #2 try
 brew "jq"
 
+##1.1 mac window
+brew "yabai"
+brew "skhd"
+
 ##0.3 git
 brew "bfg"
 brew "git-lfs"
@@ -102,5 +106,3 @@ cask "wpsoffice"
 
 # # Else
 # brew "git"
-# brew "yabai"
-# brew "skhd"
