@@ -77,7 +77,7 @@ cask "monitorcontrol"
 cask "snipaste"
 cask "shottr"
 cask "kap"
-# cask "bob"
+cask "bob"
 cask "wechat"
 cask "qq"
 
