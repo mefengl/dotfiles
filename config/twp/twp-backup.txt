@@ -1,5 +1,5 @@
 {
-    "timeStamp": 1680257142099,
+    "timeStamp": 1681638950464,
     "version": "9.6",
     "pageTranslatorService": "google",
     "textTranslatorService": "google",
@@ -27,12 +27,7 @@
         "www.bensbites.co",
         "mailchi.mp",
         "www.paulgraham.com",
-        "letterstoanewdeveloper.com",
-        "www.neugierig.org",
-        "www.swyx.io",
-        "yoheinakajima.com",
-        "aiweekly.co",
-        "www.epicweb.dev"
+        "tom.preston-werner.com"
     ],
     "neverTranslateSites": [],
     "sitesToTranslateWhenHovering": [],
