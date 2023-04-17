@@ -68,7 +68,7 @@ cask "docker"
 tap "mongodb/brew"
 brew "mongodb-community"
 
-# cask "arc"
+cask "arc"
 cask "notion"
 cask "hiddenbar"
 cask "menubarx"
