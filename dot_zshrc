@@ -3,6 +3,7 @@ create_issue() {
   gh issue create --title="$1" --assignee=mefengl
 }
 alias gnb='bash ~/config/git-next-branch.sh'
+alias gnbo='gfo && gnb'
 
 # zplug
 if [[ ! -d ~/.zplug ]]; then
