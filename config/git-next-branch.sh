@@ -1,6 +1,3 @@
-# Fetch from the remote repository
-git fetch origin
-
 # Get a list of all branches
 all_branches=$(git branch -a | sed 's/.*\///' | sed 's/remotes\///' | sed 's/^[ *]*//' | sort -u)
 if [ -z "$all_branches" ]; then
