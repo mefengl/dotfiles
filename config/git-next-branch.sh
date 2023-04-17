@@ -1,3 +1,12 @@
+# Check if the FETCHED_BRANCHES variable is set
+if [ -z "$FETCHED_BRANCHES" ]; then
+    # Fetch from the remote repository
+    git fetch origin
+
+    # Set the FETCHED_BRANCHES variable
+    export FETCHED_BRANCHES=1
+fi
+
 # Get a list of all branches
 all_branches=$(git branch -a | sed 's/.*\///' | sed 's/remotes\///' | sed 's/^[ *]*//' | sort -u)
 if [ -z "$all_branches" ]; then
