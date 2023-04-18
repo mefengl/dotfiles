@@ -3,6 +3,7 @@
 # Define the packages to install
 packages=(
     # try
+    "serverless"
     "opencommit"
     "jsdoc"
 
