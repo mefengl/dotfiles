@@ -22,3 +22,6 @@ turbo.build##.nx-px-4.xl\:nx-block.nx-shrink-0.nx-w-64.nx-hidden.nx-order-last.n
 ! 2023-02-02 https://tanstack.com
 tanstack.com##.xl\:p-12.p-6.md\:block.hidden
 
+! 2023-04-17 https://chat.openai.com
+chat.openai.com###kcg
+
