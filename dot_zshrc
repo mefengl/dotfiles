@@ -123,7 +123,13 @@ alias vimstar='nvim ~/.config/starship.toml'
 # github
 alias ghr='gh repo'
 alias ghc='gh repo clone'
-alias ghrc='gh repo create'
+ghrc() {
+  if [ $# -eq 1 ]; then
+    gh repo create $1 --public --add-readme --gitignore Node --license MIT -c
+  else
+    echo "Usage: ghrc <repository_name>"
+  fi
+}
 alias ghrv='gh repo view --web'
 alias ghprv='gh pr view --web'
 ## ?? git? gh?
@@ -131,11 +137,14 @@ eval "$(github-copilot-cli alias -- "$0")"
 
 # git
 alias gdaily='git commit -am "daily: $(date +%m/%d)" && git push'
-function aic() {
+function aicc() {
     PREFIX="$1"
-    ~/projects/mefengl/aicommits-fasttrack/dist/cli.mjs --all --noninteractive --prefix "$PREFIX: "
+    if [ -n "$PREFIX" ]; then
+        PREFIX="$PREFIX: "
+    fi
+    ~/projects/mefengl/aicommits-fasttrack/dist/cli.mjs --all --noninteractive --prefix "$PREFIX"
 }
-alias aicp='aic && ggpush'
+alias aic='aicc && ggpush'
 
 # node
 alias npmb='bash ~/.config/ppm.sh'
