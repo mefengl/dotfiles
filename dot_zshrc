@@ -130,7 +130,7 @@ ghrc() {
     echo "Usage: ghrc <repository_name>"
   fi
 }
-alias ghrd='ghpew'
+alias ghrd='ghpew repos'
 alias ghrv='gh repo view --web'
 alias ghprv='gh pr view --web'
 ## ?? git? gh?
