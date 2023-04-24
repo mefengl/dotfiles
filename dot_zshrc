@@ -1,6 +1,6 @@
 #2 try
 create_issue() {
-  gh issue create --title="$1" --assignee=mefengl
+  gh issue create --title="$1" --body="" --assignee=mefengl
 }
 alias gnb='bash ~/config/git-next-branch.sh'
 alias gnbo='gfo && gnb'
