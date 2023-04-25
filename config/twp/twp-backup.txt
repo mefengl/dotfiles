@@ -1,5 +1,5 @@
 {
-    "timeStamp": 1681638950464,
+    "timeStamp": 1682388508290,
     "version": "9.6",
     "pageTranslatorService": "google",
     "textTranslatorService": "google",
@@ -32,7 +32,18 @@
         "yoheinakajima.com",
         "aiweekly.co",
         "www.epicweb.dev",
-        "tom.preston-werner.com"
+        "tom.preston-werner.com",
+        "dynomight.net",
+        "lethain.com",
+        "modernentrepreneur.beehiiv.com",
+        "dynomight.substack.com",
+        "www.aiwithvibes.com",
+        "www.therundown.ai",
+        "billym2k.substack.com",
+        "www.notboring.co",
+        "importai.substack.com",
+        "invertedpassion.com",
+        "ethical.institute"
     ],
     "neverTranslateSites": [],
     "sitesToTranslateWhenHovering": [],
