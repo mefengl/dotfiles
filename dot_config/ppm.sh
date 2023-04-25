@@ -50,7 +50,7 @@ else
   else
       # Install pnpm using npm
       echo -e "${GREEN}Installing pnpm using npm...${NC}"
-      npm -g install pnpm
+      npm -g install pnpm@8.1.1
   fi
   if [ $? -eq 0 ]; then
       echo -e "${GREEN}Successfully installed pnpm using npm.${NC}"
