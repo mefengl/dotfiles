@@ -1,5 +1,6 @@
 #2 try
 # cask "losslesscut"
+brew "pandoc"
 cask "postman"
 cask "electron-fiddle"
 cask "termius"
