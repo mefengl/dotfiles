@@ -1,6 +1,6 @@
 #2 try
 # cask "losslesscut"
-# cask "mactex"
+cask "mactex"
 brew "pandoc"
 cask "postman"
 cask "electron-fiddle"
