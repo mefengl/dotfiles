@@ -18,6 +18,7 @@ packages=(
     # vscode
     "yo"
     "generator-code"
+    "vsce"
     # github
     "@githubnext/github-copilot-cli"
 )
