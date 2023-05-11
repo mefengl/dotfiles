@@ -3,11 +3,11 @@
 # Define the packages to install
 packages=(
     # try
-    "wrangler"
+    # "wrangler"
     "github-pewpew"
     "serverless"
-    "opencommit"
-    "jsdoc"
+    # "opencommit"
+    # "jsdoc"
 
     "@antfu/ni"
     "yarn"
