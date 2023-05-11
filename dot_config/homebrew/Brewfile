@@ -21,10 +21,10 @@ brew "git-lfs"
 brew "shfmt"
 
 ##0.5 mac
-# tap "fwartner/tap"
-# brew "fwartner/tap/mac-cleanup"
-tap "mac-cleanup/mac-cleanup-py"
-brew "mac-cleanup-py"
+tap "fwartner/tap"
+brew "fwartner/tap/mac-cleanup"
+# tap "mac-cleanup/mac-cleanup-py"
+# brew "mac-cleanup-py"
 
 # brew "asciinema"
 # brew "java"
