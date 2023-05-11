@@ -5,7 +5,7 @@ brew "pandoc"
 cask "postman"
 cask "electron-fiddle"
 cask "termius"
-cask "codux"
+# cask "codux"
 brew "tree"
 brew "jq"
 
@@ -29,8 +29,8 @@ brew "fwartner/tap/mac-cleanup"
 # brew "asciinema"
 # brew "java"
 
-tap "zurawiki/brews"
-brew "zurawiki/brews/gptcommit"
+# tap "zurawiki/brews"
+# brew "zurawiki/brews/gptcommit"
 
 brew "starship"
 brew "autojump"
@@ -46,7 +46,7 @@ brew "direnv"
 brew "pyenv"
 brew "rustup-init"
 
-brew "terraform"
+# brew "terraform"
 # brew "kafka"
 
 brew "aria2" # for quicker xcodes download
@@ -55,12 +55,10 @@ brew "watchman"
 
 brew "poetry"
 
-# cask try
-
 # cask "mochi-diffusion"
-cask "diffusionbee"
+# cask "diffusionbee"
 # cask "hey"
-tap "homebrew/cask-versions"
+# tap "homebrew/cask-versions"
 # cask "visual-studio-code-insiders"
 
 cask "homebrew/cask-fonts/font-input"
@@ -73,11 +71,11 @@ cask "iterm2"
 cask "openinterminal"
 
 ##1.1 docker like
-brew "cog"
+# brew "cog"
 cask "docker"
 
-tap "mongodb/brew"
-brew "mongodb-community"
+# tap "mongodb/brew"
+# brew "mongodb-community"
 
 cask "arc"
 cask "notion"
@@ -89,6 +87,7 @@ cask "snipaste"
 cask "shottr"
 cask "kap"
 cask "bob"
+
 cask "wechat"
 cask "qq"
 
@@ -99,12 +98,12 @@ cask "1password-cli"
 # cask "chatgpt", args: { "no-quarantine": true }
 
 cask "spotify"
+cask "wpsoffice"
 # cask "mark-text"
 # cask "zotero"
 # cask "podman-desktop"
 # cask "electron-fiddle"
 # cask "microsoft-outlook"
-cask "wpsoffice"
 
 # # Python
 # run "pyenv install 3.10"
