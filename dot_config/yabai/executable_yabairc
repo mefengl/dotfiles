@@ -3,14 +3,26 @@
 #2 try
 
 # auto app placement
-# yabai -m rule --add app=Arc space=2
+
+yabai -m rule --add app="Visual Studio Code" space=1
+yabai -m rule --add app="WPS Office" space=1
+
+yabai -m rule --add app=Arc space=2
+
 yabai -m rule --add app="GitHub Desktop" space=3
+yabai -m rule --add app=Postman space=3
+
 yabai -m rule --add app=WeCom space=4
 yabai -m rule --add app=WeChat space=4
-# yabai -m rule --add app=Notion space=5
+yabai -m rule --add app=QQ space=4
 
-yabai -m rule --add app=HTTPie space=7
-yabai -m rule --add app=QQ space=8
+yabai -m rule --add app=Notion space=5
+
+yabai -m rule --add app=Notes space=11
+yabai -m rule --add app=Calendar space=11
+yabai -m rule --add app=Reminders space=11
+yabai -m rule --add app=Typora space=11
+yabai -m rule --add app=Spotify space=11
 
 # borders
 # yabai -m config window_border                on
