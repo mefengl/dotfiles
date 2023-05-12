@@ -22,12 +22,7 @@
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "caps_lock",
-                                    "modifiers": {
-                                        "optional": [
-                                            "caps_lock"
-                                        ]
-                                    }
+                                    "key_code": "caps_lock"
                                 },
                                 "to": [
                                     {
@@ -64,47 +59,22 @@
                         ]
                     },
                     {
-                        "description": "Meh+1 → F1",
+                        "description": "Make Cmd+Caps Lock do nothing",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "1",
+                                    "key_code": "caps_lock",
                                     "modifiers": {
                                         "mandatory": [
-                                            "left_shift",
-                                            "left_control",
-                                            "left_option"
+                                            "any"
+                                        ],
+                                        "optional": [
+                                            "left_command",
+                                            "right_command"
                                         ]
                                     }
                                 },
-                                "to": [
-                                    {
-                                        "key_code": "f1"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Meh+2 → F2",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "2",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_shift",
-                                            "left_control",
-                                            "left_option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "f2"
-                                    }
-                                ],
+                                "to": [],
                                 "type": "basic"
                             }
                         ]

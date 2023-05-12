@@ -25,3 +25,6 @@ tanstack.com##.xl\:p-12.p-6.md\:block.hidden
 ! 2023-04-17 https://chat.openai.com
 chat.openai.com###kcg
 
+! 2023-05-11 https://tailwindcss.com
+tailwindcss.com##.overflow-hidden.mt-8 > .p-8
+
