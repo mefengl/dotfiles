@@ -1,5 +1,5 @@
 {
-    "timeStamp": 1682388508290,
+    "timeStamp": 1683874769098,
     "version": "9.6",
     "pageTranslatorService": "google",
     "textTranslatorService": "google",
@@ -43,7 +43,8 @@
         "www.notboring.co",
         "importai.substack.com",
         "invertedpassion.com",
-        "ethical.institute"
+        "ethical.institute",
+        "engineering.atspotify.com"
     ],
     "neverTranslateSites": [],
     "sitesToTranslateWhenHovering": [],
