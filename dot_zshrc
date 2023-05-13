@@ -1,4 +1,29 @@
 #2 try
+function ni() {
+  command ni "$@"
+  echo "nun ${@:1}" >> $HISTFILE
+  fc -R $HISTFILE
+}
+
+function nun() {
+  command nun "$@"
+  echo "ni ${@:1}" >> $HISTFILE
+  fc -R $HISTFILE
+}
+function brew() {
+  if [[ $1 == 'install' ]]; then
+    command brew "$@"
+    echo "brew uninstall ${@:2}" >> $HISTFILE
+    fc -R $HISTFILE
+  elif [[ $1 == 'uninstall' ]]; then
+    command brew "$@"
+    echo "brew install ${@:2}" >> $HISTFILE
+    fc -R $HISTFILE
+  else
+    command brew "$@"
+  fi
+}
+
 create_issue() {
   gh issue create --title="$1" --body="" --assignee=mefengl
 }
