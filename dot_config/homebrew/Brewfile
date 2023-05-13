@@ -98,7 +98,7 @@ cask "1password-cli"
 # cask "chatgpt", args: { "no-quarantine": true }
 
 cask "spotify"
-cask "wpsoffice"
+# cask "wpsoffice"
 # cask "mark-text"
 # cask "zotero"
 # cask "podman-desktop"
