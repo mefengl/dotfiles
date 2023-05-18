@@ -61,7 +61,9 @@ brew "poetry"
 # tap "homebrew/cask-versions"
 # cask "visual-studio-code-insiders"
 
-cask "homebrew/cask-fonts/font-input"
+tap "homebrew/cask-fonts"
+cask "font-input"
+cask "font-meslo-lg-nerd-font"
 
 cask "visual-studio-code"
 cask "github"

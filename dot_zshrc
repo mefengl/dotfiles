@@ -168,9 +168,9 @@ function aic() {
     if [ -n "$PREFIX" ]; then
         PREFIX="$PREFIX: "
     fi
-    ~/projects/mefengl/aicommits-fasttrack/dist/cli.mjs --all --noninteractive --prefix "$PREFIX"
+    ~/projects/mefengl/aicommits-fasttrack/dist/cli.mjs --noninteractive --prefix "$PREFIX"
 }
-alias aip='aic && ggpush'
+alias aip='aic --all && ggpush'
 
 # node
 alias npmb='bash ~/.config/ppm.sh'
