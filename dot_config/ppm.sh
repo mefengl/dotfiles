@@ -4,7 +4,7 @@
 packages=(
     # try
     # "npm-copilot"
-    # "wrangler"
+    "wrangler"
     "github-pewpew"
     "serverless"
     # "opencommit"
