@@ -158,6 +158,7 @@ ghrc() {
 alias ghrd='ghpew repos'
 alias ghrv='gh repo view --web'
 alias ghprv='gh pr view --web'
+alias ghfv='git-file-history'
 ## ?? git? gh?
 eval "$(github-copilot-cli alias -- "$0")"
 
