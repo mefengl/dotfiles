@@ -42,7 +42,7 @@ brew "gh"
 brew "tmux"
 
 brew "nvm"
-brew "direnv"
+# brew "direnv"
 brew "pyenv"
 brew "rustup-init"
 
