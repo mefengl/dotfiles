@@ -1,5 +1,5 @@
 {
-    "timeStamp": 1683874769098,
+    "timeStamp": 1685195396291,
     "version": "9.6",
     "pageTranslatorService": "google",
     "textTranslatorService": "google",
@@ -44,7 +44,10 @@
         "importai.substack.com",
         "invertedpassion.com",
         "ethical.institute",
-        "engineering.atspotify.com"
+        "engineering.atspotify.com",
+        "swizec.com",
+        "www.macarthur.me",
+        "hstock.org"
     ],
     "neverTranslateSites": [],
     "sitesToTranslateWhenHovering": [],

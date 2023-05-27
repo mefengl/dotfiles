@@ -28,3 +28,6 @@ chat.openai.com###kcg
 ! 2023-05-11 https://tailwindcss.com
 tailwindcss.com##.overflow-hidden.mt-8 > .p-8
 
+! 2023-05-27 https://movie.douban.com
+||ad.doubanio.com/$subdocument
+
