@@ -40,19 +40,3 @@ yabai -m rule --add app=Spotify space=11
 # yabai -m config left_padding                 25
 # yabai -m config right_padding                25
 # yabai -m config window_gap                   5
-
-# yabai auto focus to previously focused window after killing a window
-function record_display_id {
-  display_id=$(yabai -m query --windows --window | jq '.display')
-  python $HOME/.config/yabai/autofocus/display_focus.py write $display_id
-}
-function focus_current_display {
-  yabai -m display --focus $(python $HOME/.config/yabai/autofocus/display_focus.py read)
-}
-yabai -m signal --add event=window_focused action="${functions[record_display_id]}"
-yabai -m signal --add event=application_front_switched action="${functions[record_display_id]}"
-yabai -m signal --add event=window_destroyed action="${functions[focus_current_display]}"
-yabai -m signal --add event=application_terminated action="${functions[focus_current_display]}"
-
-#0.6 how to
-# yabai -m config --space 3 layout float
