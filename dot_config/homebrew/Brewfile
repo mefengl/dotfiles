@@ -90,7 +90,7 @@ cask "kap"
 cask "bob"
 
 cask "wechat"
-cask "qq"
+# cask "qq"
 
 cask "1password"
 cask "1password-cli"
