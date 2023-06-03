@@ -49,11 +49,13 @@ else
   if npm list -g | grep -q "pnpm"; then
       echo -e "${GREEN}pnpm is already installed.${NC}"
       installer="pnpm"
-      npm -g install pnpm@8.5.1
+      # npm -g install pnpm@8.5.1
+      npm -g install pnpm
   else
       # Install pnpm using npm
       echo -e "${GREEN}Installing pnpm using npm...${NC}"
-      npm -g install pnpm@8.5.1
+      # npm -g install pnpm@8.5.1
+      npm -g install pnpm
   fi
   if [ $? -eq 0 ]; then
       echo -e "${GREEN}Successfully installed pnpm using npm.${NC}"
