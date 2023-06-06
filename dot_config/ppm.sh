@@ -13,6 +13,7 @@ packages=(
 
     "@antfu/ni"
     "yarn"
+    "gulp-cli"
     "kill-port"
     # vercel
     "vercel"
