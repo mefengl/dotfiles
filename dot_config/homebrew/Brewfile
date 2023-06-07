@@ -98,7 +98,7 @@ cask "1password-cli"
 # tap "lencx/chatgpt", "https://github.com/lencx/chatgpt.git"
 # cask "chatgpt", args: { "no-quarantine": true }
 
-cask "spotify"
+# cask "spotify"
 # cask "wpsoffice"
 # cask "mark-text"
 # cask "zotero"
