@@ -3,7 +3,7 @@
 # Define the packages to install
 packages=(
     # try
-    # "git-file-history"
+    "git-file-history"
     # "npm-copilot"
     "wrangler"
     "github-pewpew"
