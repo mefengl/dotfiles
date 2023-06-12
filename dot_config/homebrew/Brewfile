@@ -27,7 +27,10 @@ brew "fwartner/tap/mac-cleanup"
 # brew "mac-cleanup-py"
 
 # brew "asciinema"
-# brew "java"
+
+##1 java
+brew "java"
+brew "sbt"
 
 # tap "zurawiki/brews"
 # brew "zurawiki/brews/gptcommit"
