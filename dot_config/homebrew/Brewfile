@@ -82,7 +82,7 @@ cask "docker"
 # brew "mongodb-community"
 
 cask "arc"
-cask "notion"
+# cask "notion"
 cask "hiddenbar"
 cask "menubarx"
 cask "monitorcontrol"
