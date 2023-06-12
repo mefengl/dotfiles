@@ -59,8 +59,6 @@ zplug "plugins/1password", from:oh-my-zsh
 
 zplug "plugins/tmux", from:oh-my-zsh
 
-zplug "b4b4r07/enhancd", use:init.sh # brew install fzy
-
 zplug "plugins/docker", from:oh-my-zsh
 zplug "plugins/terraform", from:oh-my-zsh
 
