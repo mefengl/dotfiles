@@ -4,7 +4,6 @@ function ni() {
   echo "nun ${@:1}" >> $HISTFILE
   fc -R $HISTFILE
 }
-
 function nun() {
   command nun "$@"
   echo "ni ${@:1}" >> $HISTFILE
@@ -87,7 +86,6 @@ zplug load
 
 #2 try
 
-
 # pnpm
 export PNPM_HOME="$HOME/.pnpm-global/bin"
 case ":$PATH:" in
@@ -95,38 +93,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-# packer
-alias pkr='packer'
-alias pkri='packer init .'
-alias pkrf='packer fmt -recursive .'
-alias pkrv='packer validate .'
-alias pkrb='packer build .'
-alias pkrall='packer init . && packer fmt -recursive . && packer validate . && packer build .'
-
-# terraform
-alias tff='terraform fmt -recursive'
-alias tfa='terraform apply -auto-approve'
-alias tfd='terraform destroy -auto-approve'
-alias tfall='terraform init && terraform fmt -recursive && terraform validate && terraform apply -auto-approve'
-
-alias tfw='terraform workspace'
-alias tfws='terraform workspace select'
-alias tfwn='terraform workspace new'
-alias tfwd='terraform workspace delete'
-alias tfwls='terraform workspace list'
-
-alias tfr='terraform refresh'
-
-# terragrunt
-alias tg='terragrunt'
-alias tgi='terragrunt init'
-alias tgf='terragrunt fmt -recursive'
-alias tgv='terragrunt validate'
-alias tgp='terragrunt plan'
-alias tga='terragrunt apply -auto-approve'
-alias tgd='terragrunt destroy -auto-approve'
-alias tgall='terragrunt init && terragrunt fmt -recursive && terragrunt validate && terragrunt plan && terragrunt apply -auto-approve'
 
 # docker
 alias awsdocker='aws ecr get-login-password --region $aws_region | docker login --username AWS --password-stdin $aws_prefix'
