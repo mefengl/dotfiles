@@ -1,123 +1,111 @@
 #2 try
-cask "input-source-pro"
-# cask "losslesscut"
-# cask "mactex"
-brew "pandoc"
-cask "postman"
-# cask "electron-fiddle"
-cask "termius"
-# cask "codux"
+
+##1.3 terminal
+brew "starship"
+brew "trash"
 brew "tree"
 brew "jq"
+brew "shfmt"
+brew "autojump"
+brew "tldr"
 
-##1.1 mac window
+##1.5 window manager
 tap "koekeishiya/formulae"
 brew "yabai"
 brew "skhd"
+cask "karabiner-elements"
+brew "tmux"
 
-##0.3 git
+##2 git
+brew "git"
+cask "github"
+brew "gh"
+brew "chezmoi"
 brew "bfg"
-brew "git-lfs"
-##0.5 format
-brew "shfmt"
+# brew "git-lfs"
+# tap "zurawiki/brews"
+# brew "zurawiki/brews/gptcommit"
+
 
 ##0.5 mac
 tap "fwartner/tap"
 brew "fwartner/tap/mac-cleanup"
-# tap "mac-cleanup/mac-cleanup-py"
-# brew "mac-cleanup-py"
-
-# brew "asciinema"
 
 ##1 java
 brew "java"
 brew "sbt"
-
-# tap "zurawiki/brews"
-# brew "zurawiki/brews/gptcommit"
-
-brew "starship"
-brew "autojump"
-brew "trash"
-brew "tldr"
-brew "chezmoi"
-brew "neovim"
-brew "gh"
-brew "tmux"
-
+##1 node
 brew "nvm"
-# brew "direnv"
+##1 python
 brew "pyenv"
+##1 rust
 brew "rustup-init"
 
-# brew "terraform"
-# brew "kafka"
-
-brew "aria2" # for quicker xcodes download
-brew "robotsandpencils/made/xcodes"
-brew "watchman"
-
-brew "poetry"
-
-# cask "mochi-diffusion"
-# cask "diffusionbee"
-# cask "hey"
-# tap "homebrew/cask-versions"
-# cask "visual-studio-code-insiders"
-
+##1.5 font
 tap "homebrew/cask-fonts"
 cask "font-input"
 
+##2 develop
 cask "visual-studio-code"
-cask "github"
-cask "karabiner-elements"
-cask "raycast"
+brew "neovim"
 cask "iterm2"
+cask "postman"
 cask "openinterminal"
 
-##1.1 docker like
-# brew "cog"
+##0.8 container&db
 cask "docker"
-
+# brew "cog"
 # tap "mongodb/brew"
 # brew "mongodb-community"
+# brew "terraform"
+# brew "kafka"
 
+##1 mac
+cask "raycast"
 cask "arc"
-# cask "notion"
+cask "bob"
 cask "hiddenbar"
 cask "menubarx"
 cask "monitorcontrol"
+cask "input-source-pro"
+cask "1password"
+# cask "notion"
+# cask "1password-cli"
 
-cask "snipaste"
-cask "shottr"
-cask "kap"
-cask "bob"
-
+##1 communication
 cask "wechat"
 cask "qq"
 
-cask "1password"
-cask "1password-cli"
+##1.2 media
+cask "snipaste"
+cask "shottr"
+cask "kap"
+# cask "losslesscut"
+# cask "diffusionbee"
 
-# tap "lencx/chatgpt", "https://github.com/lencx/chatgpt.git"
-# cask "chatgpt", args: { "no-quarantine": true }
-
-# cask "spotify"
+##0.3 office
 # cask "wpsoffice"
+# cask "mactex"
 # cask "mark-text"
 # cask "zotero"
+brew "pandoc"
+
+## Xcodes
+brew "aria2" # for quicker xcodes download
+brew "robotsandpencils/made/xcodes"
+brew "watchman"
+# run "xcodes install --latest --experimental-unxip"
+
+##0.1 fun?
+# brew "asciinema"
+
+## 0.5 Else
+# cask "spotify"
+
 # cask "podman-desktop"
 # cask "electron-fiddle"
 # cask "microsoft-outlook"
+# cask "termius"
 
-# # Python
-# run "pyenv install 3.10"
-# run "pyenv global 3.10"
-# run "pip install --upgrade pip"
-# run "pip install asitop"
-
-## Xcodes
-# run "xcodes install --latest --experimental-unxip"
-
-# # Else
-# brew "git"
+# tap "homebrew/cask-versions"
+# cask "visual-studio-code-insiders"
