@@ -1,4 +1,5 @@
 #2 try
+cask "input-source-pro"
 # cask "losslesscut"
 # cask "mactex"
 brew "pandoc"
