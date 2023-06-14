@@ -93,7 +93,7 @@ brew "pandoc"
 ## Xcodes
 brew "aria2" # for quicker xcodes download
 brew "robotsandpencils/made/xcodes"
-brew "watchman"
+# brew "watchman"
 # run "xcodes install --latest --experimental-unxip"
 
 ##0.1 fun?
