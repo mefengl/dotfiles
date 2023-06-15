@@ -46,7 +46,6 @@ zplug "zsh-users/zsh-history-substring-search", defer:3, on:"zsh-users/zsh-synta
 
 # oh-my-zsh
 ##2 try
-zplug "plugins/tmuxinator", from:oh-my-zsh
 zplug "plugins/sbt", from:oh-my-zsh
 
 zplug "plugins/marktext", from:oh-my-zsh
