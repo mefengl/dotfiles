@@ -1,4 +1,5 @@
 #2 try
+brew "simonw/llm/llm"
 
 ##1.3 terminal
 brew "starship"
