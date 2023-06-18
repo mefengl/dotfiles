@@ -1,5 +1,5 @@
 {
-    "timeStamp": 1686555065754,
+    "timeStamp": 1687104915110,
     "version": "9.8.0.3",
     "uiLanguage": "default",
     "pageTranslatorService": "google",
@@ -24,6 +24,7 @@
         "alexkondov.com",
         "basecamp.com",
         "billym2k.substack.com",
+        "doc.rust-lang.org",
         "dynomight.net",
         "dynomight.substack.com",
         "engineering.atspotify.com",
@@ -91,7 +92,7 @@
     "translateTag_pre": "no",
     "dontSortResults": "no",
     "translateDynamicallyCreatedContent": "yes",
-    "autoTranslateWhenClickingALink": "yes",
+    "autoTranslateWhenClickingALink": "no",
     "translateSelectedWhenPressTwice": "no",
     "translateTextOverMouseWhenPressTwice": "no",
     "translateClickingOnce": "no",
