@@ -46,17 +46,14 @@ zplug "zsh-users/zsh-history-substring-search", defer:3, on:"zsh-users/zsh-synta
 
 # oh-my-zsh
 ##2 try
-zplug "plugins/rust", from:oh-my-zsh
 ## scala
 zplug "plugins/sbt", from:oh-my-zsh
 
-zplug "plugins/marktext", from:oh-my-zsh
 zplug "plugins/pip", from:oh-my-zsh
 zplug "plugins/git-prompt", from:oh-my-zsh # add numbers of behind and ahead
 zplug "plugins/gitignore", from:oh-my-zsh
 zplug "plugins/common-aliases", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
-zplug "plugins/1password", from:oh-my-zsh
 
 zplug "plugins/tmux", from:oh-my-zsh
 
