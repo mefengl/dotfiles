@@ -52,7 +52,7 @@ zplug "plugins/sbt", from:oh-my-zsh
 zplug "plugins/pip", from:oh-my-zsh
 zplug "plugins/git-prompt", from:oh-my-zsh # add numbers of behind and ahead
 zplug "plugins/gitignore", from:oh-my-zsh
-zplug "plugins/common-aliases", from:oh-my-zsh
+# zplug "plugins/common-aliases", from:oh-my-zsh
 zplug "plugins/command-not-found", from:oh-my-zsh
 
 zplug "plugins/tmux", from:oh-my-zsh
