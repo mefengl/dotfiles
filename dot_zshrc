@@ -111,6 +111,7 @@ alias vimstar='nvim ~/.config/starship.toml'
 # github
 alias ghr='gh repo'
 alias ghc='gh repo clone'
+alias ghcm='bash ~/config/ghclone.sh'
 ghrc() {
   if [ $# -eq 1 ]; then
     gh repo create $1 --public --add-readme --gitignore Node --license MIT -c
