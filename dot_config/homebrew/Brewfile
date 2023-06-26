@@ -1,5 +1,6 @@
 # brew tap "homebrew/bundle"
 #2 try
+
 tap "buo/cask-upgrade"
 tap "simonw/llm"
 brew "llm"
@@ -114,3 +115,6 @@ brew "robotsandpencils/made/xcodes"
 # tap "homebrew/cask-versions"
 # cask "visual-studio-code-insiders"
 # cask "rar"
+
+##1 seems great
+# brew "mas" # mac app store cli, compatible with brew bundle, can see by `brew bundle dump`
