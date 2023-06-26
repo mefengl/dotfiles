@@ -1,3 +1,4 @@
+# brew tap "homebrew/bundle"
 #2 try
 tap "buo/cask-upgrade"
 tap "simonw/llm"
