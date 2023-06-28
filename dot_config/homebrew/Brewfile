@@ -1,5 +1,6 @@
 # brew tap "homebrew/bundle"
 #2 try
+brew "locationsimulator"
 tap "artginzburg/tap"
 brew "sudo-touchid"
 # sudo brew services start sudo-touchid
