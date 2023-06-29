@@ -120,7 +120,15 @@ ghrc() {
 alias ghrd='ghpew repos'
 alias ghrv='gh repo view --web'
 ## gist
-alias ghgc='gh gist create -p -'
+ghgc() {
+  echo "Press ^D on a new line to finish."
+  if [ -z "$1" ]; then
+    gh gist create --public -
+  else
+    gh gist create --public "$1" -
+  fi
+}
+alias ghgd='gh gist delete'
 ## else
 alias ghprv='gh pr view --web'
 alias ghfv='git-file-history'
