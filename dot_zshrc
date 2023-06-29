@@ -129,7 +129,8 @@ ghgc() {
   fi
 }
 alias ghgd='gh gist delete'
-alias ghgl='gh gist list'
+alias ghgv='gh gist view'
+alias ghgl='gh gist view'
 ## else
 alias ghprv='gh pr view --web'
 alias ghfv='git-file-history'
