@@ -125,10 +125,11 @@ ghgc() {
   if [ -z "$1" ]; then
     gh gist create --public -
   else
-    gh gist create --public "$1" -
+    gh gist create --public -f "$1" -
   fi
 }
 alias ghgd='gh gist delete'
+alias ghgl='gh gist list'
 ## else
 alias ghprv='gh pr view --web'
 alias ghfv='git-file-history'
