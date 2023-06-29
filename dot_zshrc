@@ -23,9 +23,6 @@ function brew() {
   fi
 }
 
-create_issue() {
-  gh issue create --title="$1" --body="" --assignee=mefengl
-}
 alias gnb='bash ~/config/git-next-branch.sh'
 alias gnbo='gfo && gnb'
 
@@ -112,6 +109,7 @@ alias vimstar='nvim ~/.config/starship.toml'
 alias ghr='gh repo'
 alias ghc='gh repo clone'
 alias ghcm='bash ~/config/ghclone.sh'
+## repo
 ghrc() {
   if [ $# -eq 1 ]; then
     gh repo create $1 --public --add-readme --gitignore Node --license MIT -c
@@ -121,8 +119,15 @@ ghrc() {
 }
 alias ghrd='ghpew repos'
 alias ghrv='gh repo view --web'
+## gist
+alias ghgc='gh gist create -p -'
+## else
 alias ghprv='gh pr view --web'
 alias ghfv='git-file-history'
+create_issue() {
+  gh issue create --title="$1" --body="" --assignee=mefengl
+}
+
 ## ?? git? gh?
 eval "$(github-copilot-cli alias -- "$0")"
 
