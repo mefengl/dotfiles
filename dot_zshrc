@@ -143,14 +143,6 @@ eval "$(github-copilot-cli alias -- "$0")"
 
 # git
 alias gdaily='git commit -am "daily: $(date +%m/%d)" && git push'
-function aic() {
-    PREFIX="$1"
-    if [ -n "$PREFIX" ]; then
-        PREFIX="$PREFIX: "
-    fi
-    ~/projects/mefengl/aicommits-fasttrack/dist/cli.mjs --noninteractive --prefix "$PREFIX"
-}
-alias aip='aic --all && ggpush'
 
 # node
 alias npmb='bash ~/.config/ppm.sh'
