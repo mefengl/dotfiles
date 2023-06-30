@@ -1,5 +1,6 @@
 # brew tap "homebrew/bundle"
 #2 try
+cask "locationsimulator"
 tap "artginzburg/tap"
 brew "sudo-touchid"
 # sudo brew services start sudo-touchid
@@ -124,5 +125,4 @@ brew "robotsandpencils/made/xcodes"
 # brew "mas" # mac app store cli, compatible with brew bundle, can see by `brew bundle dump`
 
 ##0.1 strange
-# cask "locationsimulator"
 
