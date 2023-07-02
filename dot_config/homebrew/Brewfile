@@ -122,7 +122,7 @@ brew "robotsandpencils/made/xcodes"
 # cask "rar"
 
 ##1 seems great
-# brew "mas" # mac app store cli, compatible with brew bundle, can see by `brew bundle dump`
+brew "mas" # mac app store cli, compatible with brew bundle, can see by `brew bundle dump`
+mas "iMovie", id: 408981434
 
 ##0.1 strange
-
