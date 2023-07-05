@@ -5,7 +5,9 @@ tap "artginzburg/tap"
 brew "sudo-touchid"
 # sudo brew services start sudo-touchid
 
+tap "homebrew/autoupdate"
 tap "buo/cask-upgrade"
+
 tap "simonw/llm"
 brew "llm"
 
