@@ -30,6 +30,7 @@ keywords=(
 	"try"
 	"zz"
 
+    "vue"
     "vite"
 )
 
