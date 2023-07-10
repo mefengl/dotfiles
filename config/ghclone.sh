@@ -6,33 +6,14 @@ else
 	username=$1
 fi
 
-mkdir -p ~/projects/$username
-rm -rf ~/projects/$username/*
-cd ~/projects/$username
+mkdir -p ~/projects
+rm -rf ~/projects/*
+cd ~/projects
 
 max_jobs=5
 counter=0
 pids=()
 max_retries=3
-
-keywords=(
-	"vscode"
-	"userscript"
-
-	"what-i"
-	"awesome"
-	"note"
-	"my"
-
-	"chat"
-	"utils"
-
-	"try"
-	"zz"
-
-	"vue"
-	"vite"
-)
 
 repos=$(gh repo list $username --limit 50 | awk '{print $1}')
 
@@ -63,17 +44,3 @@ for repo in $repos; do
 done
 
 wait
-
-for repo in *; do
-	if [ -d "$repo" ]; then
-		repo_name=$(basename "$repo")
-		for keyword in "${keywords[@]}"; do
-			if [[ $repo_name == *"$keyword"* ]]; then
-				dir="$keyword"
-				mkdir -p "$dir"
-				mv "$repo_name" "$dir/"
-				break
-			fi
-		done
-	fi
-done
