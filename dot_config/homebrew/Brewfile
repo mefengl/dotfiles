@@ -48,7 +48,7 @@ brew "sbt"
 ##1 node
 brew "nvm"
 ##1 python
-# brew "pyenv"
+brew "pyenv"
 ##1 rust
 brew "rustup-init"
 
