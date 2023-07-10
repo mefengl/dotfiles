@@ -15,7 +15,9 @@ counter=0
 pids=()
 max_retries=3
 
-gh repo list $username --limit 100 | awk '{print $1}' | while read repo; do
+repos=$(gh repo list $username --limit 100 | awk '{print $1}')
+
+for repo in $repos; do
 	retry_count=0
 	while [ $retry_count -lt $max_retries ]; do
 		gh repo clone "$repo" &
