@@ -15,6 +15,17 @@ counter=0
 pids=()
 max_retries=3
 
+keywords=(
+	"vscode"
+	"userscript"
+	"note"
+	"awesome"
+	"chat"
+	"utils"
+	"try"
+	"zz"
+)
+
 repos=$(gh repo list $username --limit 100 | awk '{print $1}')
 
 for repo in $repos; do
@@ -41,6 +52,15 @@ for repo in $repos; do
 		pids=("${pids[@]:1}")
 		((counter--))
 	fi
+
+	for keyword in "${keywords[@]}"; do
+		if [[ $repo == *"$keyword"* ]]; then
+			dir="$keyword"
+			mkdir -p "$dir"
+			mv "$repo" "$dir/"
+			break
+		fi
+	done
 done
 
 wait
