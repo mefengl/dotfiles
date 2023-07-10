@@ -30,8 +30,8 @@ keywords=(
 	"try"
 	"zz"
 
-    "vue"
-    "vite"
+	"vue"
+	"vite"
 )
 
 repos=$(gh repo list $username --limit 50 | awk '{print $1}')
