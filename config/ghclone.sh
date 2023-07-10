@@ -18,7 +18,9 @@ max_retries=3
 keywords=(
 	"vscode"
 	"userscript"
+	"what-i"
 	"note"
+	"my"
 	"awesome"
 	"chat"
 	"utils"
@@ -26,7 +28,7 @@ keywords=(
 	"zz"
 )
 
-repos=$(gh repo list $username --limit 100 | awk '{print $1}')
+repos=$(gh repo list $username --limit 50 | awk '{print $1}')
 
 for repo in $repos; do
 	retry_count=0
@@ -52,15 +54,20 @@ for repo in $repos; do
 		pids=("${pids[@]:1}")
 		((counter--))
 	fi
-
-	for keyword in "${keywords[@]}"; do
-		if [[ $repo == *"$keyword"* ]]; then
-			dir="$keyword"
-			mkdir -p "$dir"
-			mv "$repo" "$dir/"
-			break
-		fi
-	done
 done
 
 wait
+
+for repo in *; do
+	if [ -d "$repo" ]; then
+		repo_name=$(basename "$repo")
+		for keyword in "${keywords[@]}"; do
+			if [[ $repo_name == *"$keyword"* ]]; then
+				dir="$keyword"
+				mkdir -p "$dir"
+				mv "$repo_name" "$dir/"
+				break
+			fi
+		done
+	fi
+done
