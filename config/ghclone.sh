@@ -7,7 +7,7 @@ else
 fi
 
 mkdir -p ~/projects/$username
-rm -rf ~/projects/$username/*
+rm ~/projects/$username/*
 cd ~/projects/$username
 
 max_jobs=5
