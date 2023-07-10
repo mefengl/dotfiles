@@ -18,14 +18,19 @@ max_retries=3
 keywords=(
 	"vscode"
 	"userscript"
+
 	"what-i"
+	"awesome"
 	"note"
 	"my"
-	"awesome"
+
 	"chat"
 	"utils"
+
 	"try"
 	"zz"
+
+    "vite"
 )
 
 repos=$(gh repo list $username --limit 50 | awk '{print $1}')
