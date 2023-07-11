@@ -123,8 +123,9 @@ brew "robotsandpencils/made/xcodes"
 # cask "visual-studio-code-insiders"
 # cask "rar"
 
-##1 seems great
+##1 use mas install the app that already purchased
 brew "mas" # mac app store cli, compatible with brew bundle, can see by `brew bundle dump`
 mas "iMovie", id: 408981434
+mas "1Password for Safari", id: 1569813296
 
 ##0.1 strange
