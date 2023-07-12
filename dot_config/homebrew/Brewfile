@@ -120,8 +120,8 @@ brew "robotsandpencils/made/xcodes"
 # cask "microsoft-outlook"
 # cask "termius"
 
-# tap "homebrew/cask-versions"
-# cask "visual-studio-code-insiders"
+tap "homebrew/cask-versions"
+cask "visual-studio-code-insiders"
 # cask "rar"
 
 ##1 use mas install the app that already purchased
