@@ -40,7 +40,7 @@ divider=$(printf "%-${width}s" "-" | tr ' ' '-')
 node_version=$(node -v | cut -c2-)
 IFS='.' read -ra version_parts <<< "$node_version"
 
-if [ ${version_parts[0]} -lt 16 ] || ([ ${version_parts[0]} -eq 16 ] && [ ${version_parts[1]} -lt 4 ]); then
+if [ "${version_parts[0]}" -lt 16 ] || { [ "${version_parts[0]}" -eq 16 ] && [ "${version_parts[1]}" -lt 4 ]; }; then
     echo -e "${RED}Node.js version is below 16.4. Installing packages using npm instead of pnpm.${NC}"
     installer="npm"
 else
@@ -55,18 +55,17 @@ else
       # Install pnpm using npm
       echo -e "${GREEN}Installing pnpm using npm...${NC}"
       # npm -g install pnpm@8.5.1
-      npm -g install pnpm
-  fi
-  if [ $? -eq 0 ]; then
-      echo -e "${GREEN}Successfully installed pnpm using npm.${NC}"
-      installer="pnpm"
-  else
-      echo -e "${RED}Failed to install pnpm using npm. Falling back to npm for package installation.${NC}"
-      installer="npm"
+      if npm -g install pnpm; then
+        echo -e "${GREEN}Successfully installed pnpm using npm.${NC}"
+        installer="pnpm"
+      else
+        echo -e "${RED}Failed to install pnpm using npm. Falling back to npm for package installation.${NC}"
+        installer="npm"
+      fi
   fi
 fi
 
-echo $divider
+echo "$divider"
 
 # Check if the -f flag is present, force installation of all packages
 force=false
@@ -77,14 +76,13 @@ fi
 
 # Install or uninstall packages based on the force flag and whether the package is installed
 for package in "${packages[@]}"; do
-    if $force || ! $installer list -g | grep -q $package; then
+    if $force || ! $installer list -g | grep -q "$package"; then
         if $force; then
             echo -e "${GREEN}Force installing ${package} with $installer...${NC}"
         else
             echo -e "${GREEN}Installing ${package} with $installer...${NC}"
         fi
-        $installer install -g ${package}
-        if [ $? -eq 0 ]; then
+        if $installer install -g "$package"; then
             echo -e "${GREEN}Successfully installed ${package} with $installer.${NC}"
         else
             echo -e "${RED}Failed to install ${package} with $installer.${NC}"
@@ -92,5 +90,5 @@ for package in "${packages[@]}"; do
     else
         echo -e "${GREEN}${package} is already installed.${NC}"
     fi
-    echo $divider
+    echo "$divider"
 done
