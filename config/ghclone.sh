@@ -1,21 +1,20 @@
 #!/bin/bash
 
 if [ -z "$1" ]; then
-	read -p "Enter GitHub username: " username
+	read -r -p "Enter GitHub username: " username
 else
 	username=$1
 fi
 
 mkdir -p ~/projects
-rm -rf ~/projects/*
-cd ~/projects
+cd ~/projects || exit
 
 max_jobs=5
 counter=0
 pids=()
 max_retries=3
 
-repos=$(gh repo list $username --limit 50 | awk '{print $1}')
+repos=$(gh repo list "$username" --limit 50 | awk '{print $1}')
 
 for repo in $repos; do
 	retry_count=0
