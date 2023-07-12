@@ -17,6 +17,7 @@ brew "trash"
 brew "tree"
 brew "jq"
 brew "shfmt"
+brew "shellcheck"
 brew "autojump"
 brew "tldr"
 
