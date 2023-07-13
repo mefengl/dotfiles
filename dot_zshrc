@@ -159,11 +159,15 @@ alias brewb='brew bundle --file=~/.config/homebrew/Brewfile'
 alias vimb='nvim ~/.config/homebrew/Brewfile'
 alias codeb='code ~/.config/homebrew/Brewfile'
 
+# ruby
+alias gemb='bundle install --gemfile=~/.config/ruby/Gemfile'
+alias vimr='nvim ~/.config/ruby/Gemfile'
+alias coder='code ~/.config/ruby/Gemfile'
+
 # nvim
 alias vim='nvim'
 alias vimz='nvim ~/.zshrc'
 alias codez='code ~/.zshrc'
-alias vimr='nvim ~/.config/nvim/init.lua'
 alias vimt='nvim ~/.tmux.conf'
 # vscode
 alias codek='code ~/.config/karabiner/karabiner.json'

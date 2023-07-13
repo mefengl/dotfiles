@@ -38,7 +38,6 @@ brew "bfg"
 # tap "zurawiki/brews"
 # brew "zurawiki/brews/gptcommit"
 
-
 ##0.5 mac
 tap "fwartner/tap"
 brew "fwartner/tap/mac-cleanup"
@@ -52,6 +51,8 @@ brew "nvm"
 brew "pyenv"
 ##1 rust
 brew "rustup-init"
+##1 ruby
+brew "rbenv"
 
 ##1.5 font
 tap "homebrew/cask-fonts"
