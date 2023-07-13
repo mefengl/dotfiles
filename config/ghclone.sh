@@ -14,7 +14,7 @@ counter=0
 pids=()
 max_retries=3
 
-repos=$(gh repo list "$username" --limit 50 | awk '{print $1}')
+repos=$(gh repo list "$username" --limit 100 | awk '{print $1}')
 
 for repo in $repos; do
 	retry_count=0
