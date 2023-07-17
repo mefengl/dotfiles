@@ -91,6 +91,7 @@ cask "wechat"
 cask "qq"
 
 ##1.2 media
+brew "ffmpeg"
 cask "snipaste"
 cask "shottr"
 cask "kap"
