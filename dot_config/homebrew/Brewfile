@@ -9,8 +9,8 @@ brew "sudo-touchid"
 tap "homebrew/autoupdate"
 tap "buo/cask-upgrade"
 
-tap "simonw/llm"
-brew "llm"
+# tap "simonw/llm"
+# brew "llm"
 
 ##1.3 terminal
 brew "starship"
