@@ -94,7 +94,7 @@ cask "qq"
 cask "snipaste"
 cask "shottr"
 cask "kap"
-# brew "ffmpeg" # better to installed by download from official website
+brew "ffmpeg"
 # cask "losslesscut"
 # cask "diffusionbee"
 
