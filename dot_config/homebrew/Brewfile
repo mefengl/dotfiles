@@ -131,7 +131,7 @@ cask "visual-studio-code-insiders"
 brew "mas" # mac app store cli, compatible with brew bundle, can see by `brew bundle dump`
 mas "iMovie", id: 408981434
 mas "1Password for Safari", id: 1569813296
-mas "Stay", id: 1591620171
+# mas "Stay", id: 1591620171
 mas "Vimari", id: 1480933944
 
 ##0.1 strange
