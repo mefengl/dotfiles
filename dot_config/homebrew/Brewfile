@@ -91,10 +91,10 @@ cask "wechat"
 cask "qq"
 
 ##1.2 media
-brew "ffmpeg"
 cask "snipaste"
 cask "shottr"
 cask "kap"
+# brew "ffmpeg" # better to installed by download from official website
 # cask "losslesscut"
 # cask "diffusionbee"
 
