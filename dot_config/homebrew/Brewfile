@@ -95,6 +95,7 @@ cask "snipaste"
 cask "shottr"
 cask "kap"
 brew "ffmpeg"
+brew "yt-dlp"
 # cask "losslesscut"
 # cask "diffusionbee"
 

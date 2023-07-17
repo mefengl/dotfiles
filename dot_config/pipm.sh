@@ -3,7 +3,6 @@
 # Define the packages to install
 packages=(
     "asitop"
-    "twspace-dl"
 )
 
 # Define color codes for echoing messages
