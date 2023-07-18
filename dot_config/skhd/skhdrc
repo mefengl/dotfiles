@@ -7,8 +7,8 @@ meh - return : yabai -m space --mirror y-axis
 # # with key ctrl + alt + cmd
 # meh - i : open -na iTerm
 # meh - g : open -na Google\ Chrome
-meh - 1: open -a Visual\ Studio\ Code
-meh - 2: open -a Arc
+# meh - 1: open -a Visual\ Studio\ Code
+# meh - 2: open -a Arc
 
 # Navigation
 alt - h : yabai -m window --focus west
