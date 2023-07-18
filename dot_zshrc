@@ -103,9 +103,10 @@ github_update(){echo -e "\033[32mgithub_update:\033[0m";cd ~/GitHub;github_clone
 alias update='tldr --update; zplug update'
 
 #1.5 to see
-YTDL_BASE='yt-dlp --external-downloader aria2c --external-downloader-args "-x16 -s16 -k2M"'
-alias yt-dlp="$YTDL_BASE" 
-alias yt-dlp-audio="$YTDL_BASE -x --audio-format wav -o 'del.wav'"
+alias yt-dlp-base='yt-dlp --external-downloader aria2c --external-downloader-args "-x16 -s16 -k2M"' 
+yt-dlp-audio(){
+  cd ~/Downloads && yt-dlp --external-downloader aria2c --external-downloader-args "-x16 -s16 -k2M" -x --audio-format wav -o 'del.wav' $1 && bash ~/config/whisper.sh del.wav
+}
 # starship
 alias vimstar='nvim ~/.config/starship.toml'
 
