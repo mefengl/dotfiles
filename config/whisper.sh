@@ -25,6 +25,20 @@ whisper() {
 	done
 }
 
+# Define wait_for_jobs function
+wait_for_jobs() {
+	local max_jobs=$1
+	while true; do
+		# Get current number of background jobs
+		local current_jobs=$(jobs -p | wc -l)
+		# If it's less than max_jobs, break and continue processing
+		if ((current_jobs < max_jobs)); then
+			break
+		fi
+		sleep 1 # delay to avoid overloading the system
+	done
+}
+
 # Input parameters
 INPUT_FILE=$1
 
@@ -52,6 +66,7 @@ for segment in "${FILE_NAME}_segment"*."mp3"; do
 	((COUNT++))
 	# Call whisper function here
 	whisper $segment &
+	wait_for_jobs 3 # wait if there are 3 or more jobs
 done
 
 # Wait for all background tasks to finish
