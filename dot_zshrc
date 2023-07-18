@@ -175,6 +175,7 @@ alias vimt='nvim ~/.tmux.conf'
 alias codek='code ~/.config/karabiner/karabiner.json'
 alias codeb='code ~/.config/homebrew/Brewfile'
 alias codei='nr test && vsce package && code --install-extension $(ls -t *.vsix | head -n 1) && rm -f *.vsix'
+alias codeif='yes | vsce package && code --install-extension $(ls -t *.vsix | head -n 1) && rm -f *.vsix'
 
 # chezmoi
 export LANG=en_US.UTF-8
