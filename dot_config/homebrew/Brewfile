@@ -7,6 +7,7 @@ tap "artginzburg/tap"
 brew "sudo-touchid"
 # sudo brew services start sudo-touchid
 
+brew "mas" # mac app store cli, compatible with brew bundle, can see by `brew bundle dump`
 tap "homebrew/autoupdate"
 tap "buo/cask-upgrade"
 
@@ -75,7 +76,7 @@ cask "openinterminal"
 # brew "terraform"
 # brew "kafka"
 
-##1 mac
+##1 macos
 cask "raycast"
 cask "arc"
 cask "bob"
@@ -87,6 +88,11 @@ cask "1password"
 # cask "notion"
 # cask "1password-cli"
 
+##1.1 Safari
+mas "1Password for Safari", id: 1569813296
+# mas "Stay", id: 1591620171
+mas "Vimari", id: 1480933944
+
 ##1 communication
 cask "wechat"
 cask "qq"
@@ -95,9 +101,11 @@ cask "qq"
 brew "ffmpeg"
 cask "snipaste"
 cask "shottr"
+brew "yt-dlp"
 cask "kap"
 brew "gifski"
-brew "yt-dlp"
+mas "Gifski", id: 1351639930
+# mas "iMovie", id: 408981434
 # cask "losslesscut"
 # cask "diffusionbee"
 
@@ -129,12 +137,5 @@ brew "robotsandpencils/made/xcodes"
 tap "homebrew/cask-versions"
 cask "visual-studio-code-insiders"
 # cask "rar"
-
-##1 use mas install the app that already purchased
-brew "mas" # mac app store cli, compatible with brew bundle, can see by `brew bundle dump`
-mas "iMovie", id: 408981434
-mas "1Password for Safari", id: 1569813296
-# mas "Stay", id: 1591620171
-mas "Vimari", id: 1480933944
 
 ##0.1 strange
