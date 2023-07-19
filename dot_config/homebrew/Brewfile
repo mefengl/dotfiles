@@ -70,7 +70,7 @@ cask "postman"
 cask "openinterminal"
 
 ##0.8 container&db
-# cask "docker"
+cask "docker"
 # brew "cog"
 # tap "mongodb/brew"
 # brew "mongodb-community"
