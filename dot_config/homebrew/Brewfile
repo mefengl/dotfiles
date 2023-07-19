@@ -92,10 +92,11 @@ cask "wechat"
 cask "qq"
 
 ##1.2 media
+brew "ffmpeg"
 cask "snipaste"
 cask "shottr"
 cask "kap"
-brew "ffmpeg"
+brew "gifski"
 brew "yt-dlp"
 # cask "losslesscut"
 # cask "diffusionbee"
