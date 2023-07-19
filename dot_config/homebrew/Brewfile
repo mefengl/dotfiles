@@ -103,7 +103,7 @@ cask "snipaste"
 cask "shottr"
 brew "yt-dlp"
 cask "kap"
-brew "gifski"
+# brew "gifski"
 mas "Gifski", id: 1351639930
 # mas "iMovie", id: 408981434
 # cask "losslesscut"
