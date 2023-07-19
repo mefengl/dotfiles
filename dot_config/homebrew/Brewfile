@@ -91,6 +91,7 @@ cask "1password"
 ##1.1 Safari
 mas "1Password for Safari", id: 1569813296
 # mas "Stay", id: 1591620171
+mas "Tampermonkey", id: 1482490089
 mas "Vimari", id: 1480933944
 
 ##1 communication
