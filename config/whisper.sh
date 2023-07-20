@@ -2,12 +2,9 @@
 
 # Define whisper function
 whisper() {
-	OUTPUT_DIR=$2
-	OUTPUT_FILE="$OUTPUT_DIR/${1%.*}.txt"
+	OUTPUT_FILE="${1%.*}.txt"
 	ATTEMPTS=0
 	MAX_RETRIES=5
-
-	mkdir -p "$OUTPUT_DIR"
 
 	while [ $ATTEMPTS -lt $MAX_RETRIES ]; do
 		curl "https://api.openai.com/v1/audio/transcriptions" \
@@ -51,6 +48,10 @@ FILE_NAME="${INPUT_FILE%.*}"
 COUNT=0
 SEGMENT_TIME=1200 # 20 minutes
 
+# Clear the output file if it exists
+OUTPUT_FILE="${FILE_NAME}.txt"
+rm -f "$OUTPUT_FILE"
+
 # If not wav, convert to wav
 if [[ $FILE_EXT != "wav" ]]; then
 	ffmpeg -y -i "$INPUT_FILE" "$FILE_NAME.wav"
@@ -59,15 +60,12 @@ fi
 # Break the file into chunks
 ffmpeg -i "$FILE_NAME.wav" -f segment -segment_time $SEGMENT_TIME -acodec mp3 "${FILE_NAME}_segment%03d.mp3"
 
-# Create the output directory based on the current date and time
-OUTPUT_DIR="$FILE_NAME/$(date '+%Y-%m-%d')/$(date '+%H-%M-%S')"
-
 # Iterate over each segment file and pass it to the whisper function
 for segment in "${FILE_NAME}_segment"*."mp3"; do
 	echo "Processing $segment"
 	((COUNT++))
 	# Call whisper function here
-	whisper $segment $OUTPUT_DIR &
+	whisper $segment &
 	wait_for_jobs 3 # wait if there are 3 or more jobs
 done
 
@@ -79,6 +77,6 @@ echo "Processed $COUNT files."
 # Ask user if they want to run "cat *.txt | pbcopy"
 read -p "Do you want to copy the contents of all text files to clipboard? (y/n): " answer
 if [[ $answer = y ]]; then
-	find "$OUTPUT_DIR" -name "*.txt" -exec cat {} + | pbcopy
+	cat *.txt | pbcopy
 	echo "Contents of all text files have been copied to the clipboard."
 fi
