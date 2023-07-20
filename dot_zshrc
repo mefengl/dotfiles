@@ -113,7 +113,7 @@ yt-dlp-audios() {
   mkdir -p "$DIR"
 
   # Extract URLs from the input
-  urls=$(echo "$1" | grep -oP '(http|https)://[\w./?=&+%#-]*')
+  urls=$(echo "$1" | grep -oE '(http|https)://[^\s]*')
 
   for link in $urls; do
     cd "$DIR"
