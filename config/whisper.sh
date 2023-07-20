@@ -23,6 +23,8 @@ whisper() {
 			rm -f "$OUTPUT_FILE"
 		fi
 	done
+	# Delete the processed segment
+	rm -f "$1"
 }
 
 # Define wait_for_jobs function
@@ -43,7 +45,7 @@ wait_for_jobs() {
 YT_URL=$1
 DIR=~/Downloads/$(date '+%Y%m%d/%H%M%S')
 mkdir -p "$DIR" && cd "$DIR"
-yt-dlp --external-downloader aria2c --external-downloader-args "-x16 -s16 -k2M" -x --audio-format wav -o 'del.wav' $YT_URL 
+yt-dlp --external-downloader aria2c --external-downloader-args "-x16 -s16 -k2M" -x --audio-format wav -o 'del.wav' $YT_URL
 
 # File processing
 INPUT_FILE="del.wav"
@@ -75,5 +77,8 @@ done
 
 # Wait for all background tasks to finish
 wait
+
+# Remove all files
+rm -f "${FILE_NAME}"*.*
 
 echo "Processed $COUNT files."
