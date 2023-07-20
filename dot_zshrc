@@ -108,13 +108,6 @@ yt-dlp-audio(){
   DIR=~/Downloads/$(date '+%Y%m%d/%H%M%S')
   mkdir -p "$DIR" && cd "$DIR" && yt-dlp --external-downloader aria2c --external-downloader-args "-x16 -s16 -k2M" -x --audio-format wav -o 'del.wav' $1 && bash ~/config/whisper.sh del.wav
 }
-yt-dlp-audios(){
-  links=$(echo $1 | tr '\n' ' ')
-  for link in $links; do
-    echo -e "\033[32mProcessing $link\033[0m"
-    yt-dlp-audio $link
-  done
-}
 
 # starship
 alias vimstar='nvim ~/.config/starship.toml'
