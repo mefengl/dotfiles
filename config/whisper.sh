@@ -73,10 +73,3 @@ done
 wait
 
 echo "Processed $COUNT files."
-
-# Ask user if they want to run "cat *.txt | pbcopy"
-read -p "Do you want to copy the contents of all text files to clipboard? (y/n): " answer
-if [[ $answer = y ]]; then
-	cat *.txt | pbcopy
-	echo "Contents of all text files have been copied to the clipboard."
-fi
