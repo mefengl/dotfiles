@@ -111,6 +111,7 @@ yt-dlp-audio(){
 yt-dlp-audios(){
   links=$(echo $1 | tr '\n' ' ')
   for link in $links; do
+    echo -e "\033[32mProcessing $link\033[0m"
     yt-dlp-audio $link
   done
 }
