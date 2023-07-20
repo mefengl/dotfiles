@@ -118,15 +118,22 @@ yt-dlp-audios() {
   urls=$(echo "$1" | grep -oE '(http|https)://[^\s]*')
 
   for link in $urls; do
+    # Show the extracted link
+    echo -e "\033[0;32mExtracted link: $link\033[0m"  # Print in green color
+
+    # Print divider line
+    printf '%*s\n' "${COLUMNS:-$(tput cols)}" '' | tr ' ' =
+
     cd "$DIR"
     yt-dlp --external-downloader aria2c --external-downloader-args "-x16 -s16 -k2M" -x --audio-format wav -o 'del.wav' "$link"
+    echo "Processing link: $link"  # Show the link being processed
     bash ~/config/whisper.sh del.wav
   done
 
   # Ask user if they want to copy the contents of all text files to clipboard
   read -p "Do you want to copy the contents of all text files in the day folder to clipboard? (y/n): " answer
   if [[ $answer = y ]]; then
-    find "$DAY_DIR" -name "*.txt" | xargs cat | pbcopy
+    find "$DAY_DIR" -name "*.txt" -exec cat {} + | pbcopy
     echo "Contents of all text files in the day folder have been copied to the clipboard."
   fi
 }
