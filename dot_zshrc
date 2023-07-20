@@ -109,7 +109,9 @@ yt-dlp-audio(){
   mkdir -p "$DIR" && cd "$DIR" && yt-dlp --external-downloader aria2c --external-downloader-args "-x16 -s16 -k2M" -x --audio-format wav -o 'del.wav' $1 && bash ~/config/whisper.sh del.wav
 }
 yt-dlp-audios() {
-  DIR=~/Downloads/$(date '+%Y%m%d/%H%M%S')
+  DAY_DIR=~/Downloads/$(date '+%Y%m%d')
+  TIME_DIR=$(date '+%H%M%S')
+  DIR="$DAY_DIR/$TIME_DIR"
   mkdir -p "$DIR"
 
   # Extract URLs from the input
@@ -122,10 +124,10 @@ yt-dlp-audios() {
   done
 
   # Ask user if they want to copy the contents of all text files to clipboard
-  read -p "Do you want to copy the contents of all text files to clipboard? (y/n): " answer
+  read -p "Do you want to copy the contents of all text files in the day folder to clipboard? (y/n): " answer
   if [[ $answer = y ]]; then
-    cat "$DIR"/*.txt | pbcopy
-    echo "Contents of all text files have been copied to the clipboard."
+    find "$DAY_DIR" -name "*.txt" | xargs cat | pbcopy
+    echo "Contents of all text files in the day folder have been copied to the clipboard."
   fi
 }
 
