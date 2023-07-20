@@ -40,9 +40,13 @@ wait_for_jobs() {
 }
 
 # Input parameters
-INPUT_FILE=$1
+YT_URL=$1
+DIR=~/Downloads/$(date '+%Y%m%d/%H%M%S')
+mkdir -p "$DIR" && cd "$DIR"
+yt-dlp --external-downloader aria2c --external-downloader-args "-x16 -s16 -k2M" -x --audio-format wav -o 'del.wav' $YT_URL 
 
 # File processing
+INPUT_FILE="del.wav"
 FILE_EXT="${INPUT_FILE##*.}"
 FILE_NAME="${INPUT_FILE%.*}"
 COUNT=0

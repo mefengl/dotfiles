@@ -102,13 +102,6 @@ github_clone(){gh repo list mefengl | awk '{print $1}' | xargs -L1 gh repo clone
 github_update(){echo -e "\033[32mgithub_update:\033[0m";cd ~/GitHub;github_clone;for i in *;do cd $i;git pull;cd ~;done}
 alias update='tldr --update; zplug update'
 
-#1.5 to see
-alias yt-dlp-base='yt-dlp --external-downloader aria2c --external-downloader-args "-x16 -s16 -k2M"' 
-yt-dlp-audio(){
-  DIR=~/Downloads/$(date '+%Y%m%d/%H%M%S')
-  mkdir -p "$DIR" && cd "$DIR" && yt-dlp --external-downloader aria2c --external-downloader-args "-x16 -s16 -k2M" -x --audio-format wav -o 'del.wav' $1 && bash ~/config/whisper.sh del.wav
-}
-
 # starship
 alias vimstar='nvim ~/.config/starship.toml'
 
