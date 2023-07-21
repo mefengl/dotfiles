@@ -14,4 +14,4 @@ else
 fi
 
 # Extract URLs and pass them to whisper.sh using xargs
-echo "$URLS_STRING" | awk -v RS='[ ,]+' '/^https:\/\/www.youtube.com\// {print}' | xargs -I{} bash ~/config/whisper.sh "{}"
+echo "$URLS_STRING" | awk -v RS='[ ,]+' '/^https:\/\/www.youtube.com\// {print}' | xargs -P 0 -I{} bash ~/config/whisper.sh "{}"
