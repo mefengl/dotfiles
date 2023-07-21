@@ -2,28 +2,29 @@
 
 # Define whisper function
 whisper() {
+	# green echo
+	echo -e "\e[32m$2\e[0m"
+
 	OUTPUT_FILE="${1%.*}.txt"
 	ATTEMPTS=0
 	MAX_RETRIES=5
+	API_KEY=$2
 
 	while [ $ATTEMPTS -lt $MAX_RETRIES ]; do
 		curl "https://api.openai.com/v1/audio/transcriptions" \
-			-H "Authorization: Bearer $OPENAI_API_KEY" \
+			-H "Authorization: Bearer $API_KEY" \
 			-H "Content-Type: multipart/form-data" \
 			-F "model=whisper-1" \
 			-F "response_format=text" \
 			-F "file=@$1" >"$OUTPUT_FILE"
-		# Check if curl was successful
 		if [ $? -eq 0 ]; then
 			break
 		else
 			let ATTEMPTS=ATTEMPTS+1
 			echo "Curl failed. Attempt: $ATTEMPTS"
-			# Removing output file if curl failed
 			rm -f "$OUTPUT_FILE"
 		fi
 	done
-	# Delete the processed segment
 	rm -f "$1"
 }
 
@@ -31,13 +32,11 @@ whisper() {
 wait_for_jobs() {
 	local max_jobs=$1
 	while true; do
-		# Get current number of background jobs
 		local current_jobs=$(jobs -p | wc -l)
-		# If it's less than max_jobs, break and continue processing
 		if ((current_jobs < max_jobs)); then
 			break
 		fi
-		sleep 1 # delay to avoid overloading the system
+		sleep 1
 	done
 }
 
@@ -52,33 +51,32 @@ INPUT_FILE="del.wav"
 FILE_EXT="${INPUT_FILE##*.}"
 FILE_NAME="${INPUT_FILE%.*}"
 COUNT=0
-SEGMENT_TIME=1200 # 20 minutes
+SEGMENT_TIME=1200
 
-# Clear the output file if it exists
 OUTPUT_FILE="${FILE_NAME}.txt"
 rm -f "$OUTPUT_FILE"
 
-# If not wav, convert to wav
 if [[ $FILE_EXT != "wav" ]]; then
 	ffmpeg -y -i "$INPUT_FILE" "$FILE_NAME.wav"
 fi
 
-# Break the file into chunks
 ffmpeg -i "$FILE_NAME.wav" -f segment -segment_time $SEGMENT_TIME -acodec mp3 "${FILE_NAME}_segment%03d.mp3"
 
+# Select 3 random API keys from the list
+API_KEYS_ARRAY=($(echo $OPENAI_API_KEYS | tr "," "\n"))
+shuffled_keys=($(shuf -e "${API_KEYS_ARRAY[@]}"))
+selected_keys=("${shuffled_keys[@]:0:3}")
+
 # Iterate over each segment file and pass it to the whisper function
+i=0
 for segment in "${FILE_NAME}_segment"*."mp3"; do
 	echo "Processing $segment"
 	((COUNT++))
-	# Call whisper function here
-	whisper $segment &
-	wait_for_jobs 3 # wait if there are 3 or more jobs
+	whisper $segment ${selected_keys[$i]} &
+	((i = (i + 1) % 3))
+	wait_for_jobs 9
 done
 
-# Wait for all background tasks to finish
 wait
-
-# Remove all files
-rm -f "${FILE_NAME}"*.*
 
 echo "Processed $COUNT files."
