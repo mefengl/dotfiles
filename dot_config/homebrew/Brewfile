@@ -26,6 +26,8 @@ brew "shfmt"
 brew "shellcheck"
 brew "autojump"
 brew "tldr"
+tap "samwho/spacer"
+brew "spacer"
 
 ##1.5 window manager
 tap "koekeishiya/formulae"
