@@ -104,6 +104,7 @@ alias update='tldr --update; zplug update'
 
 ##1.2 too see
 alias yt-dlp-audio='bash ~/config/whisper.sh'
+alias cptxt='find . -name "*.txt" | xargs cat | pbcopy'
 
 # starship
 alias vimstar='nvim ~/.config/starship.toml'
