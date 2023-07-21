@@ -11,6 +11,9 @@ brew "mas" # mac app store cli, compatible with brew bundle, can see by `brew bu
 tap "homebrew/autoupdate"
 tap "buo/cask-upgrade"
 
+## linux
+brew "coreutils"
+
 # tap "simonw/llm"
 # brew "llm"
 
