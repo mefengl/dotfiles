@@ -132,6 +132,7 @@ ghgc() {
   fi
 }
 alias ghgd='gh gist delete'
+alias ghge='gh gist edit'
 alias ghgv='gh gist view'
 alias ghgl='gh gist list'
 ## else
