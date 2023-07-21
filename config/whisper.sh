@@ -43,11 +43,15 @@ wait_for_jobs() {
 # Input parameters
 YT_URL=$1
 DIR=~/Downloads/$(date '+%Y%m%d/%H%M%S')
+
+# Extract the video title with yt-dlp
+VIDEO_TITLE=$(yt-dlp --get-title $YT_URL | sed 's/[^a-zA-Z0-9]//g') # Removing non-alphanumeric characters
+
 mkdir -p "$DIR" && cd "$DIR"
-yt-dlp --external-downloader aria2c --external-downloader-args "-x16 -s16 -k2M" -x --audio-format wav -o 'del.wav' $YT_URL
+yt-dlp --external-downloader aria2c --external-downloader-args "-x16 -s16 -k2M" -x --audio-format wav -o "${VIDEO_TITLE}.wav" $YT_URL
 
 # File processing
-INPUT_FILE="del.wav"
+INPUT_FILE="${VIDEO_TITLE}.wav"
 FILE_EXT="${INPUT_FILE##*.}"
 FILE_NAME="${INPUT_FILE%.*}"
 COUNT=0
