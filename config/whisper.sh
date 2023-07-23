@@ -10,13 +10,16 @@ whisper() {
 	MAX_RETRIES=5
 	API_KEY=$2
 
+	# Write the video title to the output file
+	echo "Video Title: ${VIDEO_TITLE}" >"$OUTPUT_FILE"
+
 	while [ $ATTEMPTS -lt $MAX_RETRIES ]; do
 		curl "https://api.openai.com/v1/audio/transcriptions" \
 			-H "Authorization: Bearer $API_KEY" \
 			-H "Content-Type: multipart/form-data" \
 			-F "model=whisper-1" \
 			-F "response_format=text" \
-			-F "file=@$1" >"$OUTPUT_FILE"
+			-F "file=@$1" >>"$OUTPUT_FILE"
 		if [ $? -eq 0 ]; then
 			break
 		else
@@ -43,13 +46,14 @@ wait_for_jobs() {
 # Input parameters
 YT_URL=$1
 
-# Extract the video title with yt-dlp
+# Today's date
+TODAY=$(date '+%Y%m%d')
+
+# Extract the video title and publish date with yt-dlp
 VIDEO_TITLE=$(yt-dlp --get-title $YT_URL | sed 's/[^a-zA-Z0-9]//g') # Removing non-alphanumeric characters
+PUBLISH_DATE=$(yt-dlp --get-filename -o "%(upload_date)s" $YT_URL)
 
-# Get video publish date
-PUBLISH_DATE=$(yt-dlp --get-upload-date $YT_URL)
-
-DIR=~/Downloads/${PUBLISH_DATE}
+DIR=~/Downloads/${TODAY}
 mkdir -p "$DIR" && cd "$DIR"
 
 yt-dlp --external-downloader aria2c --external-downloader-args "-x16 -s16 -k2M" -x --audio-format wav -o "${PUBLISH_DATE}_${VIDEO_TITLE}.wav" $YT_URL
