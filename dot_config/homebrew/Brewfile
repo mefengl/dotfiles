@@ -1,5 +1,6 @@
 # brew tap "homebrew/bundle"
 #2 try
+cask "anki"
 cask "buzz"
 cask "alt-tab"
 cask "locationsimulator"
