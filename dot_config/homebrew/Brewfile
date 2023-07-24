@@ -86,6 +86,7 @@ cask "openinterminal"
 ##1 macos
 cask "raycast"
 cask "arc"
+cask "google-chrome"
 cask "bob"
 cask "hiddenbar"
 cask "menubarx"
