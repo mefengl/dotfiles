@@ -104,7 +104,7 @@ alias update='tldr --update; zplug update'
 
 ##1.2 too see
 alias yt-dlp-audio='bash ~/config/whisper.sh'
-alias copytxt='find . -name "*.txt" | xargs cat | pbcopy'
+alias copytxt='cat *.txt | pbcopy'
 copyfile(){pandoc $1 --to plain | pbcopy}
 
 # starship
