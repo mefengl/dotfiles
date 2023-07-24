@@ -122,6 +122,7 @@ mas "Gifski", id: 1351639930
 # cask "wpsoffice"
 # cask "mactex"
 # cask "mark-text"
+cask "typora"
 cask "zotero"
 brew "pandoc"
 cask "imageoptim" # image compress
