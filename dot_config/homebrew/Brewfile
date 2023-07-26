@@ -95,7 +95,8 @@ cask "menubarx"
 cask "monitorcontrol"
 cask "input-source-pro"
 cask "1password"
-# cask "notion"
+cask "notion"
+cask "obsidian"
 # cask "1password-cli"
 
 ##1.1 Safari
