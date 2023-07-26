@@ -141,7 +141,7 @@ alias ghgl='gh gist list'
 alias ghprv='gh pr view --web'
 alias ghfv='git-file-history'
 create_issue() {
-  gh issue create --title="$1" --body="$2" --assignee=mefengl
+  gh issue create --title="$1" --body="$2"
 }
 
 ## ?? git? gh?
