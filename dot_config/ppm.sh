@@ -3,7 +3,7 @@
 # Define the packages to install
 packages=(
     # try
-    "get-urls-cli"
+    "bumpp"
     "jsinspect"
 
     # "npm-copilot"
@@ -25,6 +25,8 @@ packages=(
     "vsce"
     # github
     "@githubnext/github-copilot-cli"
+    # cli enhance
+    "get-urls-cli"
 )
 
 # Define color codes for echoing messages
