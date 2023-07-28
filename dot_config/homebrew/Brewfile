@@ -1,5 +1,6 @@
 # brew tap "homebrew/bundle"
 #2 try
+brew "openfortivpn"
 cask "amethyst"
 cask "alt-tab"
 cask "locationsimulator"
