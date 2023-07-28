@@ -3,7 +3,6 @@
 # Define the packages to install
 packages=(
     # try
-    "pkg"
     "jsinspect"
     # "npm-copilot"
     "wrangler"
