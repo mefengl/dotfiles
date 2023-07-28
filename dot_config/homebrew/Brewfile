@@ -1,19 +1,13 @@
 # brew tap "homebrew/bundle"
 #2 try
+cask "amethyst"
 cask "anki"
-cask "buzz"
 cask "alt-tab"
 cask "locationsimulator"
-tap "artginzburg/tap"
-brew "sudo-touchid"
-# sudo brew services start sudo-touchid
 
 brew "mas" # mac app store cli, compatible with brew bundle, can see by `brew bundle dump`
 tap "homebrew/autoupdate"
 tap "buo/cask-upgrade"
-
-## linux
-brew "coreutils"
 
 # tap "simonw/llm"
 # brew "llm"
@@ -29,6 +23,12 @@ brew "autojump"
 brew "tldr"
 tap "samwho/spacer"
 brew "spacer"
+
+tap "artginzburg/tap"
+brew "sudo-touchid"
+# sudo brew services start sudo-touchid
+### linux
+brew "coreutils"
 
 ##1.5 window manager
 tap "koekeishiya/formulae"
