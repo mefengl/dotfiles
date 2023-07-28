@@ -1,7 +1,7 @@
 # brew tap "homebrew/bundle"
 #2 try
+cask "background-music"
 cask "amethyst"
-cask "anki"
 cask "alt-tab"
 cask "locationsimulator"
 
@@ -11,6 +11,9 @@ tap "buo/cask-upgrade"
 
 # tap "simonw/llm"
 # brew "llm"
+
+##10 human as llm
+cask "anki"
 
 ##1.3 terminal
 brew "starship"
