@@ -3,7 +3,9 @@
 # Define the packages to install
 packages=(
     # try
+    "get-urls-cli"
     "jsinspect"
+
     # "npm-copilot"
     "wrangler"
     "github-pewpew"
