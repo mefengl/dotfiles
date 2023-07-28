@@ -1,6 +1,5 @@
 # brew tap "homebrew/bundle"
 #2 try
-cask "background-music"
 cask "amethyst"
 cask "alt-tab"
 cask "locationsimulator"
