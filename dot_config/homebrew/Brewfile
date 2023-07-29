@@ -1,5 +1,6 @@
 # brew tap "homebrew/bundle"
 #2 try
+cask "dropbox"
 # brew "openfortivpn"
 cask "amethyst"
 cask "alt-tab"
