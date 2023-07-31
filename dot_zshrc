@@ -111,6 +111,15 @@ copyarticle() {
     mkdir -p ~/Downloads/articles/$timestamp
     node ~/projects/get-articles/index.js $1 | split -l 1500 -d -a 2 - ~/Downloads/articles/$timestamp/
 }
+copynext() {
+    for f in *; do 
+        [[ $f != *_sent ]] || continue
+        cat $f | pbcopy
+        echo -e "\033[0;32mCopied $f\033[0m"
+        mv $f ${f}_sent
+        break
+    done
+}
 
 # starship
 alias vimstar='nvim ~/.config/starship.toml'
