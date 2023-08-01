@@ -10,29 +10,25 @@ whisper() {
     MAX_RETRIES=5
     API_KEY=$2
 
-    # Write the video title and URL to the output file
-    echo "Video Title: ${VIDEO_TITLE}" >"$OUTPUT_FILE"
-    echo "Video URL: ${YT_URL}" >>"$OUTPUT_FILE"
-    echo "" >>"$OUTPUT_FILE"
-
     while [ $ATTEMPTS -lt $MAX_RETRIES ]; do
-        curl "https://api.openai.com/v1/audio/transcriptions" \
+        RESPONSE=$(curl -s -w "%{http_code}" "https://api.openai.com/v1/audio/transcriptions" \
             -H "Authorization: Bearer $API_KEY" \
             -H "Content-Type: multipart/form-data" \
             -F "model=whisper-1" \
             -F "response_format=text" \
-            -F "file=@$1" >>"$OUTPUT_FILE"
-        if [ $? -eq 0 ]; then
-            break
-        else
+            -F "file=@$1")
+        HTTP_CODE=${RESPONSE:(-3)}
+        API_RESPONSE=${RESPONSE:0:${#RESPONSE}-3}
+
+        if [[ $HTTP_CODE -eq 429 ]]; then
             let ATTEMPTS=ATTEMPTS+1
-            echo "Curl failed. Attempt: $ATTEMPTS"
-            rm -f "$OUTPUT_FILE"
+            echo "API quota exceeded. Attempt: $ATTEMPTS"
+            sleep 5
+        else
+            echo "$API_RESPONSE" >>"$OUTPUT_FILE"
+            break
         fi
     done
-    # Add article divider
-    echo "" >>"$OUTPUT_FILE"
-    echo "--- article divider ---" >> "$OUTPUT_FILE"
     rm -f "$1"
 }
 
@@ -73,6 +69,11 @@ SEGMENT_TIME=1200
 OUTPUT_FILE="${FILE_NAME}.txt"
 rm -f "$OUTPUT_FILE"
 
+# Write the video title and URL to the output file
+echo "Video Title: ${VIDEO_TITLE}" >"$OUTPUT_FILE"
+echo "Video URL: ${YT_URL}" >>"$OUTPUT_FILE"
+echo "" >>"$OUTPUT_FILE"
+
 if [[ $FILE_EXT != "wav" ]]; then
     ffmpeg -y -i "$INPUT_FILE" "$FILE_NAME.wav"
 fi
@@ -95,5 +96,9 @@ for segment in "${FILE_NAME}_segment"*."mp3"; do
 done
 
 wait
+
+# Add article divider
+echo "" >>"$OUTPUT_FILE"
+echo "--- article divider ---" >> "$OUTPUT_FILE"
 
 echo "Processed $COUNT files."
