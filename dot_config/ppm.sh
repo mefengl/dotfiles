@@ -21,6 +21,7 @@ packages=(
     "turbo"
     # vscode
     "yo"
+    "generator-nm"
     "generator-code"
     "vsce"
     # github
