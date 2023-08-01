@@ -113,7 +113,7 @@ copyarticle() {
 }
 splittxt() {
     mkdir -p ~/Downloads/txts
-    cat *.txt | split -b 150k -d -a 2 - ~/Downloads/txts/
+    cat *.txt | split -b 180k -d -a 2 - ~/Downloads/txts/
 }
 copynext() {
     for f in *; do 
