@@ -111,6 +111,10 @@ copyarticle() {
     mkdir -p ~/Downloads/articles/$timestamp
     node ~/projects/get-articles/index.js $1 | split -l 1500 -d -a 2 - ~/Downloads/articles/$timestamp/
 }
+splittxt() {
+    mkdir -p ~/Downloads/txts
+    cat *.txt | split -b 150k -d -a 2 - ~/Downloads/txts/
+}
 copynext() {
     for f in *; do 
         [[ $f != *_sent ]] || continue
