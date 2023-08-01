@@ -10,6 +10,11 @@ whisper() {
     MAX_RETRIES=5
     API_KEY=$2
 
+    # Write the video title and URL to the output file
+    echo "Video Title: ${VIDEO_TITLE}" >"$OUTPUT_FILE"
+    echo "Video URL: ${YT_URL}" >>"$OUTPUT_FILE"
+    echo "" >>"$OUTPUT_FILE"
+
     while [ $ATTEMPTS -lt $MAX_RETRIES ]; do
         RESPONSE=$(curl -s -w "%{http_code}" "https://api.openai.com/v1/audio/transcriptions" \
             -H "Authorization: Bearer $API_KEY" \
@@ -29,7 +34,9 @@ whisper() {
             break
         fi
     done
-    cat "$OUTPUT_FILE" >> "$SUMMARY_FILE"
+    # Add article divider
+    echo "" >>"$OUTPUT_FILE"
+    echo "--- article divider ---" >> "$OUTPUT_FILE"
     rm -f "$1"
 }
 
@@ -68,13 +75,7 @@ COUNT=0
 SEGMENT_TIME=1200
 
 OUTPUT_FILE="${FILE_NAME}.txt"
-SUMMARY_FILE="${FILE_NAME}_summary.txt"
-rm -f "$OUTPUT_FILE" "$SUMMARY_FILE"
-
-# Write the video title and URL to the summary file
-echo "Video Title: ${VIDEO_TITLE}" >"$SUMMARY_FILE"
-echo "Video URL: ${YT_URL}" >>"$SUMMARY_FILE"
-echo "" >>"$SUMMARY_FILE"
+rm -f "$OUTPUT_FILE"
 
 if [[ $FILE_EXT != "wav" ]]; then
     ffmpeg -y -i "$INPUT_FILE" "$FILE_NAME.wav"
@@ -98,9 +99,5 @@ for segment in "${FILE_NAME}_segment"*."mp3"; do
 done
 
 wait
-
-# Add article divider to the summary file
-echo "" >>"$SUMMARY_FILE"
-echo "--- article divider ---" >> "$SUMMARY_FILE"
 
 echo "Processed $COUNT files."
