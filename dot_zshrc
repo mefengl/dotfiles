@@ -103,7 +103,6 @@ github_update(){echo -e "\033[32mgithub_update:\033[0m";cd ~/GitHub;github_clone
 alias update='tldr --update; zplug update'
 
 ##1.2 too see
-alias yt-dlp-audio='bash ~/config/whisper.sh'
 alias copytxt='cat *.txt | pbcopy'
 copyfile(){pandoc $1 --to plain | pbcopy}
 copyarticle() {
