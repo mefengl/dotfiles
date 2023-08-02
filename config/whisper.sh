@@ -65,7 +65,7 @@ PUBLISH_DATE=$(yt-dlp --get-filename -o "%(upload_date)s" $YT_URL)
 DIR=~/Downloads/${TODAY}
 mkdir -p "$DIR" && cd "$DIR"
 
-yt-dlp --external-downloader aria2c --external-downloader-args "-x16 -s16 -k2M" -x --audio-format wav -o "${PUBLISH_DATE}_${VIDEO_TITLE}.wav" $YT_URL
+yt-dlp --external-downloader aria2c --external-downloader-args "-x16 -s16 -k2M" -x --audio-format wav -o "${PUBLISH_DATE}_${VIDEO_TITLE}.wav" $YT_URL --no-playlist
 
 # File processing
 INPUT_FILE="${PUBLISH_DATE}_${VIDEO_TITLE}.wav"
