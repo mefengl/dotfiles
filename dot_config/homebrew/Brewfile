@@ -1,5 +1,7 @@
 # brew tap "homebrew/bundle"
 #2 try
+tap "gleich/homebrew-taps"
+brew "nuke"
 brew "ast-grep"
 cask "dropbox"
 # brew "openfortivpn"
