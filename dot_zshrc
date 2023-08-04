@@ -108,7 +108,7 @@ copyfile(){pandoc $1 --to plain | pbcopy}
 copyarticle() {
     timestamp=$(date +%Y%m%d%H%M%S)
     mkdir -p ~/Downloads/articles/$timestamp
-    node ~/projects/get-articles/index.js $1
+    node ~/projects/get-articles/index.js $1 | pbcopy
 }
 splittxt() {
     mkdir -p ~/Downloads/txts
