@@ -1,5 +1,6 @@
 # brew tap "homebrew/bundle"
 #2 try
+cask "simple-comic"
 brew "sbcl"
 tap "gleich/homebrew-taps"
 brew "nuke"
