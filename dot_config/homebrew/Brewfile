@@ -68,7 +68,7 @@ brew "java"
 brew "sbt"
 ##1 node
 brew "n"
-brew "nvm"
+# brew "nvm"
 ##1 python
 brew "pyenv"
 ##1 rust
