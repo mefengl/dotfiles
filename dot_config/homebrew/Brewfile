@@ -67,6 +67,7 @@ brew "fwartner/tap/mac-cleanup"
 brew "java"
 brew "sbt"
 ##1 node
+brew "n"
 brew "nvm"
 ##1 python
 brew "pyenv"

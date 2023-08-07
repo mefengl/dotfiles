@@ -69,7 +69,6 @@ zplug "plugins/vscode", from:oh-my-zsh
 zplug "plugins/autojump", from:oh-my-zsh
 ## env
 zplug "plugins/pyenv", from:oh-my-zsh
-zplug "plugins/nvm", from:oh-my-zsh
 zplug "plugins/rbenv", from:oh-my-zsh
 
 if ! zplug check --verbose; then
