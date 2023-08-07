@@ -2,6 +2,9 @@
 
 # Define the packages to install
 packages=(
+    "wheel"
+
+    # cli
     "asitop"
 )
 
