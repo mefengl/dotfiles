@@ -6,9 +6,6 @@ packages=(
 
     # cli
     "asitop"
-
-    # media
-    "spotdl"
 )
 
 # Define color codes for echoing messages
