@@ -59,7 +59,7 @@ zplug "plugins/terraform", from:oh-my-zsh
 
 ## alias & fast operation
 zplug "plugins/aliases", from:oh-my-zsh
-zplug "djui/alias-tips"
+zplug "MichaelAquilina/zsh-you-should-use" # zplug "djui/alias-tips"
 
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/git-auto-fetch", from:oh-my-zsh
