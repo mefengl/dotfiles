@@ -7,7 +7,7 @@ brew "nuke"
 brew "ast-grep"
 cask "dropbox"
 # brew "openfortivpn"
-cask "amethyst"
+# cask "amethyst"
 cask "alt-tab"
 cask "locationsimulator"
 
