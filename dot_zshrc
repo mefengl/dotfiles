@@ -102,12 +102,12 @@ github_update(){echo -e "\033[32mgithub_update:\033[0m";cd ~/GitHub;github_clone
 alias update='tldr --update; zplug update'
 
 ##1.2 too see
-alias copytxt='cat *.txt | pbcopy'
-copyfile(){pandoc $1 --to plain | pbcopy}
-copyarticle() {
+alias gettxt='cat *.txt'
+getfile(){pandoc $1 --to plain}
+getarticle() {
     timestamp=$(date +%Y%m%d%H%M%S)
     mkdir -p ~/Downloads/articles/$timestamp
-    node ~/projects/get-articles/index.js $1 | pbcopy
+    node ~/projects/get-articles/index.js $1
 }
 splittxt() {
     mkdir -p ~/Downloads/txts
