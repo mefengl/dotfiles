@@ -102,6 +102,7 @@ github_update(){echo -e "\033[32mgithub_update:\033[0m";cd ~/GitHub;github_clone
 alias update='tldr --update; zplug update'
 
 ##1.2 too see
+alias fast-yt-dlp='yt-dlp --external-downloader aria2c --external-downloader-args "-x16 -s16 -k2M"'
 alias gettxt='cat *.txt'
 getfile(){pandoc $1 --to plain}
 getlinks() {
