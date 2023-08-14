@@ -218,6 +218,9 @@ source ~/development.sh
 alias vimy='nvim ~/.config/yabai/yabairc'
 alias vims='nvim ~/.config/skhd/skhdrc'
 
+## espanso
+alias vime='nvim ~/Library/Application\ Support/espanso/match/base.yml'
+
 eval "$(starship init zsh)"
 
 autoload -Uz compinit
