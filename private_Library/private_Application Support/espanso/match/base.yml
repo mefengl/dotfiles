@@ -1,19 +1,22 @@
 matches:
-  # Simple text replacement
-  - trigger: ":espanso"
-    replace: "Hi there!"
-
   - trigger: ":full code"
     replace: "full code without omit anything"
 
-  # Print the current date
-  - trigger: ":date"
-    replace: "{{mydate}}"
+  - trigger: ":td"
+    replace: "{{today_date}} "
     vars:
-      - name: mydate
+      - name: today_date
         type: date
         params:
-          format: "%m/%d/%Y"
+          format: "%Y-%m-%d"
+
+  - trigger: ":todo"
+    replace: "🎏 {{today_date}} Todos\n-"
+    vars:
+      - name: today_date
+        type: date
+        params:
+          format: "%Y-%m-%d"
 
   # Print the output of a shell command
   - trigger: ":shell"
