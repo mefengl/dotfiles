@@ -1,5 +1,7 @@
 # brew tap "homebrew/bundle"
 #2 try
+tap "caarlos0/tap"
+brew "jsonfmt"
 # cask "simple-comic"
 cask "espanso"
 brew "sbcl"
