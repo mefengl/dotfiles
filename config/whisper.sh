@@ -5,6 +5,7 @@ whisper() {
 	OUTPUT_FILE="${1%.*}.txt"
 	ATTEMPTS=0
 	MAX_RETRIES=5
+    THE_FILE=$1
     shift # Remove the first argument which is the file name
 	API_KEYS=("$@")
 	KEY_INDEX=0
@@ -21,7 +22,7 @@ whisper() {
 			-H "Content-Type: multipart/form-data" \
 			-F "model=whisper-1" \
 			-F "response_format=text" \
-			-F "file=@$1")
+			-F "file=@$THE_FILE")
 		HTTP_CODE=${RESPONSE:(-3)}
 		API_RESPONSE=${RESPONSE:0:${#RESPONSE}-3}
 
