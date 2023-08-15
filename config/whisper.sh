@@ -5,6 +5,7 @@ whisper() {
 	OUTPUT_FILE="${1%.*}.txt"
 	ATTEMPTS=0
 	MAX_RETRIES=5
+    shift # Remove the first argument which is the file name
 	API_KEYS=("$@")
 	KEY_INDEX=0
 
@@ -95,7 +96,7 @@ shuffled_keys=($(shuf -e "${API_KEYS_ARRAY[@]}"))
 for segment in "${FILE_NAME}_segment"*."mp3"; do
 	echo "Processing $segment"
 	((COUNT++))
-	whisper $segment "${shuffled_keys[@]}" &
+	whisper "$segment" "${shuffled_keys[@]}" &
 	wait_for_jobs 9
 done
 
