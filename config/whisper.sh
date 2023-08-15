@@ -96,7 +96,7 @@ shuffled_keys=($(shuf -e "${API_KEYS_ARRAY[@]}"))
 for segment in "${FILE_NAME}_segment"*."mp3"; do
 	echo "Processing $segment"
 	((COUNT++))
-	whisper "$segment" "${shuffled_keys[@]}" &
+	whisper $segment "${shuffled_keys[@]}" &
 	wait_for_jobs 9
 done
 
