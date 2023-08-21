@@ -178,7 +178,7 @@ alias vimp='nvim ~/.config/pipm.sh'
 alias codep='code ~/.config/pipm.sh'
 ## changeset
 alias ncs='npx changeset'
-alias ncsr='npx changeset version'
+alias ncsv='npx changeset version'
 
 # homebrew
 alias brewb='brew bundle --file=~/.config/homebrew/Brewfile'
