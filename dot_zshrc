@@ -176,6 +176,9 @@ alias coden='code ~/.config/ppm.sh'
 alias pipb='bash ~/.config/pipm.sh'
 alias vimp='nvim ~/.config/pipm.sh'
 alias codep='code ~/.config/pipm.sh'
+## changeset
+alias ncs='npx changeset'
+alias ncsr='npx changeset version'
 
 # homebrew
 alias brewb='brew bundle --file=~/.config/homebrew/Brewfile'
