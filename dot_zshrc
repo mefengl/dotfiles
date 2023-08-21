@@ -221,6 +221,9 @@ alias vims='nvim ~/.config/skhd/skhdrc'
 ## espanso
 alias vime='nvim ~/Library/Application\ Support/espanso/match/base.yml'
 
+## atuin
+alias vima='nvim ~/.config/atuin/config.yml'
+
 eval "$(starship init zsh)"
 
 autoload -Uz compinit
