@@ -97,6 +97,7 @@ alias \$=''
 alias rm='trash'
 alias ss='exec zsh'
 alias q='exit'
+alias b='bash'
 github_clone(){gh repo list mefengl | awk '{print $1}' | xargs -L1 gh repo clone 2>/dev/null}
 github_update(){echo -e "\033[32mgithub_update:\033[0m";cd ~/GitHub;github_clone;for i in *;do cd $i;git pull;cd ~;done}
 alias update='tldr --update; zplug update'
@@ -203,11 +204,11 @@ alias codeif='yes | vsce package && code --force --install-extension $(ls -t *.v
 
 # chezmoi
 export LANG=en_US.UTF-8
-alias checd="chezmoi cd"
-alias chea="chezmoi add"
-alias chera="chezmoi re-add"
-alias cherm="chezmoi remove"
+alias che="chezmoi re-add"
 alias cheu="chezmoi update"
+alias chea="chezmoi add"
+alias checd="chezmoi cd"
+alias cherm="chezmoi remove"
 
 # git
 alias gpp='ga .;gcmsg "zz";gp'
