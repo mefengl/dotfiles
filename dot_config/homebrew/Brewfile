@@ -1,8 +1,5 @@
 # brew tap "homebrew/bundle"
 #2 try
-brew "atuin"
-tap "caarlos0/tap"
-brew "jsonfmt"
 # cask "simple-comic"
 cask "espanso"
 brew "sbcl"
@@ -29,15 +26,24 @@ cask "notion" # for old staff only
 
 ##1.3 terminal
 brew "starship"
-brew "trash"
-brew "tree"
-brew "jq"
-brew "shfmt"
-brew "shellcheck"
+brew "atuin"
 brew "autojump"
+brew "trash"
+
+brew "ripgrep"
+brew "jq"
+
+brew "shellcheck"
+brew "shfmt"
+tap "caarlos0/tap"
+brew "jsonfmt"
+
 brew "tldr"
+
+brew "tree"
 tap "samwho/spacer"
 brew "spacer"
+
 
 tap "artginzburg/tap"
 brew "sudo-touchid"
