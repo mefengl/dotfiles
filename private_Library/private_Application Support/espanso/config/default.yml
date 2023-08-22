@@ -25,3 +25,6 @@ auto_restart: true
 # Because injecting long texts char-by-char is a slow operation, espanso automatically
 # uses the clipboard if the text is longer than 'clipboard_threshold' characters.
 # clipboard_threshold: 100
+
+# --- Undo backspace
+undo_backspace: false
