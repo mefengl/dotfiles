@@ -10,7 +10,7 @@ matches:
     replace: "remove types and exports, make them can be run in browser console: {{clipboard}}\n\n"
 
   - trigger: ":exp"
-    replace: "下面的代码是用来干什么的，请详细解释，加上行内注释: {{clipboard}}\n\n"
+    replace: "下面的代码是用来干什么的，请详细解释，加上行内注释，注释风格应该是类似博客的解释: {{clipboard}}\n\n"
 
   - trigger: ":eg"
     replace: "举个相关使用的例子，前后对比有和没有这段代码，说明这段代码的作用\n\n"
