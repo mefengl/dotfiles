@@ -1,7 +1,6 @@
 # brew tap "homebrew/bundle"
 #2 try
 # cask "simple-comic"
-cask "android-studio"
 brew "graphviz"
 
 cask "espanso"
