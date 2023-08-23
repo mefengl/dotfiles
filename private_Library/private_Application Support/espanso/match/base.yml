@@ -4,7 +4,7 @@ global_vars:
 
 matches:
   - trigger: ":full code"
-    replace: "full code without omit anything"
+    replace: "full code, don't omit anything, I need full code to replace original code"
 
   - trigger: ":try"
     replace: "im.try@outlook.com"

@@ -106,6 +106,7 @@ alias update='tldr --update; zplug update'
 alias fast-yt-dlp='yt-dlp --external-downloader aria2c --external-downloader-args "-x16 -s16 -k2M"'
 alias gettxt='cat *.txt'
 getfile(){pandoc $1 --to plain}
+epub2txt() { for file in *.epub; do pandoc "$file" --to plain -o "${file%.epub}.txt"; done; }
 geturls() {
     timestamp=$(date +%Y%m%d%H%M%S)
     mkdir -p ~/Downloads/articles/$timestamp
