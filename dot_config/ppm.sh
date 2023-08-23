@@ -3,7 +3,7 @@
 # Define the packages to install
 packages=(
     # try
-    "bumpp"
+    "madge"
     "jsinspect"
 
     # "npm-copilot"
@@ -15,6 +15,7 @@ packages=(
 
     "@antfu/ni"
     "yarn"
+    "bumpp"
     "kill-port"
     # vercel
     "vercel"
