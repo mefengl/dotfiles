@@ -1,6 +1,8 @@
 # brew tap "homebrew/bundle"
 #2 try
 # cask "simple-comic"
+brew "graphviz"
+
 cask "espanso"
 brew "sbcl"
 tap "gleich/homebrew-taps"
@@ -150,7 +152,6 @@ mas "Gifski", id: 1351639930
 cask "typora"
 cask "zotero"
 brew "pandoc"
-cask "imageoptim" # image compress
 
 ## Xcodes
 brew "aria2" # for quicker xcodes download
