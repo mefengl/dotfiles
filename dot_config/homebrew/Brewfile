@@ -1,7 +1,6 @@
 # brew tap "homebrew/bundle"
 #2 try
 # cask "simple-comic"
-brew "graphviz"
 
 cask "espanso"
 brew "sbcl"

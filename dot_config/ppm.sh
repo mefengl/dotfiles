@@ -3,7 +3,6 @@
 # Define the packages to install
 packages=(
     # try
-    "madge"
     "jsinspect"
 
     # "npm-copilot"
