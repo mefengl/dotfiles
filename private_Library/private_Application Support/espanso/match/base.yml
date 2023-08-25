@@ -34,6 +34,9 @@ matches:
         params:
           format: "%Y-%m-%d"
 
+  - trigger: ":done"
+    replace: " ✅"
+
   # Print the output of a shell command
   - trigger: ":shell"
     replace: "{{output}}"
@@ -42,3 +45,11 @@ matches:
         type: shell
         params:
           cmd: "echo 'Hello from your shell'"
+  # secrets
+  # - trigger: ":tel"
+  #   replace: "{{output}}"
+  #   vars:
+  #     - name: output
+  #       type: shell
+  #       params:
+  #         cmd: "op read "op://Private/" -n"
