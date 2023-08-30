@@ -1,6 +1,6 @@
 {
-    "timeStamp": 1692029578308,
-    "version": "9.8.1.0",
+    "timeStamp": 1693378513140,
+    "version": "9.8.2.0",
     "uiLanguage": "default",
     "pageTranslatorService": "google",
     "textTranslatorService": "google",
@@ -81,12 +81,12 @@
         "_execute_browser_action": "",
         "hotkey-hot-translate-selected-text": "",
         "hotkey-show-original": "",
-        "hotkey-swap-page-translation-service": "",
-        "hotkey-toggle-translation": "⌥Y",
+        "hotkey-swap-page-translation-service": "⌥Q",
+        "hotkey-toggle-translation": "⌥T",
         "hotkey-translate-page-1": "",
         "hotkey-translate-page-2": "",
         "hotkey-translate-page-3": "",
-        "hotkey-translate-selected-text": ""
+        "hotkey-translate-selected-text": "⌥S"
     },
     "expandPanelTranslateSelectedText": "no",
     "translateTag_pre": "no",
@@ -96,7 +96,7 @@
     "translateSelectedWhenPressTwice": "no",
     "translateTextOverMouseWhenPressTwice": "no",
     "translateClickingOnce": "no",
-    "enableDiskCache": "no",
+    "enableDiskCache": "yes",
     "useAlternativeService": "yes",
     "customServices": []
 }
