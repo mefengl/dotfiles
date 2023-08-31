@@ -53,3 +53,7 @@ matches:
   #       type: shell
   #       params:
   #         cmd: "op read "op://Private/" -n"
+
+  # english learning
+  - trigger: ":word"
+    replace: "{{clipboard}} 这个词一般怎么用\n"
