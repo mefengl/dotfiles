@@ -90,6 +90,7 @@ esac
 # pnpm end
 
 # docker
+alias dockerclean='docker stop $(docker ps -aq) && docker rm $(docker ps -aq)'
 alias awsdocker='aws ecr get-login-password --region $aws_region | docker login --username AWS --password-stdin $aws_prefix'
 
 #1.2 better for daily
