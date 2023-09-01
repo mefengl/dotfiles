@@ -2,15 +2,11 @@
 #2 try
 # cask "simple-comic"
 
-cask "espanso"
-brew "sbcl"
 tap "gleich/homebrew-taps"
 brew "nuke"
-brew "ast-grep"
 cask "dropbox"
 # brew "openfortivpn"
 # cask "amethyst"
-cask "alt-tab"
 cask "locationsimulator"
 
 brew "mas" # mac app store cli, compatible with brew bundle, can see by `brew bundle dump`
@@ -72,6 +68,7 @@ brew "bfg"
 ##0.5 mac
 tap "fwartner/tap"
 brew "fwartner/tap/mac-cleanup"
+cask "alt-tab"
 
 ##1 java
 brew "java"
@@ -99,9 +96,6 @@ cask "openinterminal"
 
 ##0.8 container&db
 cask "docker"
-# brew "cog"
-# tap "mongodb/brew"
-# brew "mongodb-community"
 # brew "terraform"
 # brew "kafka"
 
@@ -112,18 +106,17 @@ cask "google-chrome"
 cask "microsoft-edge"
 cask "firefox"
 cask "bob"
-# tap "pot-app/homebrew-tap"
-# cask "pot"
 cask "hiddenbar"
 cask "menubarx"
 cask "monitorcontrol"
 cask "input-source-pro"
 cask "1password"
 cask "1password-cli"
+cask "espanso"
 
 ##1.1 Safari
 mas "1Password for Safari", id: 1569813296
-mas "Stay", id: 1591620171
+# mas "Stay", id: 1591620171
 mas "Tampermonkey", id: 1482490089
 mas "Vimari", id: 1480933944
 
