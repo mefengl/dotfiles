@@ -58,6 +58,8 @@ zinit wait lucid for MichaelAquilina/zsh-you-should-use
 zinit wait lucid for OMZP::git
 zinit wait lucid for OMZP::git-auto-fetch
 zinit wait lucid for OMZP::brew
+zinit wait lucid for OMZP::docker-compose
+
 zinit wait lucid for OMZP::vscode
 zinit wait lucid for OMZP::autojump
 
@@ -83,8 +85,7 @@ esac
 # pnpm end
 
 # docker
-alias dockerup='docker-compose build & docker-compose up -d'
-alias dockerclean='docker stop $(docker ps -aq) && docker rm $(docker ps -aq)'
+alias dockerclean='docker stop $(docker ps -aq); docker rm $(docker ps -aq)'
 alias awsdocker='aws ecr get-login-password --region $aws_region | docker login --username AWS --password-stdin $aws_prefix'
 
 #1.2 better for daily
