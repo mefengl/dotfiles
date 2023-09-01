@@ -83,6 +83,7 @@ esac
 # pnpm end
 
 # docker
+alias dockerup='docker-compose build & docker-compose up -d'
 alias dockerclean='docker stop $(docker ps -aq) && docker rm $(docker ps -aq)'
 alias awsdocker='aws ecr get-login-password --region $aws_region | docker login --username AWS --password-stdin $aws_prefix'
 
