@@ -26,7 +26,6 @@ cask "obsidian"
 cask "notion" # for old staff only
 
 ##1.3 terminal
-brew "starship"
 brew "atuin"
 brew "autojump"
 brew "trash"
