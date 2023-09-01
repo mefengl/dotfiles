@@ -1,4 +1,5 @@
 #2 try
+
 function ni() {
   command ni "$@"
   echo "nun ${@:1}" >> $HISTFILE
@@ -26,58 +27,49 @@ function brew() {
 alias gnb='bash ~/config/git-next-branch.sh'
 alias gnbo='gfo && gnb'
 
-# zplug
-if [[ ! -d ~/.zplug ]]; then
-    git clone https://github.com/zplug/zplug ~/.zplug
-fi
-source ~/.zplug/init.zsh
+# zinit
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
 
-zplug "zplug/zplug", hook-build: "zplug --self-manage"
-zplug "RiverGlide/zsh-goenv", from:gitlab
+zinit ice as"command" from"gh-r" \
+          atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+          atpull"%atclone" src"init.zsh"
+zinit light starship/starship
 
-# zsh users
-zplug "zsh-users/zsh-completions",              defer:0
-zplug "zsh-users/zsh-autosuggestions",          defer:2, on:"zsh-users/zsh-completions" 
-zplug "zsh-users/zsh-syntax-highlighting",      defer:3, on:"zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-history-substring-search", defer:3, on:"zsh-users/zsh-syntax-highlighting"
+zinit wait lucid atload"_zsh_autosuggest_start" for zsh-users/zsh-autosuggestions
+zinit wait lucid for zsh-users/zsh-syntax-highlighting
+zinit wait lucid for zsh-users/zsh-history-substring-search
 
-# oh-my-zsh
-##2 try
-## scala
-zplug "plugins/sbt", from:oh-my-zsh
+# scala
+zinit wait lucid for OMZP::sbt
+zinit wait lucid for OMZP::pip
+zinit wait lucid for OMZP::git-prompt
+zinit wait lucid for OMZP::gitignore
+zinit wait lucid for OMZP::command-not-found
+zinit wait lucid for OMZP::tmux
+zinit wait lucid for OMZP::terraform
 
-zplug "plugins/pip", from:oh-my-zsh
-zplug "plugins/git-prompt", from:oh-my-zsh # add numbers of behind and ahead
-zplug "plugins/gitignore", from:oh-my-zsh
-# zplug "plugins/common-aliases", from:oh-my-zsh
-zplug "plugins/command-not-found", from:oh-my-zsh
+# alias & fast operation
+zinit wait lucid for OMZP::aliases
+zinit wait lucid for MichaelAquilina/zsh-you-should-use
+zinit wait lucid for OMZP::git
+zinit wait lucid for OMZP::git-auto-fetch
+zinit wait lucid for OMZP::brew
+zinit wait lucid for OMZP::vscode
+zinit wait lucid for OMZP::autojump
 
-zplug "plugins/tmux", from:oh-my-zsh
+# env
+zinit wait lucid for OMZP::pyenv
+zinit wait lucid for OMZP::rbenv
 
-zplug "plugins/docker", from:oh-my-zsh
-zplug "plugins/terraform", from:oh-my-zsh
-
-## alias & fast operation
-zplug "plugins/aliases", from:oh-my-zsh
-zplug "MichaelAquilina/zsh-you-should-use" # zplug "djui/alias-tips"
-
-zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/git-auto-fetch", from:oh-my-zsh
-
-zplug "plugins/brew", from:oh-my-zsh
-zplug "plugins/vscode", from:oh-my-zsh
-zplug "plugins/autojump", from:oh-my-zsh
-## env
-zplug "plugins/pyenv", from:oh-my-zsh
-zplug "plugins/rbenv", from:oh-my-zsh
-
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-zplug load
+zinit for \
+    atload"zicompinit; zicdreplay" \
+    blockf \
+    lucid \
+    wait \
+  zsh-users/zsh-completions
 
 #2 try
 
@@ -233,8 +225,6 @@ alias cde='cd ~/Library/Application\ Support/espanso/'
 
 ## atuin
 alias vima='nvim ~/.config/atuin/config.toml'
-
-eval "$(starship init zsh)"
 
 autoload -Uz compinit
 zstyle ':completion:*' menu select
