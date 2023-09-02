@@ -2,8 +2,6 @@
 #2 try
 # cask "simple-comic"
 brew "ansible"
-# cask "virtualbox" # https://www.virtualbox.org/wiki/Testbuilds
-cask "vagrant"
 brew "svn"
 
 tap "gleich/homebrew-taps"
