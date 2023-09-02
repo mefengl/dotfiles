@@ -2,7 +2,7 @@
 #2 try
 # cask "simple-comic"
 brew "ansible"
-cask "virtualbox"
+# cask "virtualbox"
 cask "vagrant"
 brew "svn"
 
