@@ -2,9 +2,9 @@
 #2 try
 # cask "simple-comic"
 brew "ansible"
-cask "vagrant"
-cask "vmware-fusion" # vagrant plugin install vagrant-vmware-desktop
-cask "vagrant-vmware-utility"
+# cask "vagrant"
+# cask "vmware-fusion" # vagrant plugin install vagrant-vmware-desktop
+# cask "vagrant-vmware-utility"
 brew "svn"
 
 tap "gleich/homebrew-taps"
