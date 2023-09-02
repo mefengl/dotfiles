@@ -2,6 +2,7 @@
 #2 try
 # cask "simple-comic"
 brew "ansible"
+cask "vagrant"
 brew "svn"
 
 tap "gleich/homebrew-taps"
@@ -39,9 +40,6 @@ brew "jsonfmt"
 brew "tldr"
 
 brew "tree"
-tap "samwho/spacer"
-brew "spacer"
-
 
 tap "artginzburg/tap"
 brew "sudo-touchid"
