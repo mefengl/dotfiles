@@ -2,6 +2,9 @@
 #2 try
 # cask "simple-comic"
 brew "ansible"
+cask "vagrant"
+cask "vmware-fusion"
+cask "vagrant-vmware-utility"
 brew "svn"
 
 tap "gleich/homebrew-taps"
