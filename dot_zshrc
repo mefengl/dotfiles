@@ -53,10 +53,10 @@ zinit wait lucid for OMZP::tmux
 zinit wait lucid for OMZP::terraform
 
 # alias & fast operation
-zinit wait lucid for OMZP::aliases
-# zi for nocompile svn \
-#   multisrc'aliases.plugin.zsh' pick'/dev/null' \
-#     OMZP::aliases
+# zinit wait lucid for OMZP::aliases
+zi for nocompile svn \
+  multisrc'aliases.plugin.zsh' pick'/dev/null' \
+    OMZP::aliases
 zinit wait lucid for MichaelAquilina/zsh-you-should-use
 zinit wait lucid for OMZP::git
 zinit wait lucid for OMZP::git-auto-fetch
