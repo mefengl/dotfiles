@@ -3,7 +3,7 @@
 # cask "simple-comic"
 brew "ansible"
 cask "vagrant"
-cask "vmware-fusion"
+cask "vmware-fusion" # vagrant plugin install vagrant-vmware-desktop
 cask "vagrant-vmware-utility"
 brew "svn"
 
