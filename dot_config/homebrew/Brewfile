@@ -1,6 +1,7 @@
 # brew tap "homebrew/bundle"
 #2 try
 # cask "simple-comic"
+brew "ansible"
 brew "svn"
 
 tap "gleich/homebrew-taps"

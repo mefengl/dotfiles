@@ -66,10 +66,6 @@ zinit wait lucid for OMZP::docker-compose
 zinit wait lucid for OMZP::vscode
 zinit wait lucid for OMZP::autojump
 
-# env
-zinit wait lucid for OMZP::pyenv
-zinit wait lucid for OMZP::rbenv
-
 zinit for \
     atload"zicompinit; zicdreplay" \
     blockf \
