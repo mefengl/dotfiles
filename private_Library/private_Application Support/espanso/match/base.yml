@@ -16,7 +16,7 @@ matches:
     replace: "下面的代码是用来干什么的，请在代码的附近用注释详细解释，类似博客的行内和行上注释，介绍背后的知识和思考:"
 
   - trigger: ":eg"
-    replace: "举个相关使用的例子，前后对比有和没有这段代码，说明这段代码的作用，例子不要有外部依赖，应该能直接运行\n"
+    replace: "举对应使用的例子，前后对比有和没有这段代码，说明这段代码的作用，例子不要有外部依赖，应该能直接运行\n"
 
   - trigger: ":td"
     replace: "{{today_date}} "
@@ -54,6 +54,8 @@ matches:
   #       params:
   #         cmd: "op read "op://Private/" -n"
 
-  # english learning
+  # learning
   - trigger: ":word"
     replace: "{{clipboard}} 这个词一般怎么用\n"
+  - trigger: ":anki"
+    replace: "use Chinese to create an anki card for: {{clipboard}}\n"
