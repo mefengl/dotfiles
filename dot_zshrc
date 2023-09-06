@@ -41,29 +41,29 @@ zinit light starship/starship
 
 zinit wait lucid atload"_zsh_autosuggest_start" for zsh-users/zsh-autosuggestions
 zinit wait lucid for zsh-users/zsh-syntax-highlighting
-zinit wait lucid for zsh-users/zsh-history-substring-search
+# zinit wait lucid for zsh-users/zsh-history-substring-search
 
 # scala
-zinit wait lucid for OMZP::sbt
-zinit wait lucid for OMZP::pip
+# zinit wait lucid for OMZP::sbt
+# zinit wait lucid for OMZP::pip
 zinit wait lucid for OMZP::git-prompt
-zinit wait lucid for OMZP::gitignore
+# zinit wait lucid for OMZP::gitignore
 zinit wait lucid for OMZP::command-not-found
-zinit wait lucid for OMZP::tmux
-zinit wait lucid for OMZP::terraform
+# zinit wait lucid for OMZP::tmux
+# zinit wait lucid for OMZP::terraform
 
 # alias & fast operation
 # zinit wait lucid for OMZP::aliases
-zi for nocompile svn \
-  multisrc'aliases.plugin.zsh' pick'/dev/null' \
-    OMZP::aliases
-zinit wait lucid for MichaelAquilina/zsh-you-should-use
-zinit wait lucid for OMZP::git
+# zi for nocompile svn \
+#   multisrc'aliases.plugin.zsh' pick'/dev/null' \
+#     OMZP::aliases
+# zinit wait lucid for MichaelAquilina/zsh-you-should-use
+# zinit wait lucid for OMZP::git
 zinit wait lucid for OMZP::git-auto-fetch
-zinit wait lucid for OMZP::brew
-zinit wait lucid for OMZP::docker-compose
+# zinit wait lucid for OMZP::brew
+# zinit wait lucid for OMZP::docker-compose
 
-zinit wait lucid for OMZP::vscode
+# zinit wait lucid for OMZP::vscode
 zinit wait lucid for OMZP::autojump
 
 zinit for \
