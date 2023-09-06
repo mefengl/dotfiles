@@ -5,7 +5,9 @@ brew "ansible"
 # cask "vagrant"
 # cask "vmware-fusion" # vagrant plugin install vagrant-vmware-desktop
 # cask "vagrant-vmware-utility"
-brew "svn"
+
+#0.1 del
+# brew "svn"
 
 tap "gleich/homebrew-taps"
 brew "nuke"
