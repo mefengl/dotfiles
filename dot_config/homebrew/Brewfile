@@ -165,8 +165,6 @@ brew "robotsandpencils/made/xcodes"
 # cask "microsoft-outlook"
 # cask "termius"
 
-tap "homebrew/cask-versions"
-cask "visual-studio-code-insiders"
 # cask "rar"
 
 ##0.1 strange
