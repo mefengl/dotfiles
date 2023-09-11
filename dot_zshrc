@@ -202,11 +202,6 @@ alias codeif='yes | vsce package && code --force --install-extension $(ls -t *.v
 
 # chezmoi
 export LANG=en_US.UTF-8
-alias che="chezmoi re-add"
-alias cheu="chezmoi update"
-alias chea="chezmoi add"
-alias checd="chezmoi cd"
-alias cherm="chezmoi remove"
 
 # git
 alias gpp='ga .;gcmsg "zz";gp'
