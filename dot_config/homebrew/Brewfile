@@ -1,27 +1,14 @@
 # brew tap "homebrew/bundle"
 #2 try
-# cask "simple-comic"
 brew "ansible"
-# cask "vagrant"
-# cask "vmware-fusion" # vagrant plugin install vagrant-vmware-desktop
-# cask "vagrant-vmware-utility"
-
-#0.1 del
-# brew "svn"
 
 tap "gleich/homebrew-taps"
 brew "nuke"
 cask "dropbox"
-# brew "openfortivpn"
-# cask "amethyst"
 cask "locationsimulator"
 
 brew "mas" # mac app store cli, compatible with brew bundle, can see by `brew bundle dump`
-tap "homebrew/autoupdate"
 tap "buo/cask-upgrade"
-
-# tap "simonw/llm"
-# brew "llm"
 
 ##10 human as llm
 cask "anki"
@@ -36,13 +23,9 @@ brew "trash"
 brew "ripgrep"
 brew "jq"
 
-brew "shellcheck"
 brew "shfmt"
-tap "caarlos0/tap"
-brew "jsonfmt"
 
 brew "tldr"
-
 brew "tree"
 
 tap "artginzburg/tap"
@@ -66,26 +49,23 @@ brew "gh"
 brew "chezmoi"
 brew "bfg"
 # brew "git-lfs"
-# tap "zurawiki/brews"
-# brew "zurawiki/brews/gptcommit"
 
 ##0.5 mac
+cask "alt-tab"
 tap "fwartner/tap"
 brew "fwartner/tap/mac-cleanup"
-cask "alt-tab"
 
-##1 java
-brew "java"
-brew "sbt"
 ##1 node
 brew "n"
-# brew "nvm"
+
 ##1 python
-brew "pyenv"
+# brew "pyenv"
+
 ##1 rust
-brew "rustup-init"
+# brew "rustup-init"
+
 ##1 ruby
-brew "rbenv"
+# brew "rbenv"
 
 ##1.5 font
 tap "homebrew/cask-fonts"
@@ -93,15 +73,13 @@ cask "font-input"
 
 ##2 develop
 cask "visual-studio-code"
-brew "neovim"
 cask "iterm2"
 cask "postman"
 cask "openinterminal"
+brew "neovim"
 
 ##0.8 container&db
 cask "docker"
-# brew "terraform"
-# brew "kafka"
 
 ##1 macos
 cask "raycast"
@@ -109,14 +87,14 @@ cask "arc"
 cask "google-chrome"
 cask "microsoft-edge"
 cask "firefox"
+
 cask "bob"
+cask "espanso"
 cask "hiddenbar"
 cask "menubarx"
 cask "monitorcontrol"
 cask "input-source-pro"
 cask "1password"
-cask "1password-cli"
-cask "espanso"
 
 ##1.1 Safari
 mas "1Password for Safari", id: 1569813296
@@ -134,18 +112,13 @@ cask "snipaste"
 cask "shottr"
 brew "yt-dlp"
 cask "kap"
-# brew "gifski"
-mas "Gifski", id: 1351639930
+# mas "Gifski", id: 1351639930
 # mas "iMovie", id: 408981434
 # cask "losslesscut"
 # cask "diffusionbee"
 
 ##0.3 office
-# cask "wpsoffice"
-# cask "mactex"
-# cask "mark-text"
 cask "typora"
-cask "zotero"
 brew "pandoc"
 
 ## Xcodes
@@ -160,11 +133,4 @@ brew "robotsandpencils/made/xcodes"
 ## 0.5 Else
 # cask "spotify"
 
-# cask "podman-desktop"
 # cask "electron-fiddle"
-# cask "microsoft-outlook"
-# cask "termius"
-
-# cask "rar"
-
-##0.1 strange
