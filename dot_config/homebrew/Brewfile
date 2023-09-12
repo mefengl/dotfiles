@@ -4,7 +4,7 @@ brew "ansible"
 
 tap "gleich/homebrew-taps"
 brew "nuke"
-cask "dropbox"
+# cask "dropbox"
 cask "locationsimulator"
 
 brew "mas" # mac app store cli, compatible with brew bundle, can see by `brew bundle dump`
@@ -12,7 +12,7 @@ tap "buo/cask-upgrade"
 
 ##10 human as llm
 cask "anki"
-cask "obsidian"
+# cask "obsidian"
 cask "notion" # for old staff only
 
 ##1.3 terminal
