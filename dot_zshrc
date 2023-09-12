@@ -93,7 +93,6 @@ alias rm='trash'
 alias appclean='nuke 1Password Arc "GitHub Desktop" WeChat iTerm2 企业微信'
 github_clone(){gh repo list mefengl | awk '{print $1}' | xargs -L1 gh repo clone 2>/dev/null}
 github_update(){echo -e "\033[32mgithub_update:\033[0m";cd ~/GitHub;github_clone;for i in *;do cd $i;git pull;cd ~;done}
-alias update='tldr --update;'
 
 ##1.2 too see
 alias fast-dl='aria2c -x 16 -s 16 -j 16 -k 1M -c -d ~/Downloads'
