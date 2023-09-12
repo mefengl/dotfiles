@@ -1,5 +1,6 @@
 # brew tap "homebrew/bundle"
 #2 try
+cask "rectangle"
 brew "ansible"
 
 tap "gleich/homebrew-taps"
