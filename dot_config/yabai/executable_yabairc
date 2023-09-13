@@ -34,6 +34,9 @@ yabai -m rule --add app=Spotify space=11
 # yabai -m config active_window_border_color   0xffff3050
 # yabai -m config normal_window_border_color   0xffaaaaaa
 
+# mouse
+yabai -m config focus_follows_mouse          autofocus
+
 # general space settings
 # yabai -m config layout                       bsp
 
