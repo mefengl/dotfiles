@@ -122,6 +122,12 @@ copynext() {
 # starship
 alias vimstar='nvim ~/.config/starship.toml'
 
+# git
+alias gdd='branch_for_delete=$(git rev-parse --abbrev-ref HEAD) && git switch main && git pull && git branch -d $branch_for_delete'
+
+## ?? git? gh?
+eval "$(github-copilot-cli alias -- "$0")"
+
 # github
 alias ghr='gh repo'
 alias ghc='gh repo clone'
@@ -155,12 +161,6 @@ alias ghfv='git-file-history'
 create_issue() {
   gh issue create --title="$1" --body="$2"
 }
-
-## ?? git? gh?
-eval "$(github-copilot-cli alias -- "$0")"
-
-# git
-alias gdaily='git commit -am "daily: $(date +%m/%d)" && git push'
 
 # node
 alias npmb='bash ~/.config/ppm.sh'
@@ -201,10 +201,6 @@ alias codeif='yes | vsce package && code --force --install-extension $(ls -t *.v
 
 # chezmoi
 export LANG=en_US.UTF-8
-
-# git
-alias gpp='ga .;gcmsg "zz";gp'
-alias gdd='previous_branch=$(current_branch) && git checkout $(git_main_branch) && git pull && git branch -d $previous_branch'
 
 # development
 touch ~/development.sh
