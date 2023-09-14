@@ -51,7 +51,6 @@ brew "bfg"
 # brew "git-lfs"
 
 ## mac
-cask "rectangle"
 cask "alt-tab"
 tap "fwartner/tap"
 brew "fwartner/tap/mac-cleanup"
