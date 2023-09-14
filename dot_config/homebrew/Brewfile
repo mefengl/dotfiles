@@ -73,7 +73,7 @@ cask "font-input"
 
 ##2 develop
 cask "visual-studio-code"
-cask "iterm2"
+cask "kitty"
 cask "postman"
 cask "openinterminal"
 brew "neovim"
