@@ -1,47 +1,50 @@
 #!/usr/bin/env sh
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
 
-#2 try
+# config
+yabai -m config layout                       bsp
+yabai -m config top_padding                  8
+yabai -m config bottom_padding               8
+yabai -m config left_padding                 8
+yabai -m config right_padding                8
+yabai -m config window_gap                   8
+yabai -m config auto_balance                 off
+yabai -m config split_ratio                  0.5
+
+# space setup
+for _ in $(yabai -m query --spaces | jq '.[].index | select(. > 6)'); do
+  yabai -m space --destroy 7
+done
+function setup_space {
+  local idx="$1"
+  local name="$2"
+  local space=
+  echo "setup space $idx : $name"
+
+  space=$(yabai -m query --spaces --space "$idx")
+  if [ -z "$space" ]; then
+    yabai -m space --create
+  fi
+
+  yabai -m space "$idx" --label "$name"
+}
+
+setup_space 1 emacs
+setup_space 2 code
+setup_space 3 web
+setup_space 4 social
+setup_space 5 media
+setup_space 6 other
 
 # auto app placement
 
 yabai -m rule --add app="Visual Studio Code" space=1
-yabai -m rule --add app="WPS Office" space=1
-
 yabai -m rule --add app=Arc space=2
-
 yabai -m rule --add app="GitHub Desktop" space=3
-yabai -m rule --add app=Postman space=3
-
 yabai -m rule --add app=WeCom space=4
 yabai -m rule --add app=WeChat space=4
 yabai -m rule --add app=QQ space=4
-
-yabai -m rule --add app=Notion space=5
 yabai -m rule --add app="Microsoft Edge" space=5
 yabai -m rule --add app=Safari space=5
-
-yabai -m rule --add app=Notes space=11
-yabai -m rule --add app=Calendar space=11
-yabai -m rule --add app=Reminders space=11
-yabai -m rule --add app=Typora space=11
-yabai -m rule --add app=Spotify space=11
-
-# borders
-# yabai -m config window_border                on
-# yabai -m config active_window_border_topmost on
-# yabai -m config window_shadow                on
-# yabai -m config window_border_width          5
-# yabai -m config active_window_border_color   0xffff3050
-# yabai -m config normal_window_border_color   0xffaaaaaa
-
-# mouse
-yabai -m config focus_follows_mouse          autofocus
-
-# general space settings
-# yabai -m config layout                       bsp
-
-# yabai -m config top_padding                  6
-# yabai -m config bottom_padding               6
-# yabai -m config left_padding                 25
-# yabai -m config right_padding                25
-# yabai -m config window_gap                   5
+yabai -m rule --add app=Notion space=5
