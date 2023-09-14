@@ -1,6 +1,6 @@
 # brew tap "homebrew/bundle"
 #2 try
-cask "rectangle"
+cask "maccy"
 brew "ansible"
 
 tap "gleich/homebrew-taps"
@@ -51,7 +51,8 @@ brew "chezmoi"
 brew "bfg"
 # brew "git-lfs"
 
-##0.5 mac
+## mac
+cask "rectangle"
 cask "alt-tab"
 tap "fwartner/tap"
 brew "fwartner/tap/mac-cleanup"
