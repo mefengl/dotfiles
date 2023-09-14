@@ -183,11 +183,6 @@ alias brewb='brew bundle --file=~/.config/homebrew/Brewfile'
 alias vimb='nvim ~/.config/homebrew/Brewfile'
 alias codeb='code ~/.config/homebrew/Brewfile'
 
-# ruby
-alias gemb='~/.rbenv/shims/bundle install --gemfile=~/.config/ruby/Gemfile && rm ~/.config/ruby/Gemfile.lock'
-alias vimg='nvim ~/.config/ruby/Gemfile'
-alias codeg='code ~/.config/ruby/Gemfile'
-
 # nvim
 alias vim='nvim'
 alias vimz='nvim ~/.zshrc'
