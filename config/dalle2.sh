@@ -32,6 +32,12 @@ RESPONSE=$(curl -s "https://api.openai.com/v1/images/generations" \
 # Extract image URLs from the response
 IMAGE_URLS=($(echo "$RESPONSE" | jq -r '.data[].url'))
 
+# If no IMAGE_URLS, output the RESPONSE in red color
+if [[ -z "$IMAGE_URLS" ]]; then
+    echo -e "\e[31m$RESPONSE\e[0m"
+    exit 1
+fi
+
 echo "Here are the generated images:"
 for IMAGE_URL in "${IMAGE_URLS[@]}"
 do
