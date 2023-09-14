@@ -32,6 +32,12 @@ RESPONSE=$(curl -s "https://api.openai.com/v1/images/generations" \
 # Extract image URLs from the response
 IMAGE_URLS=($(echo "$RESPONSE" | jq -r '.data[].url'))
 
+echo "Here are the generated images:"
+for IMAGE_URL in "${IMAGE_URLS[@]}"
+do
+    echo "$IMAGE_URL"
+done
+
 # Create markdown file
 MARKDOWN_FILE="${IMAGE_DESCRIPTION// /_}.md"
 echo "# $IMAGE_DESCRIPTION" > $MARKDOWN_FILE
