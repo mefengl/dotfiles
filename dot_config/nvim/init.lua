@@ -47,6 +47,7 @@ function! Cond(cond, ...)
 endfunction
 call plug#begin()
 ""2 try
+Plug 'ap/vim-css-color'
 Plug 'tpope/vim-obsession'
 
 Plug 'mhinz/vim-startify'
