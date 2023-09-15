@@ -1,6 +1,7 @@
 # brew tap "homebrew/bundle"
 #2 try
 cask "qutebrowser"
+cask "middleclick"
 
 tap "gleich/homebrew-taps"
 brew "nuke"
