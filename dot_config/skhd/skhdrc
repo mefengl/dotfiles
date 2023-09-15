@@ -66,5 +66,8 @@ ctrl + cmd - 1  : yabai -m window --display 1 && yabai -m display --focus 1
 ctrl + cmd - 2  : yabai -m window --display 2 && yabai -m display --focus 2
 ctrl + cmd - 3  : yabai -m window --display 3 && yabai -m display --focus 3
 
+# toggle float
+alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
 # toggle topmost
 alt - o : yabai -m window --toggle topmost
