@@ -30,15 +30,14 @@ function setup_space {
   yabai -m space "$idx" --label "$name"
 }
 
-setup_space 1 emacs
-setup_space 2 code
-setup_space 3 web
+setup_space 1 code
+setup_space 2 web
+setup_space 3 git
 setup_space 4 social
 setup_space 5 media
 setup_space 6 other
 
 # auto app placement
-
 yabai -m rule --add app="Visual Studio Code" space=1
 yabai -m rule --add app=Arc space=2
 yabai -m rule --add app="GitHub Desktop" space=3
