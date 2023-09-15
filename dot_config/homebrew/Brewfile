@@ -1,6 +1,5 @@
 # brew tap "homebrew/bundle"
 #2 try
-cask "qutebrowser"
 brew "ansible"
 
 tap "gleich/homebrew-taps"
