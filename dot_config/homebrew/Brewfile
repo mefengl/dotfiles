@@ -1,6 +1,6 @@
 # brew tap "homebrew/bundle"
 #2 try
-brew "ansible"
+cask "qutebrowser"
 
 tap "gleich/homebrew-taps"
 brew "nuke"
@@ -79,6 +79,7 @@ cask "openinterminal"
 brew "neovim"
 
 ##0.8 container&db
+brew "ansible"
 cask "docker"
 
 ##1 macos
