@@ -1,3 +1,6 @@
+# terminal
+cmd - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ &> /dev/null
+
 # space switch
 cmd + alt - x : yabai -m space --focus recent
 cmd + alt - z : yabai -m space --focus prev || skhd -k "ctrl + alt + cmd - z"
