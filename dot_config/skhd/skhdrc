@@ -1,5 +1,5 @@
 # terminal
-cmd - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ &> /dev/null
+meh - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ &> /dev/null
 
 # window focus
 alt - x : yabai -m window --focus recent
