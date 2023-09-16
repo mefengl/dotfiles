@@ -40,6 +40,12 @@ matches:
   - trigger: ":x"
     replace: " 🔫"
 
+  - trigger: ":lol"
+    replace: ": 😂"
+
+  - trigger: ":llol"
+    replace: ": 🤣"
+
   # Print the output of a shell command
   - trigger: ":shell"
     replace: "{{output}}"
