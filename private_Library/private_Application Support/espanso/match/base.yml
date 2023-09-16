@@ -41,10 +41,10 @@ matches:
     replace: " 🔫"
 
   - trigger: ":lol"
-    replace: " 😂"
+    replace: "😂"
 
   - trigger: ":llol"
-    replace: " 🤣"
+    replace: "🤣"
 
   # Print the output of a shell command
   - trigger: ":shell"
