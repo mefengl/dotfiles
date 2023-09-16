@@ -37,6 +37,9 @@ matches:
   - trigger: ":done"
     replace: " ✅"
 
+  - trigger: ":x"
+    replace: " 🔫"
+
   # Print the output of a shell command
   - trigger: ":shell"
     replace: "{{output}}"
