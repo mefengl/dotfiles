@@ -91,7 +91,7 @@ alias awsdocker='aws ecr get-login-password --region $aws_region | docker login 
 alias \$=''
 alias rm='trash'
 alias typora='open -a typora'
-alias appclean='nuke 1Password Arc "GitHub Desktop" WeChat iTerm2 企业微信'
+alias cleanapp='nuke 1Password Arc "GitHub Desktop" WeChat iTerm2 企业微信'
 github_clone(){gh repo list mefengl | awk '{print $1}' | xargs -L1 gh repo clone 2>/dev/null}
 github_update(){echo -e "\033[32mgithub_update:\033[0m";cd ~/GitHub;github_clone;for i in *;do cd $i;git pull;cd ~;done}
 
