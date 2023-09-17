@@ -18,6 +18,9 @@ matches:
   - trigger: ":eg"
     replace: "举对应使用的例子，前后对比有和没有这段代码，说明这段代码的作用，例子不要有外部依赖，应该能直接运行\n"
 
+  - trigger: ":anki"
+    replace: "中文简单的 anki 卡片"
+
   - trigger: ":td"
     replace: "{{today_date}} "
     vars:
