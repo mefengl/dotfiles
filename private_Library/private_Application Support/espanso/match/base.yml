@@ -69,5 +69,3 @@ matches:
   # learning
   - trigger: ":word"
     replace: "{{clipboard}} 这个词一般怎么用\n"
-  - trigger: ":anki"
-    replace: "use Chinese to create an anki card for: {{clipboard}}\n"
