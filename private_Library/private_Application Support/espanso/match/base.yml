@@ -21,6 +21,9 @@ matches:
   - trigger: ":anki"
     replace: "中文简单的 anki 卡片"
 
+  - trigger: ":2anki"
+    replace: "将上面的转成 anki 能导入的文件格式\n"
+
   - trigger: ":td"
     replace: "{{today_date}} "
     vars:
