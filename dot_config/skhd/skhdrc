@@ -20,6 +20,13 @@ shift + alt - l : yabai -m window --swap east
 # window balance
 shift + alt - 0 : yabai -m space --balance
 
+# float full
+shift + alt - up     : yabai -m window --grid 1:1:0:0:1:1
+# float left
+shift + alt - left   : yabai -m window --grid 1:2:0:0:1:1
+# float right
+shift + alt - right  : yabai -m window --grid 1:2:1:0:1:1
+
 # space switch
 cmd + alt - x : yabai -m space --focus recent
 cmd + alt - z : yabai -m space --focus prev || skhd -k "ctrl + alt + cmd - z"
