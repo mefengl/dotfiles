@@ -10,9 +10,6 @@ cask "locationsimulator"
 brew "mas" # mac app store cli, compatible with brew bundle, can see by `brew bundle dump`
 tap "buo/cask-upgrade"
 
-##10 human as llm
-cask "anki"
-
 ##1.3 terminal
 brew "atuin"
 brew "autojump"
