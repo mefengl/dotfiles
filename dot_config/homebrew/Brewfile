@@ -49,6 +49,7 @@ brew "bfg"
 cask "alt-tab"
 tap "fwartner/tap"
 brew "fwartner/tap/mac-cleanup"
+cask "anki"
 
 ##1 node
 brew "n"
