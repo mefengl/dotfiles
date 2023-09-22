@@ -10,7 +10,7 @@ matches:
     replace: "im.try@outlook.com"
 
   - trigger: ":metoo"
-    replace: "also for this one: {{clipboard}}\n"
+    replace: "also for this one:"
 
   - trigger: ":2console"
     replace: "remove types and exports, make them can be run in browser console:{{clipboard}}\n"
