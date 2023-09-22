@@ -47,7 +47,7 @@ fi
 
 # If a prefix is set, concatenate it with the description
 if [[ ! -z "$PREFIX" ]]; then
-  IMAGE_DESCRIPTION="$PREFIX, $IMAGE_DESCRIPTION"
+  IMAGE_DESCRIPTION="$PREFIX $IMAGE_DESCRIPTION"
 fi
 
 # If not provided, get the number of images

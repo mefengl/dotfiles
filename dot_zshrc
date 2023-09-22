@@ -96,7 +96,8 @@ github_clone(){gh repo list mefengl | awk '{print $1}' | xargs -L1 gh repo clone
 github_update(){echo -e "\033[32mgithub_update:\033[0m";cd ~/GitHub;github_clone;for i in *;do cd $i;git pull;cd ~;done}
 
 ##1.2 too see
-alias dalle2='bash ~/config/dalle2.sh -p "New Yorker style line drawing" -n 5 -s "1024x1024" -d'
+# alias dalle2='bash ~/config/dalle2.sh -p "New Yorker style line drawing" -n 5 -s "1024x1024" -d'
+alias dalle2='bash ~/config/dalle2.sh -p "one line drawing of" -n 5 -s "1024x1024" -d'
 alias fast-dl='aria2c -x 16 -s 16 -j 16 -k 1M -c -d ~/Downloads'
 alias fast-yt-dlp='yt-dlp --external-downloader aria2c --external-downloader-args "-x16 -s16 -k2M"'
 alias gettxt='cat *.txt'
