@@ -137,7 +137,7 @@ alias ghcm='bash ~/config/ghclone.sh'
 ## repo
 ghrc() {
   if [ $# -eq 1 ]; then
-    gh repo create $1 --public --add-readme --gitignore Node --license MIT -c
+    gh repo create $1 --public --add-readme --gitignore Node -c
   else
     echo "Usage: ghrc <repository_name>"
   fi
