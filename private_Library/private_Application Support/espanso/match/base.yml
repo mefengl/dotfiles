@@ -21,15 +21,6 @@ matches:
   - trigger: ":eg"
     replace: "举对应使用的例子，前后对比有和没有这段代码，说明这段代码的作用，例子不要有外部依赖，应该能直接运行\n"
 
-  - trigger: ":anki"
-    replace: "中文简单的 anki 卡片"
-
-  - trigger: ":txt"
-    replace: "生成可导入的txt供我下载"
-
-  - trigger: ":2anki"
-    replace: "将上面的转成 anki 能导入的文件格式\n"
-
   - trigger: ":td"
     replace: "{{today_date}} "
     vars:
@@ -75,6 +66,19 @@ matches:
   #       params:
   #         cmd: "op read "op://Private/" -n"
 
-  # learning
+# anki
+  - trigger: ":anki"
+    replace: "中文简单的 anki 卡片"
+
+  - trigger: ":txt"
+    replace: "生成可导入的txt供我下载"
+
+  - trigger: ":2anki"
+    replace: "将上面的转成 anki 能导入的文件格式\n"
+
   - trigger: ":word"
     replace: "{{clipboard}} 这个词一般怎么用\n"
+
+# ansible
+  - trigger: ":yml"
+    replace: "create an ansible playbook, and generate a file for me to download, the comment before each task needs to be Chinese:"
