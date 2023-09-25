@@ -81,4 +81,4 @@ matches:
 
 # ansible
   - trigger: ":yml"
-    replace: "create an ansible playbook, and generate a file for me to download, the comment before each task needs to be Chinese:"
+    replace: "create an ansible playbook, and generate a file for me to download:"
