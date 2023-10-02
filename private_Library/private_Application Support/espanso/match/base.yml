@@ -68,13 +68,10 @@ matches:
 
 # anki
   - trigger: ":anki"
-    replace: "简单的正反 anki 卡片，不需要用填空等高级格式，用中文，如果有关键的命令行或代码，应该正面是中文描述，背面是具体代码"
+    replace: "简单的正反anki卡片，不需要用填空等高级格式，用中文，如果有关键的命令行或代码，应该正面是中文描述，背面是具体代码"
 
   - trigger: ":txt"
-    replace: "，生成可导入的txt供我下载，生成的代码尽可能简单，注释都不需要，毕竟直接写卡片保存成 txt 就行"
-
-  - trigger: ":2anki"
-    replace: "将上面的转成 anki 能导入的文件格式\n"
+    replace: "，生成可导入的txt供我下载，使用tab分割，生成的代码尽可能简单，注释都不需要，毕竟直接写卡片保存成 txt 就行"
 
   - trigger: ":word"
     replace: "{{clipboard}} 这个词一般怎么用\n"
