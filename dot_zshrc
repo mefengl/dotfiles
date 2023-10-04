@@ -121,8 +121,7 @@ copynext() {
     done
 }
 
-# starship
-alias vimstar='nvim ~/.config/starship.toml'
+alias vimz='nvim ~/.zshrc'
 
 # git
 alias gdd='branch_for_delete=$(git rev-parse --abbrev-ref HEAD) && git switch main && git pull && git branch -d $branch_for_delete'
@@ -144,51 +143,43 @@ ghrc() {
 }
 alias ghrd='ghpew repos'
 alias ghrv='gh repo view --web'
-## gist
-ghgc() {
-  echo "Press ^D on a new line to finish."
-  if [ -z "$1" ]; then
-    gh gist create --public -
-  else
-    gh gist create --public -f "$1" -
-  fi
-}
-alias ghgd='gh gist delete'
-alias ghge='GIT_EDITOR=vim gh gist edit'
-alias ghgv='gh gist view'
-alias ghgl='gh gist list'
-## else
-alias ghprv='gh pr view --web'
-alias ghfv='git-file-history'
-create_issue() {
-  gh issue create --title="$1" --body="$2"
-}
+
+# ## gist
+# ghgc() {
+#   echo "Press ^D on a new line to finish."
+#   if [ -z "$1" ]; then
+#     gh gist create --public -
+#   else
+#     gh gist create --public -f "$1" -
+#   fi
+# }
+# alias ghgd='gh gist delete'
+# alias ghge='GIT_EDITOR=vim gh gist edit'
+# alias ghgv='gh gist view'
+# alias ghgl='gh gist list'
+
+# alias ghprv='gh pr view --web'
+# create_issue() {
+#   gh issue create --title="$1" --body="$2"
+# }
 
 # node
 alias npmb='bash ~/.config/ppm.sh'
 alias vimn='nvim ~/.config/ppm.sh'
-alias coden='code ~/.config/ppm.sh'
-by-what() {
-    madge --image ~/Downloads/graph.svg $1 && open ~/Downloads/graph.svg
-}
 
-## changeset
-alias ncs='npx changeset'
-alias ncsv='npx changeset version'
+# ## changeset
+# alias ncs='npx changeset'
+# alias ncsv='npx changeset version'
 
 # homebrew
 alias brewb='brew bundle --file=~/.config/homebrew/Brewfile'
 alias vimb='nvim ~/.config/homebrew/Brewfile'
-alias codeb='code ~/.config/homebrew/Brewfile'
 
 # nvim
 alias vim='nvim'
-alias vimz='nvim ~/.zshrc'
-alias codez='code ~/.zshrc'
 alias vimt='nvim ~/.tmux.conf'
+
 # vscode
-alias codek='code ~/.config/karabiner/karabiner.json'
-alias codeb='code ~/.config/homebrew/Brewfile'
 alias codei='nr test && vsce package && code --force --install-extension $(ls -t *.vsix | head -n 1) && rm -f *.vsix && echo "\033[0;32m\nPlease reload your terminal window to let the extension take effect.\033[0m"'
 alias codeif='yes | vsce package && code --force --install-extension $(ls -t *.vsix | head -n 1) && rm -f *.vsix && echo "\033[0;32m\nPlease reload your terminal window to let the extension take effect.\033[0m"'
 
@@ -205,7 +196,6 @@ alias vims='nvim ~/.config/skhd/skhdrc'
 
 ## espanso
 alias vime='nvim ~/Library/Application\ Support/espanso/match/base.yml'
-alias cde='cd ~/Library/Application\ Support/espanso/'
 
 ## atuin
 alias vima='nvim ~/.config/atuin/config.toml'
