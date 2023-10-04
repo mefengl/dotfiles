@@ -172,10 +172,6 @@ by-what() {
     madge --image ~/Downloads/graph.svg $1 && open ~/Downloads/graph.svg
 }
 
-# python
-alias pipb='bash ~/.config/pipm.sh'
-alias vimp='nvim ~/.config/pipm.sh'
-alias codep='code ~/.config/pipm.sh'
 ## changeset
 alias ncs='npx changeset'
 alias ncsv='npx changeset version'
