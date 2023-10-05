@@ -77,7 +77,7 @@ brew "neovim"
 
 ##0.8 container&db
 brew "ansible"
-cask "docker"
+# cask "docker"
 
 ##1 macos
 cask "raycast"
