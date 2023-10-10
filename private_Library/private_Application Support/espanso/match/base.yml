@@ -3,6 +3,9 @@ global_vars:
     type: "clipboard"
 
 matches:
+  - trigger: ":ocr"
+    replace: "it's ocr result, fix it"
+
   - trigger: ":full code"
     replace: "full code, don't omit anything, I need full code to replace original code"
 
