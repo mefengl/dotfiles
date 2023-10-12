@@ -1,6 +1,5 @@
 # brew tap "homebrew/bundle"
 #2 try
-# cask "whisky"
 cask "wireshark"
 brew "swift-format"
 brew "doctl"
