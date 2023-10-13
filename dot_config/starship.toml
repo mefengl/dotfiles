@@ -1,5 +1,5 @@
-[character]
-success_symbol = "[🐈]()"
+# [character]
+# success_symbol = "[🐈]()"
 
 [nodejs]
 symbol = "[⬢](bold green) "
