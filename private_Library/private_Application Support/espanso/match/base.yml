@@ -79,3 +79,11 @@ matches:
 # ansible
   - trigger: ":yml"
     replace: "create an ansible playbook, and generate a file for me to download:"
+
+# doctl
+  - trigger: ":doctl"
+    replace: "doctl compute droplet create --image ubuntu-23-04-x64 --size s-4vcpu-8gb --region sfo3 --ssh-keys $(doctl compute ssh-key list | awk 'NR>1 {print $1}') do"
+  - trigger: ":doctl"
+    replace: "doctl compute ssh do"
+  - trigger: ":doctl"
+    replace: "doctl compute droplet delete -f do"
