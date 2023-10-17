@@ -144,32 +144,9 @@ ghrc() {
 alias ghrd='ghpew repos'
 alias ghrv='gh repo view --web'
 
-# ## gist
-# ghgc() {
-#   echo "Press ^D on a new line to finish."
-#   if [ -z "$1" ]; then
-#     gh gist create --public -
-#   else
-#     gh gist create --public -f "$1" -
-#   fi
-# }
-# alias ghgd='gh gist delete'
-# alias ghge='GIT_EDITOR=vim gh gist edit'
-# alias ghgv='gh gist view'
-# alias ghgl='gh gist list'
-
-# alias ghprv='gh pr view --web'
-# create_issue() {
-#   gh issue create --title="$1" --body="$2"
-# }
-
 # node
 alias npmb='bash ~/.config/ppm.sh'
 alias vimn='nvim ~/.config/ppm.sh'
-
-# ## changeset
-# alias ncs='npx changeset'
-# alias ncsv='npx changeset version'
 
 # homebrew
 alias brewb='brew bundle --file=~/.config/homebrew/Brewfile'
