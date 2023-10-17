@@ -38,7 +38,6 @@ setup_space 3 git
 setup_space 4 social
 setup_space 5 media
 setup_space 6 other
-setup_space 7 anki
 setup_space 8
 setup_space 9
 setup_space 0
