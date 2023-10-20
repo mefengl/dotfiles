@@ -26,8 +26,8 @@ brew "shfmt"
 brew "tldr"
 brew "tree"
 
-tap "artginzburg/tap"
-brew "sudo-touchid"
+# tap "artginzburg/tap"
+# brew "sudo-touchid"
 # sudo brew services start sudo-touchid
 ### linux
 brew "coreutils"
