@@ -3,7 +3,6 @@
 cask "wireshark"
 brew "swift-format"
 brew "doctl"
-cask "qutebrowser"
 
 tap "gleich/homebrew-taps"
 brew "nuke"
