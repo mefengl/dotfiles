@@ -7,7 +7,7 @@ matches:
     replace: "it's ocr result, fix it"
 
   - trigger: ":english"
-    replace: "give me full english object"
+    replace: "give me full english object\n"
 
   - trigger: ":full code"
     replace: "full code, don't omit anything, I need full code to replace original code"
