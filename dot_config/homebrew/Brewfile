@@ -94,6 +94,7 @@ cask "menubarx"
 cask "monitorcontrol"
 cask "input-source-pro"
 cask "1password"
+brew "1password-cli"
 
 ##1.1 Safari
 mas "1Password for Safari", id: 1569813296
