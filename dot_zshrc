@@ -181,3 +181,4 @@ autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
 eval "$(atuin init zsh)"
+source ~/.config/op/plugins.sh
