@@ -3,6 +3,14 @@ global_vars:
     type: "clipboard"
 
 matches:
+  - regex: ":op(?P<cmd>.*?)\\."
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "op read 'op://Private/CLI/{{cmd}}'"
+
   - trigger: ":ocr"
     replace: "it's ocr result, fix it"
 
