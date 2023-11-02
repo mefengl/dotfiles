@@ -12,9 +12,6 @@ matches:
   - trigger: ":full code"
     replace: "full code, don't omit anything, I need full code to replace original code"
 
-  - trigger: ":try"
-    replace: "im.try@outlook.com"
-
   - trigger: ":metoo"
     replace: "also for this one:"
 

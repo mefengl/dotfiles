@@ -99,6 +99,7 @@ alias cleanapp='nuke 1Password Arc "GitHub Desktop" WeChat iTerm2 企业微信'
 alias dalle2='bash ~/config/dalle2.sh -p "New Yorker style line drawing, " -n 5 -s "1024x1024" -d'
 alias fast-dl='aria2c -x 16 -s 16 -j 16 -k 1M -c -d ~/Downloads'
 alias fast-yt-dlp='yt-dlp --external-downloader aria2c --external-downloader-args "-x16 -s16 -k2M"'
+alias yt-audio-dl='yt-dlp --external-downloader aria2c --external-downloader-args "-x16 -s16 -k2M" -x --no-playlist'
 alias gettxt='cat *.txt'
 getfile(){pandoc $1 --to plain}
 epub2txt() { for file in *.epub; do pandoc "$file" --to plain -o "${file%.epub}.txt"; done; }
@@ -126,9 +127,6 @@ alias vimz='nvim ~/.zshrc'
 # git
 alias gdd='branch_for_delete=$(git rev-parse --abbrev-ref HEAD) && git switch main && git pull && git branch -d $branch_for_delete'
 
-# ## ?? git? gh?
-# eval "$(github-copilot-cli alias -- "$0")"
-
 # github
 alias ghr='gh repo'
 alias ghc='gh repo clone'
@@ -155,10 +153,6 @@ alias vimb='nvim ~/.config/homebrew/Brewfile'
 # nvim
 alias vim='nvim'
 alias vimt='nvim ~/.tmux.conf'
-
-# vscode
-alias codei='nr test && vsce package && code --force --install-extension $(ls -t *.vsix | head -n 1) && rm -f *.vsix && echo "\033[0;32m\nPlease reload your terminal window to let the extension take effect.\033[0m"'
-alias codeif='yes | vsce package && code --force --install-extension $(ls -t *.vsix | head -n 1) && rm -f *.vsix && echo "\033[0;32m\nPlease reload your terminal window to let the extension take effect.\033[0m"'
 
 # chezmoi
 export LANG=en_US.UTF-8
