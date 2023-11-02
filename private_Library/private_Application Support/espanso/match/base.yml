@@ -20,9 +20,6 @@ matches:
   - trigger: ":full code"
     replace: "full code, don't omit anything, I need full code to replace original code"
 
-  - trigger: ":metoo"
-    replace: "also for this one:"
-
   - trigger: ":2console"
     replace: "remove types and exports, make them can be run in browser console:{{clipboard}}\n"
 
@@ -40,53 +37,17 @@ matches:
         params:
           format: "%Y-%m-%d"
 
-  - trigger: ":todo"
-    replace: "🎏 {{today_date}} Todos\n-"
-    vars:
-      - name: today_date
-        type: date
-        params:
-          format: "%Y-%m-%d"
-
   - trigger: ":done"
     replace: " ✅"
 
-  - trigger: ":x"
-    replace: " 🔫"
+  - trigger: ":note"
+    replace: "今天学到了以下的东西，麻烦待会您完善下如下笔记（常用的专有名词：english only，不常用或复杂的：中文(english)）："
 
-  - trigger: ":lol"
-    replace: "😂"
-
-  - trigger: ":llol"
-    replace: "🤣"
-
-  # Print the output of a shell command
-  - trigger: ":shell"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: shell
-        params:
-          cmd: "echo 'Hello from your shell'"
-  # secrets
-  # - trigger: ":tel"
-  #   replace: "{{output}}"
-  #   vars:
-  #     - name: output
-  #       type: shell
-  #       params:
-  #         cmd: "op read "op://Private/" -n"
-
-# anki
   - trigger: ":anki"
     replace: "简单的正反anki卡片，不需要用填空等高级格式，用中文，如果有关键的命令行或代码，正面是中文描述，以`在(某某范围)中，`开头，背面是具体代码，如果是什么技术解释，请做到专业的同时，也请尽量说人话（或者作为补充），注意正面和背面都需要只有一行，不同的部分用空格隔开就可以（因为换行会影响到tab分割）。不能使用<>这样的和html冲突的格式。如果要举例子，要经典，首先是生产中常见的，其次要是适合教学的。生成可导入的txt供我下载，使用tab分割，生成的代码尽可能简单，注释都不需要，毕竟直接写卡片保存成 txt 就行，格式：1. **卡片生成前的预告**: 在开始生成每张Anki卡片前，先简要描述即将为您生成的卡片内容。 2. **卡片生成**: 为每张Anki卡片生成代码。 3. **卡片展示**: 代码生成完毕后，以“Front”和“Back”的形式列出每张卡片的内容，使其更易于阅读。 4. **文件整合与提供**: 将所有卡片整合并保存为TXT文件，然后为您提供下载链接。"
 
   - trigger: ":word"
     replace: "{{clipboard}} 这个词一般怎么用\n"
-
-# ansible
-  - trigger: ":yml"
-    replace: "create an ansible playbook, and generate a file for me to download:"
 
 # doctl
   - trigger: ":doctl"
@@ -95,3 +56,7 @@ matches:
     replace: "doctl compute ssh do"
   - trigger: ":doctl"
     replace: "doctl compute droplet delete -f do"
+
+# ansible
+  - trigger: ":yml"
+    replace: "create an ansible playbook, and generate a file for me to download:"
