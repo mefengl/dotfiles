@@ -20,7 +20,7 @@ matches:
   - trigger: ":full code"
     replace: "full code, don't omit anything, I need full code to replace original code"
 
-  - trigger: ":2console"
+  - trigger: ":console"
     replace: "remove types and exports, make them can be run in browser console:{{clipboard}}\n"
 
   - trigger: ":exp"
