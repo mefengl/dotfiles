@@ -11,14 +11,6 @@ matches:
         params:
           cmd: "kitty sh -c '{{cmd}}'; exec $SHELL"
 
-  - regex: ":\\$pbpaste\\."
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: shell
-        params:
-          cmd: "kitty sh -c '{{clipboard}}'; exec $SHELL"
-
   - regex: ":op(?P<cmd>.*?)\\."
     replace: "{{output}}"
     vars:

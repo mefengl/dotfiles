@@ -1,5 +1,6 @@
 # terminal
 meh - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ &> /dev/null
+meh - r : kitty sh -c 'find ~/DEL ~/projects ~/Sourcetree -maxdepth 1 -type d | fzf --height 10 | xargs code'
 
 # window focus
 alt - x : yabai -m window --focus recent
