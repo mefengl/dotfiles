@@ -3,6 +3,9 @@ global_vars:
     type: "clipboard"
 
 matches:
+  - trigger: ":comment"
+    replace: "给代码的适当的地方加上注释（主要是说明逻辑，请不要添加没有必要的注释，更像是小标题），英文注释"
+
   - regex: ":op(?P<cmd>.*?)\\."
     replace: "{{output}}"
     vars:

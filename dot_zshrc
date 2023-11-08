@@ -132,13 +132,7 @@ alias ghr='gh repo'
 alias ghc='gh repo clone'
 alias ghcm='bash ~/config/ghclone.sh'
 ## repo
-ghrc() {
-  if [ $# -eq 1 ]; then
-    gh repo create $1 --public --add-readme --gitignore Node -c
-  else
-    echo "Usage: ghrc <repository_name>"
-  fi
-}
+alias ghrc='gh repo list -L 300 | fzf --height 20 --layout=reverse --border | awk "{print $1}" | xargs -I {} gh repo clone {}'
 alias ghrd='ghpew repos'
 alias ghrv='gh repo view --web'
 
