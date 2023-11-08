@@ -4,7 +4,7 @@ global_vars:
 
 matches:
   - trigger: ":comment"
-    replace: "给代码的适当的地方加上注释（主要是说明逻辑，请不要添加没有必要的注释，更像是小标题），英文注释"
+    replace: "给代码的适当的地方加上注释（主要是说明逻辑，请不要添加没有必要的注释，更像是小标题），英文注释，请给我加完注释后的全部代码"
 
   - regex: ":op(?P<cmd>.*?)\\."
     replace: "{{output}}"
