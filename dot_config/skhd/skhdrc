@@ -1,5 +1,5 @@
 # yabai
-hyper -r : yabai --stop-service; yabai --start-service
+meh - y : yabai --stop-service; yabai --start-service
 
 # terminal
 meh - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ &> /dev/null
