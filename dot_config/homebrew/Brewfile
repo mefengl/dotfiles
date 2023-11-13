@@ -1,4 +1,5 @@
 #2 try
+cask 'ticktick'
 cask 'bleunlock'
 
 cask "wireshark"
