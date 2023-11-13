@@ -1,5 +1,5 @@
 #2 try
-brew 'bleunlock'
+cask 'bleunlock'
 
 cask "wireshark"
 brew "swift-format"
