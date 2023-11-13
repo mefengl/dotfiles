@@ -1,5 +1,5 @@
 #2 try
-cask "sfm"
+brew 'imagemagick'
 
 cask "wireshark"
 brew "swift-format"
