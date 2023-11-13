@@ -1,5 +1,5 @@
 #2 try
-brew 'imagemagick'
+brew 'bleunlock'
 
 cask "wireshark"
 brew "swift-format"
@@ -109,6 +109,7 @@ cask "wechat"
 cask "qq"
 
 ##1.2 media
+brew 'imagemagick' # convert
 brew "ffmpeg"
 cask "snipaste"
 cask "shottr"
