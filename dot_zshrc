@@ -1,5 +1,7 @@
 # zmodload zsh/zprof
 #2 try
+# alias ls='lsd'
+alias viml='nvim ~/.config/lsd/config.yaml'
 
 function ni() {
   command ni "$@"
