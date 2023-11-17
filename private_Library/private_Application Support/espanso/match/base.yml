@@ -3,20 +3,20 @@ global_vars:
     type: "clipboard"
 
 matches:
-  - trigger: ";vs"
+  - trigger: ":vs"
     replace: "给我一个各个库要实现一个同样基本功能（一定程度的复杂）的 demo 代码，然后比较优缺点，说明谁才更符合最实践，同时也要说明有哪些大厂采用了那种方案，然后在这个库的历史上有什么特别有名的事件，直接用良好的 md 语法组织格式，代码放到 codeblock 里"
 
-  - trigger: ";blog"
+  - trigger: ":blog"
     replace: "注意只是说明它的使用，不要包含我代码的具体部分（你应该另外创建一套示例代码），wirte an blog post about"
-  - trigger: ";blog"
+  - trigger: ":blog"
     replace: "great, now add some humur and add some best practice tips"
-  - trigger: ";blog"
+  - trigger: ":blog"
     replace: "create an image for this article, pls use japense Graphic design style, with bright color as the main color"
 
-  - trigger: ";comment"
+  - trigger: ":comment"
     replace: "给代码的适当的地方加上注释（主要是说明逻辑，请不要添加没有必要的注释，更像是小标题），英文注释，请给我加完注释后的全部代码"
 
-  - regex: ";op(?P<cmd>.*?)\\."
+  - regex: ":op(?P<cmd>.*?)\\."
     replace: "{{output}}"
     vars:
       - name: output
@@ -24,25 +24,25 @@ matches:
         params:
           cmd: "op read 'op://Private/CLI/{{cmd}}'"
 
-  - trigger: ";ocr"
+  - trigger: ":ocr"
     replace: "it's ocr result, fix it"
 
-  - trigger: ";english"
+  - trigger: ":english"
     replace: "give me full english object\n"
 
-  - trigger: ";full code"
+  - trigger: ":full code"
     replace: "full code, don't omit anything, I need full code to replace original code"
 
-  - trigger: ";console"
+  - trigger: ":console"
     replace: "remove types and exports if there have, make them can be run in browser console:{{clipboard}}\n"
 
-  - trigger: ";exp"
+  - trigger: ":exp"
     replace: "下面的代码是用来干什么的，请在代码的附近用注释详细解释，类似博客的行内和行上注释，介绍背后的知识和思考:"
 
-  - trigger: ";eg"
+  - trigger: ":eg"
     replace: "举对应使用的例子，前后对比有和没有这段代码，说明这段代码的作用，例子不要有外部依赖，应该能直接运行\n"
 
-  - trigger: ";td"
+  - trigger: ":td"
     replace: "{{today_date}} "
     vars:
       - name: today_date
@@ -50,26 +50,26 @@ matches:
         params:
           format: "%Y-%m-%d"
 
-  - trigger: ";done"
+  - trigger: ":done"
     replace: " ✅"
 
-  - trigger: ";note"
+  - trigger: ":note"
     replace: "今天学到了以下的东西，麻烦待会您完善下如下笔记（常用的专有名词：english only，不常用或复杂的：中文(english)）："
 
-  - trigger: ";anki"
+  - trigger: ":anki"
     replace: "简单的正反anki卡片，不需要用填空等高级格式，用中文，如果有关键的命令行或代码，正面是中文描述，以`在(某某范围)中，`开头，背面是具体代码，如果是什么技术解释，请做到专业的同时，也请尽量说人话（或者作为补充），注意正面和背面都需要只有一行，不同的部分用空格隔开就可以（因为换行会影响到tab分割）。不能使用<>这样的和html冲突的格式。如果要举例子，要经典，首先是生产中常见的，其次要是适合教学的。生成可导入的txt供我下载，使用tab分割，生成的代码尽可能简单，注释都不需要，毕竟直接写卡片保存成 txt 就行，格式：1. **卡片生成前的预告**: 在开始生成每张Anki卡片前，先简要描述即将为您生成的卡片内容。 2. **卡片展示**: 代码生成完毕后，以“Front”和“Back”的形式列出每张卡片的内容，使其更易于阅读。 3. **文件整合与提供**: 将所有卡片整合并保存为TXT文件，然后为您提供下载链接。"
 
-  - trigger: ";word"
+  - trigger: ":word"
     replace: "{{clipboard}} 这个词一般怎么用\n"
 
 # doctl
-  - trigger: ";doctl"
+  - trigger: ":doctl"
     replace: "doctl compute droplet create --image ubuntu-23-04-x64 --size s-4vcpu-8gb --region sfo3 --ssh-keys $(doctl compute ssh-key list | awk 'NR>1 {print $1}') do"
-  - trigger: ";doctl"
+  - trigger: ":doctl"
     replace: "doctl compute ssh do"
-  - trigger: ";doctl"
+  - trigger: ":doctl"
     replace: "doctl compute droplet delete -f do"
 
 # ansible
-  - trigger: ";yml"
+  - trigger: ":yml"
     replace: "create an ansible playbook, and generate a file for me to download:"
