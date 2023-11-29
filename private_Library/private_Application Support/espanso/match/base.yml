@@ -3,6 +3,8 @@ global_vars:
     type: "clipboard"
 
 matches:
+  - trigger: ":project"
+    replace: "生成整个项目的zip包，让我可以 npm install 然后 node index.js 直接运行"
   - trigger: ":vs"
     replace: "给我一个各个库要实现一个同样基本功能（一定程度的复杂）的 demo 代码，然后比较优缺点，说明谁才更符合最实践，同时也要说明有哪些大厂采用了那种方案，然后在这个库的历史上有什么特别有名的事件，直接用良好的 md 语法组织格式，代码放到 codeblock 里"
 
