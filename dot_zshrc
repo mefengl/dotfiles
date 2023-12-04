@@ -1,6 +1,7 @@
 # zmodload zsh/zprof
 #2 try
 alias d='nr dev 2>/dev/null || nr start'
+alias update='tldr --update & brew cu -a -y'
 
 function ni() {
   command ni "$@"
