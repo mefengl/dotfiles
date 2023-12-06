@@ -8,6 +8,10 @@ matches:
 
   - trigger: ":new wxt"
     replace: "npx wxt@latest init "
+  - trigger: ":add eslint"
+    replace: "npx @antfu/eslint-config"
+  - trigger: ":add tailwind"
+    replace: "open https://tailwindcss.com/docs/guides/vite"
 
   - trigger: ":project"
     replace: "生成整个项目的zip包，让我可以 npm install 然后 node index.js 直接运行"
