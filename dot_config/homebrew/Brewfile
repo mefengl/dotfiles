@@ -55,9 +55,6 @@ tap "fwartner/tap"
 brew "fwartner/tap/mac-cleanup"
 cask "anki"
 
-##1 node
-brew "n"
-
 ##1 python
 # brew "pyenv"
 
