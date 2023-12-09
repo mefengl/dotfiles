@@ -37,9 +37,6 @@ setup_space 2 web
 setup_space 3 git
 setup_space 4 social
 setup_space 5 media
-setup_space 6 other
-setup_space 8
-setup_space 9
 setup_space 0
 
 # auto app placement
@@ -51,8 +48,3 @@ yabai -m rule --add app=WeChat space=4
 yabai -m rule --add app=QQ space=4
 yabai -m rule --add app="Microsoft Edge" space=5
 yabai -m rule --add app=Safari space=5
-yabai -m rule --add app=Anki space=10
-
-# signals
-yabai -m signal --add event=window_destroyed active=yes action="yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id) &> /dev/null"
-yabai -m signal --add event=window_minimized active=yes action="if \$(yabai -m query --windows --window \$YABAI_WINDOW_ID | jq -r '.\"is-floating\"'); then yabai -m query --windows --window &> /dev/null || yabai -m window --focus mouse &> /dev/null || yabai -m window --focus \$(yabai -m query --windows --space | jq .[0].id) &> /dev/null; fi"
