@@ -23,6 +23,8 @@ matches:
   - trigger: ":vs"
     replace: "给我一个各个库要实现一个同样基本功能（一定程度的复杂）的 demo 代码，然后比较优缺点，说明谁才更符合最实践，同时也要说明有哪些大厂采用了那种方案，然后在这个库的历史上有什么特别有名的事件，直接用良好的 md 语法组织格式，代码放到 codeblock 里"
 
+  - trigger: ":note"
+    replace: "给我个简短的版本作为笔记"
   - trigger: ":blog"
     replace: "注意只是说明它的使用，不要包含我代码的具体部分（你应该另外创建一套示例代码），wirte an blog post about"
   - trigger: ":blog"
