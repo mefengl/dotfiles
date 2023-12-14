@@ -1,4 +1,5 @@
 #2 try
+brew 'btop'
 cask 'ticktick'
 cask 'bleunlock'
 
