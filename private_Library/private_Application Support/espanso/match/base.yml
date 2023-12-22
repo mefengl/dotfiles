@@ -53,7 +53,7 @@ matches:
     replace: "full code, don't omit anything, I need full code to replace original code"
 
   - trigger: ":console"
-    replace: "remove types and exports if there have, make them can be run in browser console:{{clipboard}}\n"
+    replace: "remove types and exports if there have, make them can be run in browser console"
 
   - trigger: ":exp"
     replace: "下面的代码是用来干什么的，请在代码的附近用注释详细解释，类似博客的行内和行上注释，介绍背后的知识和思考:"
