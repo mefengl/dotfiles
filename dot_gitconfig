@@ -16,3 +16,5 @@
 	excludesFile = /Users/fl/.gitignore
 [init]
 	defaultBranch = main
+[push]
+	autoSetupRemote = true
