@@ -72,6 +72,9 @@ matches:
   - trigger: ":done"
     replace: " ✅"
 
+  - trigger: ":polish"
+    replace: "修复语法和修复不 native 的说法，除此以外，尽量少的改动原文"
+
   - trigger: ":note"
     replace: "今天学到了以下的东西，麻烦待会您完善下如下笔记（常用的专有名词：english only，不常用或复杂的：中文(english)）："
 
