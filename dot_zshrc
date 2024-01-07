@@ -163,6 +163,7 @@ alias vims='nvim ~/.config/skhd/skhdrc'
 
 ## espanso
 alias vime='nvim ~/Library/Application\ Support/espanso/match/base.yml'
+alias vimed='nvim ~/Library/Application\ Support/espanso/match/del.yml'
 
 ## atuin
 alias vima='nvim ~/.config/atuin/config.toml'
