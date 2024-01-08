@@ -4,7 +4,7 @@ brew 'btop'
 cask 'ticktick'
 cask 'bleunlock'
 
-cask "wireshark"
+# cask "wireshark"
 brew "swift-format"
 brew "doctl"
 
