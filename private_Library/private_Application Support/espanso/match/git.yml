@@ -1,3 +1,5 @@
 matches:
   - trigger: "gst:"
     replace: "git status"
+  - trigger: "gpf!:"
+    replace: "git push --force"
