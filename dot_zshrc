@@ -162,7 +162,9 @@ alias vimy='nvim ~/.config/yabai/yabairc'
 alias vims='nvim ~/.config/skhd/skhdrc'
 
 ## espanso
+alias cde='cd ~/Library/Application/match'
 alias vime='nvim ~/Library/Application\ Support/espanso/match/base.yml'
+alias vimeg='nvim ~/Library/Application\ Support/espanso/match/git.yml'
 alias vimed='nvim ~/Library/Application\ Support/espanso/match/del.yml'
 
 ## atuin
