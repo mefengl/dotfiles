@@ -3,3 +3,5 @@ matches:
     replace: "git status"
   - trigger: "gpf!:"
     replace: "git push --force"
+  - trigger: "gcb:"
+    replace: "git checkout -b"
