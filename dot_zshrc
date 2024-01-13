@@ -3,16 +3,6 @@
 alias d='nr dev 2>/dev/null || nr start'
 alias update='brew cu -a -y && tldr --update && chezmoi re-add && chezmoi update'
 
-function ni() {
-  command ni "$@"
-  echo "nun ${@:1}" >> $HISTFILE
-  fc -R $HISTFILE
-}
-function nun() {
-  command nun "$@"
-  echo "ni ${@:1}" >> $HISTFILE
-  fc -R $HISTFILE
-}
 function brew() {
   if [[ $1 == 'install' ]]; then
     command brew "$@"
@@ -26,9 +16,6 @@ function brew() {
     command brew "$@"
   fi
 }
-
-alias gnb='bash ~/config/git-next-branch.sh'
-alias gnbo='gfo && gnb'
 
 # zinit
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
