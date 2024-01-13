@@ -116,18 +116,8 @@ alias vimz='nvim ~/.zshrc'
 # git
 alias gdd='branch_for_delete=$(git rev-parse --abbrev-ref HEAD) && git switch main && git pull && git branch -d $branch_for_delete'
 
-# github
-alias ghr='gh repo'
-alias ghc='gh repo clone'
-alias ghcm='bash ~/config/ghclone.sh'
 ## repo
-alias ghrc='gh repo list -L 300 | fzf --height 20 --layout=reverse --border | awk "{print $1}" | xargs -I {} gh repo clone {}'
 alias ghrd='ghpew repos'
-alias ghrv='gh repo view --web'
-
-# node
-alias npmb='bash ~/.config/ppm.sh'
-alias vimn='nvim ~/.config/ppm.sh'
 
 # homebrew
 alias brewb='brew bundle --file=~/.config/homebrew/Brewfile'
