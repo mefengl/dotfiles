@@ -4,4 +4,4 @@ matches:
   - trigger: "gpf!:"
     replace: "git push --force"
   - trigger: "gcb:"
-    replace: "git checkout -b"
+    replace: "git checkout -b "
