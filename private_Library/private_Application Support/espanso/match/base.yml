@@ -3,6 +3,9 @@ global_vars:
     type: "clipboard"
 
 matches:
+  - trigger: "rsync:"
+    replace: 'rsync -av --exclude ".git" --exclude "node_modules" --exclude ".next"'
+
   - trigger: "ghc:"
     replace: "gh repo create"
 
