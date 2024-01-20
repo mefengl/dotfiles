@@ -15,6 +15,10 @@ matches:
   - trigger: ":add ni"
     replace: 'npm i -g @antfu/ni'
 
+  - trigger: ":add tailwind"
+    replace: 'ni -D @eslint/eslintrc eslint-plugin-react-hooks eslint-plugin-tailwindcss'
+
+
   - trigger: ":new wxt"
     replace: "npx wxt@latest init "
   - trigger: ":add eslint"
