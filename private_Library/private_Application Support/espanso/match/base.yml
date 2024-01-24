@@ -100,6 +100,9 @@ matches:
   - trigger: ":word"
     replace: "{{clipboard}} 这个词一般怎么用\n"
 
+  - trigger: ":dalle"
+    replace: "给我图片，一张一张的生成，在一次对话中，你可以调用 6 次 dalle ，一次又一次的调用就可以，开始调用吧"
+
 # doctl
   - trigger: ":doctl"
     replace: "doctl compute droplet create --image ubuntu-23-04-x64 --size s-4vcpu-8gb --region sfo3 --ssh-keys $(doctl compute ssh-key list | awk 'NR>1 {print $1}') do"
