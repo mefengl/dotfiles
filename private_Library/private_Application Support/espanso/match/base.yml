@@ -110,6 +110,8 @@ matches:
     replace: "doctl compute ssh do"
   - trigger: ":doctl"
     replace: "doctl compute droplet delete -f do"
+  - trigger: ":doctl"
+    replace: "doctl compute ssh del"
 
 # ansible
   - trigger: ":yml"
