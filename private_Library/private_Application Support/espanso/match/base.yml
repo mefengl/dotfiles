@@ -13,7 +13,7 @@ matches:
     replace: 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/$(curl -s https://api.github.com/repos/nvm-sh/nvm/releases/latest | grep "tag_name" | cut -d\" -f4)/install.sh | bash && export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"'
 
   - trigger: ":add python"
-    replace: 'sudo apt install python3'
+    replace: 'sudo apt install python3 python3-pip -y'
 
   - trigger: ":add ni"
     replace: 'npm i -g @antfu/ni'
