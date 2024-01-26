@@ -1,5 +1,6 @@
 # zmodload zsh/zprof
 #2 try
+alias try='cd try && mkdir -p "$(date +%Y-%m)/$(gshuf -n1 /usr/share/dict/words)" && touch "$(date +%Y-%m)/$(ls $(date +%Y-%m) | head -n1)/notebook.ipynb" && code "$(date +%Y-%m)/$(ls $(date +%Y-%m) | head -n1)"'
 alias d='nr dev 2>/dev/null || nr start'
 alias update='brew cu -a -y && tldr --update && chezmoi re-add && chezmoi update'
 
