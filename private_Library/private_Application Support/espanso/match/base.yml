@@ -6,6 +6,9 @@ matches:
   - trigger: "rsync:"
     replace: 'rsync -av --exclude ".git" --exclude "node_modules" --exclude ".next"'
 
+  - trigger: "query:"
+    replace: "document.querySelectorAll"
+
   - trigger: "ghc:"
     replace: "gh repo create"
 
