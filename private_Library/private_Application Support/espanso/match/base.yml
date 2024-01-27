@@ -21,6 +21,9 @@ matches:
   - trigger: ":add tailwind"
     replace: 'ni -D @eslint/eslintrc eslint-plugin-react-hooks eslint-plugin-tailwindcss'
 
+  - trigger: ":add docker"
+    replace: 'sudo apt install docker.io -y'
+
 
   - trigger: ":new wxt"
     replace: "npx wxt@latest init "
@@ -115,6 +118,8 @@ matches:
     replace: "doctl compute droplet delete -f do"
   - trigger: ":doctl"
     replace: "doctl compute ssh del"
+  - trigger: ":doctl"
+    replace: "doctl compute ssh try"
 
 # ansible
   - trigger: ":yml"
