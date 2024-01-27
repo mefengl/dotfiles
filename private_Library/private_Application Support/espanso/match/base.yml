@@ -22,7 +22,7 @@ matches:
     replace: 'ni -D @eslint/eslintrc eslint-plugin-react-hooks eslint-plugin-tailwindcss'
 
   - trigger: ":add docker"
-    replace: 'sudo apt install docker.io -y'
+    replace: 'sudo apt install docker.io -y && sudo apt install docker-compose -y'
 
 
   - trigger: ":new wxt"
