@@ -25,7 +25,7 @@ matches:
   #   replace: 'ni -D @eslint/eslintrc eslint-plugin-react-hooks eslint-plugin-tailwindcss'
 
   - trigger: ":add eslint"
-    replace: 'npx @antfu/eslint-config -y'
+    replace: 'echo | npx @antfu/eslint-config'
 
   - trigger: ":add eslint"
     replace: "{{output}}"
@@ -40,9 +40,9 @@ matches:
 
 
   - trigger: ":new wxt"
-    replace: "npx wxt@latest init "
+    replace: "echo | npx wxt@latest init "
   - trigger: ":add eslint"
-    replace: "npx @antfu/eslint-config"
+    replace: "echo | npx @antfu/eslint-config"
   - trigger: ":add tailwind"
     replace: "{{output}}"
     vars:
