@@ -42,6 +42,13 @@ matches:
         type: shell
         params:
           cmd: "open https://tailwindcss.com/docs/guides/vite"
+  - trigger: ":add n8n"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "open https://docs.n8n.io/hosting/installation/server-setups/digital-ocean"
 
   - trigger: ":project"
     replace: "生成整个项目的zip包，让我可以 npm install 然后 node index.js 直接运行"
