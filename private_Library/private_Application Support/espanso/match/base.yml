@@ -21,11 +21,19 @@ matches:
   - trigger: ":add ni"
     replace: 'npm i -g @antfu/ni'
 
-  - trigger: ":add eslint"
-    replace: 'ni -D @eslint/eslintrc eslint-plugin-react-hooks eslint-plugin-tailwindcss'
+  # - trigger: ":add eslint"
+  #   replace: 'ni -D @eslint/eslintrc eslint-plugin-react-hooks eslint-plugin-tailwindcss'
 
   - trigger: ":add eslint"
     replace: 'npx @antfu/eslint-config -y'
+
+  - trigger: ":add eslint"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "open https://github.com/antfu/eslint-config#react"
 
   - trigger: ":add docker"
     replace: 'sudo apt install docker.io -y && sudo apt install docker-compose -y'
