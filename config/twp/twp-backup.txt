@@ -1,5 +1,5 @@
 {
-    "timeStamp": 1697088257125,
+    "timeStamp": 1706869002190,
     "version": "9.9.0.3",
     "uiLanguage": "default",
     "pageTranslatorService": "google",
@@ -47,7 +47,6 @@
         "www.argonaut.dev",
         "www.bensbites.co",
         "www.epicweb.dev",
-        "www.lesswrong.com",
         "www.macarthur.me",
         "www.neugierig.org",
         "www.notboring.co",
