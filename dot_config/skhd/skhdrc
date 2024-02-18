@@ -5,7 +5,7 @@ meh - y : yabai --stop-service; yabai --start-service
 meh - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ &> /dev/null
 # meh - r : kitty sh -c "find ~/DEL ~/projects ~/Sourcetree -maxdepth 1 -type d | fzf --height 15 | xargs -I {} sh -c 'echo \"code\ngithub\" | fzf --height 10 | xargs -I % sh -c \"% '{}'\"'"
 # meh - r : kitty sh -c "find ~/DEL ~/projects ~/Sourcetree -maxdepth 1 -type d | fzf --height 15 | xargs code"
-meh - r : kitty sh -c "find ~/DEL ~/Links ~/projects ~/Sourcetree -maxdepth 1 | fzf --height 15 | xargs -I {} bash -c '[[ {} =~ \.sh$ ]] && bash {} || code {}'"
+meh - r : kitty sh -c "find ~/DEL ~/Links ~/projects ~/Sourcetree -maxdepth 2 | fzf --height 15 | xargs -I {} bash -c '[[ {} =~ \.sh$ ]] && bash {} || code {}'"
 
 # window focus
 alt - x : yabai -m window --focus recent
