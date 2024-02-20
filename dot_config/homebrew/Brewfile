@@ -1,5 +1,4 @@
 #2 try
-cask 'selfcontrol'
 brew 'btop'
 cask 'ticktick'
 cask 'bleunlock'
@@ -11,7 +10,7 @@ brew "doctl"
 tap "gleich/homebrew-taps"
 brew "nuke"
 # cask "dropbox"
-cask "locationsimulator"
+# cask "locationsimulator"
 
 brew "mas" # mac app store cli, compatible with brew bundle, can see by `brew bundle dump`
 tap "buo/cask-upgrade"
