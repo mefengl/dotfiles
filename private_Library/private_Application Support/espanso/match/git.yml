@@ -5,3 +5,5 @@ matches:
     replace: "git push --force"
   - trigger: "gcb:"
     replace: "git checkout -b "
+  - trigger: "grs:"
+    replace: "git restore"
