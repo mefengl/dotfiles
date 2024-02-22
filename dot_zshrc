@@ -4,7 +4,9 @@ if [ "$TERMPROGRAM" = 'Apple_Terminal' ] || [ "$TERM" = 'xterm-kitty' ]; then
   if ! tmux has-session -t normal 2> /dev/null; then
     tmux new-session -s normal
   else
-    tmux attach-session -t normal
+    if ! tmux list-clients -t normal 2> /dev/null; then
+      tmux attach-session -t normal
+    fi
   fi
 fi
 alias try='mkdir -p ~/projects/try && cd ~/projects/try && code . && week_dir=$(date +%y-week%V) && mkdir -p "$week_dir" && names=(Inspirational Discovery Adventure Pioneer Quantum Leap Innovation Synergy Revolution) && new_file="" && for name in "${names[@]}"; do if [[ ! -e "$week_dir/$name.ipynb" ]]; then new_file="$week_dir/$name.ipynb"; touch "$new_file"; break; fi; done && [[ -n "$new_file" ]] && code "$new_file"'
