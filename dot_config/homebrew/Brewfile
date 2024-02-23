@@ -54,6 +54,7 @@ brew "bfg"
 # cask "alt-tab"
 tap "fwartner/tap"
 brew "fwartner/tap/mac-cleanup"
+cask "easydevo"
 cask "anki"
 
 ##1 python
