@@ -44,7 +44,7 @@ matches:
   - trigger: ":add docker"
     replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install docker-compose -y'
 
-  - trigger: ":new wxt"
+  - trigger: ":add wxt"
     replace: "npx wxt@latest init "
   - trigger: ":add eslint"
     replace: "npx @antfu/eslint-config"
