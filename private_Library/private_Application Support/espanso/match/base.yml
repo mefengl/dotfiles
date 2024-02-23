@@ -28,7 +28,7 @@ matches:
   #   replace: 'ni -D @eslint/eslintrc eslint-plugin-react-hooks eslint-plugin-tailwindcss'
 
   - trigger: ":add eslint"
-    replace: 'echo | npx @antfu/eslint-config'
+    replace: 'npx @antfu/eslint-config'
 
   - trigger: ":add eslint"
     replace: "{{output}}"
@@ -45,9 +45,9 @@ matches:
     replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install docker-compose -y'
 
   - trigger: ":new wxt"
-    replace: "echo | npx wxt@latest init "
+    replace: "npx wxt@latest init "
   - trigger: ":add eslint"
-    replace: "echo | npx @antfu/eslint-config"
+    replace: "npx @antfu/eslint-config"
   - trigger: ":add tailwind"
     replace: "{{output}}"
     vars:
