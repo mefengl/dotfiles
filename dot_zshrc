@@ -5,20 +5,6 @@ alias try='mkdir -p ~/projects/try && cd ~/projects/try && code . && week_dir=$(
 alias d='nr dev 2>/dev/null || nr start'
 alias update='sudo -v && brew cu -a -y && tldr --update && chezmoi re-add && chezmoi update && sudo reboot'
 
-function brew() {
-  if [[ $1 == 'install' ]]; then
-    command brew "$@"
-    echo "brew uninstall ${@:2}" >> $HISTFILE
-    fc -R $HISTFILE
-  elif [[ $1 == 'uninstall' ]]; then
-    command brew "$@"
-    echo "brew install ${@:2}" >> $HISTFILE
-    fc -R $HISTFILE
-  else
-    command brew "$@"
-  fi
-}
-
 # zinit
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
@@ -33,29 +19,9 @@ zinit light starship/starship
 zinit wait lucid atload"_zsh_autosuggest_start" for zsh-users/zsh-autosuggestions
 zinit wait lucid for zsh-users/zsh-syntax-highlighting
 zinit wait lucid for hlissner/zsh-autopair
-# zinit wait lucid for zsh-users/zsh-history-substring-search
-
-# scala
-# zinit wait lucid for OMZP::sbt
-# zinit wait lucid for OMZP::pip
 zinit wait lucid for OMZP::git-prompt
-# zinit wait lucid for OMZP::gitignore
 zinit wait lucid for OMZP::command-not-found
-# zinit wait lucid for OMZP::tmux
-# zinit wait lucid for OMZP::terraform
-
-# alias & fast operation
-# zinit wait lucid for OMZP::aliases
-# zi for nocompile svn \
-#   multisrc'aliases.plugin.zsh' pick'/dev/null' \
-#     OMZP::aliases
-# zinit wait lucid for MichaelAquilina/zsh-you-should-use
-# zinit wait lucid for OMZP::git
 zinit wait lucid for OMZP::git-auto-fetch
-# zinit wait lucid for OMZP::brew
-# zinit wait lucid for OMZP::docker-compose
-
-# zinit wait lucid for OMZP::vscode
 zinit wait lucid for OMZP::autojump
 
 zinit for \
@@ -67,25 +33,10 @@ zinit for \
 
 #2 try
 
-# pnpm
-export PNPM_HOME="$HOME/.pnpm-global/bin"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
-# docker
-alias dockerclean='docker stop $(docker ps -aq); docker rm $(docker ps -aq)'
-alias awsdocker='aws ecr get-login-password --region $aws_region | docker login --username AWS --password-stdin $aws_prefix'
-
 #1.2 better for daily
 alias \$=''
 alias rm='trash'
 alias typora='open -a typora'
-alias cleanapp='nuke 1Password Arc "GitHub Desktop" WeChat iTerm2 企业微信'
-# github_clone(){gh repo list mefengl | awk '{print $1}' | xargs -L1 gh repo clone 2>/dev/null}
-# github_update(){echo -e "\033[32mgithub_update:\033[0m";cd ~/GitHub;github_clone;for i in *;do cd $i;git pull;cd ~;done}
 
 ##1.2 too see
 alias dalle2='bash ~/config/dalle2.sh -p "New Yorker style line drawing, " -n 5 -s "1024x1024" -d'
