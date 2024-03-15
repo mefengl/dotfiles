@@ -1,5 +1,4 @@
 #2 try
-cask 'jordanbaird-ice'
 cask 'keyboard-cleaner'
 cask 'swift-quit'
 cask 'devtoys'
@@ -96,10 +95,10 @@ cask "firefox"
 
 cask "bob"
 cask "espanso"
-# cask "hiddenbar"
-cask "dozer"
+# cask "dozer"
+cask 'jordanbaird-ice'
 cask "menubarx"
-# cask "itsycal"
+cask "itsycal"
 cask "monitorcontrol"
 cask "input-source-pro"
 cask "1password"
