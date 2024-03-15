@@ -78,7 +78,7 @@ cask "openinterminal"
 brew "neovim"
 
 ##0.8 container&db
-brew "ansible"
+# brew "ansible"
 # cask "docker"
 
 ##1 macos
