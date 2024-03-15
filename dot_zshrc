@@ -32,6 +32,7 @@ zinit light starship/starship
 
 zinit wait lucid atload"_zsh_autosuggest_start" for zsh-users/zsh-autosuggestions
 zinit wait lucid for zsh-users/zsh-syntax-highlighting
+zinit wait lucid for hlissner/zsh-autopair
 # zinit wait lucid for zsh-users/zsh-history-substring-search
 
 # scala
