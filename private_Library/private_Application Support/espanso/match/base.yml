@@ -97,6 +97,9 @@ matches:
   - trigger: ":full code"
     replace: "full code, don't omit anything, I need full code to replace original code"
 
+  - trigger: ":mindiff"
+    replace: "Try to minimize git diff, the area of changes."
+
   - trigger: ":console"
     replace: "remove types and exports if there have, make them can be run in browser console"
 
