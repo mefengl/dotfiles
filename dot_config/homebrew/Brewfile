@@ -1,5 +1,5 @@
 #2 try
-cask 'keyboard-cleaner'
+cask 'keyboard-cowboy'
 cask 'swift-quit'
 cask 'devtoys'
 cask 'reminders-menubar'
