@@ -5,7 +5,7 @@ cask 'devtoys'
 cask 'reminders-menubar'
 brew 'btop'
 # cask 'ticktick'
-cask 'bleunlock'
+# cask 'bleunlock'
 
 # cask "wireshark"
 brew "swift-format"
