@@ -126,7 +126,7 @@ matches:
   - trigger: ":polish"
     replace: "修复语法和修复不 native 的说法，除此以外，尽量少的改动原文"
 
-  - trigger: ":translate"
+  - trigger: ":trans"
     replace: "请中英文互译"
 
   - trigger: ":note"
