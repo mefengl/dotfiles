@@ -1,7 +1,7 @@
 #2 try
-cask 'keyboard-cowboy'
-cask 'swift-quit'
-cask 'devtoys'
+# cask 'keyboard-cowboy'
+# cask 'swift-quit'
+# cask 'devtoys'
 cask 'reminders-menubar'
 brew 'btop'
 # cask 'ticktick'
