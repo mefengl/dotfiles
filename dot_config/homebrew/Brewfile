@@ -1,4 +1,5 @@
 #2 try
+brew 'watch'
 # cask 'keyboard-cowboy'
 # cask 'swift-quit'
 # cask 'devtoys'
