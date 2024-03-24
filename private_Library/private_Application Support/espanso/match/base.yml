@@ -84,6 +84,12 @@ matches:
   - trigger: ":full code"
     replace: "full code, don't omit anything, I need full code to replace original code"
 
+  - trigger: ":ux"
+    replace: "你觉得这里的 UI 和 UX 怎么设计比较好，给我三种方案"
+
+  - trigger: ":ui"
+    replace: "你觉得这里的 UI 和 UX 怎么设计比较好，给我三种方案"
+
   - trigger: ":mindiff"
     replace: "Try to minimize git diff, the area of changes."
 
