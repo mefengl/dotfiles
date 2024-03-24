@@ -1,5 +1,5 @@
 #2 try
-brew 'btop'
+cask "buzz"
 # cask 'ticktick'
 # cask 'bleunlock'
 
@@ -28,6 +28,8 @@ brew "shfmt"
 
 brew "tldr"
 brew "tree"
+
+brew 'btop'
 
 # tap "artginzburg/tap"
 # brew "sudo-touchid"
