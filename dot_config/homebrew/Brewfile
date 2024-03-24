@@ -1,9 +1,4 @@
 #2 try
-brew 'watch'
-# cask 'keyboard-cowboy'
-# cask 'swift-quit'
-# cask 'devtoys'
-# cask 'reminders-menubar'
 brew 'btop'
 # cask 'ticktick'
 # cask 'bleunlock'
