@@ -18,6 +18,9 @@ matches:
   - trigger: ":add pnpm"
     replace: 'npx pnpm add -g pnpm'
 
+  - trigger: ":add bun"
+    replace: 'npm install -g bun'
+
   - trigger: ":add pm2"
     replace: 'npm install pm2@latest -g'
 
