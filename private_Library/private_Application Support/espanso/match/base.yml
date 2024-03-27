@@ -42,7 +42,7 @@ matches:
   - trigger: ":add docker"
     replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install docker.io -y'
 
-  - trigger: ":add docker"
+  - trigger: ":add docker-compose"
     replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install docker-compose -y'
 
   - trigger: ":add wxt"
