@@ -1,5 +1,6 @@
 #2 try
 cask 'jan'
+cask 'feishu'
 # cask 'ticktick'
 # cask 'bleunlock'
 
