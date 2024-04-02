@@ -1,4 +1,5 @@
 #2 try
+brew 'magic-wormhole'
 cask 'netnewswire'
 cask 'jan'
 cask 'feishu'
