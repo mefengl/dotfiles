@@ -101,6 +101,9 @@ matches:
   - trigger: ":ui"
     replace: "你觉得这里的 UI 和 UX 怎么设计比较好，给我三种方案"
 
+  - trigger: ":code"
+    replace: "给我需要修改部分的全部代码，和修改步骤"
+
   - trigger: ":mindiff"
     replace: "Try to minimize git diff, the area of changes."
 
