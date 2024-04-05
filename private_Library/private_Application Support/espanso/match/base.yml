@@ -110,6 +110,9 @@ matches:
   - trigger: ":console"
     replace: "remove types and exports if there have, make them can be run in browser console"
 
+  - trigger: ":log"
+    replace: "加上 console.log 用于测试"
+
   - trigger: ":exp"
     replace: "下面的代码是用来干什么的，请在代码的附近用注释详细解释，类似博客的行内和行上注释，介绍背后的知识和思考:"
 
