@@ -1,5 +1,5 @@
 #2 try
-cask 'linearmouse'
+cask 'mos'
 brew 'magic-wormhole'
 cask 'netnewswire'
 cask 'jan'
