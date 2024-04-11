@@ -45,6 +45,9 @@ matches:
   - trigger: ":add docker-compose"
     replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install docker-compose -y'
 
+  - trigger: ":add next"
+    replace: "npx create-next-app@latest"
+
   - trigger: ":add wxt"
     replace: "npx wxt@latest init "
 
