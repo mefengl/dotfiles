@@ -21,6 +21,9 @@ matches:
   - trigger: ":add bun"
     replace: 'npm install -g bun'
 
+  - trigger: ":add vite"
+    replace: 'npm create vite@latest'
+
   - trigger: ":add pm2"
     replace: 'npm install pm2@latest -g'
 
