@@ -70,7 +70,7 @@ copynext() {
 alias vimz='nvim ~/.zshrc'
 
 # git
-alias gdd='branch_for_delete=$(git rev-parse --abbrev-ref HEAD) && git switch main && git pull && git branch -d $branch_for_delete'
+alias gdd='branch_for_delete=$(git rev-parse --abbrev-ref HEAD) && { git switch main || git switch master; } && git pull && git branch -d $branch_for_delete'
 
 ## repo
 alias ghrd='ghpew repos'
