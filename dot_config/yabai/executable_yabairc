@@ -15,8 +15,8 @@ yabai -m config                                \
     layout                      bsp
 
 # space setup
-for _ in $(yabai -m query --spaces | jq '.[].index | select(. > 6)'); do
-  yabai -m space --destroy 7
+for _ in $(yabai -m query --spaces | jq '.[].index | select(. > 9)'); do
+  yabai -m space --destroy 10
 done
 function setup_space {
   local idx="$1"
