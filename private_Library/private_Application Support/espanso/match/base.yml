@@ -48,6 +48,9 @@ matches:
   - trigger: ":add next"
     replace: "nlx create-next-app@latest"
 
+  - trigger: ":add shadcn"
+    replace: "npx shadcn-ui@latest init"
+
   - trigger: ":add wxt"
     replace: "npx wxt@latest init "
 
