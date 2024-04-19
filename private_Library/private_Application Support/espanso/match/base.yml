@@ -33,11 +33,11 @@ matches:
   - trigger: ":add ni"
     replace: 'npm i -g @antfu/ni'
 
-  # - trigger: ":add eslint"
-  #   replace: 'ni -D @eslint/eslintrc eslint-plugin-react-hooks eslint-plugin-tailwindcss'
-
   - trigger: ":add eslint"
     replace: 'npx @antfu/eslint-config'
+
+  - trigger: ":add eslint-plugin"
+    replace: 'ni -D @eslint/eslintrc eslint-plugin-react-hooks eslint-plugin-tailwindcss'
 
   - trigger: ":add electron"
     replace: 'npm create @quick-start/electron@latest'
