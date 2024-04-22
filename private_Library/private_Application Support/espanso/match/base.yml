@@ -99,7 +99,7 @@ matches:
     replace: "give me full english object\n"
 
   - trigger: ":full code"
-    replace: "full code, don't omit anything, I need full code to replace original code"
+    replace: "每个文件的全部代码（如果整个文件没有修改，就不用给了）"
 
   - trigger: ":ux"
     replace: "你觉得这里的 UI 和 UX 怎么设计比较好，给我三种方案"
