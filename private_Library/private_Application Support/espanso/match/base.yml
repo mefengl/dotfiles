@@ -102,7 +102,7 @@ matches:
     replace: "give me full english object\n"
 
   - trigger: ":full code"
-    replace: "在最小化 gitdiff 的情况下，给我每个文件的全部代码（如果整个文件没有修改，就不用给了）"
+    replace: "在最小化 gitdiff 的情况下，给我每个文件的全部代码（只有当整个文件没有修改，才不用给）"
 
   - trigger: ":ux"
     replace: "你觉得这里的 UI 和 UX 怎么设计比较好，给我三种方案"
