@@ -10,7 +10,7 @@
 	process = git-lfs filter-process
 	required = true
 [user]
-	name = 冯不游
+	name = 不游
 	email = 71683364+mefengl@users.noreply.github.com
 [core]
 	excludesFile = /Users/fl/.gitignore
