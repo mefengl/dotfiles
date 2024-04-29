@@ -15,8 +15,8 @@ yabai -m config                                \
     layout                      bsp
 
 # space setup
-for _ in $(yabai -m query --spaces | jq '.[].index | select(. > 9)'); do
-  yabai -m space --destroy 10
+for _ in $(yabai -m query --spaces | jq '.[].index | select(. > 1)'); do
+  yabai -m space --destroy 2
 done
 function setup_space {
   local idx="$1"
@@ -33,19 +33,19 @@ function setup_space {
 }
 
 setup_space 1 code
-setup_space 2 web
-setup_space 3 git
-setup_space 4 social
-setup_space 5 media
-setup_space 0
+# setup_space 2 web
+# setup_space 3 git
+# setup_space 4 social
+# setup_space 5 media
+# setup_space 0
 
 # auto app placement
-yabai -m rule --add app="Visual Studio Code" space=1
-yabai -m rule --add app="GitHub Desktop" space=3
-yabai -m rule --add app=WeCom space=4
-yabai -m rule --add app=Feishu space=4
-yabai -m rule --add app=QQ space=4
-yabai -m rule --add app="Microsoft Edge" space=5
-yabai -m rule --add app=Safari space=5
-yabai -m rule --add app="Google Chrome" space=5
-yabai -m rule --add app=WeChat space=9
+# yabai -m rule --add app="Visual Studio Code" space=1
+# yabai -m rule --add app="GitHub Desktop" space=3
+# yabai -m rule --add app=WeCom space=4
+# yabai -m rule --add app=Feishu space=4
+# yabai -m rule --add app=QQ space=4
+# yabai -m rule --add app="Microsoft Edge" space=5
+# yabai -m rule --add app=Safari space=5
+# yabai -m rule --add app="Google Chrome" space=5
+# yabai -m rule --add app=WeChat space=9
