@@ -2,7 +2,7 @@
 cask 'mos'
 brew 'magic-wormhole'
 cask 'netnewswire'
-cask 'jan'
+# cask 'jan'
 cask 'feishu'
 # cask 'ticktick'
 # cask 'bleunlock'
