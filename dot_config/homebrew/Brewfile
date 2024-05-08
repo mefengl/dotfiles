@@ -113,7 +113,7 @@ mas "Vimari", id: 1480933944
 
 ##1 communication
 cask "wechat"
-cask "qq"
+# cask "qq"
 
 ##1.2 media
 brew 'imagemagick' # convert
