@@ -1,4 +1,5 @@
 #2 try
+cask 'steam'
 cask 'mos'
 brew 'magic-wormhole'
 cask 'netnewswire'
