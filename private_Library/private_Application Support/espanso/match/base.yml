@@ -3,76 +3,6 @@ global_vars:
     type: "clipboard"
 
 matches:
-  - trigger: ":gh"
-    replace: "in:name,readme,description language:javascript language:typescript pushed:>=2024-01-01 stars:>10"
-
-  - trigger: "rsync:"
-    replace: 'rsync -av --exclude ".git" --exclude "node_modules" --exclude ".next"'
-
-  - trigger: "query:"
-    replace: "document.querySelectorAll"
-
-  - trigger: ":add nvm"
-    replace: 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/$(curl -s https://api.github.com/repos/nvm-sh/nvm/releases/latest | grep "tag_name" | cut -d\" -f4)/install.sh | bash && export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"'
-
-  - trigger: ":add pnpm"
-    replace: 'npx pnpm add -g pnpm'
-
-  - trigger: ":add bun"
-    replace: 'npm install -g bun'
-
-  - trigger: ":add vite"
-    replace: 'npm create vite@latest'
-
-  - trigger: ":add pm2"
-    replace: 'npm install pm2@latest -g'
-
-  - trigger: ":add python"
-    replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install python-is-python3 -y'
-
-  - trigger: ":add ni"
-    replace: 'npm i -g @antfu/ni'
-
-  - trigger: ":add eslint"
-    replace: 'npx @antfu/eslint-config && ni -D @eslint/eslintrc eslint-plugin-react-hooks eslint-plugin-tailwindcss'
-
-  - trigger: ":add electron"
-    replace: 'npm create @quick-start/electron@latest'
-
-  - trigger: ":add docker"
-    replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install docker.io -y'
-
-  - trigger: ":add docker-compose"
-    replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install docker-compose -y'
-
-  - trigger: ":add next"
-    replace: "nlx create-next-app@latest"
-
-  - trigger: ":add shadcn"
-    replace: "npx shadcn-ui@latest init"
-
-  - trigger: ":add wxt"
-    replace: "npx wxt@latest init "
-
-  - trigger: ":add tailwind"
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: shell
-        params:
-          cmd: "open https://tailwindcss.com/docs/guides/vite"
-
-  - trigger: ":add form"
-    replace: "ni zod react-hook-form @hookform/resolvers"
-
-  - regex: ":op(?P<cmd>.*?)\\."
-    replace: "{{output}}"
-    vars:
-      - name: output
-        type: shell
-        params:
-          cmd: "op read 'op://Private/CLI/{{cmd}}'"
-
   - trigger: ":td"
     replace: "{{today_date}} "
     vars:
@@ -80,11 +10,54 @@ matches:
         type: date
         params:
           format: "%Y-%m-%d"
-
   - trigger: ":done"
     replace: " ✅"
 
-# doctl
+  - trigger: "query:"
+    replace: "document.querySelectorAll"
+  - trigger: ":gh"
+    replace: "in:name,readme,description language:javascript language:typescript pushed:>=2024-01-01 stars:>10"
+  - trigger: "rsync:"
+    replace: 'rsync -av --exclude ".git" --exclude "node_modules" --exclude ".next"'
+
+  - trigger: ":add nvm"
+    replace: 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/$(curl -s https://api.github.com/repos/nvm-sh/nvm/releases/latest | grep "tag_name" | cut -d\" -f4)/install.sh | bash && export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"'
+  - trigger: ":add pnpm"
+    replace: 'npx pnpm add -g pnpm'
+  - trigger: ":add bun"
+    replace: 'npm install -g bun'
+  - trigger: ":add vite"
+    replace: 'npm create vite@latest'
+  - trigger: ":add next"
+    replace: "nlx create-next-app@latest"
+  - trigger: ":add shadcn"
+    replace: "npx shadcn-ui@latest init"
+  - trigger: ":add wxt"
+    replace: "npx wxt@latest init "
+  - trigger: ":add tailwind"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "open https://tailwindcss.com/docs/guides/vite"
+  - trigger: ":add form"
+    replace: "ni zod react-hook-form @hookform/resolvers"
+  - trigger: ":add pm2"
+    replace: 'npm install pm2@latest -g'
+  - trigger: ":add python"
+    replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install python-is-python3 -y'
+  - trigger: ":add ni"
+    replace: 'npm i -g @antfu/ni'
+  - trigger: ":add eslint"
+    replace: 'npx @antfu/eslint-config && ni -D @eslint/eslintrc eslint-plugin-react-hooks eslint-plugin-tailwindcss'
+  - trigger: ":add electron"
+    replace: 'npm create @quick-start/electron@latest'
+  - trigger: ":add docker"
+    replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install docker.io -y'
+  - trigger: ":add docker-compose"
+    replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install docker-compose -y'
+  # doctl
   - trigger: ":doctl"
     replace: "doctl compute droplet create --image ubuntu-23-04-x64 --size s-4vcpu-8gb --region sfo3 --ssh-keys $(doctl compute ssh-key list | awk 'NR>1 {print $1}') do"
   - trigger: ":doctl"
