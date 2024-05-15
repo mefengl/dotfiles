@@ -6,4 +6,4 @@ matches:
   - trigger: "gcb:"
     replace: "git checkout -b "
   - trigger: "grs:"
-    replace: "git restore"
+    replace: "git restore ."
