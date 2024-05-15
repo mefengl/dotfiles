@@ -98,6 +98,7 @@ alias vims='nvim ~/.config/skhd/skhdrc'
 alias cde='cd ~/Library/Application\ Support/espanso/match'
 alias vime='nvim ~/Library/Application\ Support/espanso/match/base.yml'
 alias vimeg='nvim ~/Library/Application\ Support/espanso/match/git.yml'
+alias vimec='nvim ~/Library/Application\ Support/espanso/match/chat.yml'
 alias vimed='nvim ~/Library/Application\ Support/espanso/match/del.yml'
 
 ## atuin
