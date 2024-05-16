@@ -1,5 +1,7 @@
 matches:
   # sync
+  - trigger: "gf:"
+    replace: "git fetch"
   - trigger: "gl:"
     replace: "git pull"
   - trigger: "gp:"
