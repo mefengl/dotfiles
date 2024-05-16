@@ -1,9 +1,14 @@
 matches:
-  - trigger: "gst:"
-    replace: "git status"
+  # sync
+  - trigger: "gl:"
+    replace: "git pull"
+  - trigger: "gp:"
+    replace: "git push"
   - trigger: "gpf!:"
     replace: "git push --force"
+  # branch
   - trigger: "gcb:"
     replace: "git checkout -b "
+  # rollback
   - trigger: "grs:"
     replace: "git restore ."
