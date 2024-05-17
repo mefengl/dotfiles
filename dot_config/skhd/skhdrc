@@ -2,6 +2,11 @@
 meh - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ &> /dev/null
 meh - r : kitty sh -c "find ~/DEL ~/Links ~/projects ~/projects/now ~/Sourcetree -maxdepth 1 | fzf --height 15 | xargs -I {} bash -c '[[ {} =~ \.sh$ ]] && bash {} || code {}'"
 
+# set layer
+alt - b : yabai -m window --sub-layer below
+alt - n : yabai -m window --sub-layer normal
+alt - a : yabai -m window --sub-layer above
+
 # window focus
 alt - x : yabai -m window --focus recent
 alt - h : yabai -m window --focus west
@@ -76,8 +81,3 @@ ctrl + cmd - 3  : yabai -m window --display 3 && yabai -m display --focus 3
 
 # toggle float
 alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
-
-# set layer
-alt - b : yabai -m window --sub-layer below
-alt - n : yabai -m window --sub-layer normal
-alt - a : yabai -m window --sub-layer above
