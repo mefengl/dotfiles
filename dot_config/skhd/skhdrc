@@ -24,6 +24,9 @@ shift + alt - k : yabai -m window --swap north
 shift + alt - l : yabai -m window --swap east
 shift + alt - x : yabai -m window --swap recent
 
+# toggle float
+alt - f : yabai -m window --toggle float
+
 # space switch
 cmd + alt - 1 : yabai -m space --focus  1 || skhd -k "ctrl + alt + cmd - 1"
 cmd + alt - 2 : yabai -m space --focus  2 || skhd -k "ctrl + alt + cmd - 2"
