@@ -28,19 +28,19 @@ shift + alt - x : yabai -m window --swap recent
 alt - f : yabai -m window --toggle float
 
 # space switch
-cmd + alt - 1 : yabai -m space --focus  1 || skhd -k "ctrl + alt + cmd - 1"
-cmd + alt - 2 : yabai -m space --focus  2 || skhd -k "ctrl + alt + cmd - 2"
-cmd + alt - 3 : yabai -m space --focus  3 || skhd -k "ctrl + alt + cmd - 3"
-cmd + alt - 4 : yabai -m space --focus  4 || skhd -k "ctrl + alt + cmd - 4"
-cmd + alt - 5 : yabai -m space --focus  5 || skhd -k "ctrl + alt + cmd - 5"
-cmd + alt - 6 : yabai -m space --focus  6 || skhd -k "ctrl + alt + cmd - 6"
-cmd + alt - 7 : yabai -m space --focus  7 || skhd -k "ctrl + alt + cmd - 7"
-cmd + alt - 8 : yabai -m space --focus  8 || skhd -k "ctrl + alt + cmd - 8"
-cmd + alt - 9 : yabai -m space --focus  9 || skhd -k "ctrl + alt + cmd - 9"
-cmd + alt - 0 : yabai -m space --focus 10 || skhd -k "ctrl + alt + cmd - 0"
+cmd + alt - 1 : yabai -m space --focus  1
+cmd + alt - 2 : yabai -m space --focus  2
+cmd + alt - 3 : yabai -m space --focus  3
+cmd + alt - 4 : yabai -m space --focus  4
+cmd + alt - 5 : yabai -m space --focus  5
+cmd + alt - 6 : yabai -m space --focus  6
+cmd + alt - 7 : yabai -m space --focus  7
+cmd + alt - 8 : yabai -m space --focus  8
+cmd + alt - 9 : yabai -m space --focus  9
+cmd + alt - 0 : yabai -m space --focus 10
 cmd + alt - x : yabai -m space --focus recent
-cmd + alt - z : yabai -m space --focus prev || skhd -k "ctrl + alt + cmd - z"
-cmd + alt - c : yabai -m space --focus next || skhd -k "ctrl + alt + cmd - c"
+cmd + alt - z : yabai -m space --focus prev
+cmd + alt - c : yabai -m space --focus next
 
 # send window to space and follow focus
 shift + cmd - x : yabai -m window --space recent && yabai -m space --focus recent
