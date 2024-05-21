@@ -8,6 +8,7 @@ sudo yabai --load-sa
 # config
 yabai -m config layout bsp
 yabai -m config auto_balance on
+yabai -m config insert_direction second_child
 
 # manage off (sticky will show in all spaces)
 yabai -m rule --add app="System Settings" manage=off
