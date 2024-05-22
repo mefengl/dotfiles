@@ -1,4 +1,5 @@
 #2 try
+cask 'notunes'
 cask 'obs'
 cask 'devcleaner'
 cask 'alt-tab'
