@@ -8,7 +8,7 @@ matches:
   - trigger: ":ocr"
     replace: "it's ocr result, fix it"
   - trigger: ":short"
-    replace: "处理文本，让它更简洁，参考：Vigorous writing is concise. A sentence should contain no unnecessary words, a paragraph no unnecessary sentences, for the same reason that a drawing should have no unnecessary lines and a machine no unnecessary parts. This requires not that the writer make all sentences short or avoid all detail and treat subjects only in outline, but that every word tell. —From “The Elements of Style” by William Strunk Jr."
+    replace: "处理文本，让它更简洁，具体要求：Vigorous writing is concise. A sentence should contain no unnecessary words, a paragraph no unnecessary sentences, for the same reason that a drawing should have no unnecessary lines and a machine no unnecessary parts. This requires not that the writer make all sentences short or avoid all detail and treat subjects only in outline, but that every word tell. —From “The Elements of Style” by William Strunk Jr."
   # note
   - trigger: ":word"
     replace: "{{clipboard}} 这个词一般怎么用\n"
