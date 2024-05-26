@@ -1,3 +1,6 @@
+# Customizing the search shortcut
+search_shortcut: off
+
 # --- Toggle key
 
 # Customize the key used to disable and enable espanso (when double tapped)
