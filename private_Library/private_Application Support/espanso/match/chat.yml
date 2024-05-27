@@ -58,6 +58,8 @@ matches:
     replace: "请按照步骤和子步骤的格式来回答，类似于先给出一个主步骤，然后细分为小步骤（如步骤1、1.1、1.2等）。"
   - trigger: ":sum"
     replace: "用表格总结下你刚才说的那些点，加上 emoji"
+  - trigger: ":table"
+    replace: "用表格来更好的组织内容，加上 emoji"
   # meta
   - trigger: ":ai"
     replace: "你这次给我的答案的结构比较好，如果下次我想让你按这样的格式给我回答，我应该怎么和你说"
