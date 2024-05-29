@@ -96,7 +96,7 @@ brew "neovim"
 cask "raycast"
 cask "arc"
 cask "google-chrome"
-cask "microsoft-edge"
+# cask "microsoft-edge"
 cask "firefox"
 
 cask "bob"
