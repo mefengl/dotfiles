@@ -6,9 +6,6 @@ matches:
   # try
   - trigger: ":try"
     replace: "try"
-  - trigger: ":cn"
-    replace: "import { type ClassValue, clsx } from \"clsx\"\nimport { twMerge } from \"tailwind-merge\"\nfunction cn(...inputs: ClassValue[]) {\n
-  return twMerge(clsx(inputs))\n}"
 
   - trigger: ":td"
     replace: "{{today_date}} "
