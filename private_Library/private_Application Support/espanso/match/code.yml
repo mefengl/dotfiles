@@ -1,0 +1,23 @@
+matches:
+  - trigger: ":cn"
+    replace: |
+      import { type ClassValue, clsx } from "clsx"
+      import { twMerge } from "tailwind-merge"
+      function cn(...inputs: ClassValue[]) {
+        return twMerge(clsx(inputs))
+      }
+  - trigger: ":useclickoutside"
+    replace: |
+      import { useEffect } from 'react'
+      function useClickOutside(ref: React.RefObject<HTMLElement>, callback: Function) {
+        useEffect(() => {
+          const handleClickOutside = (event: MouseEvent) => {
+            if (ref.current && !ref.current.contains(event.target as Node))
+              callback()
+          }
+          document.addEventListener('mousedown', handleClickOutside)
+          return () => {
+            document.removeEventListener('mousedown', handleClickOutside)
+          }
+        }, [ref, callback])
+      }
