@@ -100,6 +100,7 @@ alias cde='cd ~/Library/Application\ Support/espanso/match'
 alias vime='nvim ~/Library/Application\ Support/espanso/match/base.yml'
 alias vimeg='nvim ~/Library/Application\ Support/espanso/match/git.yml'
 alias vimec='nvim ~/Library/Application\ Support/espanso/match/chat.yml'
+alias vimecc='nvim ~/Library/Application\ Support/espanso/match/code.yml'
 alias vimed='nvim ~/Library/Application\ Support/espanso/match/del.yml'
 
 ## atuin
