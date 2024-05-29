@@ -1,4 +1,10 @@
 matches:
+  - trigger: ":try"
+    replace: |
+      try
+
+  - trigger: ":&&"
+    replace: "Use the && operator to replace the ternary operator"
   - trigger: ":cn"
     replace: |
       import { type ClassValue, clsx } from "clsx"
