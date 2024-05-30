@@ -24,6 +24,10 @@ matches:
   - trigger: "rsync:"
     replace: 'rsync -av --exclude ".git" --exclude "node_modules" --exclude ".next"'
 
+  - trigger: ":add pdm"
+    replace: 'curl -sSL https://pdm-project.org/install-pdm.py | python3 -'
+  - trigger: ":remove pdm"
+    replace: 'pip uninstall pdm'
   - trigger: ":add nvm"
     replace: 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/$(curl -s https://api.github.com/repos/nvm-sh/nvm/releases/latest | grep "tag_name" | cut -d\" -f4)/install.sh | bash && export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"'
   - trigger: ":add pnpm"
