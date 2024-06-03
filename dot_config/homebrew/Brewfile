@@ -2,7 +2,7 @@
 cask 'notunes'
 cask 'obs'
 cask 'devcleaner'
-cask 'alt-tab'
+# cask 'alt-tab'
 cask 'mos'
 brew 'magic-wormhole'
 cask 'netnewswire'
@@ -12,7 +12,6 @@ cask 'feishu'
 # cask 'bleunlock'
 
 ##1 react native
-brew 'cocoapods'
 brew 'fastlane'
 
 # cask "wireshark"
