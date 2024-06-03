@@ -11,6 +11,10 @@ cask 'feishu'
 # cask 'ticktick'
 # cask 'bleunlock'
 
+##1 react native
+brew 'cocoapods'
+brew 'fastlane'
+
 # cask "wireshark"
 brew "swift-format"
 brew "doctl"
