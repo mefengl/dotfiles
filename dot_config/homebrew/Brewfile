@@ -1,9 +1,7 @@
 #2 try
-cask 'notunes'
+cask 'sfm'
 cask 'obs'
 cask 'devcleaner'
-# cask 'alt-tab'
-cask 'mos'
 brew 'magic-wormhole'
 cask 'netnewswire'
 # cask 'jan'
@@ -95,12 +93,14 @@ brew "neovim"
 # brew "ansible"
 # cask "docker"
 
-##1 macos
+##1 app
 cask "raycast"
 cask "arc"
 cask "google-chrome"
 # cask "microsoft-edge"
 cask "firefox"
+
+cask 'mos'
 
 cask "bob"
 cask "espanso"
@@ -111,6 +111,8 @@ cask "monitorcontrol"
 cask "input-source-pro"
 cask "1password"
 # cask "1password-cli"
+
+cask 'notunes'
 
 ##1.1 Safari
 # mas "1Password for Safari", id: 1569813296
