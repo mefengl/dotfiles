@@ -1,4 +1,5 @@
 #2 try
+cask 'alacritty'
 cask 'sfm'
 cask 'obs'
 cask 'devcleaner'
