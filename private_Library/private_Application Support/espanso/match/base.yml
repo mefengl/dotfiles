@@ -27,7 +27,7 @@ matches:
       - name: next_year_month_week
         type: shell
         params:
-          cmd: "NEXT_DATE=$(date -d 'next week' +'%Y-%m-%d'); YEAR=$(date -d $NEXT_DATE +'%Y'); MONTH=$(date -d $NEXT_DATE +'%m'); DAY=$(date -d $NEXT_DATE +'%d'); WEEK_IN_MONTH=$(((DAY - 1) / 7 + 1)); WEEK_WORD=$(echo 'one two three four' | cut -d' ' -f${WEEK_IN_MONTH}); echo ${YEAR}-${MONTH}-${WEEK_WORD}"
+          cmd: "NEXT_DATE=$(date -v +1w +'%Y-%m-%d'); YEAR=$(date -j -f '%Y-%m-%d' ${NEXT_DATE} +'%Y'); MONTH=$(date -j -f '%Y-%m-%d' ${NEXT_DATE} +'%m'); DAY=$(date -j -f '%Y-%m-%d' ${NEXT_DATE} +'%d'); WEEK_IN_MONTH=$(((DAY - 1) / 7 + 1)); WEEK_WORD=$(echo 'one two three four' | cut -d' ' -f${WEEK_IN_MONTH}); echo ${YEAR}-${MONTH}-${WEEK_WORD}"
 
   - trigger: ":done"
     replace: " ✅"
