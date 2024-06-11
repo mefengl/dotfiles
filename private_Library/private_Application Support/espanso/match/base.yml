@@ -18,7 +18,7 @@ matches:
     replace: " ✅"
 
   - trigger: "query:"
-    replace: ".querySelectorAll"
+    replace: "document.querySelectorAll"
   - trigger: ":gh"
     replace: "in:name,readme,description language:javascript language:typescript pushed:>=2024-01-01 stars:>10"
   - trigger: "rsync:"

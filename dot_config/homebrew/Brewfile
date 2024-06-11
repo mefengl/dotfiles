@@ -98,8 +98,10 @@ brew "neovim"
 cask "raycast"
 cask "arc"
 cask "google-chrome"
-# cask "microsoft-edge"
+cask "google-chrome@dev"
 cask "firefox"
+cask "firefox-developer-edition"
+# cask "microsoft-edge"
 
 cask 'mos'
 
