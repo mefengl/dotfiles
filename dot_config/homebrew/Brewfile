@@ -100,7 +100,7 @@ cask "arc"
 cask "google-chrome"
 cask "google-chrome@dev"
 cask "firefox"
-cask "firefox-developer-edition"
+cask "firefox@developer-edition"
 # cask "microsoft-edge"
 
 cask 'mos'
@@ -141,6 +141,7 @@ cask "kap"
 
 ##0.3 office
 cask "typora"
+cask "obsidian"
 brew "pandoc"
 
 ## Xcodes
