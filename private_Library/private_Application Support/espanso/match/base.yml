@@ -57,6 +57,12 @@ matches:
     replace: "npx shadcn-ui@latest init"
   - trigger: ":add wxt"
     replace: "npx wxt@latest init "
+  - trigger: ":new wxt"
+    replace: "gh repo create --template mefengl/wxt-starter --private "
+  - trigger: ":add electron"
+    replace: 'npm create @quick-start/electron@latest'
+  - trigger: ":new electron"
+    replace: 'gh repo create --template mefengl/electron-starter --private '
   - trigger: ":add tailwind"
     replace: "{{output}}"
     vars:
@@ -74,8 +80,6 @@ matches:
     replace: 'npm i -g @antfu/ni'
   - trigger: ":add eslint"
     replace: 'npx @antfu/eslint-config && ni -D @eslint/eslintrc eslint-plugin-tailwindcss'
-  - trigger: ":add electron"
-    replace: 'npm create @quick-start/electron@latest'
   - trigger: ":add docker"
     replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install docker.io -y'
   - trigger: ":add docker-compose"
