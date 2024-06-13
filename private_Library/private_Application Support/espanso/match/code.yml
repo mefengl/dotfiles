@@ -12,7 +12,7 @@ matches:
       function cn(...inputs: ClassValue[]) {
         return twMerge(clsx(inputs))
       }
-  - trigger: ":useclickoutside"
+  - trigger: ":useClickOutside"
     replace: |
       import { useEffect } from 'react'
       function useClickOutside(ref: React.RefObject<HTMLElement>, callback: Function) {
@@ -27,3 +27,20 @@ matches:
           }
         }, [ref, callback])
       }
+  - trigger: ":useLocation"
+    replace: |
+      import { useEffect, useState } from 'react'
+      function useLocation() {
+        const [location, setLocation] = useState(window.location)
+        useEffect(() => {
+          const checkLocation = () => {
+            if (window.location.href !== location.href) {
+              setLocation({ ...window.location })
+            }
+          }
+          const intervalId = setInterval(checkLocation, 500)
+          return () => clearInterval(intervalId)
+        }, [location])
+        return location
+      }
+
