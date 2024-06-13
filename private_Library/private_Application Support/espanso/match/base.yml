@@ -32,11 +32,11 @@ matches:
   - trigger: ":done"
     replace: " ✅"
 
-  - trigger: "query:"
+  - trigger: ":query"
     replace: "document.querySelectorAll"
   - trigger: ":gh"
     replace: "in:name,readme,description language:javascript language:typescript pushed:>=2024-01-01 stars:>10"
-  - trigger: "rsync:"
+  - trigger: ":rsync"
     replace: 'rsync -av --exclude ".git" --exclude "node_modules" --exclude ".next"'
 
   - trigger: ":add pdm"
