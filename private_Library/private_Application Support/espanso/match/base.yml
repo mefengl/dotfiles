@@ -43,10 +43,12 @@ matches:
     replace: 'curl -sSL https://pdm-project.org/install-pdm.py | python3 -'
   - trigger: ":remove pdm"
     replace: 'pip uninstall pdm'
-  - trigger: ":add nvm"
-    replace: 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/$(curl -s https://api.github.com/repos/nvm-sh/nvm/releases/latest | grep "tag_name" | cut -d\" -f4)/install.sh | bash && export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"'
+  # - trigger: ":add nvm"
+  #   replace: 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/$(curl -s https://api.github.com/repos/nvm-sh/nvm/releases/latest | grep "tag_name" | cut -d\" -f4)/install.sh | bash && export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"'
   - trigger: ":add pnpm"
-    replace: 'npx pnpm add -g pnpm'
+    replace: 'curl -fsSL https://get.pnpm.io/install.sh | sh -'
+  - trigger: ":add node"
+    replace: "pnpm env use --global lts"
   - trigger: ":add bun"
     replace: 'npm install -g bun'
   - trigger: ":add vite"
@@ -95,3 +97,8 @@ matches:
     replace: "doctl compute ssh del"
   - trigger: ":doctl"
     replace: "doctl compute ssh try"
+  # meta
+  - trigger: ":trigger"
+    replace: |
+      - trigger: ""
+        replace: ""

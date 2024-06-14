@@ -1,4 +1,6 @@
 matches:
+  - trigger: ":story"
+    replace: "通过故事的方式告诉我"
   - trigger: ":bullet"
     replace: "用 bullet points 列出来"
   - trigger: ":polish"
