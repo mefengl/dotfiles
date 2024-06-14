@@ -7,20 +7,16 @@ alt - f : yabai -m window --toggle zoom-fullscreen
 # meta
 meh - y : yabai --restart-service
 
-shift + alt - n : yabai -m space --create && \
+shift + alt - n : 
+    yabai -m space --create && \
 	index="$(yabai -m query --spaces --display | jq 'map(select(."is-native-fullscreen" == false))[-1].index')" && \
 	yabai -m window --space "${index}" && \
 	yabai -m space --focus "${index}"
 
-alt - backspace :
-	index="$(yabai -m query --spaces --display | jq 'map(select(."has-focus" == true))[0].index')" && \
-	yabai -m space --destroy && \
-	yabai -m space --focus "${index}" || yabai -m space --focus "$(($index - 1))" \
-	&& yabai -m query --spaces --display | \
-	jq -re 'map(select(."is-native-fullscreen" == false)) | length > 1' \
-	&& yabai -m query --spaces | \
-	jq -re 'map(select(."windows" == []).index) | reverse | .[] ' | \
-	xargs -I % sh -c 'yabai -m space % --destroy'
+alt - backspace : 
+  yabai -m query --spaces | \
+  jq -re 'map(select(."windows" == []).index) | reverse | .[] ' | \
+  xargs -I % sh -c 'yabai -m space % --destroy'
 
 # terminal
 meh - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ &> /dev/null
