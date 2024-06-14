@@ -14,7 +14,6 @@ matches:
       }
   - trigger: ":useClickOutside"
     replace: |
-      import { useEffect } from 'react'
       function useClickOutside(ref: React.RefObject<HTMLElement>, callback: Function) {
         useEffect(() => {
           const handleClickOutside = (event: MouseEvent) => {
@@ -29,9 +28,8 @@ matches:
       }
   - trigger: ":useLocation"
     replace: |
-      import { useEffect, useState } from 'react'
       function useLocation() {
-        const [location, setLocation] = useState(window.location)
+        const [location, setLocation] = useState({ ...window.location })
         useEffect(() => {
           const checkLocation = () => {
             if (window.location.href !== location.href) {

@@ -124,7 +124,7 @@ cask 'notunes'
 # mas "Vimari", id: 1480933944
 
 ##1 communication
-cask "wechat"
+# cask "wechat"
 # cask "qq"
 
 ##1.2 media
