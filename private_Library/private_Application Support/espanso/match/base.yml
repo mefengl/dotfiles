@@ -51,6 +51,8 @@ matches:
     replace: "pnpm env use --global lts"
   - trigger: ":add antfu"
     replace: "pnpm install --global @antfu/ni taze bumpp"
+  - trigger: ":add ai"
+    replace: "pnpm install --global @builder.io/ai-shell"
   - trigger: ":add bun"
     replace: 'npm install -g bun'
   - trigger: ":add vite"
@@ -83,7 +85,7 @@ matches:
   - trigger: ":add ni"
     replace: 'npm i -g @antfu/ni'
   - trigger: ":add eslint"
-    replace: 'npx @antfu/eslint-config && ni -D @eslint/eslintrc eslint-plugin-tailwindcss'
+    replace: 'npx @antfu/eslint-config && ni -D @eslint/eslintrc eslint-plugin-tailwindcss && ni -D eslint-plugin-format'
   - trigger: ":add docker"
     replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install docker.io -y'
   - trigger: ":add docker-compose"
