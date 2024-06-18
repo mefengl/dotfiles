@@ -64,6 +64,8 @@ matches:
     replace: "用表格总结下你刚才说的那些点，加上 emoji"
   - trigger: ":table"
     replace: "用表格来更好的组织内容，加上 emoji"
+  - trigger: ":article"
+    replace: "转换成文章，注意，不要漏掉信息，只是转换成容易读的文章"
   # meta
   - trigger: ":ai"
     replace: "你这次给我的答案的结构比较好，如果下次我想让你按这样的格式给我回答，我应该怎么和你说"
