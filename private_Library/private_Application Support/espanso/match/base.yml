@@ -59,6 +59,8 @@ matches:
     replace: 'npm create vite@latest'
   - trigger: ":add next"
     replace: "nlx create-next-app@latest"
+  - trigger: ":add vercel"
+    replace: "pnpm install --global vercel"
   - trigger: ":add shadcn"
     replace: "npx shadcn-ui@latest init"
   - trigger: ":add wxt"

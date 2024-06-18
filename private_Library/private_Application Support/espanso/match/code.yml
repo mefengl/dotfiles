@@ -41,4 +41,18 @@ matches:
         }, [location])
         return location
       }
-
+  - trigger: ":useStorage"
+    replace: |
+      function useStorage<T>(key: string) {
+        const [value, setValue] = useState<T | null>(null)
+        useEffect(() => {
+          const fetchStorageValue = async () => {
+            const storedvalue = await storage.getItem<T | null>(key)
+            setValue(storedvalue)
+          }
+          fetchStorageValue()
+          const unwatch = storage.watch<T>(key, setValue)
+          return unwatch
+        }, [key])
+        return value
+      }
