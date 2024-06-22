@@ -1,7 +1,6 @@
 # zmodload zsh/zprof
 #2 try
 alias \#='echo'
-alias npx='bunx'
 touch ~/.hushlogin # to disable the login message
 alias try='mkdir -p ~/projects/try && cd ~/projects/try && code . && week_dir=$(date +%y-week%V) && mkdir -p "$week_dir" && names=(Inspirational Discovery Adventure Pioneer Quantum Leap Innovation Synergy Revolution) && new_file="" && for name in "${names[@]}"; do if [[ ! -e "$week_dir/$name.ipynb" ]]; then new_file="$week_dir/$name.ipynb"; touch "$new_file"; break; fi; done && [[ -n "$new_file" ]] && code "$new_file"'
 alias d='nr dev 2>/dev/null || nr start'
