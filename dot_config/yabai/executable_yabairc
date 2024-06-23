@@ -14,7 +14,6 @@ yabai -m config insert_direction second_child
 yabai -m rule --add app="System Settings" manage=off
 yabai -m rule --add app="Finder" manage=off
 yabai -m rule --add app="1Password" manage=off
-yabai -m rule --add app="ChatGPT" manage=off
 yabai -m rule --add app="Free Download Manager" manage=off
 
 # signals

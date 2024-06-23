@@ -56,3 +56,32 @@ matches:
         }, [key])
         return value
       }
+  - trigger: ":throttle"
+    replace: |
+      /* only run once during the period
+       * run at the end of the period
+       */
+      function throttle(fn, delay) {
+        let last = 0
+        return (...args) => {
+          const now = Date.now()
+          if (now - last < delay)
+            return
+          last = now
+          return fn(...args)
+        }
+      }
+  - trigger: ":debounce"
+    replace: |
+      /* only run once during the period
+       * next run will only happen
+       * when no new call is made for the period
+       */
+      function debounce(fn, delay) {
+        let timeout
+        return (...args) => {
+          clearTimeout(timeout)
+          timeout = setTimeout(() => fn(...args), delay)
+        }
+      }
+
