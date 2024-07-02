@@ -1,6 +1,6 @@
 #2 try
 cask 'alacritty'
-cask 'sfm'
+# cask 'sfm'
 cask 'obs'
 cask 'devcleaner'
 brew 'magic-wormhole'
