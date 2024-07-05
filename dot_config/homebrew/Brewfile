@@ -130,7 +130,7 @@ cask 'notunes'
 ##1.2 media
 brew 'imagemagick' # convert
 brew "ffmpeg"
-cask "snipaste"
+# cask "snipaste"
 cask "shottr"
 brew "yt-dlp"
 cask "kap"
