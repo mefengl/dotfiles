@@ -74,7 +74,7 @@ alias vimz='nvim ~/.zshrc'
 alias gdd='branch_for_delete=$(git rev-parse --abbrev-ref HEAD) && { git switch main || git switch master; } && git pull && git branch -d $branch_for_delete'
 
 ## repo
-alias ghrc='clear && gh repo list mefengl --limit 100 --json name -q '\''.[].name'\'' | fzf --height 15 --prompt="Select a repository to clone: " | xargs -I {} sh -c "gh repo clone mefengl/{} ~/projects/{} && code ~/projects/{}"'
+alias ghrc='clear && gh repo list mefengl --limit 1024 --json name -q '\''.[].name'\'' | fzf --height 15 --prompt="Select a repository to clone: " | xargs -I {} sh -c "gh repo clone mefengl/{} ~/projects/{} && code ~/projects/{}" && exit'
 alias ghrd='ghpew repos'
 
 # homebrew
