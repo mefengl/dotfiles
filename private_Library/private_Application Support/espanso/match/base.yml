@@ -53,10 +53,12 @@ matches:
     replace: "pnpm env use --global lts"
   - trigger: ":add antfu"
     replace: "pnpm install --global @antfu/ni taze bumpp"
+  - trigger: ":add iconify"
+    replace: "ni -g @iconify-icon/react"
   - trigger: ":add ai"
     replace: "pnpm install --global @builder.io/ai-shell"
   - trigger: ":add bun"
-    replace: 'npm install -g bun'
+    replace: 'pnpm install -g bun'
   - trigger: ":add vite"
     replace: 'npm create vite@latest'
   - trigger: ":add next"
