@@ -76,7 +76,7 @@ matches:
   - trigger: ":new electron"
     replace: 'gh repo create --template mefengl/electron-starter --private '
   - trigger: ":add elysia"
-    replace: "bun create elysia app"
+    replace: "bun create elysia"
   - trigger: ":add tailwind"
     replace: "{{output}}"
     vars:
