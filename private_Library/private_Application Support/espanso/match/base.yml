@@ -75,6 +75,8 @@ matches:
     replace: 'npm create @quick-start/electron@latest'
   - trigger: ":new electron"
     replace: 'gh repo create --template mefengl/electron-starter --private '
+  - trigger: ":add elysia"
+    replace: "bun create elysia app"
   - trigger: ":add tailwind"
     replace: "{{output}}"
     vars:
@@ -107,6 +109,9 @@ matches:
     replace: "doctl compute ssh del"
   - trigger: ":doctl"
     replace: "doctl compute ssh try"
+  # ai
+  - trigger: ":add ollama"
+    replace: "open https://ollama.com/download"
   # meta
   - trigger: ":trigger"
     replace: |
