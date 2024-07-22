@@ -112,6 +112,8 @@ matches:
   # ai
   - trigger: ":add ollama"
     replace: "open https://ollama.com/download"
+  - trigger: ":add android"
+    replace: "open https://docs.expo.dev/workflow/android-studio-emulator"
   # meta
   - trigger: ":trigger"
     replace: |
