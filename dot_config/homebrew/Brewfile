@@ -1,7 +1,7 @@
 #2 try
 cask 'orbstack'
 cask 'jordanbaird-ice'
-cask 'alacritty'
+# cask 'alacritty'
 # cask 'sfm'
 cask 'obs'
 cask 'devcleaner'
