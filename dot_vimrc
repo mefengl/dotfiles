@@ -7,11 +7,9 @@ let mapleader = " "
 
 " custom key mappings
 noremap gp yypkgccj
-nnoremap <leader>vf va{Vo
-vnoremap <leader>y "*y
-nnoremap <leader>y "*y
-noremap <leader>w :w<CR>
 noremap cv :silent! source $MYVIMRC<CR>
+
+"" enhance navigation
 noremap <C-d> <C-d>zz
 noremap <C-u> <C-u>zz
 noremap n nzzzv
@@ -29,18 +27,21 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 call plug#begin()
+Plug 'jghauser/mkdir.nvim'
+Plug 'echasnovski/mini.nvim'
+
 Plug 'ap/vim-css-color'
 Plug 'tpope/vim-obsession'
 Plug 'mhinz/vim-startify'
-Plug 'jghauser/mkdir.nvim'
-Plug 'wakatime/vim-wakatime'
-Plug 'github/copilot.vim'
-Plug 'echasnovski/mini.nvim'
 Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
-Plug 'tpope/vim-surround'
+
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+
+Plug 'wakatime/vim-wakatime'
+Plug 'github/copilot.vim'
 call plug#end()
 
 " copy&paste
@@ -53,7 +54,6 @@ set scrolloff=7
 set signcolumn=number
 
 syntax on
-set termguicolors
 
 set ignorecase
 set smartcase
