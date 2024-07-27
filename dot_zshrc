@@ -68,7 +68,7 @@ copynext() {
     done
 }
 
-alias vimz='nvim ~/.zshrc'
+alias vimz='vim ~/.zshrc'
 
 # git
 alias gdd='branch_for_delete=$(git rev-parse --abbrev-ref HEAD) && { git switch main || git switch master; } && git pull && git branch -d $branch_for_delete'
@@ -79,11 +79,10 @@ alias ghrd='ghpew repos'
 
 # homebrew
 alias brewb='brew bundle --file=~/.config/homebrew/Brewfile'
-alias vimb='nvim ~/.config/homebrew/Brewfile'
+alias vimb='vim ~/.config/homebrew/Brewfile'
 
-# nvim
-alias vim='nvim'
-alias vimt='nvim ~/.tmux.conf'
+# vim
+alias vimt='vim ~/.tmux.conf'
 
 # chezmoi
 export LANG=en_US.UTF-8
@@ -93,19 +92,19 @@ touch ~/development.sh
 source ~/development.sh
 
 ## yabai&skhd
-alias vimy='nvim ~/.config/yabai/yabairc'
-alias vims='nvim ~/.config/skhd/skhdrc'
+alias vimy='vim ~/.config/yabai/yabairc'
+alias vims='vim ~/.config/skhd/skhdrc'
 
 ## espanso
 alias cde='cd ~/Library/Application\ Support/espanso/match'
-alias vime='nvim ~/Library/Application\ Support/espanso/match/base.yml'
-alias vimeg='nvim ~/Library/Application\ Support/espanso/match/git.yml'
-alias vimec='nvim ~/Library/Application\ Support/espanso/match/chat.yml'
-alias vimecc='nvim ~/Library/Application\ Support/espanso/match/code.yml'
-alias vimed='nvim ~/Library/Application\ Support/espanso/match/del.yml'
+alias vime='vim ~/Library/Application\ Support/espanso/match/base.yml'
+alias vimeg='vim ~/Library/Application\ Support/espanso/match/git.yml'
+alias vimec='vim ~/Library/Application\ Support/espanso/match/chat.yml'
+alias vimecc='vim ~/Library/Application\ Support/espanso/match/code.yml'
+alias vimed='vim ~/Library/Application\ Support/espanso/match/del.yml'
 
 ## atuin
-alias vima='nvim ~/.config/atuin/config.toml'
+alias vima='vim ~/.config/atuin/config.toml'
 
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
