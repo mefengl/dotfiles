@@ -90,7 +90,6 @@ cask "visual-studio-code"
 cask "kitty"
 cask "postman"
 cask "openinterminal"
-brew "neovim"
 
 ##0.8 container&db
 # brew "ansible"
