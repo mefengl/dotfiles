@@ -1,0 +1,69 @@
+" ~/.vimrc
+" vim-plug
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+" map leader to space
+let mapleader = " "
+
+" custom key mappings
+noremap gp yypkgccj
+nnoremap <leader>vf va{Vo
+vnoremap <leader>y "*y
+nnoremap <leader>y "*y
+noremap <leader>w :w<CR>
+noremap cv :silent! source $MYVIMRC<CR>
+noremap <C-d> <C-d>zz
+noremap <C-u> <C-u>zz
+noremap n nzzzv
+noremap N Nzzzv
+noremap { {zz
+noremap } }zz
+noremap <C-j> }zz
+noremap <C-k> {zz
+
+" plug installation
+let data_dir = '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin()
+Plug 'ap/vim-css-color'
+Plug 'tpope/vim-obsession'
+Plug 'mhinz/vim-startify'
+Plug 'jghauser/mkdir.nvim'
+Plug 'wakatime/vim-wakatime'
+Plug 'github/copilot.vim'
+Plug 'echasnovski/mini.nvim'
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-entire'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-commentary'
+call plug#end()
+
+" copy&paste
+set clipboard=unnamedplus
+
+" set up options
+set number
+set relativenumber
+set scrolloff=7
+set signcolumn=number
+
+syntax on
+set termguicolors
+
+set ignorecase
+set smartcase
+set nohlsearch
+
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+
+set splitright
+set splitbelow
+
