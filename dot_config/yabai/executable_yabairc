@@ -16,6 +16,3 @@ yabai -m rule --add app="Finder" manage=off
 yabai -m rule --add app="1Password" manage=off
 yabai -m rule --add app="Free Download Manager" manage=off
 
-# signals
-yabai -m signal --add event=window_moved action='[ $(yabai -m query --windows | jq ". | length") -eq 2 ] && sleep 0.5 && yabai -m query --windows | jq -re ".[] | select(.app == \"kitty\") | .id" | xargs -I{} yabai -m window {} --swap east'
-
