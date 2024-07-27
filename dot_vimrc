@@ -27,6 +27,10 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 call plug#begin()
+Plug 'morhetz/gruvbox'
+Plug 'machakann/vim-highlightedyank'
+let g:highlightedyank_highlight_duration = 150
+
 Plug 'jghauser/mkdir.nvim'
 Plug 'echasnovski/mini.nvim'
 
@@ -45,7 +49,7 @@ Plug 'github/copilot.vim'
 call plug#end()
 
 " copy&paste
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 " set up options
 set number
@@ -54,6 +58,9 @@ set scrolloff=7
 set signcolumn=number
 
 syntax on
+set termguicolors
+colorscheme gruvbox
+set background=dark
 
 set ignorecase
 set smartcase
