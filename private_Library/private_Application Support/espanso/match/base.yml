@@ -39,6 +39,8 @@ matches:
   - trigger: ":rsync"
     replace: 'rsync -av --exclude ".git" --exclude "node_modules" --exclude ".next"'
 
+  - trigger: ":add omakub"
+    replace: "wget -qO- https://omakub.org/install | bash"
   - trigger: ":add pdm"
     replace: 'curl -sSL https://pdm-project.org/install-pdm.py | python3 -'
   - trigger: ":remove pdm"

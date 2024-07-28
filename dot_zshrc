@@ -1,4 +1,7 @@
 # zmodload zsh/zprof
+# done, but a little better
+alias ls='ls -G'
+alias grep='grep --color'
 #2 try
 alias npx='pnpx'
 alias \#='echo'

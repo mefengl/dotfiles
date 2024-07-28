@@ -31,14 +31,13 @@ Plug 'morhetz/gruvbox'
 Plug 'machakann/vim-highlightedyank'
 let g:highlightedyank_highlight_duration = 150
 
-Plug 'jghauser/mkdir.nvim'
-Plug 'echasnovski/mini.nvim'
-
 Plug 'ap/vim-css-color'
 Plug 'tpope/vim-obsession'
 Plug 'mhinz/vim-startify'
-Plug 'kana/vim-textobj-user'
-Plug 'kana/vim-textobj-entire'
+
+Plug 'kana/vim-textobj-user' " required by vim-textobj-entire
+Plug 'kana/vim-textobj-entire' " ae, ie
+Plug 'wellle/targets.vim'
 
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
