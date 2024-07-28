@@ -1,4 +1,5 @@
 #2 try
+cask 'openvpn-connect'
 cask 'orbstack'
 cask 'jordanbaird-ice'
 # cask 'alacritty'
