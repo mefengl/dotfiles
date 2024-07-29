@@ -10,32 +10,16 @@ alias try='mkdir -p ~/projects/try && cd ~/projects/try && code . && week_dir=$(
 alias d='nr dev 2>/dev/null || nr start'
 alias update='brew cu -a -y && brew cleanup --prune=all; brew autoremove && pnpm update --global && tldr --update && chezmoi re-add && chezmoi update'
 
-# zinit
-# autoload -Uz compinit
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
-[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
-[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
-source "${ZINIT_HOME}/zinit.zsh"
+# source antidote
+source $HOME/.antidote/antidote.zsh
+# initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
+antidote load
 
-zinit ice as"command" from"gh-r" \
-          atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
-          atpull"%atclone" src"init.zsh"
-zinit light starship/starship
+# shell prompt
+eval "$(starship init zsh)"
 
-zinit wait lucid atload"_zsh_autosuggest_start" for zsh-users/zsh-autosuggestions
-zinit wait lucid for zsh-users/zsh-syntax-highlighting
-zinit wait lucid for hlissner/zsh-autopair
-zinit wait lucid for OMZP::git-prompt
-zinit wait lucid for OMZP::command-not-found
-zinit wait lucid for OMZP::git-auto-fetch
-zinit wait lucid for OMZP::autojump
-
-zinit for \
-    atload"zicompinit; zicdreplay" \
-    blockf \
-    lucid \
-    wait \
-  zsh-users/zsh-completions
+# zoxide: z, replacement of j
+eval "$(zoxide init zsh)"
 
 #2 try
 

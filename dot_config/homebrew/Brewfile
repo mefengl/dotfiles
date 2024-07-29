@@ -3,7 +3,6 @@ cask 'openvpn-connect'
 cask 'orbstack'
 cask 'jordanbaird-ice'
 # cask 'alacritty'
-# cask 'sfm'
 cask 'obs'
 cask 'devcleaner'
 brew 'magic-wormhole'
@@ -20,18 +19,14 @@ brew 'fastlane'
 brew "swift-format"
 brew "doctl"
 
-# tap "gleich/homebrew-taps"
-# brew "nuke"
-
-# cask "dropbox"
-# cask "locationsimulator"
-
 brew "mas" # mac app store cli, compatible with brew bundle, can see by `brew bundle dump`
 tap "buo/cask-upgrade"
 
 ##1.3 terminal
+brew "starship"
 brew "atuin"
-brew "autojump"
+# brew "autojump"
+brew "zoxide"
 brew "fzf"
 brew "trash"
 
@@ -44,9 +39,6 @@ brew "tree"
 
 brew 'btop'
 
-# tap "artginzburg/tap"
-# brew "sudo-touchid"
-# sudo brew services start sudo-touchid
 ### linux
 brew "coreutils"
 
@@ -159,3 +151,10 @@ brew "robotsandpencils/made/xcodes"
 # cask "spotify"
 
 # cask "electron-fiddle"
+
+# tap "gleich/homebrew-taps"
+# brew "nuke"
+
+# cask "dropbox"
+# cask "locationsimulator"
+
