@@ -38,6 +38,8 @@ matches:
     replace: "in:name,readme,description language:javascript language:typescript pushed:>=2024-01-01 stars:>10"
   - trigger: ":rsync"
     replace: 'rsync -av --exclude ".git" --exclude "node_modules" --exclude ".next"'
+  - trigger: ":add openvpn"
+    replace: "wget -qO- https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh | AUTO_INSTALL=y bash"
   - trigger: ":add wormhole"
     replace: "sudo apt install magic-wormhole"
   - trigger: ":add omakub"
