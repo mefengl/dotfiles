@@ -1,10 +1,10 @@
 #2 try
-cask 'openvpn-connect'
+# cask 'openvpn-connect'
 cask 'orbstack'
 cask 'jordanbaird-ice'
 # cask 'alacritty'
-cask 'obs'
-cask 'devcleaner'
+# cask 'obs'
+# cask 'devcleaner'
 brew 'magic-wormhole'
 # cask 'netnewswire'
 # cask 'jan'
