@@ -1,30 +1,31 @@
-# zmodload zsh/zprof
-# done, but a little better
-alias ls='ls -G'
-alias grep='grep --color'
-#2 try
-alias npx='pnpx'
-alias \#='echo'
-touch ~/.hushlogin # to disable the login message
-alias try='mkdir -p ~/projects/try && cd ~/projects/try && code . && week_dir=$(date +%y-week%V) && mkdir -p "$week_dir" && names=(Inspirational Discovery Adventure Pioneer Quantum Leap Innovation Synergy Revolution) && new_file="" && for name in "${names[@]}"; do if [[ ! -e "$week_dir/$name.ipynb" ]]; then new_file="$week_dir/$name.ipynb"; touch "$new_file"; break; fi; done && [[ -n "$new_file" ]] && code "$new_file"'
-alias d='nr dev 2>/dev/null || nr start'
-alias update='brew cu -a -y && brew cleanup --prune=all; brew autoremove && pnpm update --global && tldr --update && chezmoi re-add && chezmoi update'
+# shell prompt
+eval "$(starship init zsh)"
+touch ~/.hushlogin # disable the login message
 
 # source antidote
 source $HOME/.antidote/antidote.zsh
 # initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
 antidote load
 
-# shell prompt
-eval "$(starship init zsh)"
-
 # zoxide: z, replacement of j
 eval "$(zoxide init zsh)"
 
 #2 try
 
+# a little fresh air for tools from last century
+alias ls='ls -G'
+alias grep='grep --color'
+
+# dev
+alias d='nr dev 2>/dev/null || nr start'
+function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
+alias update='brew cu -a -y && brew cleanup --prune=all; brew autoremove && pnpm update --global && tldr --update && chezmoi re-add && chezmoi update'
+
+#2 try
+
 #1.2 better for daily
 alias \$=''
+alias \#='echo'
 alias rm='trash'
 alias typora='open -a typora'
 
@@ -96,11 +97,9 @@ alias vima='vim ~/.config/atuin/config.toml'
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
 eval "$(atuin init zsh)"
-function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
 
-# Created by `pipx`
-export PATH="$PATH:~/.local/bin"
-
+# pnpm: node(package) manager
+alias npx='pnpx'
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
@@ -109,8 +108,11 @@ case ":$PATH:" in
 esac
 # pnpm end
 
-# pdm
+# pdm: python package manager
 export PATH=$HOME/Library/Python/3.9/bin:$PATH
+
+# Created by `pipx`
+export PATH="$PATH:~/.local/bin"
 
 # android
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
