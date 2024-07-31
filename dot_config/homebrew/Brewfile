@@ -16,7 +16,7 @@ cask 'feishu'
 brew 'fastlane'
 
 # cask "wireshark"
-brew "swift-format"
+# brew "swift-format"
 brew "doctl"
 
 brew "mas" # mac app store cli, compatible with brew bundle, can see by `brew bundle dump`
