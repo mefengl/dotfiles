@@ -70,6 +70,9 @@ alias brewb='brew bundle --file=~/.config/homebrew/Brewfile'
 alias vimb='vim ~/.config/homebrew/Brewfile'
 
 # vim
+alias vimv='vim ~/.vimrc'
+
+# tmux
 alias vimt='vim ~/.tmux.conf'
 
 # chezmoi
