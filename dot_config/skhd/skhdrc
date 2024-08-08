@@ -15,7 +15,7 @@ shift + alt - n :
 
 alt - backspace : 
   yabai -m query --spaces | \
-  jq -re 'map(select(."windows" == []).index) | reverse | .[] ' | \
+  jq -re 'map(select(."windows" == []).index) | .[]' | \
   xargs -I % sh -c 'yabai -m space % --destroy'
 
 # terminal
