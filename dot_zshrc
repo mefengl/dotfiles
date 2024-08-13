@@ -101,10 +101,8 @@ zstyle ':completion:*' menu select
 fpath+=~/.zfunc
 eval "$(atuin init zsh)"
 
-# pnpm: node(package) manager
-alias npx='pnpx'
 # pnpm
-export PNPM_HOME="$HOME/Library/pnpm"
+export PNPM_HOME="/Users/fl/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;

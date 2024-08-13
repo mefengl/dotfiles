@@ -72,6 +72,8 @@ matches:
     replace: 'pnpm install -g bun'
   - trigger: ":add vite"
     replace: 'npm create vite@latest'
+  - trigger: ":add react"
+    replace: 'npm create vite@latest -- --template react-ts'
   - trigger: ":add next"
     replace: "nlx create-next-app@latest"
   - trigger: ":add vercel"
@@ -80,6 +82,8 @@ matches:
     replace: "npx shadcn-ui@latest init"
   - trigger: ":add wxt"
     replace: "npx wxt@latest init "
+  - trigger: ":new vite"
+    replace: "npm create vite@latest"
   - trigger: ":new wxt"
     replace: "gh repo create --template mefengl/wxt-starter --private "
   - trigger: ":add electron"
