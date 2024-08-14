@@ -1,0 +1,22 @@
+live_config_reload = true
+
+import = [
+  "~/.config/alacritty/themes/themes/gruvbox_dark.toml"
+  # "~/.config/alacritty/themes/themes/hyper.toml"
+]
+
+[font]
+size = 18
+
+[window]
+decorations = "buttonless"
+dynamic_padding = false
+opacity = 0.9
+
+  [window.padding]
+  x = 16
+  y = 16
+
+[env]
+TERM = "xterm-256color"
+
