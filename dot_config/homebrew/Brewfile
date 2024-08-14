@@ -80,7 +80,8 @@ cask "font-input"
 
 ##2 develop
 cask "visual-studio-code"
-cask "kitty"
+cask "alacritty"
+# cask "kitty"
 cask "postman"
 cask "openinterminal"
 
