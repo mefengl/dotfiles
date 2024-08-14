@@ -18,10 +18,6 @@ alt - backspace :
   jq -re 'map(select(."windows" == []).index) | .[]' | \
   xargs -I % sh -c 'yabai -m space % --destroy'
 
-# terminal
-meh - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~ &> /dev/null
-meh - r : kitty sh -c "find ~/DEL ~/Links ~/projects ~/Sourcetree -maxdepth 1 | fzf --height 15 | xargs -I {} bash -c '[[ {} =~ \.sh$ ]] && bash {} || code {}'"
-
 # set layer
 alt - b : yabai -m window --sub-layer below
 alt - n : yabai -m window --sub-layer normal

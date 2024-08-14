@@ -62,6 +62,7 @@ alias vimz='vim ~/.zshrc'
 alias gdd='branch_for_delete=$(git rev-parse --abbrev-ref HEAD) && { git switch main || git switch master; } && git pull && git branch -d $branch_for_delete'
 
 ## repo
+alias ghr="find ~/DEL ~/Links ~/projects ~/Sourcetree -maxdepth 1 | fzf --height 15 | xargs -I {} bash -c '[[ {} =~ \.sh$ ]] && bash {} || code {}'"
 alias ghrc='clear && gh repo list mefengl --limit 1024 --json name -q '\''.[].name'\'' | fzf --height 15 --prompt="Select a repository to clone: " | xargs -I {} sh -c "gh repo clone mefengl/{} ~/projects/{} && code ~/projects/{}" && exit'
 alias ghrd='ghpew repos'
 
@@ -70,7 +71,7 @@ alias brewb='brew bundle --file=~/.config/homebrew/Brewfile'
 alias vimb='vim ~/.config/homebrew/Brewfile'
 
 # terminal
-alias vima='vim ~/.config/alacritty/alacritty.yml'
+alias vima='vim ~/.config/alacritty/alacritty.toml'
 
 # vim
 alias vimv='vim ~/.vimrc'
@@ -97,8 +98,9 @@ alias vimec='vim ~/Library/Application\ Support/espanso/match/chat.yml'
 alias vimecc='vim ~/Library/Application\ Support/espanso/match/code.yml'
 alias vimed='vim ~/Library/Application\ Support/espanso/match/del.yml'
 
+# config like this should be put together
 ## atuin
-alias vima='vim ~/.config/atuin/config.toml'
+# alias vima='vim ~/.config/atuin/config.toml'
 
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
@@ -123,3 +125,4 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
