@@ -69,6 +69,9 @@ alias ghrd='ghpew repos'
 alias brewb='brew bundle --file=~/.config/homebrew/Brewfile'
 alias vimb='vim ~/.config/homebrew/Brewfile'
 
+# terminal
+alias vima='vim ~/.config/alacritty/alacritty.yml'
+
 # vim
 alias vimv='vim ~/.vimrc'
 
