@@ -126,6 +126,7 @@ cask 'notunes'
 brew 'imagemagick' # convert
 brew "ffmpeg"
 # cask "snipaste"
+cask "flameshot"
 cask "shottr"
 brew "yt-dlp"
 cask "kap"

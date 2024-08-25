@@ -71,4 +71,6 @@ matches:
     replace: "你这次给我的答案的结构比较好，如果下次我想让你按这样的格式给我回答，我应该怎么和你说"
   - trigger: ":more"
     replace: "有什么简单的方案吗，分享 8 个"
+  - trigger: ":py"
+    replace: "Write Python code to test if it works before providing JavaScript code. Don't give me js code until your test passed."
 
