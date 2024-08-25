@@ -84,4 +84,29 @@ matches:
           timeout = setTimeout(() => fn(...args), delay)
         }
       }
-
+  - trigger: ":useQuery"
+    replace: |
+      function useQuery(url) {
+        const [data, setData] = useState(null)
+        const [isLoading, setIsLoading] = useState(true)
+        const [error, setError] = useState(null)
+        useEffect(() => {
+          const fetchData = async () => {
+            try {
+              const res = await fetch(url)
+              if (!res.ok)
+                throw new Error('A network error occurred.')
+              const json = await res.json()
+              setData(json)
+            }
+            catch (e) {
+              setError(e.message)
+            }
+            finally {
+              setIsLoading(false)
+            }
+          }
+          fetchData()
+        }, [url])
+        return { data, isLoading, error }
+      }
