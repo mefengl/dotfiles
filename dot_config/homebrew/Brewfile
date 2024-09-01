@@ -79,6 +79,7 @@ cask "anki"
 ##1.5 font
 tap "homebrew/cask-fonts"
 cask "font-input"
+cask "font-fira-code-nerd-font"
 
 ##2 develop
 cask "visual-studio-code"
