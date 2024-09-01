@@ -24,6 +24,7 @@ tap "buo/cask-upgrade"
 
 ##1.3 shell/terminal
 brew "zellij"
+brew "neovim"
 brew "starship"
 brew "atuin"
 # brew "autojump"
