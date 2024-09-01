@@ -1,0 +1,5 @@
+/* https://github.com/basecamp/omakub/blob/master/configs/zellij.kdl */
+
+default_layout "compact"
+on_force_close "quit"
+
