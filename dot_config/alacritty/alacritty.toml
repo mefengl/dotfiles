@@ -6,11 +6,13 @@ import = [
   # "~/.config/alacritty/themes/themes/hyper.toml"
 ]
 
+# https://github.com/basecamp/omakub/tree/master/defaults/alacritty
+
 [env]
 TERM = "xterm-256color"
 
 [shell]
-program = "zellij"
+program = "/opt/homebrew/bin/zellij"
 
 [font]
 size = 18
@@ -19,5 +21,5 @@ size = 18
 padding.x = 16
 padding.y = 14
 decorations = "buttonless"
-opacity = 0.9
+opacity = 0.98
 
