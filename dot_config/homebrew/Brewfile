@@ -22,7 +22,8 @@ brew "doctl"
 brew "mas" # mac app store cli, compatible with brew bundle, can see by `brew bundle dump`
 tap "buo/cask-upgrade"
 
-##1.3 terminal
+##1.3 shell/terminal
+brew "zellij"
 brew "starship"
 brew "atuin"
 # brew "autojump"

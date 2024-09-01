@@ -1,5 +1,11 @@
 live_config_reload = true
 
+[env]
+TERM = "xterm-256color"
+
+# [shell]
+# program = "zellij"
+
 import = [
   "~/.config/alacritty/themes/themes/gruvbox_dark.toml"
   # "~/.config/alacritty/themes/themes/gruvbox_light.toml"
@@ -17,7 +23,4 @@ opacity = 0.9
   [window.padding]
   x = 16
   y = 16
-
-[env]
-TERM = "xterm-256color"
 
