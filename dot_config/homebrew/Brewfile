@@ -45,9 +45,9 @@ brew 'btop'
 brew "coreutils"
 
 ##1.5 window manager
-tap "koekeishiya/formulae"
-brew "yabai"
-brew "skhd"
+# tap "koekeishiya/formulae"
+# brew "yabai"
+# brew "skhd"
 cask "karabiner-elements"
 brew "tmux"
 
