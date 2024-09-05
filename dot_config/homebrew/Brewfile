@@ -53,6 +53,7 @@ brew "tmux"
 
 ##2 git
 brew "git"
+brew "lazygit"
 cask "github"
 brew "gh"
 # brew "act"

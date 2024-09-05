@@ -84,6 +84,8 @@ matches:
     replace: "npx wxt@latest init "
   - trigger: ":new vite"
     replace: "npm create vite@latest"
+  - trigger: ":new react"
+    replace: "gh repo create --template mefengl/react-starter --private "
   - trigger: ":new wxt"
     replace: "gh repo create --template mefengl/wxt-starter --private "
   - trigger: ":add electron"
