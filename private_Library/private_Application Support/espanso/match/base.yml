@@ -117,13 +117,11 @@ matches:
     replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install docker-compose -y'
   # doctl
   - trigger: ":doctl"
-    replace: "doctl compute droplet create --image ubuntu-23-04-x64 --size s-4vcpu-8gb --region sfo3 --ssh-keys $(doctl compute ssh-key list | awk 'NR>1 {print $1}') do"
+    replace: "doctl compute droplet create --image ubuntu-22-04-x64 --size s-4vcpu-8gb --region sfo3 --ssh-keys $(doctl compute ssh-key list | awk 'NR>1 {print $1}') try"
   - trigger: ":doctl"
-    replace: "doctl compute ssh do"
+    replace: "doctl compute ssh try"
   - trigger: ":doctl"
-    replace: "doctl compute droplet delete -f do"
-  - trigger: ":doctl"
-    replace: "doctl compute ssh del"
+    replace: "doctl compute droplet delete -f try"
   - trigger: ":doctl"
     replace: "doctl compute ssh try"
   # ai
