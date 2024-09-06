@@ -70,7 +70,7 @@ alias gdd='branch_for_delete=$(git rev-parse --abbrev-ref HEAD) && { git switch 
 
 ## repo
 alias ghr="find ~/DEL ~/Links ~/projects ~/Sourcetree -maxdepth 1 | fzf --height 15 | xargs -I {} bash -c '[[ {} =~ \.sh$ ]] && bash {} || code {}' && exit"
-alias ghrc='clear && gh repo list mefengl --limit 1024 --json name -q '\''.[].name'\'' | fzf --height 15 --prompt="Select a repository to clone: " | xargs -I {} sh -c "gh repo clone mefengl/{} ~/projects/{} && code ~/projects/{}" && exit'
+alias ghrc='clear && gh repo list mefengl --limit 49 --json name -q '\''.[].name'\'' | fzf --height 15 --prompt="Select a repository to clone: " | xargs -I {} sh -c "gh repo clone mefengl/{} ./{}"'
 alias ghrd='ghpew repos'
 
 # homebrew
