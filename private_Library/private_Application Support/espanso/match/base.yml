@@ -122,8 +122,6 @@ matches:
     replace: "doctl compute ssh try"
   - trigger: ":doctl"
     replace: "doctl compute droplet delete -f try"
-  - trigger: ":doctl"
-    replace: "doctl compute ssh try"
   # ai
   - trigger: ":add ollama"
     replace: "open https://ollama.com/download"
