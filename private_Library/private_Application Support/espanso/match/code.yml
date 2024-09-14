@@ -110,3 +110,23 @@ matches:
         }, [url])
         return { data, isLoading, error }
       }
+  - trigger: ":useActiveTabUrl"
+    replace: |
+      function useActiveTabUrl(): string {
+        const [url, setUrl] = useState<string>('')
+        useEffect(() => {
+          const getActiveTabUrl = async () => {
+            const [tab] = await browser.tabs.query({ active: true, currentWindow: true })
+            if (tab?.url) {
+              let formattedUrl = tab.url
+              if (formattedUrl.endsWith('/')) {
+                formattedUrl = formattedUrl.slice(0, -1)
+              }
+              setUrl(formattedUrl)
+            }
+          }
+          getActiveTabUrl()
+        }, [])
+        return url
+      }
+

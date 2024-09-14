@@ -93,8 +93,8 @@ cask "1password"
 ##1.2 media
 brew 'imagemagick' # convert
 brew "ffmpeg"
-# cask "snipaste"
-cask "flameshot"
+cask "snipaste"
+# cask "flameshot"
 cask "shottr"
 brew "yt-dlp"
 cask "kap"
