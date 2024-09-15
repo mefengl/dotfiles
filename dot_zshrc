@@ -15,8 +15,24 @@ eval "$(zoxide init zsh)"
 
 #2 try
 
-# a little fresh air for tools from last century
-alias ls='ls -G'
+# from https://github.com/basecamp/omakub/blob/master/defaults/bash/aliases begin >>>
+
+# File system
+alias ls='eza -lh --group-directories-first --icons'
+alias lsa='ls -a'
+alias lt='eza --tree --level=2 --long --icons --git'
+alias lta='lt -a'
+alias ff="fzf --preview 'batcat --style=numbers --color=always {}'"
+alias fd='fdfind'
+alias cd='z'
+
+# Directories
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+# <<< end
+
 alias grep='grep --color'
 
 # dev
