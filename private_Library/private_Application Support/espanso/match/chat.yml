@@ -41,7 +41,7 @@ matches:
     replace: "在最小化 gitdiff 的情况下，给我每个文件的全部代码（注意，当整个文件没有修改，说明无改动即可），不要省略，也不要省略原先的注释"
   - trigger: ":ux"
     replace: "你觉得这里的 UI 和 UX 怎么设计比较好，给我三种方案"
-  - trigger: ":ui"
+  - trigger: ":uiux"
     replace: "你觉得这里的 UI 和 UX 怎么设计比较好，给我三种方案"
   - trigger: ":code"
     replace: "给我需要修改部分的全部代码，和修改步骤"
@@ -65,7 +65,7 @@ matches:
   - trigger: ":table"
     replace: "用表格来更好的组织内容，加上 emoji"
   - trigger: ":article"
-    replace: "转换成文章，注意，不要漏掉信息，只是转换成容易读的文章"
+    replace: "转换成文章，注意，不需要你总结，只是需要清理，不要漏掉信息，只是转换成容易读的文章"
   # meta
   - trigger: ":ai"
     replace: "你这次给我的答案的结构比较好，如果下次我想让你按这样的格式给我回答，我应该怎么和你说"
