@@ -204,12 +204,20 @@ alt-shift-l = ['join-with right', 'mode main']
 
 # https://nikitabobko.github.io/AeroSpace/guide#on-window-detected-callback
 [[on-window-detected]]
-if.app-id = 'org.alacritty'
-run = 'move-node-to-workspace T'
-
-[[on-window-detected]]
 if.app-id = 'company.thebrowser.Browser'
 run = 'move-node-to-workspace B'
+
+[[on-window-detected]]
+if.app-id = 'com.github.GitHubClient'
+run = 'move-node-to-workspace G'
+
+[[on-window-detected]]
+if.app-id = 'com.electron.logseq'
+run = 'move-node-to-workspace N'
+
+[[on-window-detected]]
+if.app-id = 'org.alacritty'
+run = 'move-node-to-workspace T'
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.VSCode'
@@ -220,6 +228,6 @@ if.app-id = 'com.tencent.xinWeChat'
 run = 'move-node-to-workspace W'
 
 [[on-window-detected]]
-if.app-id = 'com.github.GitHubClient'
-run = 'move-node-to-workspace G'
+if.app-id = 'com.apple.dt.Xcode'
+run = 'move-node-to-workspace X'
 
