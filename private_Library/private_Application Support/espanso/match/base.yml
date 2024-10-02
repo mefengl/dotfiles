@@ -101,6 +101,15 @@ matches:
         type: shell
         params:
           cmd: "open https://tailwindcss.com/docs/guides/vite"
+  - trigger: ":add nativewind"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "open https://www.nativewind.dev/v4/getting-started/expo-router"
+  - trigger: ":add cn"
+    replace: "ni clsx tailwind-merge"
   - trigger: ":add form"
     replace: "ni zod react-hook-form @hookform/resolvers"
   - trigger: ":add pm2"
@@ -110,7 +119,7 @@ matches:
   - trigger: ":add ni"
     replace: 'npm i -g @antfu/ni'
   - trigger: ":add eslint"
-    replace: 'npx @antfu/eslint-config && ni -D @eslint/eslintrc eslint-plugin-tailwindcss && ni -D eslint-plugin-format && ni -D eslint-plugin-perfectionist'
+    replace: 'npx @antfu/eslint-config && ni -D @eslint/eslintrc eslint-plugin-tailwindcss eslint-plugin-react-hooks && ni -D eslint-plugin-format && ni -D eslint-plugin-perfectionist'
   - trigger: ":add docker"
     replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install docker.io -y'
   - trigger: ":add docker-compose"
