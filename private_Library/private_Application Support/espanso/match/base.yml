@@ -110,7 +110,7 @@ matches:
   - trigger: ":add ni"
     replace: 'npm i -g @antfu/ni'
   - trigger: ":add eslint"
-    replace: 'npx @antfu/eslint-config && ni -D @eslint/eslintrc eslint-plugin-tailwindcss && ni -D eslint-plugin-format'
+    replace: 'npx @antfu/eslint-config && ni -D @eslint/eslintrc eslint-plugin-tailwindcss && ni -D eslint-plugin-format && ni -D eslint-plugin-perfectionist'
   - trigger: ":add docker"
     replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install docker.io -y'
   - trigger: ":add docker-compose"
