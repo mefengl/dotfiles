@@ -129,4 +129,20 @@ matches:
         }, [])
         return url
       }
+  - trigger: ":useDidMount"
+    replace: |
+      function useDidMount(callback: Function) {
+        useEffect(() => {
+          callback()
+        }, [])
+      }
+  - trigger: ":useWillUnmount"
+    replace: |
+      function useWillUnmount(callback: Function) {
+        useEffect(() => {
+          return () => {
+            callback()
+          }
+        }, [])
+      }
 
