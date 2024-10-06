@@ -144,7 +144,7 @@ matches:
     replace: "doctl compute droplet delete -f tiny"
 
   - trigger: ":doctl try"
-    replace: "doctl compute droplet create --image ubuntu-22-04-x64 --size s-1vcpu-1gb-35gb-intel --region sfo3 --ssh-keys $(doctl compute ssh-key list | awk 'NR>1 {print $1}') try"
+    replace: "doctl compute droplet create --image ubuntu-22-04-x64 --size s-1vcpu-2gb-70gb-intel --region sfo3 --ssh-keys $(doctl compute ssh-key list | awk 'NR>1 {print $1}') try"
   - trigger: ":doctl try"
     replace: "doctl compute ssh try"
   - trigger: ":doctl try"
