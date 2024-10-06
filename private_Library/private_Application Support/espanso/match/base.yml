@@ -45,6 +45,16 @@ matches:
   - trigger: ":add omakub"
     replace: "wget -qO- https://omakub.org/install | bash"
 
+  - trigger: ":add mise"
+    replace: "curl https://mise.run | sh"
+  # ruby
+  - trigger: ":add ruby"
+    replace: "mise use -g ruby"
+  - trigger: ":add kamal"
+    replace: "gem install kamal"
+  - trigger: ":add rails"
+    replace: "gem install rails"
+
   - trigger: ":add z-plug"
     replace: "git clone --depth=1 https://github.com/mattmc3/antidote.git ~/.antidote && touch ~/.zsh_plugins.txt"
   - trigger: ":add vim-plug"
@@ -124,13 +134,28 @@ matches:
     replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install docker.io -y'
   - trigger: ":add docker-compose"
     replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install docker-compose -y'
+
   # doctl
-  - trigger: ":doctl"
-    replace: "doctl compute droplet create --image ubuntu-22-04-x64 --size s-1vcpu-512mb-10gb --region sfo3 --ssh-keys $(doctl compute ssh-key list | awk 'NR>1 {print $1}') try"
-  - trigger: ":doctl"
+  - trigger: ":doctl tiny"
+    replace: "doctl compute droplet create --image ubuntu-22-04-x64 --size s-1vcpu-512mb-10gb --region sfo3 --ssh-keys $(doctl compute ssh-key list | awk 'NR>1 {print $1}') tiny"
+  - trigger: ":doctl tiny"
+    replace: "doctl compute ssh tiny"
+  - trigger: ":doctl tiny"
+    replace: "doctl compute droplet delete -f tiny"
+
+  - trigger: ":doctl try"
+    replace: "doctl compute droplet create --image ubuntu-22-04-x64 --size s-1vcpu-1gb-35gb-intel --region sfo3 --ssh-keys $(doctl compute ssh-key list | awk 'NR>1 {print $1}') try"
+  - trigger: ":doctl try"
     replace: "doctl compute ssh try"
-  - trigger: ":doctl"
+  - trigger: ":doctl try"
     replace: "doctl compute droplet delete -f try"
+
+  - trigger: ":doctl dev"
+    replace: "doctl compute droplet create --image ubuntu-22-04-x64 --size s-2vcpu-2gb-90gb-intel --region sfo3 --ssh-keys $(doctl compute ssh-key list | awk 'NR>1 {print $1}') dev"
+  - trigger: ":doctl dev"
+    replace: "doctl compute ssh dev"
+  - trigger: ":doctl dev"
+    replace: "doctl compute droplet delete -f dev"
   # ai
   - trigger: ":add ollama"
     replace: "open https://ollama.com/download"
