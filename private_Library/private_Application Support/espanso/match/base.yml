@@ -138,6 +138,7 @@ matches:
   # doctl
   - trigger: ":doctl ip"
     replace: "doctl compute droplet list --format Name,PublicIPv4"
+
   - trigger: ":doctl tiny"
     replace: "doctl compute droplet create --image ubuntu-22-04-x64 --size s-1vcpu-512mb-10gb --region sfo3 --ssh-keys $(doctl compute ssh-key list | awk 'NR>1 {print $1}') tiny"
   - trigger: ":doctl tiny"

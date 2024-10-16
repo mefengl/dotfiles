@@ -10,11 +10,13 @@
 	process = git-lfs filter-process
 	required = true
 [user]
-	name = 不游
+	name = mefengl
 	email = 71683364+mefengl@users.noreply.github.com
 [core]
-	excludesFile = /Users/fl/.gitignore
+	excludesFile = ~/.gitignore
 [init]
 	defaultBranch = main
 [push]
 	autoSetupRemote = true
+[includeIf "gitdir:~/Developer/buyou/"]
+	path = .gitconfig-buyou

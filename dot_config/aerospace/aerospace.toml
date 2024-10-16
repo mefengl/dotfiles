@@ -208,12 +208,20 @@ if.app-id = 'company.thebrowser.Browser'
 run = 'move-node-to-workspace B'
 
 [[on-window-detected]]
+if.app-name-regex-substring = 'Cursor'
+run = 'move-node-to-workspace C'
+
+[[on-window-detected]]
 if.app-id = 'org.mozilla.firefoxdeveloperedition'
 run = 'move-node-to-workspace F'
 
 [[on-window-detected]]
 if.app-id = 'com.github.GitHubClient'
 run = 'move-node-to-workspace G'
+
+[[on-window-detected]]
+if.app-id = 'abnerworks.Typora'
+run = 'move-node-to-workspace M'
 
 [[on-window-detected]]
 if.app-id = 'com.electron.logseq'
