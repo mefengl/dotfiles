@@ -132,6 +132,9 @@ matches:
     replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install docker.io -y'
   - trigger: ":add docker-compose"
     replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install docker-compose -y'
+  - trigger: ":docker clean"
+    replace: 'docker rm $(docker ps -a -q); docker rmi $(docker images -q); docker volume rm $(docker volume ls -q)'
+
 
   # doctl
   - trigger: ":doctl ip"
