@@ -134,6 +134,8 @@ matches:
     replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install docker-compose -y'
   - trigger: ":docker clean"
     replace: 'docker rm $(docker ps -a -q); docker rmi $(docker images -q); docker volume rm $(docker volume ls -q)'
+  - trigger: ":add sql-studio"
+    replace: "curl --proto '=https' --tlsv1.2 -LsSf https://github.com/frectonz/sql-studio/releases/download/0.1.32/sql-studio-installer.sh | sh"
 
 
   # doctl

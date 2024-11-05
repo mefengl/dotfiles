@@ -1,17 +1,10 @@
-live_config_reload = true
-
-import = [
-  "~/.config/alacritty/themes/themes/gruvbox_dark.toml"
-  # "~/.config/alacritty/themes/themes/gruvbox_light.toml"
-  # "~/.config/alacritty/themes/themes/hyper.toml"
-]
 
 # https://github.com/basecamp/omakub/tree/master/defaults/alacritty
 
 [env]
 TERM = "xterm-256color"
 
-[shell]
+[terminal.shell]
 program = "/opt/homebrew/bin/zellij"
 
 [font]
@@ -25,4 +18,15 @@ padding.x = 16
 padding.y = 14
 decorations = "buttonless"
 opacity = 0.98
+
+[general]
+live_config_reload = true
+
+import = [
+  "~/.config/alacritty/themes/themes/gruvbox_dark.toml"
+  # "~/.config/alacritty/themes/themes/gruvbox_light.toml"
+  # "~/.config/alacritty/themes/themes/hyper.toml"
+]
+
+[terminal]
 

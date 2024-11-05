@@ -232,6 +232,10 @@ if.app-id = 'com.electron.logseq'
 run = 'move-node-to-workspace N'
 
 [[on-window-detected]]
+if.app-id = 'md.obsidian'
+run = 'move-node-to-workspace O'
+
+[[on-window-detected]]
 if.app-id = 'org.alacritty'
 run = 'move-node-to-workspace T'
 
