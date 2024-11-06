@@ -2,7 +2,7 @@
 brew "lazydocker"
 cask 'orbstack'
 cask 'jordanbaird-ice'
-brew 'magic-wormhole'
+# brew 'magic-wormhole'
 cask 'feishu'
 
 ##1 react native
