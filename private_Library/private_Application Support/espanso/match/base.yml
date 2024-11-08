@@ -74,10 +74,8 @@ matches:
     replace: "pnpm install --global @antfu/ni taze bumpp"
   - trigger: ":add iconify"
     replace: "ni -g @iconify-icon/react"
-  - trigger: ":add ai"
-    replace: "pnpm install --global @builder.io/ai-shell"
   - trigger: ":add bun"
-    replace: 'pnpm install -g bun'
+    replace: 'mise use -g bun'
   - trigger: ":add vite"
     replace: 'npm create vite@latest'
   - trigger: ":add react"
