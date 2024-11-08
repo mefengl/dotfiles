@@ -57,14 +57,17 @@ matches:
   # go
   - trigger: ":add go"
     replace: "mise use -g go"
+  # python - uv
+  - trigger: ":add uv"
+    replace: 'curl -LsSf https://astral.sh/uv/install.sh | sh'
+  - trigger: ":add python"
+    replace: 'uv python install'
 
   - trigger: ":add z-plug"
     replace: "git clone --depth=1 https://github.com/mattmc3/antidote.git ~/.antidote && touch ~/.zsh_plugins.txt"
   - trigger: ":add vim-plug"
     replace: "curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
 
-  - trigger: ":add uv"
-    replace: 'curl -LsSf https://astral.sh/uv/install.sh | sh'
   - trigger: ":add pnpm"
     replace: 'curl -fsSL https://get.pnpm.io/install.sh | sh -'
   - trigger: ":add node"
