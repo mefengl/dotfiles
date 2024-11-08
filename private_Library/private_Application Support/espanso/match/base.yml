@@ -54,6 +54,9 @@ matches:
     replace: "gem install kamal"
   - trigger: ":add rails"
     replace: "gem install rails"
+  # go
+  - trigger: ":add go"
+    replace: "mise use -g go"
 
   - trigger: ":add z-plug"
     replace: "git clone --depth=1 https://github.com/mattmc3/antidote.git ~/.antidote && touch ~/.zsh_plugins.txt"
@@ -62,20 +65,16 @@ matches:
 
   - trigger: ":add uv"
     replace: 'curl -LsSf https://astral.sh/uv/install.sh | sh'
-  # - trigger: ":add nvm"
-  #   replace: 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/$(curl -s https://api.github.com/repos/nvm-sh/nvm/releases/latest | grep "tag_name" | cut -d\" -f4)/install.sh | bash && export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"'
   - trigger: ":add pnpm"
     replace: 'curl -fsSL https://get.pnpm.io/install.sh | sh -'
-  - trigger: ":add yarn"
-    replace: "pnpm install --global yarn"
   - trigger: ":add node"
     replace: "pnpm env use --global lts"
+  - trigger: ":add yarn"
+    replace: "pnpm install --global yarn"
   - trigger: ":add antfu"
     replace: "pnpm install --global @antfu/ni taze bumpp"
   - trigger: ":add iconify"
     replace: "ni -g @iconify-icon/react"
-  - trigger: ":add bun"
-    replace: 'mise use -g bun'
   - trigger: ":add vite"
     replace: 'npm create vite@latest'
   - trigger: ":add react"
