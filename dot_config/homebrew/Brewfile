@@ -57,7 +57,6 @@ cask "easydevo"
 cask "anki"
 
 ##1.5 font
-tap "homebrew/cask-fonts"
 cask "font-input"
 cask "font-fira-code-nerd-font"
 
@@ -81,7 +80,6 @@ cask 'mos'
 
 cask "bob"
 cask "espanso"
-cask "dozer"
 cask "menubarx"
 # cask "itsycal"
 cask "monitorcontrol"
