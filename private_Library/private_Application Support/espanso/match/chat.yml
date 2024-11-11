@@ -9,6 +9,8 @@ matches:
     replace: "翻译成中文"
   - trigger: ":getart"
     replace: "这是什么风格，用专业术语先分类可分析的部分，然后对于每个部分，用专业术语精确的表达使用的技术/画风/一切，目的是让另一个画师能够知道应该怎么创造另一个相同风格"
+  - trigger: ":icon"
+    replace: "3D Fluent Emoji style ios app icon for "
   - trigger: ":dalle"
     replace: "给我图片，一张一张的生成，在一次对话中，你可以调用 6 次 dalle ，一次又一次的调用就可以，开始调用吧"
   - trigger: ":ocr"
