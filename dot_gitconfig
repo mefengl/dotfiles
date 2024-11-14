@@ -18,5 +18,5 @@
 	defaultBranch = main
 [push]
 	autoSetupRemote = true
-[includeIf "gitdir:~/Developer/buyou/"]
+[includeIf "gitdir:/Volumes/xiaomi-1t/Developer/buyou/"]
 	path = .gitconfig-buyou
