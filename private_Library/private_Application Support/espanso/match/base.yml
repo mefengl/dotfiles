@@ -62,6 +62,9 @@ matches:
     replace: 'curl -LsSf https://astral.sh/uv/install.sh | sh'
   - trigger: ":add python"
     replace: 'uv python install'
+  # rust
+  - trigger: ":add rust"
+    replace: "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
 
   - trigger: ":add z-plug"
     replace: "git clone --depth=1 https://github.com/mattmc3/antidote.git ~/.antidote && touch ~/.zsh_plugins.txt"

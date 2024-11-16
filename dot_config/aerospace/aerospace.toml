@@ -216,6 +216,10 @@ if.app-id = 'com.google.Chrome'
 run = 'move-node-to-workspace C'
 
 [[on-window-detected]]
+if.app-id = 'is.follow'
+run = 'move-node-to-workspace F'
+
+[[on-window-detected]]
 if.app-id = 'org.mozilla.firefoxdeveloperedition'
 run = 'move-node-to-workspace F'
 
