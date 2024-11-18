@@ -62,9 +62,9 @@ matches:
     replace: 'curl -LsSf https://astral.sh/uv/install.sh | sh'
   - trigger: ":add python"
     replace: 'uv python install'
-  # zig
-  - trigger: ":add zig"
-    replace: "mise use -g zig"
+  # # zig
+  # - trigger: ":add zig"
+  #   replace: "mise use -g zig"
   # rust
   - trigger: ":add rust"
     replace: "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
