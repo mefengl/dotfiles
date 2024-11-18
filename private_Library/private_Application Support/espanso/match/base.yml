@@ -125,8 +125,6 @@ matches:
     replace: "ni zod react-hook-form @hookform/resolvers"
   - trigger: ":add pm2"
     replace: 'npm install pm2@latest -g'
-  - trigger: ":add python"
-    replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install python-is-python3 -y'
   - trigger: ":add ni"
     replace: 'npm i -g @antfu/ni'
   - trigger: ":add eslint"

@@ -204,6 +204,10 @@ alt-shift-l = ['join-with right', 'mode main']
 
 # https://nikitabobko.github.io/AeroSpace/guide#on-window-detected-callback
 [[on-window-detected]]
+if.app-id = 'net.ankiweb.dtop'
+run = 'move-node-to-workspace A'
+
+[[on-window-detected]]
 if.app-id = 'company.thebrowser.Browser'
 run = 'move-node-to-workspace B'
 
