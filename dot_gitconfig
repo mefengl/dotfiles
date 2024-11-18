@@ -20,3 +20,5 @@
 	autoSetupRemote = true
 [includeIf "gitdir:/Volumes/xiaomi-1t/Developer/buyou/"]
 	path = .gitconfig-buyou
+[includeIf "gitdir:/Volumes/xiaomi-1t/Developer/q/"]
+	path = .gitconfig-q
