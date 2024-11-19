@@ -22,3 +22,5 @@
 	path = .gitconfig-buyou
 [includeIf "gitdir:/Volumes/xiaomi-1t/Developer/q/"]
 	path = .gitconfig-q
+[includeIf "gitdir:/Volumes/xiaomi-1t/Developer/x/"]
+	path = .gitconfig-x
