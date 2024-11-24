@@ -24,3 +24,5 @@
 	path = .gitconfig-q
 [includeIf "gitdir:/Volumes/xiaomi-1t/Developer/x/"]
 	path = .gitconfig-x
+[hub]
+	protocol = https
