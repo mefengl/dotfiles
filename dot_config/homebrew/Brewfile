@@ -64,6 +64,7 @@ cask "font-fira-code-nerd-font"
 
 ##2 develop
 cask "visual-studio-code"
+cask "visual-studio-code@insiders"
 cask "alacritty"
 # cask "kitty"
 cask "postman"

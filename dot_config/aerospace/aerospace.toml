@@ -216,10 +216,6 @@ if.app-name-regex-substring = 'Cursor'
 run = 'move-node-to-workspace C'
 
 [[on-window-detected]]
-if.app-id = 'com.google.Chrome'
-run = 'move-node-to-workspace C'
-
-[[on-window-detected]]
 if.app-id = 'is.follow'
 run = 'move-node-to-workspace F'
 
