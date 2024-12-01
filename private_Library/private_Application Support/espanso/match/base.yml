@@ -37,9 +37,9 @@ matches:
   # gh
   - trigger: ":github"
     replace: "in:name,readme,description language:javascript language:typescript pushed:>=2024-01-01 stars:>10"
-  - trigger: ":gh repo create local"
+  - trigger: ":gh repo create"
     replace: "git remote remove origin; gh repo create --private --source . --push $(basename \"$PWD\")"
-  - trigger: ":gh repo create remote"
+  - trigger: ":gh repo create"
     replace: "gh repo create --private --clone --add-readme "
   - trigger: ":rsync"
     replace: 'rsync -av --exclude ".git" --exclude "node_modules" --exclude ".next"'
