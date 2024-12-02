@@ -41,6 +41,17 @@ matches:
     replace: "git remote remove origin; gh repo create --private --source . --push $(basename \"$PWD\")"
   - trigger: ":gh repo create"
     replace: "gh repo create --private --clone --add-readme "
+  - trigger: ":new uv"
+    replace: "gh repo create --private --clone --template mefengl/uv-starter "
+  - trigger: ":new react"
+    replace: "gh repo create --private --clone --template mefengl/react-starter "
+  - trigger: ":new wxt"
+    replace: "gh repo create --private --clone --template mefengl/wxt-starter "
+  - trigger: ":new expo"
+    replace: "gh repo create --private --clone --template mefengl/expo-starter "
+  - trigger: ":new electron"
+    replace: 'gh repo create --private --clone --template mefengl/electron-starter '
+
   - trigger: ":rsync"
     replace: 'rsync -av --exclude ".git" --exclude "node_modules" --exclude ".next"'
   - trigger: ":add openvpn"
@@ -65,8 +76,6 @@ matches:
   # python - uv
   - trigger: ":add uv"
     replace: 'curl -LsSf https://astral.sh/uv/install.sh | sh'
-  - trigger: ":new uv"
-    replace: "gh repo create --clone --template mefengl/uv-starter --private "
   - trigger: ":add python"
     replace: 'uv python install'
   - trigger: ":add ruff"
@@ -107,16 +116,8 @@ matches:
     replace: "npx wxt@latest init "
   - trigger: ":new vite"
     replace: "npm create vite@latest"
-  - trigger: ":new react"
-    replace: "gh repo create --clone --template mefengl/react-starter --private "
-  - trigger: ":new wxt"
-    replace: "gh repo create --clone --template mefengl/wxt-starter --private "
-  - trigger: ":new expo"
-    replace: "gh repo create --clone --template mefengl/expo-starter --private "
   - trigger: ":add electron"
     replace: 'npm create @quick-start/electron@latest'
-  - trigger: ":new electron"
-    replace: 'gh repo create --clone --template mefengl/electron-starter --private '
   - trigger: ":add elysia"
     replace: "bun create elysia"
   - trigger: ":add tailwind"
