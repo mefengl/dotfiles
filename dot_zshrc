@@ -53,7 +53,7 @@ alias grep='grep --color'
 # dev
 # alias d='nr dev 2>/dev/null || nr start'
 function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
-alias update='brew cu -a -y && brew cleanup --prune=all; brew autoremove && pnpm update --global && tldr --update && chezmoi re-add && chezmoi update'
+alias update='brew update && brew upgrade && brew cu -a -y && brew cleanup --prune=all; brew autoremove && brew doctor && pnpm update --global && tldr --update && chezmoi re-add && chezmoi update'
 
 #2 try
 
