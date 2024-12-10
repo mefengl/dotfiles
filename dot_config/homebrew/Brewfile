@@ -1,4 +1,5 @@
 #2 try
+brew "snapcraft" # electron linux build
 cask "ollama"
 brew "lazydocker"
 cask 'orbstack'
@@ -55,7 +56,7 @@ brew "bfg"
 # cask "alt-tab"
 tap "fwartner/tap"
 brew "fwartner/tap/mac-cleanup"
-cask "easydevo"
+# cask "easydevo"
 cask "anki"
 
 ##1.5 font
@@ -66,8 +67,8 @@ cask "font-fira-code-nerd-font"
 cask "visual-studio-code"
 cask "alacritty"
 # cask "kitty"
-cask "postman"
-cask "openinterminal"
+# cask "postman"
+# cask "openinterminal"
 
 ##1 app
 cask "raycast"
