@@ -3,10 +3,10 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # shell prompt
 eval "$(starship init zsh)"
-touch ~/.hushlogin # disable the login message
+touch "$HOME/.hushlogin" # disable the login message
 
 # source antidote
-source $HOME/.antidote/antidote.zsh
+source "$HOME/.antidote/antidote.zsh"
 # initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
 antidote load
 
@@ -152,7 +152,7 @@ esac
 export PATH=$HOME/Library/Python/3.9/bin:$PATH
 
 # Created by `pipx`
-export PATH="$PATH:~/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # # android
 # export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
