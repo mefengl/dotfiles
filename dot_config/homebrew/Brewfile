@@ -1,12 +1,12 @@
 #2 try
 # cask "image2icon" # electron icon
-brew "snapcraft" # electron linux build
+# brew "snapcraft" # electron linux build
 cask "ollama"
-brew "lazydocker"
+# brew "lazydocker"
 cask 'orbstack'
 cask 'jordanbaird-ice'
 # brew 'magic-wormhole'
-cask 'feishu'
+# cask 'feishu'
 
 ##1 react native
 brew 'fastlane'
@@ -14,7 +14,7 @@ brew 'fastlane'
 brew "doctl"
 
 # brew "mas" # mac app store cli, compatible with brew bundle, can see by `brew bundle dump`
-tap "buo/cask-upgrade"
+tap "buo/cask-upgrade" # brew cu
 
 ##1.3 shell/terminal
 brew "zellij"
@@ -22,18 +22,14 @@ brew "neovim"
 brew "starship"
 brew "atuin"
 # brew "autojump"
-brew "zoxide"
-brew "fzf"
+brew "zoxide" # z
+brew 'btop'
 brew "trash"
-
+brew "fzf"
 brew "jq"
-
-brew "shfmt"
-
 brew "tldr"
 brew "tree"
-
-brew 'btop'
+# brew "shfmt"
 
 ### linux
 brew "coreutils"
@@ -47,7 +43,7 @@ brew "git"
 brew "lazygit"
 cask "github"
 brew "gh"
-brew "gist"
+# brew "gist"
 # brew "act"
 brew "chezmoi"
 brew "bfg"
@@ -61,13 +57,12 @@ brew "fwartner/tap/mac-cleanup"
 cask "anki"
 
 ##1.5 font
-cask "font-input"
+# cask "font-input"
 cask "font-fira-code-nerd-font"
 
 ##2 develop
 cask "visual-studio-code"
 cask "alacritty"
-# cask "kitty"
 # cask "postman"
 # cask "openinterminal"
 
@@ -82,30 +77,27 @@ cask "firefox@developer-edition"
 
 cask 'mos'
 
-cask "bob"
+# cask "bob"
 cask "espanso"
 cask "menubarx"
 # cask "itsycal"
-cask "monitorcontrol"
-cask "input-source-pro"
+# cask "monitorcontrol"
+# cask "input-source-pro"
 cask "1password"
 # cask "1password-cli"
 
-# cask 'notunes'
-
 ##1.2 media
-brew 'imagemagick' # convert
+brew 'imagemagick' # migick
 brew "ffmpeg"
 cask "snipaste"
-# cask "flameshot"
-cask "shottr"
+# cask "shottr"
 brew "yt-dlp"
 cask "kap"
 
 ##0.3 office
 cask "typora"
-# cask "obsidian"
 brew "pandoc"
+cask "obsidian"
 
 ## Xcodes
 brew "aria2" # for quicker xcodes download
