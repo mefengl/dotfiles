@@ -1,4 +1,5 @@
 #2 try
+cask "free-download-manager"
 # cask "image2icon" # electron icon
 # brew "snapcraft" # electron linux build
 cask "ollama"
