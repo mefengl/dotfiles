@@ -18,11 +18,11 @@
 	defaultBranch = main
 [push]
 	autoSetupRemote = true
-[includeIf "gitdir:/Volumes/xiaomi-1t/Developer/buyou/"]
+[includeIf "gitdir:/Volumes/MI-1T/Developer/buyou/"]
 	path = .gitconfig-buyou
-[includeIf "gitdir:/Volumes/xiaomi-1t/Developer/q/"]
+[includeIf "gitdir:/Volumes/MI-1T/Developer/q/"]
 	path = .gitconfig-q
-[includeIf "gitdir:/Volumes/xiaomi-1t/Developer/x/"]
+[includeIf "gitdir:/Volumes/MI-1T/Developer/x/"]
 	path = .gitconfig-x
 [hub]
 	protocol = https

@@ -65,7 +65,7 @@ matches:
     replace: "curl https://mise.run | sh"
   # bun
   - trigger: ":add bun"
-    replace: "mise use -g bun"
+    replace: "mise use -g bun && bun upgrade"
   # ruby
   - trigger: ":add ruby"
     replace: "mise use -g ruby"
