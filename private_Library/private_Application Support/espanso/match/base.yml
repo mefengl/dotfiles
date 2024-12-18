@@ -58,6 +58,11 @@ matches:
     replace: "wget -qO- https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh | AUTO_INSTALL=y bash"
   - trigger: ":add wormhole"
     replace: "sudo apt install magic-wormhole"
+  - trigger: ":file.io"
+    replace: 'curl https://file.io -F "file=@$|$"'
+    vars:
+      - name: file_path
+        type: file
   - trigger: ":add omakub"
     replace: "wget -qO- https://omakub.org/install | bash"
 
