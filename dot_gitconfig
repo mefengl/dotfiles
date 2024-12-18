@@ -18,11 +18,13 @@
 	defaultBranch = main
 [push]
 	autoSetupRemote = true
+[hub]
+	protocol = https
 [includeIf "gitdir:/Volumes/MI-1T/Developer/buyou/"]
 	path = .gitconfig-buyou
+[includeIf "gitdir:/Volumes/MI-1T/Developer/buurk/"]
+  path = .gitconfig-buurk
 [includeIf "gitdir:/Volumes/MI-1T/Developer/q/"]
 	path = .gitconfig-q
 [includeIf "gitdir:/Volumes/MI-1T/Developer/x/"]
 	path = .gitconfig-x
-[hub]
-	protocol = https
