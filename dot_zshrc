@@ -165,4 +165,4 @@ eval "$(~/.local/bin/mise activate zsh)"
 export PATH="/opt/homebrew/opt/mysql-client@8.4/bin:$PATH"
 
 # bun completions
-[ -s "/Users/fl/.bun/_bun" ] && source "/Users/fl/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"

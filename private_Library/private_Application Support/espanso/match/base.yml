@@ -71,6 +71,9 @@ matches:
   # bun
   - trigger: ":add bun"
     replace: "mise remove bun; mise use -g bun"
+  # deno
+  - trigger: ":add deno"
+    replace: "mise remove deno; mise use -g deno"
   # ruby
   - trigger: ":add ruby"
     replace: "mise use -g ruby"
