@@ -71,19 +71,24 @@ matches:
   # bun
   - trigger: ":add bun"
     replace: "mise remove bun; mise use -g bun"
+  - trigger: ":add antfu"
+    replace: "bun install --global @antfu/ni bumpp taze"
   # deno
   - trigger: ":add deno"
     replace: "mise remove deno; mise use -g deno"
+  # zig
+  - trigger: ":add zig"
+    replace: "mise remove zig; mise use -g zig"
+  # go
+  - trigger: ":add go"
+    replace: "mise remove go; mise use -g go"
   # ruby
   - trigger: ":add ruby"
-    replace: "mise use -g ruby"
+    replace: "mise remove ruby; mise use -g ruby"
   - trigger: ":add kamal"
     replace: "gem install kamal"
   - trigger: ":add rails"
     replace: "gem install rails"
-  # go
-  - trigger: ":add go"
-    replace: "mise use -g go"
   # python - uv
   - trigger: ":add uv"
     replace: 'curl -LsSf https://astral.sh/uv/install.sh | sh'
@@ -91,12 +96,9 @@ matches:
     replace: 'uv python install'
   - trigger: ":add ruff"
     replace: 'uv tool install ruff'
-  # # zig
-  # - trigger: ":add zig"
-  #   replace: "mise use -g zig"
   # rust
   - trigger: ":add rust"
-    replace: "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh"
+    replace: "mise remove rust; mise use -g rust"
 
   - trigger: ":add z-plug"
     replace: "git clone --depth=1 https://github.com/mattmc3/antidote.git ~/.antidote && touch ~/.zsh_plugins.txt"
@@ -109,8 +111,6 @@ matches:
     replace: "pnpm env use --global lts"
   - trigger: ":add yarn"
     replace: "pnpm install --global yarn"
-  - trigger: ":add antfu"
-    replace: "pnpm install --global @antfu/ni taze bumpp"
   - trigger: ":add iconify"
     replace: "ni -g @iconify-icon/react"
   - trigger: ":add vite"
