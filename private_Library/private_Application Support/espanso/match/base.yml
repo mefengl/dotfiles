@@ -111,6 +111,7 @@ matches:
     replace: "pnpm env use --global lts"
   - trigger: ":add yarn"
     replace: "pnpm install --global yarn"
+
   - trigger: ":add iconify"
     replace: "ni -g @iconify-icon/react"
   - trigger: ":add vite"
@@ -155,12 +156,14 @@ matches:
     replace: 'npm i -g @antfu/ni'
   - trigger: ":add eslint"
     replace: 'npx @antfu/eslint-config && ni -D @eslint/eslintrc eslint-plugin-tailwindcss eslint-plugin-react-hooks && ni -D eslint-plugin-format && ni -D eslint-plugin-perfectionist'
+
   - trigger: ":add docker"
     replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install docker.io -y'
   - trigger: ":add docker-compose"
     replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install docker-compose -y'
   - trigger: ":docker clean"
     replace: 'docker rm $(docker ps -a -q); docker rmi $(docker images -q); docker volume rm $(docker volume ls -q)'
+
   - trigger: ":add sql-studio"
     replace: "curl --proto '=https' --tlsv1.2 -LsSf https://github.com/frectonz/sql-studio/releases/download/0.1.32/sql-studio-installer.sh | sh"
 
@@ -196,11 +199,14 @@ matches:
     replace: "doctl compute ssh dev"
   - trigger: ":doctl dev"
     replace: "doctl compute droplet delete -f dev"
+
   # ai
   - trigger: ":add ollama"
     replace: "open https://ollama.com/download"
+
   - trigger: ":add android"
     replace: "open https://docs.expo.dev/workflow/android-studio-emulator"
+
   # meta
   - trigger: ":trigger"
     replace: |
