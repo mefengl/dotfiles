@@ -3,10 +3,6 @@ global_vars:
     type: "clipboard"
 
 matches:
-  # try
-  - trigger: ":try"
-    replace: "try"
-
   - trigger: ":td"
     replace: "{{today_date}} "
     vars:
@@ -113,7 +109,7 @@ matches:
     replace: "curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
 
   - trigger: ":add iconify"
-    replace: "ni -g @iconify-icon/react"
+    replace: "ni @iconify-icon/react"
   - trigger: ":add vite"
     replace: 'npm create vite@latest'
   - trigger: ":add react"
