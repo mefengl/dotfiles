@@ -53,7 +53,7 @@ alias grep='grep --color'
 # dev
 # alias d='nr dev 2>/dev/null || nr start'
 function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
-alias update='brew update && brew upgrade && brew cu -a -y && brew cleanup --prune=all; brew autoremove && brew doctor && pnpm update --global && tldr --update && chezmoi re-add && chezmoi update'
+alias update='brew update && brew upgrade && brew cu -a -y && brew cleanup --prune=all; brew autoremove && brew doctor && tldr --update && chezmoi re-add && chezmoi update'
 
 #2 try
 
@@ -139,17 +139,6 @@ alias vimed='vim ~/Library/Application\ Support/espanso/match/del.yml'
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
 eval "$(atuin init zsh)"
-
-# pnpm
-export PNPM_HOME="$HOME/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
-# pdm: python package manager
-export PATH=$HOME/Library/Python/3.9/bin:$PATH
 
 # Created by `pipx`
 export PATH="$PATH:$HOME/.local/bin"
