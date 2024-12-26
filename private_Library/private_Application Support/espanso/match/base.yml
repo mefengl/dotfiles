@@ -68,11 +68,18 @@ matches:
 
   - trigger: ":add mise"
     replace: "curl https://mise.run | sh"
+  # node
+  - trigger: ":add node"
+    replace: "mise remove -y node; mise use -g node@lts"
   # bun
   - trigger: ":add bun"
     replace: "mise remove -y bun; mise use -g bun"
   - trigger: ":add antfu"
     replace: "bun install --global @antfu/ni bumpp taze"
+  - trigger: ":add pnpm"
+    replace: "bun install --global pnpm"
+  - trigger: ":add yarn"
+    replace: "bun install --global yarn"
   # deno
   - trigger: ":add deno"
     replace: "mise remove -y deno; mise use -g deno"
@@ -105,13 +112,6 @@ matches:
   - trigger: ":add vim-plug"
     replace: "curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
 
-  - trigger: ":add pnpm"
-    replace: 'curl -fsSL https://get.pnpm.io/install.sh | sh -'
-  - trigger: ":add node"
-    replace: "pnpm env use --global lts"
-  - trigger: ":add yarn"
-    replace: "pnpm install --global yarn"
-
   - trigger: ":add iconify"
     replace: "ni -g @iconify-icon/react"
   - trigger: ":add vite"
@@ -120,8 +120,6 @@ matches:
     replace: 'npm create vite@latest -- --template react-ts'
   - trigger: ":add next"
     replace: "nlx create-next-app@latest"
-  - trigger: ":add vercel"
-    replace: "pnpm install --global vercel"
   - trigger: ":add shadcn"
     replace: "npx shadcn-ui@latest init"
   - trigger: ":add wxt"
@@ -130,8 +128,6 @@ matches:
     replace: "npm create vite@latest"
   - trigger: ":add electron"
     replace: 'npm create @quick-start/electron@latest'
-  - trigger: ":add elysia"
-    replace: "bun create elysia"
   - trigger: ":add tailwind"
     replace: "{{output}}"
     vars:
