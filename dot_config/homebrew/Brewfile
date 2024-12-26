@@ -24,7 +24,7 @@ brew "neovim"
 brew "starship"
 brew "atuin"
 # brew "autojump"
-brew "zoxide" # z
+# brew "zoxide" # z
 brew 'btop'
 brew "trash"
 brew "fzf"
