@@ -70,21 +70,21 @@ matches:
     replace: "curl https://mise.run | sh"
   # bun
   - trigger: ":add bun"
-    replace: "mise remove bun; mise use -g bun"
+    replace: "mise remove -y bun; mise use -g bun"
   - trigger: ":add antfu"
     replace: "bun install --global @antfu/ni bumpp taze"
   # deno
   - trigger: ":add deno"
-    replace: "mise remove deno; mise use -g deno"
+    replace: "mise remove -y deno; mise use -g deno"
   # zig
   - trigger: ":add zig"
     replace: "mise remove -y zig zls; mise use -g zig zls"
   # go
   - trigger: ":add go"
-    replace: "mise remove go; mise use -g go"
+    replace: "mise remove -y go; mise use -g go"
   # ruby
   - trigger: ":add ruby"
-    replace: "mise remove ruby; mise use -g ruby"
+    replace: "mise remove -y ruby; mise use -g ruby"
   - trigger: ":add kamal"
     replace: "gem install kamal"
   - trigger: ":add rails"
@@ -98,7 +98,7 @@ matches:
     replace: 'uv tool install ruff'
   # rust
   - trigger: ":add rust"
-    replace: "mise remove rust; mise use -g rust"
+    replace: "mise remove -y rust; mise use -g rust"
 
   - trigger: ":add z-plug"
     replace: "git clone --depth=1 https://github.com/mattmc3/antidote.git ~/.antidote && touch ~/.zsh_plugins.txt"
