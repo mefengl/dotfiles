@@ -76,6 +76,8 @@ matches:
     replace: "bun install --global pnpm"
   - trigger: ":add yarn"
     replace: "bun install --global yarn"
+  - trigger: ":add shadcn"
+    replace: "bunx shadcn-ui@latest init"
   # deno
   - trigger: ":add deno"
     replace: "mise remove -y deno; mise use -g deno"
@@ -116,8 +118,6 @@ matches:
     replace: 'npm create vite@latest -- --template react-ts'
   - trigger: ":add next"
     replace: "nlx create-next-app@latest"
-  - trigger: ":add shadcn"
-    replace: "npx shadcn-ui@latest init"
   - trigger: ":add wxt"
     replace: "npx wxt@latest init "
   - trigger: ":new vite"
