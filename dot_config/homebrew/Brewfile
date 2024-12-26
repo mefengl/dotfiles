@@ -64,7 +64,7 @@ cask "font-fira-code-nerd-font"
 
 ##2 develop
 cask "visual-studio-code"
-cask "alacritty"
+# cask "alacritty"
 # cask "postman"
 # cask "openinterminal"
 
