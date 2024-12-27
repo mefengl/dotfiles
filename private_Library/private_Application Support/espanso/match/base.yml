@@ -83,7 +83,7 @@ matches:
     replace: "mise remove -y deno; mise use -g deno"
   # zig
   - trigger: ":add zig"
-    replace: "mise remove -y zig zls; mise use -g zig zls"
+    replace: "mise remove -y zig; mise use -g zig"
   # go
   - trigger: ":add go"
     replace: "mise remove -y go; mise use -g go"
