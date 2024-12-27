@@ -199,6 +199,14 @@ matches:
   - trigger: ":add android"
     replace: "open https://docs.expo.dev/workflow/android-studio-emulator"
 
+  # download
+  - trigger: ":fast-dl"
+    replace: "aria2c -x 16 -s 16 -j 16 -k 1M -c "
+  - trigger: ":fast-yt-dlp"
+    replace: "yt-dlp --cookies-from-browser chrome --external-downloader aria2c --external-downloader-args \"-x16 -s16 -k2M\" "
+  - trigger: ":yt-audio-dl"
+    replace: "yt-dlp --cookies-from-browser chrome --external-downloader aria2c --external-downloader-args \"-x16 -s16 -k2M\" -x --no-playlist "
+
   # meta
   - trigger: ":trigger"
     replace: |
