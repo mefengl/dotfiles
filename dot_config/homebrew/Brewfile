@@ -1,5 +1,5 @@
 #2 try
-cask "background-music"
+cask "ghostty"
 cask "free-download-manager"
 # cask "image2icon" # electron icon
 # brew "snapcraft" # electron linux build
