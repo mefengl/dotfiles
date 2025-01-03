@@ -1,10 +1,8 @@
 #2 try
+cask "dbeaver-community"
 cask "ghostty"
 cask "free-download-manager"
-# cask "image2icon" # electron icon
-# brew "snapcraft" # electron linux build
 cask "ollama"
-# brew "lazydocker"
 cask 'orbstack'
 cask 'jordanbaird-ice'
 # brew 'magic-wormhole'
