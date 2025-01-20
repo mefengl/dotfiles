@@ -4,7 +4,7 @@ cask "ghostty"
 cask "free-download-manager"
 cask "ollama"
 cask 'orbstack'
-cask 'jordanbaird-ice'
+# cask 'jordanbaird-ice'
 # brew 'magic-wormhole'
 # cask 'feishu'
 

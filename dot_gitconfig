@@ -28,3 +28,5 @@
 	path = .gitconfig-q
 [includeIf "gitdir:/Volumes/MI-1T/Developer/x/"]
 	path = .gitconfig-x
+[rebase]
+	autosquash = true
