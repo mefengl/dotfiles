@@ -43,6 +43,8 @@ matches:
     replace: "gh repo create --private --clone --template mefengl/react-starter "
   - trigger: ":new wxt"
     replace: "gh repo create --private --clone --template mefengl/wxt-starter "
+  - trigger: ":new vscode"
+    replace: "gh repo create --private --clone --template mefengl/start-vscode-mefengl "
   - trigger: ":new expo"
     replace: "gh repo create --private --clone --template mefengl/expo-starter "
   - trigger: ":new electron"
