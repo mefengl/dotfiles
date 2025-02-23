@@ -1,3 +1,13 @@
+#0.5 delete
+brew "zellij"
+brew "neovim"
+brew "atuin"
+# brew "autojump"
+# brew "tmux"
+# brew "gist"
+# brew "act"
+# cask "shottr"
+
 #2 try
 cask "dbeaver-community"
 cask "ghostty"
@@ -6,7 +16,6 @@ cask "ollama"
 cask 'orbstack'
 # cask 'jordanbaird-ice'
 # brew 'magic-wormhole'
-# cask 'feishu'
 
 ##1 react native
 brew 'fastlane'
@@ -17,11 +26,7 @@ brew "doctl"
 tap "buo/cask-upgrade" # brew cu
 
 ##1.3 shell/terminal
-brew "zellij"
-brew "neovim"
 brew "starship"
-brew "atuin"
-# brew "autojump"
 # brew "zoxide" # z
 brew 'btop'
 brew "trash"
@@ -36,15 +41,12 @@ brew "coreutils"
 
 ##1.5 window manager
 cask "karabiner-elements"
-# brew "tmux"
 
 ##2 git
 brew "git"
 brew "lazygit"
 cask "github"
 brew "gh"
-# brew "gist"
-# brew "act"
 brew "chezmoi"
 brew "bfg"
 # brew "git-lfs"
@@ -90,11 +92,10 @@ cask "1password"
 brew 'imagemagick' # migick
 brew "ffmpeg"
 cask "snipaste"
-# cask "shottr"
 brew "yt-dlp"
 cask "kap"
 
-##0.3 office
+##1.3 office
 cask "typora"
 brew "pandoc"
 cask "obsidian"
