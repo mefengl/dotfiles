@@ -121,7 +121,7 @@ matches:
   - trigger: ":add next"
     replace: "nlx create-next-app@latest"
   - trigger: ":add wxt"
-    replace: "npx wxt@latest init "
+    replace: "bunx wxt@latest init "
   - trigger: ":new vite"
     replace: "npm create vite@latest"
   - trigger: ":add electron"
@@ -146,10 +146,8 @@ matches:
     replace: "ni zod react-hook-form @hookform/resolvers"
   - trigger: ":add pm2"
     replace: 'npm install pm2@latest -g'
-  - trigger: ":add ni"
-    replace: 'npm i -g @antfu/ni'
   - trigger: ":add eslint"
-    replace: 'npx @antfu/eslint-config && ni -D @eslint/eslintrc eslint-plugin-tailwindcss eslint-plugin-react-hooks && ni -D eslint-plugin-format && ni -D eslint-plugin-perfectionist'
+    replace: 'bunx @antfu/eslint-config'
 
   - trigger: ":add docker"
     replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install docker.io -y'
