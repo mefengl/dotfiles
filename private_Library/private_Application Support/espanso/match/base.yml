@@ -49,6 +49,8 @@ matches:
     replace: "gh repo create --private --clone --template mefengl/expo-starter "
   - trigger: ":new electron"
     replace: 'gh repo create --private --clone --template mefengl/electron-starter '
+  - trigger: ":new taro"
+    replace: 'gh repo create --private --clone --template mefengl/taro-starter '
 
   - trigger: ":rsync"
     replace: 'rsync -av --exclude ".git" --exclude "node_modules" --exclude ".next"'
