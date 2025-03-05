@@ -153,3 +153,5 @@ export PATH="$HOME/.bun/bin:$PATH"
 
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+. "$HOME/.local/bin/env"

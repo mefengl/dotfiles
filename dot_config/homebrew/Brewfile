@@ -32,7 +32,7 @@ brew 'btop'
 brew "trash"
 brew "fzf"
 brew "jq"
-brew "tldr"
+brew "tlrc" # tldr
 brew "tree"
 # brew "shfmt"
 
@@ -72,9 +72,9 @@ cask "visual-studio-code"
 cask "raycast"
 cask "arc"
 cask "google-chrome"
-cask "google-chrome@dev"
+# cask "google-chrome@dev"
 cask "firefox"
-cask "firefox@developer-edition"
+# cask "firefox@developer-edition"
 # cask "microsoft-edge"
 
 cask 'mos'
@@ -102,7 +102,8 @@ cask "obsidian"
 
 ## Xcodes
 brew "aria2" # for quicker xcodes download
-brew "robotsandpencils/made/xcodes"
+# brew "robotsandpencils/made/xcodes" # check the repo later
+
 # brew "watchman"
 # run "xcodes install --latest --experimental-unxip"
 

@@ -91,6 +91,8 @@ matches:
   # go
   - trigger: ":add go"
     replace: "mise remove -y go; mise use -g go"
+  - trigger: ":add flarectl"
+    replace: "go install github.com/cloudflare/cloudflare-go/cmd/flarectl@latest"
   # ruby
   - trigger: ":add ruby"
     replace: "mise remove -y ruby; mise use -g ruby"
@@ -166,32 +168,32 @@ matches:
   - trigger: ":doctl ip"
     replace: "doctl compute droplet list --format Name,PublicIPv4"
 
-  - trigger: ":doctl tiny"
-    replace: "doctl compute droplet create --image ubuntu-22-04-x64 --size s-1vcpu-512mb-10gb --region sfo3 --ssh-keys $(doctl compute ssh-key list | awk 'NR>1 {print $1}') tiny"
-  - trigger: ":doctl tiny"
+  - trigger: ":doctl tiny create"
+    replace: "doctl compute droplet create --image ubuntu-22-04-x64 --size s-1vcpu-512mb-10gb --region sfo3 --ssh-keys $(doctl compute ssh-key list | awk '$2 == \"try\" {print $1}') tiny"
+  - trigger: ":doctl tiny ssh"
     replace: "doctl compute ssh tiny"
-  - trigger: ":doctl tiny"
+  - trigger: ":doctl tiny delete"
     replace: "doctl compute droplet delete -f tiny"
-  
-  - trigger: ":doctl small"
-    replace: "doctl compute droplet create --image ubuntu-22-04-x64 --size s-1vcpu-1gb-35gb-intel --region sfo3 --ssh-keys $(doctl compute ssh-key list | awk 'NR>1 {print $1}') small"
-  - trigger: ":doctl small"
+
+  - trigger: ":doctl small create"
+    replace: "doctl compute droplet create --image ubuntu-22-04-x64 --size s-1vcpu-1gb-35gb-intel --region sfo3 --ssh-keys $(doctl compute ssh-key list | awk '$2 == \"try\" {print $1}') small"
+  - trigger: ":doctl small ssh"
     replace: "doctl compute ssh small"
-  - trigger: ":doctl small"
+  - trigger: ":doctl small delete"
     replace: "doctl compute droplet delete -f small"
 
-  - trigger: ":doctl try"
-    replace: "doctl compute droplet create --image ubuntu-22-04-x64 --size s-1vcpu-2gb-70gb-intel --region sfo3 --ssh-keys $(doctl compute ssh-key list | awk 'NR>1 {print $1}') try"
-  - trigger: ":doctl try"
+  - trigger: ":doctl try create"
+    replace: "doctl compute droplet create --image ubuntu-22-04-x64 --size s-1vcpu-2gb-70gb-intel --region sfo3 --ssh-keys $(doctl compute ssh-key list | awk '$2 == \"try\" {print $1}') try"
+  - trigger: ":doctl try ssh"
     replace: "doctl compute ssh try"
-  - trigger: ":doctl try"
+  - trigger: ":doctl try delete"
     replace: "doctl compute droplet delete -f try"
 
-  - trigger: ":doctl dev"
-    replace: "doctl compute droplet create --image ubuntu-22-04-x64 --size s-2vcpu-2gb --region sfo3 --ssh-keys $(doctl compute ssh-key list | awk 'NR>1 {print $1}') dev"
-  - trigger: ":doctl dev"
+  - trigger: ":doctl dev create"
+    replace: "doctl compute droplet create --image ubuntu-22-04-x64 --size s-2vcpu-2gb --region sfo3 --ssh-keys $(doctl compute ssh-key list | awk '$2 == \"try\" {print $1}') dev"
+  - trigger: ":doctl dev ssh"
     replace: "doctl compute ssh dev"
-  - trigger: ":doctl dev"
+  - trigger: ":doctl dev delete"
     replace: "doctl compute droplet delete -f dev"
 
   # ai
@@ -214,3 +216,18 @@ matches:
     replace: |
       - trigger: ""
         replace: ""
+
+  # flarectl script
+  - trigger: ":flarectl ip"
+    replace: |
+      bash << 'EOF'
+      source ~/development.sh
+      update_cf_dns() {
+        local domain="$1"
+        local new_ip="$2"
+        flarectl dns list --zone "$domain" --name "$domain" --type A | grep -v "ID" | awk '{print $1}' | xargs -I {} flarectl dns delete --zone "$domain" --id "{}" 2>/dev/null || true
+        flarectl dns create --zone "$domain" --name "$domain" --type A --ttl 1 --proxy --content "$new_ip"
+        flarectl dns list --zone "$domain" --name "www.$domain" --type A | grep -v "ID" | awk '{print $1}' | xargs -I {} flarectl dns delete --zone "$domain" --id "{}" 2>/dev/null || true
+        flarectl dns create --zone "$domain" --name "www.$domain" --type A --ttl 1 --proxy --content "$new_ip"
+      }
+      update_cf_dns "
