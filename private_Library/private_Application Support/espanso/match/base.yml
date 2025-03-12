@@ -154,9 +154,7 @@ matches:
     replace: 'bunx @antfu/eslint-config'
 
   - trigger: ":add docker"
-    replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install docker.io -y'
-  - trigger: ":add docker-compose"
-    replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install docker-compose -y'
+    replace: 'sudo DEBIAN_FRONTEND=noninteractive apt install docker.io docker-compose -y'
   - trigger: ":docker clean"
     replace: 'docker rm $(docker ps -a -q); docker rmi $(docker images -q); docker volume rm $(docker volume ls -q)'
 
@@ -164,6 +162,8 @@ matches:
     replace: "curl --proto '=https' --tlsv1.2 -LsSf https://github.com/frectonz/sql-studio/releases/download/0.1.32/sql-studio-installer.sh | sh"
 
 
+  - trigger: ":ubuntu"
+    replace: "docker run -it --rm --name devcontainer mcr.microsoft.com/devcontainers/base:ubuntu-22.04"
   # doctl
   - trigger: ":doctl ip"
     replace: "doctl compute droplet list --format Name,PublicIPv4"
