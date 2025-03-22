@@ -41,6 +41,8 @@ matches:
     replace: "gh repo create --private --clone --template mefengl/uv-starter "
   - trigger: ":new react"
     replace: "gh repo create --private --clone --template mefengl/react-starter "
+  - trigger: ":new tanstack"
+    replace: "gh repo create --private --clone --template mefengl/tanstack-starter "
   - trigger: ":new wxt"
     replace: "gh repo create --private --clone --template mefengl/wxt-starter "
   - trigger: ":new vscode"
@@ -80,6 +82,8 @@ matches:
     replace: "bun install --global pnpm"
   - trigger: ":add yarn"
     replace: "bun install --global yarn"
+  - trigger: ":add pm2"
+    replace: 'bun install --global pm2@latest'
   - trigger: ":add shadcn"
     replace: "bunx shadcn-ui@latest init"
   # deno
@@ -148,8 +152,6 @@ matches:
     replace: "ni clsx tailwind-merge"
   - trigger: ":add form"
     replace: "ni zod react-hook-form @hookform/resolvers"
-  - trigger: ":add pm2"
-    replace: 'npm install pm2@latest -g'
   - trigger: ":add eslint"
     replace: 'bunx @antfu/eslint-config'
 
