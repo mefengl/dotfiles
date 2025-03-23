@@ -49,7 +49,7 @@ cask "github"
 brew "gh"
 brew "chezmoi"
 brew "bfg"
-# brew "git-lfs"
+brew "git-lfs"
 
 ## mac
 cask "alt-tab"
