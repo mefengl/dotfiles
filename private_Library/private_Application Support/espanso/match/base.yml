@@ -84,6 +84,8 @@ matches:
     replace: "bun install --global yarn"
   - trigger: ":add pm2"
     replace: 'bun install --global pm2@latest'
+  - trigger: ":add supabase"
+    replace: "bun install --global supabase"
   - trigger: ":add shadcn"
     replace: "bunx shadcn-ui@latest init"
   # deno
