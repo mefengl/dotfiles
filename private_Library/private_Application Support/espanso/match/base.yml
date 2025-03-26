@@ -3,6 +3,9 @@ global_vars:
     type: "clipboard"
 
 matches:
+  - trigger: ":unroll"
+    replace: "@threadreaderapp unroll"
+
   - trigger: ":td"
     replace: "{{today_date}} "
     vars:
