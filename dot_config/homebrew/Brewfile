@@ -9,8 +9,6 @@
 # cask "shottr"
 
 #2 try
-cask "logi-options+"
-
 cask "google-drive"
 
 cask "ghostty"
