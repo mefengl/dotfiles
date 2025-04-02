@@ -4,7 +4,7 @@ matches:
   - trigger: ":bullet"
     replace: "用 bullet points 列出来"
   - trigger: ":polish"
-    replace: "修复语法和修复不 native 的说法，use simple, germanic words，除此以外，尽量少的改动原文，保持原文的语言不变，保持原文的单词大小写不变"
+    replace: "修复语法和修复不 native 的说法，use simple, germanic words，除此以外，尽量少的改动原文，保持原文的单词大小写不变，保持被修饰的语言不变，然后给出另一个语言的 polish 版本(中文/英文)"
   - trigger: ":zh"
     replace: "翻译成中文"
   - trigger: ":getart"

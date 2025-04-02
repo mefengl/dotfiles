@@ -9,6 +9,7 @@ brew "atuin"
 # cask "shottr"
 
 #2 try
+cask "google-drive"
 cask "dbeaver-community"
 cask "ghostty"
 cask "free-download-manager"
