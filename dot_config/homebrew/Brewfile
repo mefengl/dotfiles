@@ -1,7 +1,7 @@
 #0.5 delete
-brew "zellij"
-brew "neovim"
-brew "atuin"
+# brew "zellij"
+# brew "neovim"
+# brew "atuin"
 # brew "autojump"
 # brew "tmux"
 # brew "gist"
@@ -9,12 +9,16 @@ brew "atuin"
 # cask "shottr"
 
 #2 try
+cask "logi-options+"
+
 cask "google-drive"
-cask "dbeaver-community"
+
 cask "ghostty"
-cask "free-download-manager"
+cask "orbstack"
+cask "dbeaver-community"
 cask "ollama"
-cask 'orbstack'
+
+# cask "free-download-manager"
 # cask 'jordanbaird-ice'
 # brew 'magic-wormhole'
 
