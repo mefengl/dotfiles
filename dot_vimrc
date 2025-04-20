@@ -43,7 +43,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 
-Plug 'github/copilot.vim'
+" Plug 'github/copilot.vim'
 call plug#end()
 
 " copy&paste
@@ -54,6 +54,7 @@ set number
 set relativenumber
 set scrolloff=7
 set signcolumn=number
+set nowrap
 
 syntax on
 set termguicolors

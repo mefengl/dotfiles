@@ -1,80 +1,137 @@
 matches:
-  - trigger: ":story"
-    replace: "通过故事的方式告诉我"
-  - trigger: ":bullet"
-    replace: "用 bullet points 列出来"
-  - trigger: ":polish"
-    replace: "修复语法和修复不 native 的说法，use simple, germanic words，除此以外，尽量少的改动原文，保持原文的单词大小写不变，保持被修饰的语言不变，然后给出另一个语言的 polish 版本(中文/英文)"
-  - trigger: ":zh"
-    replace: "翻译成中文"
-  - trigger: ":getart"
-    replace: "这是什么风格，用专业术语先分类可分析的部分，然后对于每个部分，用专业术语精确的表达使用的技术/画风/一切，目的是让另一个画师能够知道应该怎么创造另一个相同风格"
-  - trigger: ":icon"
-    replace: "3D Fluent Emoji style ios app icon for "
-  - trigger: ":dalle"
-    replace: "给我图片，一张一张的生成，在一次对话中，你可以调用 6 次 dalle ，一次又一次的调用就可以，开始调用吧"
-  - trigger: ":ocr"
-    replace: "it's ocr result, fix it"
-  - trigger: ":short"
-    replace: "处理文本，让它更简洁，具体要求：Vigorous writing is concise. A sentence should contain no unnecessary words, a paragraph no unnecessary sentences, for the same reason that a drawing should have no unnecessary lines and a machine no unnecessary parts. This requires not that the writer make all sentences short or avoid all detail and treat subjects only in outline, but that every word tell. —From “The Elements of Style” by William Strunk Jr."
-  # note
-  - trigger: ":word"
-    replace: "{{clipboard}} 这个词一般怎么用\n"
-  - trigger: ":note"
-    replace: "今天学到了以下的东西，麻烦待会您完善下如下笔记（常用的专有名词：english only，不常用或复杂的：中文(english)）："
-  - trigger: ":note"
-    replace: "给我个简短的版本作为笔记"
-  - trigger: ":blog"
-    replace: "注意只是说明它的使用，不要包含我代码的具体部分（你应该另外创建一套示例代码），wirte an blog post about"
-  - trigger: ":blog"
-    replace: "great, now add some humur and add some best practice tips"
-  - trigger: ":blog"
-    replace: "create an image for this article, pls use japense Graphic design style, with bright color as the main color"
-  # code
-  - trigger: ":comment"
-    replace: "给代码的适当的地方加上注释（主要是说明逻辑，请不要添加没有必要的注释，更像是小标题），英文注释，请给我加完注释后的全部代码"
-  - trigger: ":zip"
-    replace: "直接用 python 创建所有项目文件成 zip 给我下载"
-  - trigger: ":compare"
-    replace: "这些方案哪种比较好，比较优缺点，说明谁才更符合最实践，同时也要说明有哪些知名的项目采用了那种方案"
-  # - trigger: ":file"
-  #   replace: "based on before talking, generate a file for me to download:"
-  - trigger: ":full code"
-    replace: "在最小化 gitdiff 的情况下，给我每个文件的全部代码（注意，当整个文件没有修改，说明无改动即可），不要省略，也不要省略原先的注释"
-  - trigger: ":ux"
-    replace: "你觉得这里的 UI 和 UX 怎么设计比较好，给我三种方案"
-  - trigger: ":uiux"
-    replace: "你觉得这里的 UI 和 UX 怎么设计比较好，给我三种方案"
-  - trigger: ":code"
-    replace: "给我需要修改部分的全部代码，和修改步骤"
-  - trigger: ":mindiff"
-    replace: "Try to minimize git diff, the area of changes."
-  - trigger: ":console"
-    replace: "remove types and exports if there have, make them can be run in browser console"
-  - trigger: ":log"
-    replace: "加上 console.log 用于测试"
-  - trigger: ":exp"
-    replace: "我是小学生，请你帮我给文件加上详细的注释，好让我能明白它在做什么。下面的代码是用来干什么的？请在代码旁边用注释详细解释，像博客里的行内注释和行上注多行释那样，也可以在代码开头或结尾直接放上更详细的说明，介绍，补充。尽可能详细地介绍背后的知识和思考，默认使用多行注释，啰嗦一点。举例子，举一反三。你需要用中文写注释。"
-  - trigger: ":gitdiff"
-    replace: "对于表格中的每个优化点，请举出优化后的代码例子（通过 gitdiff 格式给出）"
-  - trigger: ":eg"
-    replace: "举对应使用的例子，前后对比有和没有这段代码，说明这段代码的作用，例子不要有外部依赖，应该能直接运行\n"
-  # format
-  - trigger: ":step"
-    replace: "请按照步骤和子步骤的格式来回答，类似于先给出一个主步骤，然后细分为小步骤（如步骤1、1.1、1.2等）。"
-  - trigger: ":sum"
-    replace: "用表格总结下你刚才说的那些点，加上 emoji"
-  - trigger: ":table"
-    replace: "用表格来更好的组织内容，加上 emoji"
-  - trigger: ":article"
-    replace: "转换成文章，注意，不需要你总结，只是需要清理，不要漏掉信息，只是转换成容易读的文章"
-  - trigger: ":thread"
-    replace: "不要用绝对化的语言，不要使用`不是而是`，不要用`最讽刺的`，`我们学到了`，`教会了我们`，`在...时代`，`...时代`，`讲了个简单的事`，`有趣的地方在于：`，`创新`，不要使用冒号来引出正文，只是朴实无华的论证"
+  # try
+  - trigger: ":fixy"
+    replace: "找出这段代码中的错误。解释根本原因并提供修正后的代码。"
+  - trigger: ":alts"
+    replace: "实现/解决这个问题有哪 3 种替代方法？简要比较它们。"
+  - trigger: ":core"
+    replace: "用简单、直接的语言解释这背后绝对核心的概念/机制。不要废话。"
+  - trigger: ":why"
+    replace: "为什么当初要这样设计/实现？可能考虑了哪些权衡？"
+
   # meta
   - trigger: ":ai"
-    replace: "你这次给我的答案的结构比较好，如果下次我想让你按这样的格式给我回答，我应该怎么和你说"
+    replace: |
+      你上次回答的结构很好。下次我应该怎么提示你，才能得到类似结构的答案？请给我具体的指令示例。
+  - trigger: ":ai"
+    replace: |
+      将我们讨论中的关键信息浓缩成一个全面而简洁的教程格式，适合给另一个高级 LLM 看。侧重于核心概念和技术细节。
   - trigger: ":more"
-    replace: "有什么简单的方案吗，分享 8 个"
+    replace: "有什么更简单的方案吗？列出 8 个。"
   - trigger: ":py"
-    replace: "Write Python code to test if it works before providing JavaScript code. Don't give me js code until your test passed."
+    replace: "先编写 Python 代码来测试概念/逻辑。只有在 Python 测试通过后 *才* 提供 JavaScript 代码。" 
+  - trigger: ":story"
+    replace: "用讲故事的方式告诉我。"
+  - trigger: ":bullet"
+    replace: "用要点（bullet points）列出来。"
+  - trigger: ":pol"
+    replace: |
+      润色以下文本：
+      1. 修复语法错误和别扭/不地道的表达。
+      2. 使用简单、直接的语言（倾向于日耳曼语系词汇）。
+      3. 除了修正外，尽量减少改动（保持原文大小写、语言不变）。
+      4. 提供润色后的版本。
+      5. 然后，提供*另一种*语言（英/中）的润色版本。
+      待润色的文本如下：
+      
+  - trigger: ":sum"
+    replace: |
+      目标： 对紧随本指令之后的文本进行深度技术剖析。
+      指令：
+      1.  分析以下文本：
+      2.  提取核心要素：
+          * 技术洞见： 最关键的技术概念、机制或发现。
+          * 新颖论点： 文本中提出的独特、非传统的观点或主张。
+          * 非显见结论： 推导出的、不直接陈述但有重要意义的结论。
+          * 关键批判/权衡： 对技术、方法或结论的根本性限制、挑战或负面评价。
+      3.  过滤标准：
+          * 严格剔除： 营销术语、通用陈述、背景闲聊、重复信息、行业标准做法的简单描述（除非其应用方式特殊）。
+          * 聚焦： 高信息密度、具体的技术细节、量化数据（如果存在）、有争议或反直觉的观点。
+      4.  识别关键点：
+          * 技术难点/突破： 指出文本中暗示或明确提到的核心技术障碍或创新性解决方案。
+          * 潜在“虚言”(Bullshit Detection)： 识别任何看似夸大、缺乏证据支持、或与已知技术原理/实践相悖的主张。
+      5.  输出要求：
+          * 格式： 简洁的要点（bullet points）列表。
+          * 风格： 直接、精炼、高度技术化、零“水分”。优先展示具有原创性、影响力或挑战性的内容。
+      核心思维： 假设你是一名资深工程师或研究员，任务是快速评估这份材料的真正技术价值和新颖性，忽略所有非实质性内容。
+  - trigger: ":zh"
+    replace: "翻译成中文。"
+  - trigger: ":getart"
+    replace: |
+      使用专业术语分析以下艺术作品的风格。
+      1. 对主要可分析的组成部分进行分类（例如：构图、色彩、线条、媒介、渲染、影响等）。
+      2. 对每个组成部分，使用特定的艺术术语精确描述所使用的技法/选择。
+      目标：为另一位艺术家创建一份清晰的蓝图，以便复制这种风格。
+      艺术作品的背景/描述如下：
+  - trigger: ":icon"
+    replace: "为以下内容生成一个 3D Fluent Emoji 风格的 iOS 应用图标："
+  - trigger: ":dalle"
+    replace: "为之前的请求生成图片，每次 DALL-E 调用生成一张，按顺序进行。本轮最多 6 张图片。现在开始生成第一张。" 
+  - trigger: ":ocr"
+    replace: "这是原始 OCR 文本。修正常见的错误（字符识别、空格、换行）并将其格式化为连贯的文本。" 
+  - trigger: ":short"
+    replace: "使以下文本简洁有力（遵循 Strunk & White：“省略不必要的词”）。确保每个词都有意义。去除冗余但保留基本含义。" 
+
+  # note
+  - trigger: ":word"
+    replace: |
+      `{{clipboard}}`
+      解释这个词/短语通常如何使用。提供语境、细微差别和例句。
+      
+  - trigger: ":note"
+    replace: |
+      将以下学习要点完善并结构化为笔记。
+      格式要求：常用技术术语使用英文。不常用/复杂的术语使用中文（英文）。
+      输入内容如下：
+      
+  - trigger: ":note"
+    replace: "将前面文本的关键点总结成简洁的笔记，以便快速回顾。"
+
+  # blog
+  - trigger: ":blog"
+    replace: "写一篇博客文章解释 [主题/概念]。创建你自己的简单示例代码（不要使用我的具体代码）。侧重于清晰度和实际应用。主题：" 
+  - trigger: ":blog"
+    replace: "改进之前的博客文章：增加一些幽默感和相关的最佳实践技巧。" 
+  - trigger: ":blog"
+    replace: "为这篇博客文章创建一张图片：日式平面设计风格，以亮色为主色调。" 
+
+  # code
+  - trigger: ":comment"
+    replace: "为以下代码添加简洁的英文注释，解释逻辑块（像副标题一样）。避免无关紧要的注释。提供带有完整注释的代码。" 
+  - trigger: ":zip"
+    replace: "生成一个 Python 脚本，该脚本创建所有讨论过的项目文件并将它们打包成 zip 压缩文件。提供该脚本或获取 zip 文件的方法。" 
+  - trigger: ":compare"
+    replace: "比较讨论过的几种方法：优缺点？是否符合最佳实践？有哪些知名项目/公司在使用每种方法？" 
+  - trigger: ":full_code"
+    replace: "提供在我们讨论中*仅被修改过的文件*的完整更新后代码。对于未修改的文件，说明“无更改”。包含所有原始注释，不要省略。" 
+  - trigger: ":uiux" 
+    replace: "根据上下文，提出 3 种不同的 UI/UX 设计方案。解释每种方案的理由。" 
+  - trigger: ":code_apply" 
+    replace: "展示必要的代码修改以及应用这些修改的步骤。" 
+  - trigger: ":mindiff"
+    replace: "应用所请求的代码更改，优先考虑最小化 diff 范围。仅修改必要的行/块。" 
+  - trigger: ":console"
+    replace: "将代码片段转换为可以直接在浏览器控制台中运行（如果存在，移除类型和模块语法）。" 
+  - trigger: ":log"
+    replace: "在代码中添加 `console.log` 语句以跟踪执行/调试。重点关注关键变量或函数入口/出口。" 
+  - trigger: ":exp"
+    replace: |
+      像对完全的初学者一样解释以下代码（ELI5 风格）。
+      在代码*内部*添加详细的中文注释（大量使用多行注释）。解释每个部分的“是什么”、“为什么”、“怎么做”。包括背景概念、类比、示例。要详尽、啰嗦。
+      代码如下：
+      
+  - trigger: ":gitdiff"
+    replace: "对于之前讨论的每个优化点（例如，在表格中），使用 git diff 格式提供代码更改。" 
+  - trigger: ":eg"
+    replace: "提供一个简单的、可运行的代码示例（无外部依赖），展示 [概念/代码] 的效果。展示“之前”和“之后”的版本，以清晰说明其目的/影响。" 
+
+  # format
+  - trigger: ":step"
+    replace: "请使用嵌套步骤（例如，步骤 1, 1.1, 1.2...）来组织你的回答。" 
+  - trigger: ":table"
+    replace: "将信息整理成表格。使用相关的表情符号（emoji）。" 
+  - trigger: ":article"
+    replace: "将前面的文本重新格式化为结构良好、易于阅读的文章。*不要*总结或省略信息；只专注于改善流程和呈现方式。" 
+  - trigger: ":thread" 
+    replace: "用中立、客观、直接的语言重写文本。平实地陈述论点。避免绝对化、修辞手法（例如，引导性的冒号、“讽刺的是”、“教会了我们”）、对话式/观点化的措辞。坚持事实和逻辑。" 
 

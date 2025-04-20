@@ -80,7 +80,7 @@ matches:
   - trigger: ":add bun"
     replace: "mise remove -y bun; mise use -g bun"
   - trigger: ":add antfu"
-    replace: "bun install --global @antfu/ni bumpp taze"
+    replace: "bun install --global @antfu/ni bumpp taze esno"
   - trigger: ":add pnpm"
     replace: "bun install --global pnpm"
   - trigger: ":add yarn"
@@ -116,6 +116,8 @@ matches:
     replace: 'uv python install'
   - trigger: ":add ruff"
     replace: 'uv tool install ruff'
+  - trigger: ":sqlite"
+    replace: 'uvx --from sqlite-web sqlite_web '
   # rust
   - trigger: ":add rust"
     replace: "mise remove -y rust; mise use -g rust"
